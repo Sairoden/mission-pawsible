@@ -2,13 +2,13 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // PAGES
-import { ChatMessage } from "./pages";
+import { Home, ChatMessage } from "./pages";
 
 function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <h1>Landing Page</h1>,
+      element: <Home />,
     },
     {
       path: "/signup",
