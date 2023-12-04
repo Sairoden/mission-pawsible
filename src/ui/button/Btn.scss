@@ -2,6 +2,10 @@
     padding: 1rem 3rem;
     border-radius: 19rem;
     text-align: center;
+
+    h5 {
+        text-transform: capitalize;
+    }
 }
 .button:hover {
     opacity: .75;

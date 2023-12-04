@@ -1,6 +1,7 @@
 import React from 'react'
 import './Navbar.scss'
 import Btn from '../button/Btn.jsx'
+
 const Navbar = () => {
   return (
     <nav>
