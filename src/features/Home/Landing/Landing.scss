@@ -1,0 +1,65 @@
+@import '../../../index.scss';
+
+.landing {
+    margin: auto;
+    padding-top: 2.5rem;
+    width: 95vw;
+    height: calc(100vh - 10rem);
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-around;
+    align-items: center;
+
+    @media screen and (max-width: 426px) {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+    }
+
+    .cta{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (max-width: 426px) {
+            width: 100%;
+        }
+
+        .header {
+            text-align: center;
+            h1{
+                line-height: 1;
+                @media screen and (max-width: 768px) {
+                    font-size: 2.8rem;
+                }
+            }
+            span {
+                font: inherit;
+                color: $color-orange;
+            }
+
+            
+        }
+        
+        .body {
+            margin-top: 2rem;
+            text-align: center;
+
+            h4 {
+                font-weight: 300;
+                @media screen and (max-width: 768px) {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        .btns {
+            width: 100%;
+            margin-top: 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            
+        }
+    }
+}
