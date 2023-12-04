@@ -1,13 +1,8 @@
+// Variable
+@import '_variables';
+
 // font style
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-// color
-$color-orange: #FF902A;
-$color-brown:#2F2105;
-$color-blue: #003459;
-$color-beige: #F6EBDA;
-$color-white: white;
-$font: 'Poppins', sans-serif;
 
 
 // universal css
@@ -20,6 +15,7 @@ $font: 'Poppins', sans-serif;
 
 body{
     padding-top: 10rem;
+    font-family: $font;
     background-color: $color-beige;
 }
 
@@ -56,4 +52,3 @@ h6 {
     color: white !important;
     background-color: $color-blue;
 }
-
