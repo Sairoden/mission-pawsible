@@ -1,4 +1,4 @@
-import styles from "./AboutUs.module.scss";
+import "./AboutUs.scss";
 
 function AboutUs() {
   return <h1>AboutUs</h1>;
