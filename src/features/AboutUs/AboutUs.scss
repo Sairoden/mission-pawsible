@@ -1,0 +1,56 @@
+.root {
+  background-color: #f6ebda;
+  padding: 20px;
+
+  .container {
+    display: flex;
+  }
+
+  .Header {
+    text-align: end;
+    font-weight: 700;
+  }
+
+  .description {
+    text-align: justify;
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin-top: 20px;
+  }
+
+  .main-header {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .main-img {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 50px;
+  }
+  .image2 {
+    margin-left: 100px;
+  }
+
+  @media (min-width: 300px) and (max-width: 700px) {
+    .Header {
+      font-size: 3rem;
+    }
+
+    .description {
+      font-size: 1.6rem;
+    }
+    .main-img {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      padding: 10px;
+    }
+    .image2 {
+      margin: auto;
+    }
+  }
+}
