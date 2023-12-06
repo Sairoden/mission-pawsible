@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 // PAGES
 import { Home, ChatMessage } from "./pages";
 
+// FEATURES COMPONENT (TEMPORAY, WILL DELETE LATER)
+import { AboutUs } from "./features";
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -52,7 +55,7 @@ function App() {
     },
     {
       path: "/about-us",
-      element: <h1>About Us</h1>,
+      element: <AboutUs />,
     },
     {
       path: "/contact-us",
