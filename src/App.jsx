@@ -2,7 +2,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // PAGES
-import { Home, ChatMessage } from "./pages";
+import { Home, ChatMessage, ContactUs } from "./pages";
 
 // FEATURES COMPONENTS (TEMPORAY, WILL DELETE LATER)
 import { AboutUs } from "./features";
@@ -65,7 +65,7 @@ function App() {
         },
         {
           path: "/contact-us",
-          element: <h1>Contact Us</h1>,
+          element: <ContactUs />,
         },
         {
           path: "/account",
