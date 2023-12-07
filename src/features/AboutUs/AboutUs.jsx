@@ -3,10 +3,10 @@ import "./AboutUs.scss";
 
 function AboutUs() {
   return (
-    <div className="root">
+    <div className="about-us">
       <div className="container">
         <div className="main-header">
-          <h1 className="Header">ABOUT US</h1>
+          <h1 className="header">ABOUT US</h1>
           <p className="description">
             At Lost and Found Dog Network, we're driven by a simple yet powerful
             mission: to reunite lost pets with their loving families. The
@@ -39,13 +39,13 @@ function AboutUs() {
 
         <div className="main-img">
           <div className="image1">
-            <img src="cat_img.png" alt="catImage" />
+            <img src="about-us-pet-2.png" alt="Cat Image" />
           </div>
           <div className="image2">
-            <img src="chihuahua_img.png" alt="catImage" />
+            <img src="about-us-pet-3.png" alt="Dog Chihuahua Image" />
           </div>
           <div className="image3">
-            <img src="poodle_img.png" alt="catImage" />
+            <img src="about-us-pet-1.png" alt="Dog Image" />
           </div>
         </div>
       </div>
