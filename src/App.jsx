@@ -8,7 +8,7 @@ import { Home, ChatMessage } from "./pages";
 import { AboutUs } from "./features";
 
 // UI COMPONENTS
-import { Navbar } from "./ui";
+import { Navbar, Footer } from "./ui";
 
 function App() {
   const router = createBrowserRouter([
@@ -86,6 +86,7 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
+      <Footer />
     </>
   );
 }
