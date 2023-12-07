@@ -1,3 +1,4 @@
+// STYLES
 import "./AboutUs.scss";
 
 function AboutUs() {
@@ -13,8 +14,8 @@ function AboutUs() {
             everything we do. We understand the worry and heartache that come
             with a pet's disappearance, and we're here to make those
             heartwarming reunions possible.
-          </p>
-          <p className="description">
+            <br />
+            <br />
             Our journey began with a shared passion for pets and a vision to
             create a safer, more efficient platform for lost pets. We wanted to
             connect pet owners, finders, and lovers while offering valuable
@@ -23,8 +24,8 @@ function AboutUs() {
             stories inspire us, and your support keeps us dedicated to our
             mission. Together, we're making a difference, one wagging tail at a
             time
-          </p>
-          <p className="description">
+            <br />
+            <br />
             So, whether you're a pet owner, a finder, or an animal enthusiast,
             we welcome you to be part of our journey. Share your stories, join
             our community, and help us in our mission to ensure that no lost pet
@@ -35,9 +36,9 @@ function AboutUs() {
             companions.
           </p>
         </div>
+
         <div className="main-img">
           <div className="image1">
-            {" "}
             <img src="cat_img.png" alt="catImage" />
           </div>
           <div className="image2">
