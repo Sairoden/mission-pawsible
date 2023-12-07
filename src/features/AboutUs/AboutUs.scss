@@ -1,9 +1,9 @@
 .root {
   background-color: #f6ebda;
-  padding: 20px;
 
   .container {
     display: flex;
+    padding: 40px;
   }
 
   .Header {
@@ -39,7 +39,11 @@
     .Header {
       font-size: 3rem;
     }
-
+    .container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
     .description {
       font-size: 1.6rem;
     }

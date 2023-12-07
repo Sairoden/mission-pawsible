@@ -1,30 +1,41 @@
-import React from 'react'
-import './Navbar.scss'
-import Btn from '../button/Btn.jsx'
+// REACT & LIBRARIES
+import { Outlet, NavLink } from "react-router-dom";
+
+// STYLES
+import "./Navbar.scss";
+
+// UI COMPONENTS
+import Btn from "../button/Btn.jsx";
 
 const Navbar = () => {
   return (
-    <nav>
+    <>
+      <nav>
         <div className="logo">
-            <img src="../../../public/logo-mission.png" alt="" />
-         </div>
-        <input type="checkbox" className="toggler"/>
+          <img src="/logo-mission.png" alt="" />
+        </div>
+        <input type="checkbox" className="toggler" />
         <div className="hamburger">
-            <div></div>
+          <div></div>
         </div>
         <div className="menu">
-                    <a href="#" className="active"> HOME</a>
-                    <a href="#"> LOST PETS</a>
-                    <a href="#"> FOUND PETS</a>
-                    <a href="#"> REUNITED PETS</a>
-                    <a href="#"> RESOURCES</a>
-                    <a href="#"> ABOUT US</a>
-                    <a href="#"> CONTACT US</a>
-                    <a href="#"> <Btn class = "bg-orange" text = "LOGIN" />
-                    </a>
+          <NavLink to="/" activeClassName="active">
+            HOME
+          </NavLink>
+          <NavLink to="/lost-pets"> LOST PETS</NavLink>
+          <NavLink to="/found-pets"> FOUND PETS</NavLink>
+          <NavLink to="/reunited-pets"> REUNITED PETS</NavLink>
+          <NavLink to="/resources"> RESOURCES</NavLink>
+          <NavLink to="/about-us">ABOUT US</NavLink>
+          <NavLink to="/contact-us">CONTACT US</NavLink>
+          <NavLink to="/">
+            <Btn class="bg-orange" text="LOGIN" />
+          </NavLink>{" "}
         </div>
-    </nav>
-  )
-}
+      </nav>
+      <Outlet />
+    </>
+  );
+};
 
-export default Navbar
+export default Navbar;
