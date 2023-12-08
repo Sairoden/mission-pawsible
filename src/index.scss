@@ -17,6 +17,10 @@ $font: "Poppins", sans-serif;
   font-size: 62.5%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: $font;
   background-color: $color-beige;
