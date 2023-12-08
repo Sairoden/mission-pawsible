@@ -1,9 +1,10 @@
 // STYLES
 import "./Button.scss";
 
-const Button = ({ variation, styles, children, icon }) => {
+const Button = ({ variation, styles, children, icon, onClick }) => {
   return (
     <button
+      onClick={onClick}
       style={styles}
       type="button"
       className={`button ${variation} ${icon && "button-icon-padding"}`}

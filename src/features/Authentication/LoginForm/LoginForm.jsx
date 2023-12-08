@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 // UI COMPONENTS
 import { Button, Input } from "../../../ui";
 
+
+
 function Login() {
   return (
     <div className="login-container">
@@ -17,11 +19,11 @@ function Login() {
 
       <h1 className="login-title">Log in</h1>
 
-      <div className="login-form">
+      <form className="login-form">
         <label htmlFor="email" className="login-label">
           Email
         </label>
-        <Input id="email" width="49vw" />
+        <Input id="email" width="49vw" type="email" />
 
         <label htmlFor="password" className="login-label">
           Password
@@ -31,17 +33,17 @@ function Login() {
         <a href="#">
           <p className="login-forgot">Forget Password?</p>
         </a>
-      </div>
 
-      <div className="login-buttons-container">
-        <button type="button" className="login-google">
-          Sign in with Google <FcGoogle className="login-google-icon" />
-        </button>
+        <div className="login-buttons-container">
+          <button type="button" className="login-google">
+            Sign in with Google <FcGoogle className="login-google-icon" />
+          </button>
 
-        <Button variation="primary" icon={true}>
-          Log in
-        </Button>
-      </div>
+          <Button variation="primary" icon={true}>
+            Log in
+          </Button>
+        </div>
+      </form>
 
       <Link to="/signup">
         <p className="signup-link">

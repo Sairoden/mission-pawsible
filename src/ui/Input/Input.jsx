@@ -8,13 +8,14 @@ function Input({
   placeholder = "",
   onChange,
   width,
+  type = "text",
 }) {
   return (
     <input
       style={{
         width,
       }}
-      type="text"
+      type={type}
       id={id}
       disabled={disabled}
       className={`input ${styles}`}
