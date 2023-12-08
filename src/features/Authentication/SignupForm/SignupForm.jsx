@@ -6,51 +6,88 @@ import { Link } from "react-router-dom";
 // UI COMPONENTS
 import { Button, Input } from "../../../ui";
 
-function LoginForm() {
+function SignupForm() {
   return (
-    <div className="login-container">
+    <div className="signup-container">
       <img
-        src="login-banner.png"
+        src="/signup-banner.png"
         alt="Guy with a dog image"
-        className="login-banner"
+        className="signup-banner"
       />
 
-      <h1 className="login-title">Log in</h1>
+      <h1 className="signup-title">Be a part of our growing family today!</h1>
 
-      <div className="login-form">
-        <label htmlFor="email" className="login-label">
-          Email
-        </label>
-        <Input id="email" width="943px" />
+      <form className="signup-form">
+        <div className="grid-container">
+          <div className="grid-item">
+            <label htmlFor="firstName" className="signup-label">
+              First Name
+            </label>
+            <Input id="firstName" width="22vw" />
+          </div>
 
-        <label htmlFor="password" className="login-label">
-          Password
-        </label>
-        <Input id="password" width="200px" />
+          <div className="grid-item">
+            <label htmlFor="lastName" className="signup-label">
+              Last Name
+            </label>
+            <Input id="lastName" width="22vw" />
+          </div>
 
-        <a href="#">
-          <p className="login-forgot">Forget Password?</p>
-        </a>
-      </div>
+          <div className="grid-item">
+            <label htmlFor="email" className="signup-label">
+              Email
+            </label>
+            <Input id="email" width="22vw" type="email" />
+          </div>
 
-      <div className="login-buttons-container">
-        <button type="button" className="login-google">
-          Sign in with Google <FcGoogle className="login-google-icon" />
-        </button>
+          <div className="grid-item">
+            <label htmlFor="contactNumber" className="signup-label">
+              Contact Number
+            </label>
+            <Input id="contactNumber" width="22vw" />
+          </div>
 
-        <Button variation="primary" icon={true}>
-          Log in
-        </Button>
-      </div>
+          <div className="grid-item">
+            <label htmlFor="address" className="signup-label">
+              Address
+            </label>
+            <Input id="address" width="49vw" />
+          </div>
 
-      <Link to="/signup">
-        <p className="signup-link">
-          Don't have an account?{" "}
-          <span className="signup-link-bold">Sign up</span>
+          <div className="grid-item">
+            <label htmlFor="password" className="signup-label">
+              Password
+            </label>
+            <Input id="password" width="22vw" type="password" />
+          </div>
+
+          <div className="grid-item">
+            <label htmlFor="confirmPassword" className="signup-label">
+              Confirm Password
+            </label>
+            <Input id="confirmPassword" width="22vw" type="password" />
+          </div>
+        </div>
+
+        <div className="signup-buttons-container">
+          <button type="button" className="signup-google">
+            Sign in with Google <FcGoogle className="signup-google-icon" />
+          </button>
+
+          <Button variation="primary" icon={true}>
+            Signup
+          </Button>
+        </div>
+      </form>
+
+      <Link to="/login">
+        <p className="login-link">
+          Already have an account?{" "}
+          <span className="login-link-bold">Log in</span>
         </p>
       </Link>
     </div>
   );
 }
 
-export default LoginForm;
+export default SignupForm;

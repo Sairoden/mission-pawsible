@@ -6,9 +6,7 @@ import { Link } from "react-router-dom";
 // UI COMPONENTS
 import { Button, Input } from "../../../ui";
 
-
-
-function Login() {
+function LoginForm() {
   return (
     <div className="login-container">
       <img
@@ -28,7 +26,7 @@ function Login() {
         <label htmlFor="password" className="login-label">
           Password
         </label>
-        <Input id="password" width="49vw" />
+        <Input id="password" width="49vw" type="password" />
 
         <a href="#">
           <p className="login-forgot">Forget Password?</p>
@@ -55,4 +53,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default LoginForm;

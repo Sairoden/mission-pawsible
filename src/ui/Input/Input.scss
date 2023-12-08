@@ -1,5 +1,9 @@
 @import "../../index.scss";
 
+.input-container {
+  position: relative;
+}
+
 .input {
   height: 4.3rem;
   border-radius: 20px;
@@ -20,4 +24,15 @@
   &:focus {
     outline: none;
   }
+}
+
+.password-icon {
+  position: absolute;
+  top: 55%;
+  transform: translateY(-50%);
+  right: 2rem;
+  height: 2.4rem;
+  width: 2.4rem;
+  cursor: pointer;
+  color: #8d8a86;
 }

@@ -1,15 +1,11 @@
 @import "../../index.scss";
 
-.about-us {
-  background-color: #f6ebda;
-
-  .container {
-    display: flex;
-    padding: 4rem;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: -6rem;
-  }
+.about-us-container {
+  display: flex;
+  padding: 4rem;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: -6rem;
 
   .header {
     text-align: end;
