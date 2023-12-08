@@ -1,5 +1,5 @@
 // STYLES
-import "./AboutUs.scss";
+import "./About.scss";
 import { motion } from "framer-motion";
 
 function AboutUs() {

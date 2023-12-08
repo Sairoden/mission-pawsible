@@ -2,10 +2,15 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // PAGES
-import { Home, ChatMessage, ContactUs, Login, Signup, Account } from "./pages";
-
-// FEATURES COMPONENTS (TEMPORAY, WILL DELETE LATER)
-import { AboutUs } from "./features";
+import {
+  Home,
+  ChatMessage,
+  ContactUs,
+  Login,
+  Signup,
+  Account,
+  AboutUs,
+} from "./pages";
 
 // UI COMPONENTS
 import { Navbar, Footer } from "./ui";

@@ -2,7 +2,7 @@
 import "./Contact.scss";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
-import Contact_animation from "../../../public/Contact-animation.json";
+import contactAnimation from "../../assets/contact-animation.json";
 
 // UI COMPONENTS
 import { Button } from "../../ui";
@@ -16,7 +16,7 @@ function Contact() {
         transition={{ delay: 0.5, duration: 0.5 }}
         className="contact-animation"
       >
-        <Lottie animationData={Contact_animation} />
+        <Lottie animationData={contactAnimation} />
       </motion.div>
 
       <div className="Header-container">
