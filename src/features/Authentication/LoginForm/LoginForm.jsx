@@ -4,7 +4,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
 // UI COMPONENTS
-import { Button } from "../../../ui";
+import { Button, Input } from "../../../ui";
 
 function Login() {
   return (
@@ -21,12 +21,12 @@ function Login() {
         <label htmlFor="email" className="login-label">
           Email
         </label>
-        <input type="text" id="email" className="login-input" />
+        <Input id="email" height="43px" width="943px" />
 
-        <label htmlFor="email" className="login-label">
+        <label htmlFor="password" className="login-label">
           Password
         </label>
-        <input type="text" id="email" className="login-input" />
+        <Input id="password" height="43px" width="943px" />
 
         <a href="#">
           <p className="login-forgot">Forget Password?</p>

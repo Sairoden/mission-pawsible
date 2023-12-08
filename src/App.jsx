@@ -2,7 +2,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // PAGES
-import { Home, ChatMessage, ContactUs, Login, Signup } from "./pages";
+import { Home, ChatMessage, ContactUs, Login, Signup, Account } from "./pages";
 
 // FEATURES COMPONENTS (TEMPORAY, WILL DELETE LATER)
 import { AboutUs } from "./features";
@@ -69,7 +69,7 @@ function App() {
         },
         {
           path: "/account",
-          element: <h1>Account Page</h1>,
+          element: <Account />,
         },
         {
           path: "/account/edit",
