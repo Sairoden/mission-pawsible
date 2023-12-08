@@ -1,6 +1,5 @@
 // STYLES
 import "./Contact.scss";
-import pawSvg from "../../../public/paw.svg";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
 import Contact_animation from "../../../public/Contact-animation.json";
@@ -33,24 +32,28 @@ function Contact() {
         <form className="form-content">
           <label className="label-text">Email</label>
           <br />
+
           <input type="text" className="form-input" />
           <br />
+
           <label className="label-text">Subject</label>
           <br />
+
           <input type="text" className="form-input" />
           <br />
+
           <label className="label-text">Message</label>
           <br />
+
           <textarea className="form-textarea" />
           <br />
         </form>
       </div>
       <div className="footer-section">
-        {" "}
-        <div className="form-btn">Send</div>
-        <div>
-          <img src={pawSvg} alt="pawIcon" />
-        </div>
+        <button type="button" className="form-btn">
+          Send
+          <img src="/paw.svg" alt="paw icon" className="login-icon" />
+        </button>
       </div>
     </div>
   );
