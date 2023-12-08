@@ -1,5 +1,6 @@
 // STYLES
 import "./AboutUs.scss";
+import { motion } from "framer-motion";
 
 function AboutUs() {
   return (
@@ -38,15 +39,32 @@ function AboutUs() {
         </div>
 
         <div className="main-img">
-          <div className="image1">
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="image1"
+          >
             <img src="about-us-pet-2.png" alt="Cat Image" />
-          </div>
-          <div className="image2">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="image2"
+          >
             <img src="about-us-pet-3.png" alt="Dog Chihuahua Image" />
-          </div>
-          <div className="image3">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            className="image3"
+          >
             <img src="about-us-pet-1.png" alt="Dog Image" />
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
