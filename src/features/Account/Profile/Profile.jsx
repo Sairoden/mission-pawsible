@@ -5,7 +5,7 @@ import { Button } from "../../../ui";
 function Profile() {
   return (
     <div className="profile-container">
-      <div className="container">
+      <div className="profile-main-container">
         <div className="main-content">
           <div className="Account-img">
             <img src="/public/uploadimage.png" alt="profileIcon" width={150} />
@@ -47,6 +47,85 @@ function Profile() {
           <div className="footer-content">
             <Button variation="primary">Edit Profile</Button>
             <Button variation="primary">Logout</Button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="register_container">
+          <div className="register-main-container">
+            <div className="register_main_content">
+              <div className="register-header">
+                <h4>REGISTERED LOST PET</h4>
+                <button className="register-btnAdd">ADD +</button>
+              </div>
+            </div>
+            <div className="register-middle-content">
+              <div className="register-details">
+                <div className="Register-container-img">
+                  <img src="/public/shitsu.png" alt="cardImage" />
+                </div>
+                <div>
+                  <h3 className="register-middle-header">
+                    MO5-Poodle Tiny Yellow
+                  </h3>
+                  <span className="Registered-spanText">
+                    GENDER: Female Last Seen: Nov 12,2019
+                  </span>
+                </div>
+                <div className="register-middle-btn">
+                  <button className="Update-btn">UPDATE</button>
+                  <button className="listing-btn">CLOSE LISTING</button>
+                </div>
+              </div>
+              <div className="register-details">
+                <div className="Register-container-img">
+                  <img src="/public/shitsu.png" alt="cardImage" />
+                </div>
+                <div>
+                  <h3 className="register-middle-header">
+                    MO5-Poodle Tiny Yellow
+                  </h3>
+                  <span className="Registered-spanText">
+                    GENDER: Female Last Seen: Nov 12,2019
+                  </span>
+                </div>
+                <div className="register-middle-btn">
+                  <button className="Update-btn">UPDATE</button>
+                  <button className="listing-btn">CLOSE LISTING</button>
+                </div>
+              </div>
+              <div className="register-details">
+                <div className="Register-container-img">
+                  <img src="/public/shitsu.png" alt="cardImage" />
+                </div>
+                <div>
+                  <h3 className="register-middle-header">
+                    MO5-Poodle Tiny Yellow
+                  </h3>
+                  <span className="Registered-spanText">
+                    GENDER: Female Last Seen: Nov 12,2019
+                  </span>
+                </div>
+                <div className="register-middle-btn">
+                  <button className="Update-btn">UPDATE</button>
+                  <button className="listing-btn">CLOSE LISTING</button>
+                </div>
+              </div>
+            </div>
+            <div className="bottom-content">
+              <Button variation="primary">SHOW MORE</Button>
+            </div>
+          </div>
+          <div className="register-footer-container">
+            <div className="register-footer-content">
+              <div className="register-header">
+                <h4>REGISTERED FOUND PET</h4>
+                <button className="register-btnAdd">ADD +</button>
+              </div>
+            </div>
+            <div className="register-footer-text">
+              <h3 className="middle_footer_text">NO ENTRY</h3>
+            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,13 @@
 .profile-container {
   padding: 5rem;
   color: #667479;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
 }
 
-.container {
+.profile-main-container {
   padding: 20px;
   border-radius: 15px;
   background-color: #ffffff;
@@ -79,4 +83,194 @@
   gap: 20px;
   justify-content: center;
   margin-top: 5rem;
+}
+
+// registered pet section scss below //
+
+.register_container {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #fff;
+  height: 68vh;
+}
+
+.register-main-container {
+  background-color: #ebeeef;
+  border-radius: 15px;
+  padding: 10px;
+  height: 55vh;
+}
+
+.register-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0px;
+  grid-template-columns: 1fr 10px;
+  padding-right: 10px;
+}
+
+.register-middle-content {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  padding: 20px;
+}
+
+.register-details {
+  width: 13vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  justify-content: start;
+  justify-items: center;
+  align-items: center;
+  color: #ff902a;
+  padding: 3px;
+  height: 35vh;
+}
+
+.Registered-spanText {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #7a808c;
+}
+
+.Register-container-img {
+  width: 100%;
+  height: 25vh;
+  overflow: hidden;
+  padding: 0px;
+  margin-right: 0px;
+  border-radius: 15px;
+}
+
+.Register-Container-img {
+  overflow: visible;
+  border-radius: 0px;
+  height: auto;
+  width: 100%;
+}
+
+.register-middle-header {
+  color: #00171f;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.bottom-content {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding-right: 0px;
+}
+
+// registered pets middle button //
+
+.register-middle-btn {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  padding-bottom: 5px;
+
+  .listing-btn {
+    border: 1px solid #003459;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: #003459;
+    font-size: 1.6rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .listing-btn:hover {
+    background: #003459;
+    color: #fff;
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    -moz-transition: 0.6s;
+    -ms-transition: 0.6s;
+    -o-transition: 0.6s;
+  }
+  .listing-btn:active {
+    transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+  }
+
+  .Update-btn {
+    border: 1px solid #ff902a;
+    border-radius: 15px;
+    background-color: #ffffff;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-weight: 600;
+    color: #ff902a;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+  .Update-btn:hover {
+    background: #ff902a;
+    color: #fff;
+    transition: 0.6s;
+  }
+  .Update-btn:active {
+    transform: translateY(4px);
+  }
+}
+
+.register-footer-container {
+  background-color: #ebeeef;
+  border-radius: 15px;
+  margin-top: 10px;
+  padding: 10px 1px 10px 10px;
+}
+
+.register-footer-text {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.middle_footer_text {
+  font-weight: 600;
+}
+
+.register-btnAdd {
+  color: #ff902a;
+  border-radius: 15px;
+  padding: 2px 10px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.register-btnAdd:hover {
+  background: #ff902a;
+  color: #fff;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.register-btnAdd:active {
+  transform: translateY(10px);
+  -webkit-transform: translateY(10px);
+  -moz-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  -o-transform: translateY(10px);
 }
