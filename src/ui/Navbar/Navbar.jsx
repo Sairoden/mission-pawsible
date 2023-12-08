@@ -5,7 +5,7 @@ import { Outlet, NavLink } from "react-router-dom";
 import "./Navbar.scss";
 
 // UI COMPONENTS
-import Btn from "../button/Btn.jsx";
+import { Button } from "../index";
 
 const Navbar = () => {
   return (
@@ -32,7 +32,7 @@ const Navbar = () => {
           <NavLink to="/about-us">ABOUT US</NavLink>
           <NavLink to="/contact-us">CONTACT US</NavLink>
           <NavLink to="/login">
-            <Btn class="bg-orange" text="LOGIN" />
+            <Button class="bg-orange">LOG IN</Button>
           </NavLink>
         </div>
       </nav>

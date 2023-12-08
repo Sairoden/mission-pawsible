@@ -4,6 +4,9 @@ import Lottie from "lottie-react";
 import { motion } from "framer-motion";
 import Contact_animation from "../../../public/Contact-animation.json";
 
+// UI COMPONENTS
+import { Button } from "../../ui";
+
 function Contact() {
   return (
     <div className="contact-container">
@@ -50,10 +53,9 @@ function Contact() {
         </form>
       </div>
       <div className="footer-section">
-        <button type="button" className="form-btn">
+        <Button variation="primary" icon={true}>
           Send
-          <img src="/paw.svg" alt="paw icon" className="login-icon" />
-        </button>
+        </Button>
       </div>
     </div>
   );

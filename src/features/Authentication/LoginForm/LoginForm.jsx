@@ -3,6 +3,9 @@ import "./LoginForm.scss";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 
+// UI COMPONENTS
+import { Button } from "../../../ui";
+
 function Login() {
   return (
     <div className="login-container">
@@ -35,10 +38,9 @@ function Login() {
           Sign in with Google <FcGoogle className="login-google-icon" />
         </button>
 
-        <button type="button" className="login-button">
+        <Button variation="primary" icon={true}>
           Log in
-          <img src="/paw.svg" alt="paw icon" className="login-icon" />
-        </button>
+        </Button>
       </div>
 
       <Link to="/signup">
