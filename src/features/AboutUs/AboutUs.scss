@@ -35,27 +35,4 @@
   .image2 {
     margin-left: 23rem;
   }
-
-  @media (min-width: 300px) and (max-width: 700px) {
-    .header {
-      font-size: 3rem;
-    }
-    .container {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-    }
-    .description {
-      font-size: 1.6rem;
-    }
-    .main-img {
-      display: flex;
-      flex-direction: row;
-      margin: auto;
-      padding: 10px;
-    }
-    .image2 {
-      margin: auto;
-    }
-  }
 }

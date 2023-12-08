@@ -1,9 +1,22 @@
 // STYLES
 import "./Contact.scss";
+import pawSvg from "../../../public/paw.svg";
+import Lottie from "lottie-react";
+import { motion } from "framer-motion";
+import Contact_animation from "../../../public/Contact-animation.json";
 
 function Contact() {
   return (
     <div className="contact-container">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className="contact-animation"
+      >
+        <Lottie animationData={Contact_animation} />
+      </motion.div>
+
       <div className="Header-container">
         <div>
           <h1 className="header-text">CONTACT US</h1>
@@ -36,7 +49,7 @@ function Contact() {
         {" "}
         <div className="form-btn">Send</div>
         <div>
-          <img src="/paw.svg" alt="paw" />
+          <img src={pawSvg} alt="pawIcon" />
         </div>
       </div>
     </div>
