@@ -2,12 +2,9 @@
 
 .footer-container {
   background: $color-blue;
-  height: 269px;
+  width: 100%;
+  height: 30vh;
   color: $color-white;
-
-  a {
-    all: unset;
-  }
 
   .footer-logo {
     display: flex;

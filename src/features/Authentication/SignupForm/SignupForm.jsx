@@ -2,7 +2,7 @@
 import "./SignupForm.scss";
 
 function Signup() {
-  return <h1>Signup</h1>;
+  return <h1>SignupForm</h1>;
 }
 
 export default Signup;
