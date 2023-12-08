@@ -21,12 +21,12 @@ function Login() {
         <label htmlFor="email" className="login-label">
           Email
         </label>
-        <Input id="email" height="43px" width="943px" />
+        <Input id="email" width="943px" />
 
         <label htmlFor="password" className="login-label">
           Password
         </label>
-        <Input id="password" height="43px" width="943px" />
+        <Input id="password" width="943px" />
 
         <a href="#">
           <p className="login-forgot">Forget Password?</p>

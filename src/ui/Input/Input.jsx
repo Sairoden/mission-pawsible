@@ -7,13 +7,11 @@ function Input({
   value,
   placeholder = "",
   onChange,
-  height,
   width,
 }) {
   return (
     <input
       style={{
-        height,
         width,
       }}
       type="text"

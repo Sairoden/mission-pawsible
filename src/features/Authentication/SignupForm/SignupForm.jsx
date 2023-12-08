@@ -1,8 +1,56 @@
 // STYLES
 import "./SignupForm.scss";
+import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
 
-function Signup() {
-  return <h1>SignupForm</h1>;
+// UI COMPONENTS
+import { Button, Input } from "../../../ui";
+
+function LoginForm() {
+  return (
+    <div className="login-container">
+      <img
+        src="login-banner.png"
+        alt="Guy with a dog image"
+        className="login-banner"
+      />
+
+      <h1 className="login-title">Log in</h1>
+
+      <div className="login-form">
+        <label htmlFor="email" className="login-label">
+          Email
+        </label>
+        <Input id="email" width="943px" />
+
+        <label htmlFor="password" className="login-label">
+          Password
+        </label>
+        <Input id="password" width="200px" />
+
+        <a href="#">
+          <p className="login-forgot">Forget Password?</p>
+        </a>
+      </div>
+
+      <div className="login-buttons-container">
+        <button type="button" className="login-google">
+          Sign in with Google <FcGoogle className="login-google-icon" />
+        </button>
+
+        <Button variation="primary" icon={true}>
+          Log in
+        </Button>
+      </div>
+
+      <Link to="/signup">
+        <p className="signup-link">
+          Don't have an account?{" "}
+          <span className="signup-link-bold">Sign up</span>
+        </p>
+      </Link>
+    </div>
+  );
 }
 
-export default Signup;
+export default LoginForm;
