@@ -17,7 +17,7 @@ function Profile() {
       <div className="profile-main-container">
         <div className="main-content">
           <div className="Account-img">
-            <img src="/uploadimage.png" alt="profileIcon" width={150} />
+            <img src="uploadimage.png" alt="profileIcon" width={150} />
           </div>
           <div className="Account-header">
             <h4 className="Account-text">Last Name, First Name</h4>
@@ -73,7 +73,7 @@ function Profile() {
             <div className="register-middle-content">
               <div className="register-details">
                 <div className="Register-container-img">
-                  <img src="/shitsu.png" alt="cardImage" />
+                  <img src="shitsu.png" alt="cardImage" />
                 </div>
                 <div>
                   <h3 className="register-middle-header">
@@ -90,7 +90,7 @@ function Profile() {
               </div>
               <div className="register-details">
                 <div className="Register-container-img">
-                  <img src="/public/shitsu.png" alt="cardImage" />
+                  <img src="shitsu.png" alt="cardImage" />
                 </div>
                 <div>
                   <h3 className="register-middle-header">
@@ -107,7 +107,7 @@ function Profile() {
               </div>
               <div className="register-details">
                 <div className="Register-container-img">
-                  <img src="/public/shitsu.png" alt="cardImage" />
+                  <img src="shitsu.png" alt="cardImage" />
                 </div>
                 <div>
                   <h3 className="register-middle-header">

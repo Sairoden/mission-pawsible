@@ -4,7 +4,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 // Services
 import { getCurrentUser } from "../../services";
-import { useEffect } from "react";
 
 export const useGetCurrentUser = () => {
   const location = useLocation();

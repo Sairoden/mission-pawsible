@@ -15,6 +15,7 @@ function Input({
   type = "text",
   register,
   required = false,
+  password,
 }) {
   const [showPassword, setShowPassword] = useState(false);
   const inputType = showPassword ? "text" : type;
@@ -24,6 +25,24 @@ function Input({
 
   const autocompleteValue =
     type === "password" ? "new-password" : type === "email" ? "username" : "on";
+
+  const validEmail = type === "email" && {
+    value: /\S+@\S+\.\S+/,
+    message: "Please provide a valid email",
+  };
+
+  const validPassword = type === "password" && {
+    value: 8,
+    message: "Password needs to be at least 8 characters",
+  };
+
+  const validConfirmPassword =
+    id === "confirmPassword" && (value => value === password);
+
+  const validContactNumber = id === "contactNumber" && {
+    value: /^09\d{9}$/,
+    message: "Should start with 09",
+  };
 
   return (
     <div className="input-container">
@@ -41,11 +60,9 @@ function Input({
         autoComplete={autocompleteValue}
         {...register(id, {
           required,
-          pattern: type === "email" && /\S+@\S+\.\S+/,
-          minLength: type === "password" && {
-            value: 8,
-            message: "Password needs to be at least 8 characters",
-          },
+          pattern: validEmail || validContactNumber,
+          minLength: validPassword,
+          validate: validConfirmPassword,
         })}
       />
       {type === "password" && (

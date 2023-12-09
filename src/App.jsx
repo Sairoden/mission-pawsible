@@ -103,9 +103,9 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <div style={{ fontSize: "32px" }}>
+        {/* <div style={{ fontSize: "32px" }}>
           <ReactQueryDevtools initialIsOpen={false} />
-        </div>
+        </div> */}
 
         <RouterProvider router={router} />
         <Footer />
