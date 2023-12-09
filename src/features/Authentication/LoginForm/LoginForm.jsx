@@ -6,24 +6,32 @@ import "./LoginForm.scss";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { toast } from "react-hot-toast";
 
 // UI COMPONENTS
-import { Button, Input, ErrorInput } from "../../../ui";
+import { Button, Input, ErrorInput, Spinner } from "../../../ui";
+
+// HOOKS
+import { useLogin } from "../../../hooks";
 
 function LoginForm() {
+  // REACT-HOOK-FORM
   const {
     register,
     formState: { errors },
     handleSubmit,
-    reset,
   } = useForm();
 
+  // HOOKS
+  const { login, isPending } = useLogin();
+
   const handleLogin = data => {
-    console.log(data);
+    if (!data.email || !data.password) return;
+
+    login(data);
   };
 
-  console.log(errors);
+  if (isPending) return <Spinner />;
+
   return (
     <div className="login-container">
       <motion.img
@@ -46,6 +54,7 @@ function LoginForm() {
           type="email"
           register={register}
           required="Please provide a valid email address"
+          disabled={isPending}
         />
 
         <label htmlFor="password" className="login-label">
@@ -57,6 +66,7 @@ function LoginForm() {
           type="password"
           register={register}
           required="Please provide a password"
+          disabled={isPending}
         />
 
         <a href="#">

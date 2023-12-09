@@ -16,7 +16,12 @@ import {
 // UI COMPONENTS
 import { Button } from "../index";
 
+// HOOKS
+import { useGetCurrentUser } from "../../hooks";
+
 const Navbar = () => {
+  const { user } = useGetCurrentUser();
+
   return (
     <>
       <nav className="navbar-container">
@@ -65,17 +70,31 @@ const Navbar = () => {
           CONTACT US
         </NavLink>
 
-        <NavLink to="/login">
-          <Button
-            variation="primary"
-            styles={{
-              marginTop: "-5rem",
-              padding: "2rem 6rem",
-            }}
-          >
-            LOG IN
-          </Button>
-        </NavLink>
+        {!user ? (
+          <NavLink to="/login">
+            <Button
+              variation="primary"
+              styles={{
+                marginTop: "-5rem",
+                padding: "2rem 6rem",
+              }}
+            >
+              LOG IN
+            </Button>
+          </NavLink>
+        ) : (
+          <NavLink to="/account">
+            <Button
+              variation="primary"
+              styles={{
+                marginTop: "-5rem",
+                padding: "2rem 6rem",
+              }}
+            >
+              ACCOUNT
+            </Button>
+          </NavLink>
+        )}
       </nav>
       <Outlet />
     </>

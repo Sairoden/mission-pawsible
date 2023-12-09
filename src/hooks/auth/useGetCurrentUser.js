@@ -1,0 +1,24 @@
+// React & Libraries
+import { useQuery } from "@tanstack/react-query";
+import { useLocation, useNavigate } from "react-router-dom";
+
+// Services
+import { getCurrentUser } from "../../services";
+import { useEffect } from "react";
+
+export const useGetCurrentUser = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const { isPending, data: user } = useQuery({
+    queryFn: getCurrentUser,
+    queryKey: ["user"],
+  });
+
+  useEffect(() => {
+    if (user && location.pathname === "/login") navigate("/");
+    if (!user && location.pathname === "/account") navigate("/");
+  }, [user, location.pathname, navigate]);
+
+  return { isPending, user, isAuthenticated: user?.role === "authenticated" };
+};
