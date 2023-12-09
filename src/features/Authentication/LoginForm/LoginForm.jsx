@@ -2,6 +2,7 @@
 import "./LoginForm.scss";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 // UI COMPONENTS
 import { Button, Input } from "../../../ui";
@@ -9,10 +10,13 @@ import { Button, Input } from "../../../ui";
 function LoginForm() {
   return (
     <div className="login-container">
-      <img
+      <motion.img
         src="login-banner.png"
         alt="Guy with a dog image"
         className="login-banner"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.5, ease: "easeIn" }}
       />
 
       <h1 className="login-title">Log in</h1>

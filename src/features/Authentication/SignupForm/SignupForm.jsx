@@ -2,6 +2,7 @@
 import "./SignupForm.scss";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 // UI COMPONENTS
 import { Button, Input } from "../../../ui";
@@ -9,10 +10,12 @@ import { Button, Input } from "../../../ui";
 function SignupForm() {
   return (
     <div className="signup-container">
-      <img
+      <motion.img
         src="/signup-banner.png"
         alt="Guy with a dog image"
         className="signup-banner"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       />
 
       <h1 className="signup-title">Be a part of our growing family today!</h1>
