@@ -15,10 +15,8 @@ export const useGetCurrentUser = () => {
     queryKey: ["user"],
   });
 
-  useEffect(() => {
-    if (user && location.pathname === "/login") navigate("/");
-    if (!user && location.pathname === "/account") navigate("/");
-  }, [user, location.pathname, navigate]);
+  if (user && location.pathname === "/login") navigate("/");
+  if (!user && location.pathname === "/account") navigate("/");
 
   return { isPending, user, isAuthenticated: user?.role === "authenticated" };
 };

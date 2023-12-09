@@ -15,12 +15,12 @@ export const useLogin = () => {
   const { mutate: login, isPending } = useMutation({
     mutationFn: loginApi,
     onSuccess: user => {
-      console.log(user);
       queryClient.setQueryData(["user", user?.user]);
       toast.success("You have successfully logged in");
-      navigate("/", { replace: true });
+      navigate("/");
     },
     onError: err => toast.error(err.message),
+    onSettled: () => queryClient.refetchQueries(["user"]),
   });
 
   return { login, isPending };

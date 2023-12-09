@@ -1,14 +1,23 @@
-import React from "react";
+// STYLES
 import "./Profile.scss";
-import { Button } from "../../../ui";
+
+// UI COMPONENTS
+import { Button, Spinner } from "../../../ui";
+
+// HOOKS
+import { useLogout } from "../../../hooks";
 
 function Profile() {
+  const { logout, isPending } = useLogout();
+
+  if (isPending) return <Spinner />;
+
   return (
     <div className="profile-container">
       <div className="profile-main-container">
         <div className="main-content">
           <div className="Account-img">
-            <img src="/public/uploadimage.png" alt="profileIcon" width={150} />
+            <img src="/uploadimage.png" alt="profileIcon" width={150} />
           </div>
           <div className="Account-header">
             <h4 className="Account-text">Last Name, First Name</h4>
@@ -46,7 +55,9 @@ function Profile() {
           </div>
           <div className="footer-content">
             <Button variation="primary">Edit Profile</Button>
-            <Button variation="primary">Logout</Button>
+            <Button variation="primary" onClick={logout}>
+              Logout
+            </Button>
           </div>
         </div>
       </div>
@@ -62,7 +73,7 @@ function Profile() {
             <div className="register-middle-content">
               <div className="register-details">
                 <div className="Register-container-img">
-                  <img src="/public/shitsu.png" alt="cardImage" />
+                  <img src="/shitsu.png" alt="cardImage" />
                 </div>
                 <div>
                   <h3 className="register-middle-header">
