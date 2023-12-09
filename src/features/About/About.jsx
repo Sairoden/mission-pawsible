@@ -38,30 +38,60 @@ function AboutUs() {
 
       <div className="main-img">
         <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ x: 300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
           className="image1"
         >
-          <img src="about-us-pet-2.png" alt="Cat Image" />
+          <motion.img
+            src="about-us-pet-2.png"
+            alt="Cat Image"
+            drag
+            dragConstraints={{
+              top: -50,
+              left: -50,
+              right: 50,
+              bottom: 50,
+            }}
+          />
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          initial={{ x: 300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
           className="image2"
         >
-          <img src="about-us-pet-3.png" alt="Dog Chihuahua Image" />
+          <motion.img
+            src="about-us-pet-3.png"
+            alt="Dog Chihuahua Image"
+            drag
+            dragConstraints={{
+              top: -50,
+              left: -50,
+              right: 50,
+              bottom: 50,
+            }}
+          />
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          initial={{ x: 300, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.5 }}
           className="image3"
         >
-          <img src="about-us-pet-1.png" alt="Dog Image" />
+          <motion.img
+            src="about-us-pet-1.png"
+            alt="Dog Image"
+            drag
+            dragConstraints={{
+              top: -50,
+              left: -50,
+              right: 50,
+              bottom: 50,
+            }}
+          />
         </motion.div>
       </div>
     </div>
