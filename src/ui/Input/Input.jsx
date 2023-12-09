@@ -13,6 +13,8 @@ function Input({
   onChange,
   width,
   type = "text",
+  register,
+  required = false,
 }) {
   const [showPassword, setShowPassword] = useState(false);
   const inputType = showPassword ? "text" : type;
@@ -37,6 +39,14 @@ function Input({
         placeholder={placeholder || undefined}
         onChange={onChange}
         autoComplete={autocompleteValue}
+        {...register(id, {
+          required,
+          pattern: type === "email" && /\S+@\S+\.\S+/,
+          minLength: type === "password" && {
+            value: 8,
+            message: "Password needs to be at least 8 characters",
+          },
+        })}
       />
       {type === "password" && (
         <>

@@ -1,3 +1,6 @@
+// REACT & LIBRARIES
+import { useForm } from "react-hook-form";
+
 // STYLES
 import "./LoginForm.scss";
 import { FcGoogle } from "react-icons/fc";
@@ -6,13 +9,21 @@ import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 
 // UI COMPONENTS
-import { Button, Input } from "../../../ui";
+import { Button, Input, ErrorInput } from "../../../ui";
 
 function LoginForm() {
-  const handleLogin = () => {
-    toast.success("Successfully toasted!");
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
+
+  const handleLogin = data => {
+    console.log(data);
   };
 
+  console.log(errors);
   return (
     <div className="login-container">
       <motion.img
@@ -25,16 +36,28 @@ function LoginForm() {
 
       <h1 className="login-title">Log in</h1>
 
-      <form className="login-form">
+      <form className="login-form" onSubmit={handleSubmit(handleLogin)}>
         <label htmlFor="email" className="login-label">
-          Email
+          Email <ErrorInput>{errors?.email?.message}</ErrorInput>
         </label>
-        <Input id="email" width="49vw" type="email" />
+        <Input
+          id="email"
+          width="49vw"
+          type="email"
+          register={register}
+          required="Please provide a valid email address"
+        />
 
         <label htmlFor="password" className="login-label">
-          Password
+          Password <ErrorInput>{errors?.password?.message}</ErrorInput>
         </label>
-        <Input id="password" width="49vw" type="password" />
+        <Input
+          id="password"
+          width="49vw"
+          type="password"
+          register={register}
+          required="Please provide a password"
+        />
 
         <a href="#">
           <p className="login-forgot">Forget Password?</p>
@@ -45,7 +68,7 @@ function LoginForm() {
             Sign in with Google <FcGoogle className="login-google-icon" />
           </button>
 
-          <Button variation="primary" icon={true} onClick={handleLogin}>
+          <Button variation="primary" icon={true} type="submit">
             Log in
           </Button>
         </div>
