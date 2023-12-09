@@ -3,11 +3,16 @@ import "./LoginForm.scss";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { toast } from "react-hot-toast";
 
 // UI COMPONENTS
 import { Button, Input } from "../../../ui";
 
 function LoginForm() {
+  const handleLogin = () => {
+    toast.success("Successfully toasted!");
+  };
+
   return (
     <div className="login-container">
       <motion.img
@@ -40,7 +45,7 @@ function LoginForm() {
             Sign in with Google <FcGoogle className="login-google-icon" />
           </button>
 
-          <Button variation="primary" icon={true}>
+          <Button variation="primary" icon={true} onClick={handleLogin}>
             Log in
           </Button>
         </div>
