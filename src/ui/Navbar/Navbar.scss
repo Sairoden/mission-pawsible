@@ -8,7 +8,7 @@
 
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-top: 7rem;
 
   .navbar-logo {
@@ -20,6 +20,19 @@
 
   .active {
     color: $color-orange;
+  }
+
+  .nav-link {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .navbar-icon {
+      height: 2.4rem;
+      width: 2.4rem;
+      object-fit: contain;
+      margin-top: 0.2rem;
+    }
   }
 
   // background: $color-beige;

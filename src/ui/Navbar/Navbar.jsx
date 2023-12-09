@@ -1,5 +1,14 @@
 // REACT & LIBRARIES
 import { Outlet, NavLink } from "react-router-dom";
+import {
+  HiOutlineSignal,
+  HiOutlineTag,
+  HiOutlineTrophy,
+  HiOutlineHome,
+  HiOutlineMegaphone,
+  HiOutlineLightBulb,
+  HiOutlineSquare3Stack3D,
+} from "react-icons/hi2";
 
 // STYLES
 import "./Navbar.scss";
@@ -18,18 +27,44 @@ const Navbar = () => {
             className="navbar-logo"
           />
         </NavLink>
+
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? "active" : "")}
+          className={`nav-link ${({ isActive }) => (isActive ? "active" : "")}`}
         >
+          <HiOutlineHome className="navbar-icon" />
           HOME
         </NavLink>
-        <NavLink to="/lost-pets">LOST PETS</NavLink>
-        <NavLink to="/found-pets">FOUND PETS</NavLink>
-        <NavLink to="/reunited-pets">REUNITED PETS</NavLink>
-        <NavLink to="/resources">RESOURCES</NavLink>
-        <NavLink to="/about-us">ABOUT US</NavLink>
-        <NavLink to="/contact-us">CONTACT US</NavLink>
+
+        <NavLink to="/lost-pets" className="nav-link">
+          <HiOutlineTag className="navbar-icon" />
+          LOST PETS
+        </NavLink>
+
+        <NavLink to="/found-pets" className="nav-link">
+          <HiOutlineSignal className="navbar-icon" />
+          FOUND PETS
+        </NavLink>
+
+        <NavLink to="/reunited-pets" className="nav-link">
+          <HiOutlineTrophy className="navbar-icon" />
+          REUNITED PETS
+        </NavLink>
+
+        <NavLink to="/resources" className="nav-link">
+          <HiOutlineSquare3Stack3D className="navbar-icon" />
+          RESOURCES
+        </NavLink>
+        <NavLink to="/about-us" className="nav-link">
+          <HiOutlineLightBulb className="navbar-icon" />
+          ABOUT US
+        </NavLink>
+
+        <NavLink to="/contact-us" className="nav-link">
+          <HiOutlineMegaphone className="navbar-icon" />
+          CONTACT US
+        </NavLink>
+
         <NavLink to="/login">
           <Button
             variation="primary"
