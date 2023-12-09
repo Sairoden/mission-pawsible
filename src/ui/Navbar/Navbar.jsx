@@ -1,5 +1,8 @@
 // REACT & LIBRARIES
 import { Outlet, NavLink } from "react-router-dom";
+
+// STYLES
+import "./Navbar.scss";
 import {
   HiOutlineSignal,
   HiOutlineTag,
@@ -9,9 +12,6 @@ import {
   HiOutlineLightBulb,
   HiOutlineSquare3Stack3D,
 } from "react-icons/hi2";
-
-// STYLES
-import "./Navbar.scss";
 
 // UI COMPONENTS
 import { Button } from "../index";
