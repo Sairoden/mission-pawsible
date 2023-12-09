@@ -43,7 +43,7 @@ function LoginForm() {
         </div>
       </form>
 
-      <Link to="/signup">
+      <Link to="/signup" onClick={() => scrollTo(0, 0)}>
         <p className="signup-link">
           Don't have an account?{" "}
           <span className="signup-link-bold">Sign up</span>

@@ -80,7 +80,7 @@ function SignupForm() {
         </div>
       </form>
 
-      <Link to="/login">
+      <Link to="/login" onClick={() => scrollTo(0, 0)}>
         <p className="login-link">
           Already have an account?{" "}
           <span className="login-link-bold">Log in</span>
