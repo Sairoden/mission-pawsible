@@ -17,50 +17,64 @@ function Profile() {
       <div className="profile-main-container">
         <div className="main-content">
           <div className="Account-img">
-            <img src="uploadimage.png" alt="profileIcon" width={150} />
+            <img src="profile.png" alt="profileIcon" className="profile-img" />
           </div>
+
           <div className="Account-header">
-            <h4 className="Account-text">Last Name, First Name</h4>
+            <h4 className="Account-text">Sairoden Gandarosa</h4>
           </div>
         </div>
+
         <div className="middle_container">
           <div className="middle-content">
             <div className="Account-details">
               <div>
                 <span className="Account-span">EMAIL:</span>
               </div>
+
               <div>
-                <span className="Account_emailText">andreachiu@yahoo.com</span>
+                <span className="Account_emailText">
+                  odingandarosa@gmail.com
+                </span>
               </div>
             </div>
+
             <div className="Account-contact">
               <div>
                 <span className="Account-span">CONTACT:</span>
               </div>
+
               <div>
-                <span className="Account_emailText">+63 917 1234567</span>
+                <span className="Account_emailText">09215390606</span>
               </div>
             </div>
+
             <div className="Account-address">
               <div>
                 <span className="Account-span">ADDRESS:</span>
               </div>
+
               <div>
                 <span className="Account_emailText">
                   94 Kamuning Road Interweave Building,Brgy. Kamuning, Quezon
-                  City
+                  City 94 Kamuning Road Interweave Building,Brgy. Kamuning,
+                  Quezon City
                 </span>
               </div>
             </div>
           </div>
+
           <div className="footer-content">
-            <Button variation="primary">Edit Profile</Button>
-            <Button variation="primary" onClick={logout}>
+            <Button variation="primary" type="submit">
+              Update
+            </Button>
+            <Button variation="secondary" onClick={logout}>
               Logout
             </Button>
           </div>
         </div>
       </div>
+
       <div>
         <div className="register_container">
           <div className="register-main-container">
@@ -70,11 +84,13 @@ function Profile() {
                 <button className="register-btnAdd">ADD +</button>
               </div>
             </div>
+
             <div className="register-middle-content">
               <div className="register-details">
                 <div className="Register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
+
                 <div>
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
@@ -83,15 +99,18 @@ function Profile() {
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
+
                 <div className="register-middle-btn">
                   <button className="Update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </div>
+
               <div className="register-details">
                 <div className="Register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
+
                 <div>
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
@@ -100,15 +119,18 @@ function Profile() {
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
+
                 <div className="register-middle-btn">
                   <button className="Update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </div>
+
               <div className="register-details">
                 <div className="Register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
+
                 <div>
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
@@ -117,16 +139,19 @@ function Profile() {
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
+
                 <div className="register-middle-btn">
                   <button className="Update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </div>
             </div>
+
             <div className="bottom-content">
               <Button variation="primary">SHOW MORE</Button>
             </div>
           </div>
+
           <div className="register-footer-container">
             <div className="register-footer-content">
               <div className="register-header">
@@ -134,6 +159,7 @@ function Profile() {
                 <button className="register-btnAdd">ADD +</button>
               </div>
             </div>
+
             <div className="register-footer-text">
               <h3 className="middle_footer_text">NO ENTRY</h3>
             </div>
