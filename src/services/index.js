@@ -5,7 +5,13 @@ import { supabaseUrl, supabase } from "./supabase";
 import { getAllPets } from "./apiPets";
 
 // AUTH
-import { login, getCurrentUser, logout } from "./apiAuth";
+import {
+  login,
+  getCurrentUser,
+  logout,
+  signup,
+  resendEmailConfirmation,
+} from "./apiAuth";
 
 export {
   // SUPABASE
@@ -19,4 +25,6 @@ export {
   login,
   getCurrentUser,
   logout,
+  signup,
+  resendEmailConfirmation,
 };

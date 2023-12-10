@@ -10,6 +10,9 @@ import { motion } from "framer-motion";
 // UI COMPONENTS
 import { Button, Input, ErrorInput } from "../../../ui";
 
+// HOOKS
+import { useSignup } from "../../../hooks";
+
 function SignupForm() {
   // REACT-HOOK-FORM
   const {
@@ -19,8 +22,23 @@ function SignupForm() {
     getValues,
   } = useForm();
 
+  const { signup, isPending } = useSignup();
+
   const handleSignup = data => {
-    console.log(data);
+    if (
+      !data.firstName ||
+      !data.lastName ||
+      !data.email ||
+      !data.contactNumber ||
+      !data.address ||
+      !data.password ||
+      !data.confirmPassword
+    )
+      return;
+
+    if (data.password !== data.confirmPassword) return;
+
+    signup(data);
   };
 
   return (
@@ -47,6 +65,7 @@ function SignupForm() {
               width="22vw"
               register={register}
               required="Please provide a first name"
+              disabled={isPending}
             />
           </div>
 
@@ -59,6 +78,7 @@ function SignupForm() {
               width="22vw"
               register={register}
               required="Please provide a last name"
+              disabled={isPending}
             />
           </div>
 
@@ -72,6 +92,7 @@ function SignupForm() {
               type="email"
               register={register}
               required="Please provide a valid email address"
+              disabled={isPending}
             />
           </div>
 
@@ -85,6 +106,7 @@ function SignupForm() {
               width="22vw"
               register={register}
               required="Please provide"
+              disabled={isPending}
             />
           </div>
 
@@ -97,6 +119,7 @@ function SignupForm() {
               width="49vw"
               register={register}
               required="Please provide an address"
+              disabled={isPending}
             />
           </div>
 
@@ -110,6 +133,7 @@ function SignupForm() {
               type="password"
               register={register}
               required="Please provide a password"
+              disabled={isPending}
             />
           </div>
 
@@ -125,16 +149,22 @@ function SignupForm() {
               register={register}
               required="Password need to match"
               password={getValues().password}
+              disabled={isPending}
             />
           </div>
         </div>
 
         <div className="signup-buttons-container">
-          <button type="button" className="signup-google">
+          <button type="button" className="signup-google" disabled={isPending}>
             Sign in with Google <FcGoogle className="signup-google-icon" />
           </button>
 
-          <Button variation="primary" icon={true} type="submit">
+          <Button
+            variation="primary"
+            icon={true}
+            type="submit"
+            disabled={isPending}
+          >
             Signup
           </Button>
         </div>

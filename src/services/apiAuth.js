@@ -20,13 +20,71 @@ export const login = async ({ email, password }) => {
     password,
   });
 
+  if (error?.message === "Email not confirmed")
+    throw new Error("Email is not confirmed. Please verify it.");
+
   if (error) throw new Error("Invalid credentials. Please try again.");
 
   return data;
+};
+
+export const signup = async ({
+  firstName,
+  lastName,
+  email,
+  contactNumber,
+  address,
+  password,
+}) => {
+  const { data: registeredUser } = await supabase
+    .from("users")
+    .select("email")
+    .eq("email", email);
+
+  if (registeredUser.length > 0)
+    throw new Error("Email has already been registered.");
+
+  const { data, error } = await supabase.auth.signUp({
+    email,
+    password,
+  });
+
+  if (error) throw new Error("Email has already been registered.");
+
+  const { data: user, error: userError } = await supabase
+    .from("users")
+    .insert([
+      { id: data.user.id, firstName, lastName, email, contactNumber, address },
+    ])
+    .select();
+
+  data.user.user_metadata = {
+    firstName: user[0]?.firstName,
+    lastName: user[0]?.lastName,
+    contactNumber: user[0]?.contactNumber,
+    address: user[0]?.address,
+    avatar: user[0]?.avatar,
+  };
+
+  if (userError) throw new Error("Registration failed.");
 };
 
 export const logout = async () => {
   const { error } = await supabase.auth.signOut();
 
   if (error) throw new Error(error.message);
+};
+
+export const resendEmailConfirmation = async email => {
+  const { data, error } = await supabase.auth.resend({
+    type: "signup",
+    email,
+    options: {
+      emailRedirectTo: "http://localhost:5173/",
+    },
+  });
+
+  if (error) throw new Error("Failed to resend email confirmation");
+
+  return data;
 };

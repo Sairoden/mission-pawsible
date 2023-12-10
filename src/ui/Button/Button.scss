@@ -72,3 +72,21 @@
   height: 2.8rem;
   transition: transform 0.3s ease;
 }
+
+.button-disabled {
+  cursor: not-allowed;
+  background: $color-orange;
+  &:hover {
+    background: $color-orange;
+    &:before {
+      width: 0;
+    }
+    .button-icon {
+      transform: scale(1);
+    }
+  }
+
+  &:active {
+    transform: scale(1);
+  }
+}

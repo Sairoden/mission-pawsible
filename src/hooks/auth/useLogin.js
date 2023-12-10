@@ -16,7 +16,7 @@ export const useLogin = () => {
     mutationFn: loginApi,
     onSuccess: user => {
       queryClient.setQueryData(["user", user?.user]);
-      toast.success("You have successfully logged in");
+      toast.success("You have successfully logged in.");
       navigate("/");
     },
     onError: err => toast.error(err.message),

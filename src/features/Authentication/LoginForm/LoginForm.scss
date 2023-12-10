@@ -58,6 +58,17 @@
     }
   }
 
+  .forgot-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .forgot-button {
+      all: unset;
+      cursor: pointer;
+    }
+  }
+
   .login-buttons-container {
     display: flex;
     align-items: center;

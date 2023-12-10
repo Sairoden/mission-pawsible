@@ -6,12 +6,13 @@ import "./LoginForm.scss";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import toast from "react-hot-toast";
 
 // UI COMPONENTS
 import { Button, Input, ErrorInput, Spinner } from "../../../ui";
 
 // HOOKS
-import { useLogin } from "../../../hooks";
+import { useLogin, useResendEmail } from "../../../hooks";
 
 function LoginForm() {
   // REACT-HOOK-FORM
@@ -19,15 +20,35 @@ function LoginForm() {
     register,
     formState: { errors },
     handleSubmit,
+    getValues,
   } = useForm();
 
   // HOOKS
   const { login, isPending } = useLogin();
+  const { resendEmail } = useResendEmail();
 
   const handleLogin = data => {
     if (!data.email || !data.password) return;
 
     login(data);
+  };
+
+  const handleResendEmail = () => {
+    if (!getValues().email) {
+      toast.error("Please provide a valid email address.");
+      return;
+    }
+
+    resendEmail(getValues().email);
+  };
+
+  const handleForgotPassword = () => {
+    if (!getValues().email || !getValues().password) {
+      toast.error("Please provide your email and password.");
+      return;
+    }
+
+    console.log(getValues().email, getValues().password);
   };
 
   if (isPending) return <Spinner />;
@@ -69,16 +90,35 @@ function LoginForm() {
           disabled={isPending}
         />
 
-        <a href="#">
-          <p className="login-forgot">Forget Password?</p>
-        </a>
+        <div className="forgot-container">
+          <button
+            type="button"
+            className="forgot-button"
+            onClick={handleForgotPassword}
+          >
+            <p className="login-forgot">Forget Password?</p>
+          </button>
+
+          <button
+            type="button"
+            className="forgot-button"
+            onClick={handleResendEmail}
+          >
+            <p className="login-forgot">Resend Email?</p>
+          </button>
+        </div>
 
         <div className="login-buttons-container">
-          <button type="button" className="login-google">
+          <button type="button" className="login-google" disabled={isPending}>
             Sign in with Google <FcGoogle className="login-google-icon" />
           </button>
 
-          <Button variation="primary" icon={true} type="submit">
+          <Button
+            variation="primary"
+            icon={true}
+            type="submit"
+            disabled={isPending}
+          >
             Log in
           </Button>
         </div>

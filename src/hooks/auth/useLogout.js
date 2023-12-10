@@ -2,6 +2,9 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 
+// STYLES
+import toast from "react-hot-toast";
+
 // SERVICES
 import { logout as logoutApi } from "../../services";
 
@@ -15,6 +18,7 @@ export const useLogout = () => {
       navigate("/");
       queryClient.removeQueries();
     },
+    onError: err => toast.error(err.message),
   });
 
   return { logout, isPending };
