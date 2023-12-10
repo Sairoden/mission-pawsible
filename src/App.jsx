@@ -16,7 +16,7 @@ import {
 } from "./pages";
 
 // UI COMPONENTS
-import { Navbar, Footer } from "./ui";
+import { Navbar, Footer, PageNotFound } from "./ui";
 
 // TANSTACK QUERY
 const queryClient = new QueryClient({
@@ -95,6 +95,10 @@ function App() {
         {
           path: "/chat",
           element: <ChatMessage />,
+        },
+        {
+          path: "*",
+          element: <PageNotFound />,
         },
       ],
     },
