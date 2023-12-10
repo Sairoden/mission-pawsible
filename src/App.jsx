@@ -13,6 +13,8 @@ import {
   Signup,
   Account,
   AboutUs,
+  Resource,
+  ResourceDetail,
 } from "./pages";
 
 // UI COMPONENTS
@@ -70,11 +72,11 @@ function App() {
         },
         {
           path: "/resources",
-          element: <h1>Resources</h1>,
+          element: <Resource />,
         },
         {
           path: "/resources/:resourceId",
-          element: <h1>Specific Resource Detail</h1>,
+          element: <ResourceDetail />,
         },
         {
           path: "/about-us",

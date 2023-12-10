@@ -5,15 +5,14 @@ import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 
+// ASSETS
+import logo from "../../assets/logo-mission.png";
+
 function Footer() {
   return (
     <footer className="footer-container">
       <a href="#" className="footer-logo">
-        <img
-          src="/logo-mission.png"
-          alt="mission-pawsible logo"
-          className="logo"
-        />
+        <img src={logo} alt="mission-pawsible logo" className="logo" />
       </a>
 
       <div className="footer-main">

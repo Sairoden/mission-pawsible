@@ -19,6 +19,9 @@ import { Button } from "../index";
 // HOOKS
 import { useGetCurrentUser } from "../../hooks";
 
+// ASSETS
+import logo from "../../assets/logo-mission.png";
+
 const Navbar = () => {
   const { user } = useGetCurrentUser();
 
@@ -26,11 +29,7 @@ const Navbar = () => {
     <>
       <nav className="navbar-container">
         <NavLink to="/">
-          <img
-            src="logo-mission.png"
-            alt="mission pawsible logo"
-            className="navbar-logo"
-          />
+          <img src={logo} alt="mission pawsible logo" className="navbar-logo" />
         </NavLink>
 
         <NavLink
