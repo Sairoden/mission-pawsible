@@ -1,3 +1,6 @@
+// REACT & LIBRARIES
+import { useForm } from "react-hook-form";
+
 // STYLES
 import "./Contact.scss";
 import Lottie from "lottie-react";
@@ -8,6 +11,13 @@ import contactAnimation from "../../assets/contact-animation.json";
 import { Button } from "../../ui";
 
 function Contact() {
+  // REACT-HOOK-FORM
+  const { register, handleSubmit } = useForm();
+
+  const handleContact = data => {
+    console.log(data);
+  };
+
   return (
     <div className="contact-container">
       <motion.div
@@ -32,30 +42,28 @@ function Contact() {
         </div>
       </div>
       <div className="form-container">
-        <form className="form-content">
+        <form className="form-content" onSubmit={handleSubmit(handleContact)}>
           <label className="label-text">Email</label>
           <br />
 
-          <input type="text" className="form-input" />
+          <input type="text" className="form-input" {...register("email")} />
           <br />
 
           <label className="label-text">Subject</label>
           <br />
 
-          <input type="text" className="form-input" />
+          <input type="text" className="form-input" {...register("subject")} />
           <br />
 
           <label className="label-text">Message</label>
           <br />
 
-          <textarea className="form-textarea" />
-          <br />
+          <textarea className="form-textarea" {...register("message")} />
+
+          <Button variation="primary" icon={true} type="submit">
+            Send
+          </Button>
         </form>
-      </div>
-      <div className="footer-section">
-        <Button variation="primary" icon={true}>
-          Send
-        </Button>
       </div>
     </div>
   );

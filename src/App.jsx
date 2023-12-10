@@ -103,9 +103,11 @@ function App() {
   return (
     <>
       <QueryClientProvider client={queryClient}>
-        <div style={{ fontSize: "32px" }}>
-          <ReactQueryDevtools initialIsOpen={false} />
-        </div>
+        {import.meta.env.MODE === "development" && (
+          <div style={{ fontSize: "32px" }}>
+            <ReactQueryDevtools initialIsOpen={false} />
+          </div>
+        )}
 
         <RouterProvider router={router} />
         <Footer />
