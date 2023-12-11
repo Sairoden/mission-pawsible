@@ -7,6 +7,8 @@ import { Button, Spinner } from "../../../ui";
 // HOOKS
 import { useLogout } from "../../../hooks";
 
+import { motion } from "framer-motion";
+
 function Profile() {
   const { logout, isPending } = useLogout();
 
@@ -86,7 +88,12 @@ function Profile() {
             </div>
 
             <div className="register-middle-content">
-              <div className="register-details">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="register-details"
+              >
                 <div className="Register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
@@ -104,9 +111,14 @@ function Profile() {
                   <button className="Update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="register-details">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="register-details"
+              >
                 <div className="Register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
@@ -124,9 +136,14 @@ function Profile() {
                   <button className="Update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
-              </div>
+              </motion.div>
 
-              <div className="register-details">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="register-details"
+              >
                 <div className="Register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
@@ -144,7 +161,82 @@ function Profile() {
                   <button className="Update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
-              </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="register-details"
+              >
+                <div className="Register-container-img">
+                  <img src="shitsu.png" alt="cardImage" />
+                </div>
+
+                <div>
+                  <h3 className="register-middle-header">
+                    MO5-Poodle Tiny Yellow
+                  </h3>
+                  <span className="Registered-spanText">
+                    GENDER: Female Last Seen: Nov 12,2019
+                  </span>
+                </div>
+
+                <div className="register-middle-btn">
+                  <button className="Update-btn">UPDATE</button>
+                  <button className="listing-btn">CLOSE LISTING</button>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="register-details"
+              >
+                <div className="Register-container-img">
+                  <img src="shitsu.png" alt="cardImage" />
+                </div>
+
+                <div>
+                  <h3 className="register-middle-header">
+                    MO5-Poodle Tiny Yellow
+                  </h3>
+                  <span className="Registered-spanText">
+                    GENDER: Female Last Seen: Nov 12,2019
+                  </span>
+                </div>
+
+                <div className="register-middle-btn">
+                  <button className="Update-btn">UPDATE</button>
+                  <button className="listing-btn">CLOSE LISTING</button>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="register-details"
+              >
+                <div className="Register-container-img">
+                  <img src="shitsu.png" alt="cardImage" />
+                </div>
+
+                <div>
+                  <h3 className="register-middle-header">
+                    MO5-Poodle Tiny Yellow
+                  </h3>
+                  <span className="Registered-spanText">
+                    GENDER: Female Last Seen: Nov 12,2019
+                  </span>
+                </div>
+
+                <div className="register-middle-btn">
+                  <button className="Update-btn">UPDATE</button>
+                  <button className="listing-btn">CLOSE LISTING</button>
+                </div>
+              </motion.div>
             </div>
 
             <div className="bottom-content">
