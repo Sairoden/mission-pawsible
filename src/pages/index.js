@@ -7,6 +7,9 @@ import Account from "./Account";
 import AboutUs from "./AboutUs";
 import Resource from "./Resource";
 import ResourceDetail from "./ResourceDetail";
+import LostPet from "./LostPet";
+import FoundPet from "./FoundPet";
+import ReunitedPet from "./ReunitedPet";
 
 export {
   ChatMessage,
@@ -18,4 +21,7 @@ export {
   AboutUs,
   Resource,
   ResourceDetail,
+  LostPet,
+  FoundPet,
+  ReunitedPet,
 };

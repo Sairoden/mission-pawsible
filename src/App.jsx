@@ -15,6 +15,7 @@ import {
   AboutUs,
   Resource,
   ResourceDetail,
+  LostPet,
 } from "./pages";
 
 // UI COMPONENTS
@@ -48,7 +49,7 @@ function App() {
         },
         {
           path: "/lost-pets",
-          element: <h1>Lost Pets</h1>,
+          element: <LostPet />,
         },
         {
           path: "/found-pets",

@@ -1,4 +1,4 @@
-import React from "react";
+// STYLES
 import "./Resources.scss";
 import { motion } from "framer-motion";
 
@@ -10,18 +10,14 @@ function Resources() {
       </div>
       <div className="resources-middle-container">
         <motion.div
-          initial={{ x: "100%" }}
-          animate={{ x: "0" }}
-          transition={{ duration: 1, origin: 1 }}
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: "0", opacity: 1 }}
+          transition={{ duration: 1, origin: 1, delay: 0.5 }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img
-                src="/public/resource-dog.png"
-                alt="resourcesImage"
-                width={210}
-              />
+              <img src="/resource.png" alt="resourcesImage" width={210} />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
@@ -47,18 +43,14 @@ function Resources() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: "-0%" }}
-          transition={{ duration: 1, origin: 1 }}
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: "0", opacity: 1 }}
+          transition={{ duration: 1, origin: 1, delay: 1 }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img
-                src="/public/resource-dog.png"
-                alt="resourcesImage"
-                width={210}
-              />
+              <img src="/resource.png" alt="resourcesImage" width={210} />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
@@ -84,18 +76,14 @@ function Resources() {
           </div>
         </motion.div>
         <motion.div
-          initial={{ x: "100%" }}
-          animate={{ x: "0" }}
-          transition={{ duration: 1, origin: 1 }}
+          initial={{ x: "100%", opacity: 0 }}
+          animate={{ x: "0", opacity: 1 }}
+          transition={{ duration: 1, origin: 1, delay: 1.5 }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img
-                src="/public/resource-dog.png"
-                alt="resourcesImage"
-                width={210}
-              />
+              <img src="/resource.png" alt="resourcesImage" width={210} />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
