@@ -2,24 +2,37 @@
 import "./LostPets.scss";
 
 // UI COMPONENTS
+import { Button } from "../../../ui";
 
 function LostPets() {
   return (
     <div className="lost-pets-container">
-      <div className="pets-banner">
-        <img src="/lost-pets-banner.png" alt="lost-pets banner" />
-        <div className="pets-banner-text">
-          <h1>Find Your Lost Pet</h1>
-          <p>We help lost pets and return them back to their owners.</p>
-          <button className="pets-banner-button">
-            Post your Lost Pet{" "}
-            <img
-              src="/paw.svg"
-              alt="paw icon"
-              className="pets-banner-button-icon"
-            />
-          </button>
+      <div className="pets-banner-container">
+        <img
+          src="/lost-pets-banner.png"
+          alt="lost-pets banner"
+          className="pets-banner-image"
+        />
+        <div className="pets-banner-content">
+          <div className="pets-banner-text">
+            <h1 className="pets-banner-title">Find Your Lost Pet</h1>
+            <p className="pets-banner-subtitle">
+              We help lost pets and return them back to their owners.
+            </p>
+          </div>
+
+          <Button
+            variation="primary"
+            icon={true}
+            styles={{ padding: "2rem 4rem" }}
+          >
+            POST YOUR PET
+          </Button>
         </div>
+      </div>
+
+      <div className="pets-filter-container">
+        <h1>FILTER</h1>
       </div>
     </div>
   );

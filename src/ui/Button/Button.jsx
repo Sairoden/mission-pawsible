@@ -9,15 +9,14 @@ const Button = ({
   onClick,
   type = "button",
   disabled = false,
+  iconStyles,
 }) => {
   return (
     <button
       onClick={onClick}
       style={styles}
       type={type}
-      className={`button ${variation} ${icon && "button-icon-padding"} ${
-        disabled && "button-disabled"
-      }`}
+      className={`button ${variation} ${disabled && "button-disabled"}`}
       disabled={disabled}
     >
       {children}

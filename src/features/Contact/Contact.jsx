@@ -60,7 +60,12 @@ function Contact() {
 
           <textarea className="form-textarea" {...register("message")} />
 
-          <Button variation="primary" icon={true} type="submit">
+          <Button
+            variation="primary"
+            icon={true}
+            type="submit"
+            styles={{ padding: "1.6rem 7.5rem" }}
+          >
             Send
           </Button>
         </form>
