@@ -1,1 +1,57 @@
 @import "../../../index.scss";
+
+.detail-container {
+  background-color: #ffffff;
+  padding: 20px 50px 20px 20px;
+  border: 0px solid black;
+  border-radius: 20px;
+  margin: 50px;
+}
+
+.detail-img {
+  margin-top: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.detail-text {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.detail-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-header-text {
+  font-size: 4.8rem;
+  color: #003459;
+}
+
+.header-span {
+  display: flex;
+  gap: 5px;
+}
+
+.span_name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ff902a;
+}
+
+.span_date {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #003459;
+}
+
+.detail-footer-span {
+  color: #2f2105;
+  font-size: 2.4rem;
+  text-align: justify;
+}
