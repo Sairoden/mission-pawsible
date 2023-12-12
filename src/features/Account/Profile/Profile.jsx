@@ -252,8 +252,56 @@ function Profile() {
               </div>
             </div>
 
-            <div className="register-footer-text">
-              <h3 className="middle_footer_text">NO ENTRY</h3>
+            <div className="register-footer-image-container">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="register-details"
+              >
+                <div className="Register-container-img">
+                  <img src="shitsu.png" alt="cardImage" />
+                </div>
+
+                <div>
+                  <h3 className="register-middle-header">
+                    MO5-Poodle Tiny Yellow
+                  </h3>
+                  <span className="Registered-spanText">
+                    GENDER: Female Last Seen: Nov 12,2019
+                  </span>
+                </div>
+
+                <div className="register-middle-btn">
+                  <button className="Update-btn">UPDATE</button>
+                  <button className="listing-btn">CLOSE LISTING</button>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.7 }}
+                className="register-details"
+              >
+                <div className="Register-container-img">
+                  <img src="shitsu.png" alt="cardImage" />
+                </div>
+
+                <div>
+                  <h3 className="register-middle-header">
+                    MO5-Poodle Tiny Yellow
+                  </h3>
+                  <span className="Registered-spanText">
+                    GENDER: Female Last Seen: Nov 12,2019
+                  </span>
+                </div>
+
+                <div className="register-middle-btn">
+                  <button className="Update-btn">UPDATE</button>
+                  <button className="listing-btn">CLOSE LISTING</button>
+                </div>
+              </motion.div>
             </div>
           </div>
         </div>

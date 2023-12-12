@@ -302,3 +302,11 @@
   display: block;
   margin: 0 auto;
 }
+
+.register-footer-image-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
