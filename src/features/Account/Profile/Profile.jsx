@@ -18,46 +18,46 @@ function Profile() {
     <div className="profile-container">
       <div className="profile-main-container">
         <div className="main-content">
-          <div className="Account-img">
+          <div className="account-img">
             <img src="profile.png" alt="profileIcon" className="profile-img" />
           </div>
 
-          <div className="Account-header">
-            <h4 className="Account-text">Sairoden Gandarosa</h4>
+          <div className="account-header">
+            <h4 className="account-text">Sairoden Gandarosa</h4>
           </div>
         </div>
 
         <div className="middle_container">
           <div className="middle-content">
-            <div className="Account-details">
+            <div className="account-details">
               <div>
-                <span className="Account-span">EMAIL:</span>
+                <span className="account-span">EMAIL:</span>
               </div>
 
               <div>
-                <span className="Account_emailText">
+                <span className="account_emailText">
                   odingandarosa@gmail.com
                 </span>
               </div>
             </div>
 
-            <div className="Account-contact">
+            <div className="account-contact">
               <div>
-                <span className="Account-span">CONTACT:</span>
+                <span className="account-span">CONTACT:</span>
               </div>
 
               <div>
-                <span className="Account_emailText">09215390606</span>
+                <span className="account_emailText">09215390606</span>
               </div>
             </div>
 
-            <div className="Account-address">
+            <div className="account-address">
               <div>
-                <span className="Account-span">ADDRESS:</span>
+                <span className="account-span">ADDRESS:</span>
               </div>
 
               <div>
-                <span className="Account_emailText">
+                <span className="account_emailText">
                   94 Kamuning Road Interweave Building,Brgy. Kamuning, Quezon
                   City 94 Kamuning Road Interweave Building,Brgy. Kamuning,
                   Quezon City
@@ -94,7 +94,7 @@ function Profile() {
                 transition={{ duration: 0.7 }}
                 className="register-details"
               >
-                <div className="Register-container-img">
+                <div className="register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
 
@@ -102,13 +102,13 @@ function Profile() {
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
                   </h3>
-                  <span className="Registered-spanText">
+                  <span className="registered-spanText">
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
 
                 <div className="register-middle-btn">
-                  <button className="Update-btn">UPDATE</button>
+                  <button className="update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </motion.div>
@@ -119,7 +119,7 @@ function Profile() {
                 transition={{ duration: 0.7 }}
                 className="register-details"
               >
-                <div className="Register-container-img">
+                <div className="register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
 
@@ -127,13 +127,13 @@ function Profile() {
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
                   </h3>
-                  <span className="Registered-spanText">
+                  <span className="registered-spanText">
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
 
                 <div className="register-middle-btn">
-                  <button className="Update-btn">UPDATE</button>
+                  <button className="update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </motion.div>
@@ -144,7 +144,7 @@ function Profile() {
                 transition={{ duration: 0.7 }}
                 className="register-details"
               >
-                <div className="Register-container-img">
+                <div className="register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
 
@@ -152,13 +152,13 @@ function Profile() {
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
                   </h3>
-                  <span className="Registered-spanText">
+                  <span className="registered-spanText">
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
 
                 <div className="register-middle-btn">
-                  <button className="Update-btn">UPDATE</button>
+                  <button className="update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </motion.div>
@@ -169,7 +169,7 @@ function Profile() {
                 transition={{ duration: 0.7 }}
                 className="register-details"
               >
-                <div className="Register-container-img">
+                <div className="register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
 
@@ -177,13 +177,13 @@ function Profile() {
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
                   </h3>
-                  <span className="Registered-spanText">
+                  <span className="registered-spanText">
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
 
                 <div className="register-middle-btn">
-                  <button className="Update-btn">UPDATE</button>
+                  <button className="update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </motion.div>
@@ -194,7 +194,7 @@ function Profile() {
                 transition={{ duration: 0.7 }}
                 className="register-details"
               >
-                <div className="Register-container-img">
+                <div className="register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
 
@@ -202,13 +202,13 @@ function Profile() {
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
                   </h3>
-                  <span className="Registered-spanText">
+                  <span className="registered-spanText">
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
 
                 <div className="register-middle-btn">
-                  <button className="Update-btn">UPDATE</button>
+                  <button className="update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </motion.div>
@@ -219,7 +219,7 @@ function Profile() {
                 transition={{ duration: 0.7 }}
                 className="register-details"
               >
-                <div className="Register-container-img">
+                <div className="register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
 
@@ -227,13 +227,13 @@ function Profile() {
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
                   </h3>
-                  <span className="Registered-spanText">
+                  <span className="registered-spanText">
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
 
                 <div className="register-middle-btn">
-                  <button className="Update-btn">UPDATE</button>
+                  <button className="update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </motion.div>
@@ -263,7 +263,7 @@ function Profile() {
                 transition={{ duration: 0.7 }}
                 className="register-details"
               >
-                <div className="Register-container-img">
+                <div className="register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
 
@@ -271,13 +271,13 @@ function Profile() {
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
                   </h3>
-                  <span className="Registered-spanText">
+                  <span className="registered-spanText">
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
 
                 <div className="register-middle-btn">
-                  <button className="Update-btn">UPDATE</button>
+                  <button className="update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </motion.div>
@@ -288,7 +288,7 @@ function Profile() {
                 transition={{ duration: 0.7 }}
                 className="register-details"
               >
-                <div className="Register-container-img">
+                <div className="register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
 
@@ -296,13 +296,13 @@ function Profile() {
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
                   </h3>
-                  <span className="Registered-spanText">
+                  <span className="registered-spanText">
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
 
                 <div className="register-middle-btn">
-                  <button className="Update-btn">UPDATE</button>
+                  <button className="update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </motion.div>
@@ -313,7 +313,7 @@ function Profile() {
                 transition={{ duration: 0.7 }}
                 className="register-details"
               >
-                <div className="Register-container-img">
+                <div className="register-container-img">
                   <img src="shitsu.png" alt="cardImage" />
                 </div>
 
@@ -321,13 +321,13 @@ function Profile() {
                   <h3 className="register-middle-header">
                     MO5-Poodle Tiny Yellow
                   </h3>
-                  <span className="Registered-spanText">
+                  <span className="registered-spanText">
                     GENDER: Female Last Seen: Nov 12,2019
                   </span>
                 </div>
 
                 <div className="register-middle-btn">
-                  <button className="Update-btn">UPDATE</button>
+                  <button className="update-btn">UPDATE</button>
                   <button className="listing-btn">CLOSE LISTING</button>
                 </div>
               </motion.div>

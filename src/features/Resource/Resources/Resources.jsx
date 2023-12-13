@@ -47,7 +47,7 @@ function Resources() {
         <motion.div
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: "0", opacity: 1 }}
-          transition={{ duration: 1, origin: 1, delay: 0.5 }}
+          transition={{ duration: 1, origin: 1, delay: 0.6 }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">
@@ -81,7 +81,7 @@ function Resources() {
         <motion.div
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: "0", opacity: 1 }}
-          transition={{ duration: 1, origin: 1, delay: 0.5 }}
+          transition={{ duration: 1, origin: 1, delay: 0.7 }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">

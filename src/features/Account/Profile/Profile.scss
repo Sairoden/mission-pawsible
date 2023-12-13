@@ -1,8 +1,9 @@
 @import "../../../index.scss";
 
 .profile-container {
-  padding: 5rem;
-  color: #667479;
+  width: 90%;
+  margin: auto;
+  color: $color-darkgray;
   display: flex;
   flex-direction: row;
   gap: 5rem;
@@ -10,83 +11,82 @@
 }
 
 .profile-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   padding: 20px;
   border-radius: 15px;
-  background-color: #ffffff;
+  background-color: $color-white;
   font-size: 1rem;
   width: 25vw;
-  height: 65vh;
-}
+  height: 70vh;
 
-.main-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  justify-items: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
 
-.Account-img {
-  margin: auto;
-}
+  .account-text {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: $color-brown;
+  }
+  .middle_container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .middle-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .account-details {
+    display: flex;
+    flex-direction: row;
+    gap: 4.6rem;
+    grid-template-columns: 1fr 75%;
+    border-bottom: 1px solid $color-mainlyblue;
+    padding-bottom: 1rem;
+  }
 
-.Account-text {
-  font-weight: 400;
-  font-size: 1.8rem;
-  color: $color-brown;
-}
-.middle_container {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-}
-.middle-content {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.Account-details {
-  display: flex;
-  flex-direction: row;
-  gap: 4.6rem;
-  grid-template-columns: 1fr 75%;
-  border-bottom: 1px solid #ebeeef;
-  padding-bottom: 1rem;
-}
+  .account-contact {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid $color-mainlyblue;
+    padding-bottom: 1rem;
+  }
 
-.Account-contact {
-  display: flex;
-  gap: 10px;
-  border-bottom: 1px solid #ebeeef;
-  padding-bottom: 1rem;
-}
+  .account-address {
+    display: flex;
+    gap: 20px;
+  }
 
-.Account-address {
-  display: flex;
-  gap: 20px;
-}
+  .account-span {
+    font-weight: 400;
+    font-size: 1.6rem;
+  }
 
-.Account-span {
-  font-weight: 400;
-  font-size: 1.6rem;
-}
+  .account_emailText {
+    font-size: 1.6rem;
+    font-weight: 300;
+  }
 
-.Account_emailText {
-  font-size: 1.6rem;
-  font-weight: 300;
-}
+  .account-header {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
 
-.Account-header {
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-}
-
-.footer-content {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
+  .footer-content {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 // registered pet section scss below //
@@ -94,8 +94,9 @@
 .register_container {
   padding: 10px;
   border-radius: 15px;
-  background-color: #fff;
+  background-color: $color-white;
   height: auto;
+  margin-bottom: 20px;
 }
 
 .register-main-container {
@@ -135,24 +136,22 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  background-color: #ffffff;
+  background-color: $color-white;
   border-radius: 15px;
-  justify-content: start;
-  justify-items: center;
-  align-items: center;
-  color: #ff902a;
+  text-align: center;
+  color: $color-orange;
   padding: 3px;
   height: 35vh;
   cursor: pointer;
 }
 
-.Registered-spanText {
+.registered-spanText {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #7a808c;
+  color: $color-darkgray;
 }
 
-.Register-container-img {
+.register-container-img {
   width: 100%;
   height: 25vh;
   overflow: hidden;
@@ -161,7 +160,7 @@
   border-radius: 15px;
 }
 
-.Register-Container-img {
+.register-Container-img {
   overflow: visible;
   border-radius: 0px;
   height: auto;
@@ -169,7 +168,7 @@
 }
 
 .register-middle-header {
-  color: #00171f;
+  color: $color-blue;
   font-size: 1.6rem;
   font-weight: 700;
 }
@@ -190,23 +189,25 @@
   flex-direction: row;
   gap: 5px;
   padding-bottom: 5px;
+  align-items: center;
+  justify-content: center;
 
   .listing-btn {
-    border: 1px solid #003459;
+    border: 1px solid $color-blue;
     border-radius: 15px;
-    background-color: #ffffff;
+    background-color: $color-white;
     padding-top: 1px;
     padding-bottom: 1px;
     padding-right: 5px;
     padding-left: 5px;
-    color: #003459;
+    color: $color-blue;
     font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
   }
   .listing-btn:hover {
-    background: #003459;
-    color: #fff;
+    background: $color-blue;
+    color: $color-white;
     transform: scale(0.9);
     transition: 0.6s;
     -webkit-transition: 0.6s;
@@ -226,32 +227,32 @@
     -o-transform: translateY(4px);
   }
 
-  .Update-btn {
-    border: 1px solid #ff902a;
+  .update-btn {
+    border: 1px solid $color-orange;
     border-radius: 15px;
-    background-color: #ffffff;
+    background-color: $color-white;
     padding-top: 1px;
     padding-bottom: 1px;
     padding-right: 5px;
     padding-left: 5px;
     font-weight: 600;
-    color: #ff902a;
+    color: $color-orange;
     font-size: 1.6rem;
     cursor: pointer;
   }
-  .Update-btn:hover {
-    background: #ff902a;
-    color: #fff;
+  .update-btn:hover {
+    background: $color-orange;
+    color: $color-white;
     transform: scale(0.9);
     transition: 0.6s;
   }
-  .Update-btn:active {
+  .update-btn:active {
     transform: translateY(4px);
   }
 }
 
 .register-footer-container {
-  background-color: #ebeeef;
+  background-color: $color-mainlyblue;
   border-radius: 15px;
   margin-top: 10px;
   padding: 10px 1px 10px 10px;
@@ -269,7 +270,7 @@
 }
 
 .register-btnAdd {
-  color: #ff902a;
+  color: $color-orange;
   border-radius: 15px;
   padding: 2px 10px;
   font-weight: 600;
@@ -277,8 +278,8 @@
   cursor: pointer;
 }
 .register-btnAdd:hover {
-  background: #ff902a;
-  color: #fff;
+  background: $color-orange;
+  color: $color-white;
   transition: 0.5s;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
