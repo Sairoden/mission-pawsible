@@ -1,11 +1,12 @@
 @import "../../index.scss";
 
 .about-us-container {
+  width: 90%;
+  margin: auto;
   display: flex;
-  padding: 4rem;
   align-items: center;
   justify-content: space-around;
-  margin-top: -6rem;
+  height: calc(100vh - 10rem);
 
   .header {
     text-align: end;
