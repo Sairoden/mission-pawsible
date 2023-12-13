@@ -8,6 +8,7 @@ function Resources() {
       <div className="resources_header">
         <h1 className="resources_header_text">Resources</h1>
       </div>
+
       <div className="resources-middle-container">
         <motion.div
           initial={{ x: "100%", opacity: 0 }}
@@ -17,7 +18,7 @@ function Resources() {
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img src="/resource.png" alt="resourcesImage" width={210} />
+              <img src="/resource.png" alt="resourcesImage" width={250} />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
@@ -42,15 +43,16 @@ function Resources() {
             </div>
           </div>
         </motion.div>
+
         <motion.div
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: "0", opacity: 1 }}
-          transition={{ duration: 1, origin: 1, delay: 1 }}
+          transition={{ duration: 1, origin: 1, delay: 0.5 }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img src="/resource.png" alt="resourcesImage" width={210} />
+              <img src="/resource.png" alt="resourcesImage" width={250} />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
@@ -75,15 +77,16 @@ function Resources() {
             </div>
           </div>
         </motion.div>
+
         <motion.div
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: "0", opacity: 1 }}
-          transition={{ duration: 1, origin: 1, delay: 1.5 }}
+          transition={{ duration: 1, origin: 1, delay: 0.5 }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img src="/resource.png" alt="resourcesImage" width={210} />
+              <img src="/resource.png" alt="resourcesImage" width={250} />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
@@ -109,7 +112,7 @@ function Resources() {
           </div>
         </motion.div>
       </div>
-      <div className="resources_footer"></div>
+      <div className="resources_footer_pagination"></div>
     </div>
   );
 }
