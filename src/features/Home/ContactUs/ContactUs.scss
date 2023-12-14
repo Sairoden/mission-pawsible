@@ -1,0 +1,49 @@
+@import '../../../index.scss';
+
+.contact-us {
+    background-color: #F9D9AA;
+    
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media screen and (max-width: 426px) {
+        flex-direction: column-reverse;
+        }
+    }
+
+
+    .info {
+        padding: 0 2.5rem;
+        // width: 60%;
+        text-align: center;
+        
+        @media screen and (max-width: 768px) {
+            width: 95%;
+            margin: 0;
+            padding: 2rem;
+        }
+        .title {
+            margin: 1rem 0;
+            color: $color-blue;
+        }
+        .text {
+            text-align: center;
+        }
+    }
+
+    .img {
+        // width: 40%;
+    //     display: flex;
+    //     justify-content: center;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+        img {
+            max-height: 25rem;
+            width: auto;
+        }
+    }
+}
