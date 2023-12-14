@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // UI COMPONENTS
 import { Button } from "../index";
 
-function PetsBanner({ image, title, subtitle, buttonText }) {
+function PetsBanner({ image, title, subtitle, bannerButton = true }) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -20,13 +20,15 @@ function PetsBanner({ image, title, subtitle, buttonText }) {
           <h1 className="pets-banner-title">{title}</h1>
           <p className="pets-banner-subtitle">{subtitle}</p>
 
-          <Button
-            variation="primary"
-            icon={true}
-            styles={{ padding: "2rem 4rem" }}
-          >
-            {buttonText}
-          </Button>
+          {bannerButton && (
+            <Button
+              variation="primary"
+              icon={true}
+              styles={{ padding: "2rem 4rem" }}
+            >
+              POST YOUR PET
+            </Button>
+          )}
         </div>
       </div>
     </motion.div>

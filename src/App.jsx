@@ -18,6 +18,7 @@ import {
   LostPet,
   AppLayout,
   ProfileUpdate,
+  FoundPet,
 } from "./pages";
 
 // UI COMPONENTS
@@ -55,7 +56,7 @@ function App() {
         },
         {
           path: "/found-pets",
-          element: <h1>Found Pets</h1>,
+          element: <FoundPet />,
         },
         {
           path: "/reunited-pets",
