@@ -21,7 +21,7 @@ function Input({
   const inputType = showPassword ? "text" : type;
 
   const handleShowPassword = () =>
-    setShowPassword(prevPassword => !prevPassword);
+    setShowPassword((prevPassword) => !prevPassword);
 
   const autocompleteValue =
     type === "password" ? "new-password" : type === "email" ? "username" : "on";
@@ -37,7 +37,7 @@ function Input({
   };
 
   const validConfirmPassword =
-    id === "confirmPassword" && (value => value === password);
+    id === "confirmPassword" && ((value) => value === password);
 
   const validContactNumber = id === "contactNumber" && {
     value: /^09\d{9}$/,

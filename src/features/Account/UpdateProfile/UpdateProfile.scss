@@ -1,1 +1,81 @@
 @import "../../../index.scss";
+
+.update-white-container {
+  height: calc(80vh - 2rem);
+  width: 90%;
+  margin: 10rem auto;
+  background-color: $color-white;
+  border-radius: 25px;
+}
+.update-main-container {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  height: 100%;
+}
+
+.update-left-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  transform: translateY(30%);
+  -webkit-transform: translateY(30%);
+  -moz-transform: translateY(30%);
+  -ms-transform: translateY(30%);
+  -o-transform: translateY(30%);
+}
+
+.update-left-image {
+  border-radius: 50%;
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.update-right-container {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 5rem;
+  margin: auto;
+
+  .update-right-header {
+    text-align: center;
+  }
+
+  .update-form-content {
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 90px;
+    gap: 10px;
+
+    .update-form3 {
+      grid-column: 1 / 3;
+      display: flex;
+      flex-direction: column;
+
+      .address-input {
+        height: 4vh;
+        border-radius: 25px;
+        border: 1px solid black;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .update-input {
+    width: 25vw;
+    height: 4vh;
+    border-radius: 25px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+  }
+  .update-right-button {
+    text-align: center;
+  }
+}

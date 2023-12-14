@@ -1,8 +1,6 @@
 // Variable
 @import "_variables";
 
-
-
 // universal css
 
 * {
@@ -16,7 +14,7 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   color: $color-brown;
   padding-top: 10rem;
   font-family: $font;
@@ -24,7 +22,7 @@ body{
 }
 
 // heading
-h1{
+h1 {
   line-height: 1;
   font: 700 4rem $font;
 }
@@ -34,7 +32,7 @@ h2 {
   line-height: 1;
 
   @media screen and (max-width: 768px) {
-      font-size: 3rem;
+    font-size: 3rem;
   }
 }
 //title
@@ -42,15 +40,15 @@ h3 {
   font: 700 2.4rem $font;
 
   @media screen and (max-width: 768px) {
-      font-size: 2.2rem;
+    font-size: 2.2rem;
   }
 }
 // sub title
 h4 {
   font: 700 1.8rem $font;
-  
+
   @media screen and (max-width: 768px) {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -58,7 +56,7 @@ h5 {
   font: 400 1.4rem $font;
 
   @media screen and (max-width: 768px) {
-      font-size: 1.2rem;
+    font-size: 1.2rem;
   }
 }
 //regular text
@@ -70,6 +68,11 @@ p {
   text-align: justify;
   line-height: 2rem;
 }
+label {
+  font: 400 1.8rem $font;
+  line-height: 2rem;
+}
+
 .bg-orange {
   color: white !important;
   background-color: $color-orange;
@@ -88,22 +91,21 @@ p {
   flex-wrap: wrap;
 }
 .button {
-  margin: .5rem 0;
+  margin: 0.5rem 0;
   padding: 1rem 3rem;
   border-radius: 19rem;
   text-align: center;
 }
 .button:hover {
-  opacity: .75;
+  opacity: 0.75;
 }
 .container {
   width: 95vw;
   margin: auto;
 
   @media screen and (min-width: 1441px) {
-      width: 90vw;
+    width: 90vw;
   }
-
 }
 .card {
   padding: 1rem 2rem;
