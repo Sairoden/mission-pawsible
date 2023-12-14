@@ -2,51 +2,119 @@
 import "./LostPets.scss";
 
 // UI COMPONENTS
-import { Button } from "../../../ui";
+import {
+  PetsCards,
+  PetsCard,
+  PetsFilter,
+  PetsBanner,
+  Pagination,
+} from "../../../ui";
 
 function LostPets() {
   return (
     <div className="lost-pets-container">
-      <div className="pets-banner-container">
-        <img
-          src="/lost-pets-banner.png"
-          alt="lost-pets banner"
-          className="pets-banner-image"
-        />
-        <div className="pets-banner-content">
-          <div className="pets-banner-text">
-            <h1 className="pets-banner-title">Find Your Lost Pet</h1>
-            <p className="pets-banner-subtitle">
-              We help lost pets and return them back to their owners.
-            </p>
-          </div>
+      <PetsBanner
+        image="/lost-pets-banner.png"
+        title="Find Your Lost Pet"
+        subtitle="We help lost pets and return them back to their owners."
+        buttonText="POST YOUR PET"
+      />
 
-          <Button
-            variation="primary"
-            icon={true}
-            styles={{ padding: "2rem 4rem" }}
-          >
-            POST YOUR PET
-          </Button>
-        </div>
+      <div className="pets-main-container">
+        <PetsFilter />
+
+        <PetsCards total={57}>
+          <PetsCard
+            image="/shitsu.png"
+            title="MO502 - Poodle Tiny Yellow"
+            gender="Male"
+            date="Nov 12, 2023"
+          />
+          <PetsCard
+            image="/resource.png"
+            title="MO502 - Poodle Tiny Yellow"
+            gender="Male"
+            date="Nov 12, 2023"
+          />
+          <PetsCard
+            image="/shitsu.png"
+            title="MO502 - Poodle Tiny Yellow"
+            gender="Male"
+            date="Nov 12, 2023"
+          />
+          <PetsCard
+            image="/shitsu.png"
+            title="MO502 - Poodle Tiny Yellow"
+            gender="Male"
+            date="Nov 12, 2023"
+          />
+          <PetsCard
+            image="/shitsu.png"
+            title="MO502 - Poodle Tiny Yellow"
+            gender="Male"
+            date="Nov 12, 2023"
+          />
+          <PetsCard
+            image="/shitsu.png"
+            title="MO502 - Poodle Tiny Yellow"
+            gender="Male"
+            date="Nov 12, 2023"
+          />
+          <PetsCard
+            image="/shitsu.png"
+            title="MO502 - Poodle Tiny Yellow"
+            gender="Male"
+            date="Nov 12, 2023"
+          />
+          <PetsCard
+            image="/shitsu.png"
+            title="MO502 - Poodle Tiny Yellow"
+            gender="Male"
+            date="Nov 12, 2023"
+          />
+          <PetsCard
+            image="/shitsu.png"
+            title="MO502 - Poodle Tiny Yellow"
+            gender="Male"
+            date="Nov 12, 2023"
+          />
+        </PetsCards>
       </div>
 
-      <div className="pets-filter-container">
-        <h1>FILTER</h1>
-      </div>
+      <Pagination total={80} />
     </div>
   );
 }
+
+export default LostPets;
 
 <div
   style={{
     width: "100%",
     height: "100%",
-    opacity: 0.4,
-    mixBlendMode: "multiply",
-    background:
-      "linear-gradient(180deg, rgba(255, 255, 255, 0.13) 0%, black 100%, rgba(217, 217, 217, 0) 100%)",
+    paddingTop: 6,
+    paddingBottom: 4,
+    paddingLeft: 13,
+    paddingRight: 13,
+    background: "#FF902A",
+    borderRadius: 8,
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: 10,
+    display: "inline-flex",
   }}
-/>;
-
-export default LostPets;
+>
+  <div
+    style={{
+      color: "#FDFDFD",
+      fontSize: 18,
+      fontFamily: "Poppins",
+      fontWeight: "700",
+      lineHeight: 24,
+      wordWrap: "break-word",
+    }}
+  >
+    1
+  </div>
+</div>;

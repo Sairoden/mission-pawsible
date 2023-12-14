@@ -35,7 +35,12 @@ function SpecificResource() {
         </div>
       </div>
       <div className="detail-img">
-        <img src="/resource.png" alt="resourcesImage" width={600} />
+        <img
+          loading="lazy"
+          src="/resource.png"
+          alt="resourcesImage"
+          width={600}
+        />
       </div>
       <div className="detail-text">
         <p className="detail-footer-span">

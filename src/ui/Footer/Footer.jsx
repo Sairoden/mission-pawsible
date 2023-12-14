@@ -12,7 +12,12 @@ function Footer() {
   return (
     <footer className="footer-container">
       <a href="#" className="footer-logo">
-        <img src={logo} alt="mission-pawsible logo" className="logo" />
+        <img
+          loading="lazy"
+          src={logo}
+          alt="mission-pawsible logo"
+          className="logo"
+        />
       </a>
 
       <div className="footer-main">

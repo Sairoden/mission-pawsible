@@ -18,7 +18,12 @@ function Resources() {
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img src="/resource.png" alt="resourcesImage" width={250} />
+              <img
+                loading="lazy"
+                src="/resource.png"
+                alt="resourcesImage"
+                width={250}
+              />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
@@ -52,7 +57,12 @@ function Resources() {
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img src="/resource.png" alt="resourcesImage" width={250} />
+              <img
+                loading="lazy"
+                src="/resource.png"
+                alt="resourcesImage"
+                width={250}
+              />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
@@ -86,7 +96,12 @@ function Resources() {
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img src="/resource.png" alt="resourcesImage" width={250} />
+              <img
+                loading="lazy"
+                src="/resource.png"
+                alt="resourcesImage"
+                width={250}
+              />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">

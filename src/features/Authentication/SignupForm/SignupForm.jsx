@@ -44,6 +44,7 @@ function SignupForm() {
   return (
     <div className="signup-container">
       <motion.img
+        loading="lazy"
         src="/signup-banner.png"
         alt="Guy with a dog image"
         className="signup-banner"

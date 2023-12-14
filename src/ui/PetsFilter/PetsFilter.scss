@@ -1,0 +1,46 @@
+@import "../../index.scss";
+
+.pets-filter-container {
+  width: 10vw;
+
+  .pets-filter-header {
+    color: $color-brown;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .pets-filter-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+
+    .pets-filter-detail-line {
+      border: 1px solid $color-brown;
+      margin-top: 1.5rem;
+      width: 15vw;
+    }
+
+    .pets-filter-details-title {
+      color: $color-brown;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .pets-filter-detail {
+      display: flex;
+      gap: 1rem;
+
+      .pets-filter-detail-checkbox {
+        width: 2rem;
+      }
+
+      .pets-filter-detail-label {
+        color: $color-brown;
+        font-size: 1.8rem;
+        font-weight: 500;
+      }
+    }
+  }
+}

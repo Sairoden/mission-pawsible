@@ -1,0 +1,19 @@
+@import "../../index.scss";
+
+.pets-cards-container {
+  width: 65vw;
+
+  .pets-cards-header {
+    color: $color-brown;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .pets-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 3rem;
+  }
+}

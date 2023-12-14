@@ -19,7 +19,12 @@ function Profile() {
       <div className="profile-main-container">
         <div className="main-content">
           <div className="account-img">
-            <img src="profile.png" alt="profileIcon" className="profile-img" />
+            <img
+              loading="lazy"
+              src="profile.png"
+              alt="profileIcon"
+              className="profile-img"
+            />
           </div>
 
           <div className="account-header">
@@ -95,7 +100,7 @@ function Profile() {
                 className="register-details"
               >
                 <div className="register-container-img">
-                  <img src="shitsu.png" alt="cardImage" />
+                  <img loading="lazy" src="shitsu.png" alt="cardImage" />
                 </div>
 
                 <div>
@@ -120,7 +125,7 @@ function Profile() {
                 className="register-details"
               >
                 <div className="register-container-img">
-                  <img src="shitsu.png" alt="cardImage" />
+                  <img loading="lazy" src="shitsu.png" alt="cardImage" />
                 </div>
 
                 <div>
@@ -145,7 +150,7 @@ function Profile() {
                 className="register-details"
               >
                 <div className="register-container-img">
-                  <img src="shitsu.png" alt="cardImage" />
+                  <img loading="lazy" src="shitsu.png" alt="cardImage" />
                 </div>
 
                 <div>
@@ -170,7 +175,7 @@ function Profile() {
                 className="register-details"
               >
                 <div className="register-container-img">
-                  <img src="shitsu.png" alt="cardImage" />
+                  <img loading="lazy" src="shitsu.png" alt="cardImage" />
                 </div>
 
                 <div>
@@ -195,7 +200,7 @@ function Profile() {
                 className="register-details"
               >
                 <div className="register-container-img">
-                  <img src="shitsu.png" alt="cardImage" />
+                  <img loading="lazy" src="shitsu.png" alt="cardImage" />
                 </div>
 
                 <div>
@@ -220,7 +225,7 @@ function Profile() {
                 className="register-details"
               >
                 <div className="register-container-img">
-                  <img src="shitsu.png" alt="cardImage" />
+                  <img loading="lazy" src="shitsu.png" alt="cardImage" />
                 </div>
 
                 <div>
@@ -264,7 +269,7 @@ function Profile() {
                 className="register-details"
               >
                 <div className="register-container-img">
-                  <img src="shitsu.png" alt="cardImage" />
+                  <img loading="lazy" src="shitsu.png" alt="cardImage" />
                 </div>
 
                 <div>
@@ -289,7 +294,7 @@ function Profile() {
                 className="register-details"
               >
                 <div className="register-container-img">
-                  <img src="shitsu.png" alt="cardImage" />
+                  <img loading="lazy" src="shitsu.png" alt="cardImage" />
                 </div>
 
                 <div>
@@ -314,7 +319,7 @@ function Profile() {
                 className="register-details"
               >
                 <div className="register-container-img">
-                  <img src="shitsu.png" alt="cardImage" />
+                  <img loading="lazy" src="shitsu.png" alt="cardImage" />
                 </div>
 
                 <div>

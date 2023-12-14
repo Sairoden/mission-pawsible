@@ -59,6 +59,7 @@ const Navbar = () => {
           <HiOutlineSquare3Stack3D className="navbar-icon" />
           RESOURCES
         </NavLink>
+
         <NavLink to="/about-us" className="nav-link">
           <HiOutlineLightBulb className="navbar-icon" />
           ABOUT US

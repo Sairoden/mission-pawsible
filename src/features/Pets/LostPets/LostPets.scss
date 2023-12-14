@@ -1,56 +1,11 @@
 @import "../../../index.scss";
 
 .lost-pets-container {
-  .pets-banner-container {
-    position: relative;
-    width: 100%;
+  margin-bottom: 5rem;
 
-    &:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0.4;
-
-      mix-blend-mode: multiply;
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.13) 0%,
-        black 100%,
-        rgba(217, 217, 217, 0) 100%
-      );
-      z-index: 1;
-    }
-
-    .pets-banner-image {
-      width: 100%;
-      height: 100%;
-      z-index: -999;
-      object-fit: cover;
-    }
-
-    .pets-banner-content {
-      position: absolute;
-      top: 50%;
-      left: 5rem;
-      transform: translateY(-20%);
-      z-index: 2;
-
-      .pets-banner-text {
-        color: #fff;
-        margin-bottom: 5rem;
-
-        .pets-banner-title {
-          font-size: 6.4rem;
-          font-weight: 700;
-        }
-
-        .pets-banner-subtitle {
-          font-size: 1.6rem;
-        }
-      }
-    }
+  .pets-main-container {
+    padding: 10rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
   }
 }

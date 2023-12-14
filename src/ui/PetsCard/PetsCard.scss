@@ -1,0 +1,66 @@
+@import "../../index.scss";
+
+.pets-card {
+  width: 25.6rem;
+  height: 42rem;
+  background-color: #f4f4f4;
+  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden; /* Ensure the border-radius is applied to the image */
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .pets-card-image {
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 26rem;
+    height: 28rem;
+    object-fit: cover;
+  }
+
+  .pets-card-title {
+    color: #00171f;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  .pets-card-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    .pets-card-subtitle-break {
+      font-size: 1.2rem;
+      margin: 0 0.5rem;
+    }
+
+    .pets-card-subtitle-content {
+      color: #667479;
+      line-height: 18px;
+      font-size: 1.8rem;
+      word-wrap: break-word;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .pets-card-subtitle-heading {
+        font-weight: 600;
+      }
+
+      .pets-card-subtitle-subheading {
+        font-weight: 400;
+      }
+    }
+  }
+}

@@ -56,6 +56,7 @@ function LoginForm() {
   return (
     <div className="login-container">
       <motion.img
+        loading="lazy"
         src="login-banner.png"
         alt="Guy with a dog image"
         className="login-banner"
