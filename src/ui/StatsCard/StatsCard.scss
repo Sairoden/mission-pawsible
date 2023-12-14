@@ -1,0 +1,56 @@
+@import "/src/index.scss";
+
+.card {
+    width: 22.5rem;
+    min-height: 10rem;
+    display: flex;
+    background-color: rgba($color-brown, 0.55);
+    color: $color-white;
+    text-align: center;
+      
+    @media screen and (max-width: 768px) {
+        width: auto;
+        padding: 2rem 1.5rem; 
+        flex-direction: column-reverse;
+    }
+    @media screen and (max-width: 426px) {
+        width: 30%;
+    }
+
+    & > * {
+        margin: 1rem;
+
+        @media screen and (max-width: 768px) {
+            margin: 2rem 1rem;
+        }
+        @media screen and (max-width: 426px) {
+            margin: 2rem 0;
+        }
+    }
+    .stats {
+        width: 70%;
+        @media screen and (max-width: 768px) {
+            width: auto;
+        }
+        @media screen and (max-width: 426px) {
+            height: 50%;
+        }
+        h6 {
+            text-transform: uppercase;
+        }
+    }
+    .img {
+        width: 5rem;
+        height: 5rem;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba($color-white, 0.2); 
+        border-radius: 50%;
+
+        img {
+            width: 3rem;
+        }
+    }
+}
