@@ -19,6 +19,7 @@ import {
   AppLayout,
   ProfileUpdate,
   FoundPet,
+  ReunitedPet,
 } from "./pages";
 
 // UI COMPONENTS
@@ -60,7 +61,7 @@ function App() {
         },
         {
           path: "/reunited-pets",
-          element: <h1>Reunited Pets</h1>,
+          element: <ReunitedPet />,
         },
         {
           path: "/pet/:petId",

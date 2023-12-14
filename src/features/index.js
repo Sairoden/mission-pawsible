@@ -19,6 +19,7 @@ import SpecificResource from "./Resource/SpecificResource/SpecificResource";
 // PETS
 import LostPets from "./Pets/LostPets/LostPets";
 import FoundPets from "./Pets/FoundPets/FoundPets";
+import ReunitedPets from "./Pets/ReunitedPets/ReunitedPets";
 
 export {
   // ABOUT US
@@ -42,4 +43,5 @@ export {
   // PETS
   LostPets,
   FoundPets,
+  ReunitedPets,
 };

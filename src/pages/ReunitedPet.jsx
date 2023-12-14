@@ -1,7 +1,8 @@
-import React from "react";
+// FEATURES COMPONENTS
+import { ReunitedPets } from "../features";
 
 function ReunitedPet() {
-  return <div>ReunitedPet</div>;
+  return <ReunitedPets />;
 }
 
 export default ReunitedPet;

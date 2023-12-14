@@ -10,7 +10,7 @@ function LostPets() {
       <PetsBanner
         image="/lost-pets-banner.png"
         title="Find Your Lost Pet"
-        subtitle="We help lost pets and return them back to their owners."
+        subtitle="We help lost pets and return them back to their owners"
       />
       <PetsGallery />
       <Pagination total={80} />
