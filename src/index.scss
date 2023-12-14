@@ -1,17 +1,10 @@
 // Variable
 @import "_variables";
-$color-orange: #ff902a;
-$color-brown: #2f2105;
-$color-blue: #003459;
-$color-beige: #f6ebda;
-$color-white: white;
-$color-darkgray: #7a808c;
-$color-mainlyblue: #ebeeef;
-$font: "Poppins", sans-serif;
-// font style
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+
 
 // universal css
+
 * {
   margin: 0;
   padding: 0;
@@ -23,40 +16,105 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body{
+  color: $color-brown;
+  padding-top: 10rem;
   font-family: $font;
   background-color: $color-beige;
 }
 
 // heading
-h1 {
+h1{
   line-height: 1;
   font: 700 4rem $font;
 }
 // sub heading
 h2 {
   font: 600 3.2rem $font;
+  line-height: 1;
+
+  @media screen and (max-width: 768px) {
+      font-size: 3rem;
+  }
 }
 //title
 h3 {
   font: 700 2.4rem $font;
+
+  @media screen and (max-width: 768px) {
+      font-size: 2.2rem;
+  }
 }
 // sub title
 h4 {
   font: 700 1.8rem $font;
+  
+  @media screen and (max-width: 768px) {
+      font-size: 1.4rem;
+  }
 }
 
 h5 {
   font: 400 1.4rem $font;
+
+  @media screen and (max-width: 768px) {
+      font-size: 1.2rem;
+  }
 }
 //regular text
 h6 {
   font: 400 1.2rem $font;
 }
+p {
+  font: 400 1.2rem $font;
+  text-align: justify;
+  line-height: 2rem;
+}
 .bg-orange {
   color: white !important;
   background-color: $color-orange;
 }
+.bg-blue {
+  color: white !important;
+  background-color: $color-blue;
+}
+.btns {
+  width: 100%;
+  margin-top: 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.button {
+  margin: .5rem 0;
+  padding: 1rem 3rem;
+  border-radius: 19rem;
+  text-align: center;
+}
+.button:hover {
+  opacity: .75;
+}
+.container {
+  width: 95vw;
+  margin: auto;
+
+  @media screen and (min-width: 1441px) {
+      width: 90vw;
+  }
+
+}
+.card {
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+}
+
+.bg-orange {
+  color: white !important;
+  background-color: $color-orange;
+}
+
 .bg-blue {
   color: white !important;
   background-color: $color-blue;
@@ -68,5 +126,5 @@ a {
 }
 
 button {
-  font-family: $font;
+  // font-family: $font;
 }
