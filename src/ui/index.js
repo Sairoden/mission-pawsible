@@ -10,6 +10,7 @@ import PetsCards from "./PetsCards/PetsCards";
 import PetsFilter from "./PetsFilter/PetsFilter";
 import PetsBanner from "./PetsBanner/PetsBanner";
 import Pagination from "./Pagination/Pagination";
+import PetsGallery from "./PetsGallery/PetsGallery";
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   PetsFilter,
   PetsBanner,
   Pagination,
+  PetsGallery,
 };
