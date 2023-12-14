@@ -2,6 +2,9 @@
 import "./Resources.scss";
 import { motion } from "framer-motion";
 
+// UI COMPONENTS
+import { Pagination } from "../../../ui";
+
 function Resources() {
   return (
     <div className="resources_container">
@@ -145,7 +148,8 @@ function Resources() {
           </div>
         </motion.div>
       </div>
-      <div className="resources_footer_pagination"></div>
+
+      <Pagination total={80} />
     </div>
   );
 }

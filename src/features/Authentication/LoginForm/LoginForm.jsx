@@ -59,8 +59,10 @@ function LoginForm() {
         src="login-banner.png"
         alt="Guy with a dog image"
         className="login-banner"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 5 }}
       />
 
       <h1 className="login-title">Log in</h1>

@@ -15,7 +15,11 @@ export const useGetCurrentUser = () => {
   });
 
   if (user && location.pathname === "/login") navigate("/");
-  if (!user && location.pathname === "/account") navigate("/");
+  if (
+    (!user && location.pathname === "/account") ||
+    (!user && location.pathname === "/account/update")
+  )
+    navigate("/");
 
   return { isPending, user, isAuthenticated: user?.role === "authenticated" };
 };
