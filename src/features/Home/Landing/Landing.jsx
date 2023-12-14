@@ -4,24 +4,24 @@ import './Landing.scss'
 
 const Landing = () => {
   return (
-    <section class="landing">
-        <div class="cta">
-            <div class="header">
+    <section className="landing container">
+        <div className="cta">
+            <div className="header">
                 <h1>Make a <span>Pawsitive</span> Change</h1>
             </div>
-            <div class="body">
+            <div className="body">
                 <h4>Help bring every paw back home! Start your search now, your furry friends can’t wait to see you!</h4>
             </div>
-            <div class="btns">
-                <div class="btn">
-                <Btn class = "bg-orange" text="Find pet"/>
+            <div className="btns">
+                <div className="button bg-orange">
+                    <h5>Find Pets</h5>
                 </div>
-                <div class="btn">
-                    <Btn class = "bg-blue" text="Join Us"/>
+                <div className="button bg-blue">
+                    <h5>Join Us</h5>
                 </div>
             </div>
         </div>
-        <div class="img">
+        <div className="img">
             <div><h1>hello</h1></div>
         </div>
     </section>
