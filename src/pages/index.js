@@ -10,6 +10,8 @@ import ResourceDetail from "./ResourceDetail";
 import LostPet from "./LostPet";
 import FoundPet from "./FoundPet";
 import ReunitedPet from "./ReunitedPet";
+import AppLayout from "./AppLayout";
+import ProfileUpdate from "./ProfileUpdate";
 
 export {
   ChatMessage,
@@ -24,4 +26,6 @@ export {
   LostPet,
   FoundPet,
   ReunitedPet,
+  AppLayout,
+  ProfileUpdate,
 };

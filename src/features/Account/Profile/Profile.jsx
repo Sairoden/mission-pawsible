@@ -1,13 +1,15 @@
+// REACT & LIBRARIES
+import { NavLink } from "react-router-dom";
+
 // STYLES
 import "./Profile.scss";
+import { motion } from "framer-motion";
 
 // UI COMPONENTS
 import { Button, Spinner } from "../../../ui";
 
 // HOOKS
 import { useLogout } from "../../../hooks";
-
-import { motion } from "framer-motion";
 
 function Profile() {
   const { logout, isPending } = useLogout();
@@ -67,9 +69,11 @@ function Profile() {
           </div>
 
           <div className="footer-content">
-            <Button variation="primary" type="submit">
-              Update
-            </Button>
+            <NavLink to="/account/update">
+              <Button variation="primary" type="submit">
+                Update
+              </Button>
+            </NavLink>
             <Button variation="secondary" onClick={logout}>
               Logout
             </Button>

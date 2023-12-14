@@ -44,7 +44,6 @@ function AboutUs() {
           className="image1"
         >
           <motion.img
-            loading="lazy"
             src="about-us-pet-2.png"
             alt="Cat Image"
             drag
@@ -64,7 +63,6 @@ function AboutUs() {
           className="image2"
         >
           <motion.img
-            loading="lazy"
             src="about-us-pet-3.png"
             alt="Dog Chihuahua Image"
             drag
@@ -84,7 +82,6 @@ function AboutUs() {
           className="image3"
         >
           <motion.img
-            loading="lazy"
             src="about-us-pet-1.png"
             alt="Dog Image"
             drag

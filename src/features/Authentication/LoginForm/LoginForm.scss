@@ -1,12 +1,11 @@
 @import "../../../index.scss";
 
 .login-container {
-  padding: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: -3rem;
+  padding-bottom: 10rem;
 
   .login-banner {
     width: 20%;
@@ -139,7 +138,7 @@
     font-size: 1.8rem;
     font-weight: 400;
     word-wrap: break-word;
-    padding: 8rem;
+    padding-top: 8rem;
 
     &-bold {
       color: $color-brown;

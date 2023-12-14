@@ -16,10 +16,12 @@ import {
   Resource,
   ResourceDetail,
   LostPet,
+  AppLayout,
+  ProfileUpdate,
 } from "./pages";
 
 // UI COMPONENTS
-import { Navbar, Footer, PageNotFound } from "./ui";
+import { PageNotFound } from "./ui";
 
 // TANSTACK QUERY
 const queryClient = new QueryClient({
@@ -33,7 +35,7 @@ const queryClient = new QueryClient({
 function App() {
   const router = createBrowserRouter([
     {
-      element: <Navbar />,
+      element: <AppLayout />,
       children: [
         {
           path: "/",
@@ -64,8 +66,8 @@ function App() {
           element: <h1>Specific Pet Detail</h1>,
         },
         {
-          path: "/pet/edit/:petId",
-          element: <h1>Edit Pet Page</h1>,
+          path: "/pet/update/:petId",
+          element: <h1>Update Pet Page</h1>,
         },
         {
           path: "/register-pet",
@@ -92,8 +94,8 @@ function App() {
           element: <Account />,
         },
         {
-          path: "/account/edit",
-          element: <h1>Edit Account Page</h1>,
+          path: "/account/update",
+          element: <ProfileUpdate />,
         },
         {
           path: "/chat",
@@ -108,35 +110,32 @@ function App() {
   ]);
 
   return (
-    <>
-      <QueryClientProvider client={queryClient}>
-        {import.meta.env.MODE === "development" && (
-          <div style={{ fontSize: "32px" }}>
-            <ReactQueryDevtools initialIsOpen={false} />
-          </div>
-        )}
+    <QueryClientProvider client={queryClient}>
+      {import.meta.env.MODE === "development" && (
+        <div style={{ fontSize: "32px" }}>
+          <ReactQueryDevtools initialIsOpen={false} />
+        </div>
+      )}
 
-        <RouterProvider router={router} />
-        <Footer />
+      <RouterProvider router={router} />
 
-        <Toaster
-          position="top-center"
-          gutter={12}
-          containerStyle={{ margin: "8px" }}
-          toastOptions={{
-            success: { duration: 3000 },
-            error: { duration: 5000 },
-            style: {
-              fontSize: "3.5rem",
-              maxWidth: "500px",
-              padding: "16px",
-              backgroundColor: "#fff",
-              color: "var(--color-grey-700)",
-            },
-          }}
-        />
-      </QueryClientProvider>
-    </>
+      <Toaster
+        position="top-center"
+        gutter={12}
+        containerStyle={{ margin: "8px" }}
+        toastOptions={{
+          success: { duration: 3000 },
+          error: { duration: 5000 },
+          style: {
+            fontSize: "3.5rem",
+            maxWidth: "500px",
+            padding: "16px",
+            backgroundColor: "#fff",
+            color: "var(--color-grey-700)",
+          },
+        }}
+      />
+    </QueryClientProvider>
   );
 }
 

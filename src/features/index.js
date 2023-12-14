@@ -10,6 +10,7 @@ import SignupForm from "./Authentication/SignupForm/SignupForm";
 
 // ACCOUNT
 import Profile from "./Account/Profile/Profile";
+import UpdateProfile from "./Account/UpdateProfile/UpdateProfile";
 
 // RESOURCES
 import Resources from "./Resource/Resources/Resources";
@@ -31,6 +32,7 @@ export {
 
   // ACCOUNT
   Profile,
+  UpdateProfile,
 
   // RESOURCES
   Resources,

@@ -11,19 +11,25 @@ function Resources() {
 
       <div className="resources-middle-container">
         <motion.div
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: "0", opacity: 1 }}
-          transition={{ duration: 1, origin: 1, delay: 0.5 }}
+          initial={{
+            opacity: 0,
+            // if odd index card,slide from right instead of left
+            // eslint-disable-next-line no-constant-condition
+            x: 1 % 2 === 0 ? 100 : -100,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, // Slide in to its original position
+            transition: {
+              duration: 1.5, // Animation duration
+            },
+          }}
+          viewport={{ once: true }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img
-                loading="lazy"
-                src="/resource.png"
-                alt="resourcesImage"
-                width={250}
-              />
+              <img src="/resource.png" alt="resourcesImage" width={250} />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
@@ -50,19 +56,25 @@ function Resources() {
         </motion.div>
 
         <motion.div
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: "0", opacity: 1 }}
-          transition={{ duration: 1, origin: 1, delay: 0.6 }}
+          initial={{
+            opacity: 0,
+            // if odd index card,slide from right instead of left
+            // eslint-disable-next-line no-constant-condition
+            x: 2 % 2 === 0 ? 100 : -100,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, // Slide in to its original position
+            transition: {
+              duration: 1.5, // Animation duration
+            },
+          }}
+          viewport={{ once: true }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img
-                loading="lazy"
-                src="/resource.png"
-                alt="resourcesImage"
-                width={250}
-              />
+              <img src="/resource.png" alt="resourcesImage" width={250} />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
@@ -89,19 +101,25 @@ function Resources() {
         </motion.div>
 
         <motion.div
-          initial={{ x: "100%", opacity: 0 }}
-          animate={{ x: "0", opacity: 1 }}
-          transition={{ duration: 1, origin: 1, delay: 0.7 }}
+          initial={{
+            opacity: 0,
+            // if odd index card,slide from right instead of left
+            // eslint-disable-next-line no-constant-condition
+            x: 3 % 2 === 0 ? 100 : -100,
+          }}
+          whileInView={{
+            opacity: 1,
+            x: 0, // Slide in to its original position
+            transition: {
+              duration: 1.5, // Animation duration
+            },
+          }}
+          viewport={{ once: true }}
           className="resources_detail_container"
         >
           <div className="resources-middle-content">
             <div className="resources-image">
-              <img
-                loading="lazy"
-                src="/resource.png"
-                alt="resourcesImage"
-                width={250}
-              />
+              <img src="/resource.png" alt="resourcesImage" width={250} />
             </div>
             <div className="resources-detail-content">
               <h2 className="resources-detail-header">
