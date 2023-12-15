@@ -28,9 +28,7 @@ function UpdateProfile() {
             />
           </div>
           <div>
-            <Button variation="primary" className="profile-left-btn">
-              EDIT IMAGE
-            </Button>
+            <input type="file" />
           </div>
         </div>
 
@@ -39,7 +37,7 @@ function UpdateProfile() {
             <h1 className="update-header-text">UPDATE PROFILE</h1>
           </div>
 
-          <div className="update-form-content">
+          <form className="update-form-content">
             <div className="update-form1">
               <Input id="firstName" width="22vw" register={register} />
               <br />
@@ -54,8 +52,14 @@ function UpdateProfile() {
                 FIRST NAME
               </label>
             </div>
+
             <div className="update-form3">
-              <input type="text" className="address-input" />
+              <Input
+                id="address"
+                width="47vw"
+                register={register}
+                className="address-input"
+              />
               <br />
               <label htmlFor="text" className="right-form-label">
                 ADDRESS:
@@ -89,7 +93,8 @@ function UpdateProfile() {
                 CHANGE PASSWORD:
               </label>
             </div>
-          </div>
+          </form>
+
           <div className="update-right-button">
             <Button variation="primary">SAVE</Button>
           </div>

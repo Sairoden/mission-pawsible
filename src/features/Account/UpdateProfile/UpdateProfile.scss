@@ -59,13 +59,7 @@
       grid-column: 1 / 3;
       display: flex;
       flex-direction: column;
-
-      .address-input {
-        height: 4vh;
-        border-radius: 25px;
-        border: 1px solid black;
-        margin-bottom: 5px;
-      }
+      flex: 1;
     }
   }
   .update-input {
