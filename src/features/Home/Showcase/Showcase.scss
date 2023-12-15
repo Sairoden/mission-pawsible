@@ -1,0 +1,153 @@
+@import "../../../index.scss";
+
+.showcase {
+  padding-bottom: 10rem;
+  background-image: url(./img/img-other.png);
+  background-size: contain;
+
+  .title {
+    padding-top: 10rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .header {
+    @media screen and (max-width: 768px) {
+      text-align: center !important;
+    }
+
+    .main {
+      margin: 1rem 0;
+      color: $color-orange;
+    }
+
+    .sub {
+      color: $color-blue;
+      margin: 0.5rem 0;
+    }
+  }
+
+  .story {
+    padding: 2.5rem;
+    background-color: $color-white;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .img {
+      display: flex;
+      justify-content: center;
+
+      @media screen and (max-width: 768px) {
+        width: 95%;
+      }
+
+      img {
+        height: 25rem;
+        border-radius: $radius;
+
+        @media screen and (max-width: 426px) {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .info {
+      width: 100%;
+      margin: 0 1.5rem;
+      @media screen and (max-width: 768px) {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  .adoption {
+    text-align: center;
+
+    .header {
+      h5 {
+        margin: 1rem 0;
+      }
+    }
+
+    .body {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @media screen and (max-width: 426px) {
+        flex-direction: column;
+      }
+      .adopt-link {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+
+  .microchip {
+    margin-top: 10rem;
+    min-height: 28.4rem;
+    background-color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+
+    @media screen and (min-width: 1441px) {
+      padding: 0 5%;
+    }
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      padding-bottom: 1rem;
+    }
+
+    img {
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+
+    .info {
+      width: 50%;
+      margin: auto 1.5rem;
+      padding-bottom: 1rem;
+
+      @media screen and (min-width: 1441px) {
+        width: 90%;
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+
+      .header,
+      .text {
+        text-align: right;
+      }
+
+      .text {
+        @media screen and (max-width: 768px) {
+          text-align: center !important;
+        }
+      }
+
+      .btns {
+        @media screen and (min-width: 1441px) {
+          justify-content: flex-end;
+
+          .button {
+            margin-right: 10rem;
+          }
+        }
+      }
+    }
+  }
+}

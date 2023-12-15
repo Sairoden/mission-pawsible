@@ -24,6 +24,15 @@ import ReunitedPets from "./Pets/ReunitedPets/ReunitedPets";
 // PET DETAIL
 import PetDetails from "./PetDetails/PetDetails";
 
+// HOME
+import Landing from "./Home/Landing/Landing";
+import Adoption from "./Home/Adoption/Adoption";
+import FeaturedStory from "./Home/FeaturedStory/FeaturedStory";
+import Microchip from "./Home/Microchip/Microchip";
+import Showcase from "./Home/Showcase/Showcase";
+import ContactUs from "./Home/ContactUs/ContactUs";
+import Other from "./Home/Other/Other";
+
 export {
   // ABOUT US
   About,
@@ -50,4 +59,13 @@ export {
 
   // PET DETAIL
   PetDetails,
+
+  // HOME
+  Landing,
+  Adoption,
+  FeaturedStory,
+  Microchip,
+  Showcase,
+  ContactUs,
+  Other,
 };
