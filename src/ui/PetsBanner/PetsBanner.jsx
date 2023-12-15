@@ -7,14 +7,17 @@ import { Button } from "../index";
 
 function PetsBanner({ image, title, subtitle, bannerButton = true }) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1 }}
-      className="pets-banner-container"
-    >
-      <img src={image} alt={`${title} banner`} className="pets-banner-image" />
+    <div className="pets-banner-container">
+      <motion.img
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        loading="eager"
+        src={image}
+        alt={`${title} banner`}
+        className="pets-banner-image"
+      />
       <div className="pets-banner-content">
         <div className="pets-banner-text">
           <h1 className="pets-banner-title">{title}</h1>
@@ -31,7 +34,7 @@ function PetsBanner({ image, title, subtitle, bannerButton = true }) {
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

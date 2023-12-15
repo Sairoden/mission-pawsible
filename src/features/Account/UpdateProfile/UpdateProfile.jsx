@@ -1,8 +1,21 @@
+// REACT & LIBRARIES
+import { useForm } from "react-hook-form";
+
 // STYLES
 import "./UpdateProfile.scss";
-import { Button } from "../../../ui";
+
+// UI COMPONENTS
+import { Button, Input } from "../../../ui";
 
 function UpdateProfile() {
+  // REACT-HOOK-FORM
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    getValues,
+  } = useForm();
+
   return (
     <div className="update-white-container">
       <div className="update-main-container">
@@ -28,14 +41,14 @@ function UpdateProfile() {
 
           <div className="update-form-content">
             <div className="update-form1">
-              <input type="text" className="update-input" />
+              <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
                 LAST NAME:
               </label>
             </div>
             <div className="update-form2">
-              <input type="text" className="update-input" />
+              <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
                 FIRST NAME
@@ -49,28 +62,28 @@ function UpdateProfile() {
               </label>
             </div>
             <div className="update-form4">
-              <input type="text" className="update-input" />
+              <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
                 EMAIL:
               </label>
             </div>
             <div className="update-form5">
-              <input type="text" className="update-input" />
+              <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
                 CONTACT NUMBER:
               </label>
             </div>
             <div className="update-form6">
-              <input type="text" className="update-input" />
+              <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
                 PASSWORD:
               </label>
             </div>
             <div className="update-form7">
-              <input type="text" className="update-input" />
+              <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
                 CHANGE PASSWORD:

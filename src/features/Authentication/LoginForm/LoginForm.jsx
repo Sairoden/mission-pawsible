@@ -62,7 +62,7 @@ function LoginForm() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 5 }}
+        transition={{ duration: 3 }}
       />
 
       <h1 className="login-title">Log in</h1>
