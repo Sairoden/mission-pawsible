@@ -20,6 +20,7 @@ import {
   ProfileUpdate,
   FoundPet,
   ReunitedPet,
+  PetDetail,
 } from "./pages";
 
 // UI COMPONENTS
@@ -65,7 +66,7 @@ function App() {
         },
         {
           path: "/pet/:petId",
-          element: <h1>Specific Pet Detail</h1>,
+          element: <PetDetail />,
         },
         {
           path: "/pet/update/:petId",

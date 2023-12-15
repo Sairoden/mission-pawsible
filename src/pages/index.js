@@ -12,6 +12,7 @@ import FoundPet from "./FoundPet";
 import ReunitedPet from "./ReunitedPet";
 import AppLayout from "./AppLayout";
 import ProfileUpdate from "./ProfileUpdate";
+import PetDetail from "./PetDetail";
 
 export {
   ChatMessage,
@@ -28,4 +29,5 @@ export {
   ReunitedPet,
   AppLayout,
   ProfileUpdate,
+  PetDetail,
 };

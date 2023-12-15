@@ -21,6 +21,9 @@ import LostPets from "./Pets/LostPets/LostPets";
 import FoundPets from "./Pets/FoundPets/FoundPets";
 import ReunitedPets from "./Pets/ReunitedPets/ReunitedPets";
 
+// PET DETAIL
+import PetDetails from "./PetDetails/PetDetails";
+
 export {
   // ABOUT US
   About,
@@ -44,4 +47,7 @@ export {
   LostPets,
   FoundPets,
   ReunitedPets,
+
+  // PET DETAIL
+  PetDetails,
 };

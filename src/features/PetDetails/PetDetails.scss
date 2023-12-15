@@ -1,0 +1,13 @@
+@import "../../index.scss";
+
+.image-gallery {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  height: auto;
+}
+
+.image-gallery-left-nav .image-gallery-svg,
+.image-gallery-right-nav .image-gallery-svg {
+  width: 4rem;
+}
