@@ -7,15 +7,18 @@ function FeaturedStory() {
       <div className="title">
         <h2>Featured Story</h2>
       </div>
+
       <div className="story">
         <div className="img">
           <img src="/img-story.png" alt="featured story image" />
         </div>
+
         <div className="info">
           <div className="header">
             <h6 className="sub">May 8, 2023</h6>
             <h4 className="main">A Bark Away: The Journey of Max's Return</h4>
           </div>
+
           <div className="body">
             <p>
               Justin, a Manila resident, lived a joyous life alongside his dog

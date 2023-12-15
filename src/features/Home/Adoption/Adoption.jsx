@@ -7,6 +7,7 @@ function Adoption() {
       <div className="title">
         <h2>Adopt a Pet</h2>
       </div>
+
       <div className="adoption">
         <div className="header">
           <h5>
@@ -14,13 +15,16 @@ function Adoption() {
             opportunities now!
           </h5>
         </div>
+
         <div className="body">
           <a href="https://www.caraphil.org/" className="adopt-link">
             <img src="/img-cara.png" alt="caraphil" />
           </a>
+
           <a href="http://www.philanimalrescue.org/" className="adopt-link">
             <img src="/img-part.png" alt="phil-animal-rescue" />
           </a>
+
           <a href="https://pawssionproject.org.ph/" className="adopt-link">
             <img src="/img-pawssion.png" alt="pawssion-project" />
           </a>
