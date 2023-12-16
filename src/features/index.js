@@ -31,6 +31,7 @@ import FeaturedStory from "./Home/FeaturedStory/FeaturedStory";
 import Microchip from "./Home/Microchip/Microchip";
 import Showcase from "./Home/Showcase/Showcase";
 import ContactUs from "./Home/ContactUs/ContactUs";
+import Stats from "./Home/Stats/Stats";
 import Other from "./Home/Other/Other";
 
 export {
@@ -67,5 +68,6 @@ export {
   Microchip,
   Showcase,
   ContactUs,
+  Stats,
   Other,
 };

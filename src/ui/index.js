@@ -11,6 +11,7 @@ import PetsFilter from "./PetsFilter/PetsFilter";
 import PetsBanner from "./PetsBanner/PetsBanner";
 import Pagination from "./Pagination/Pagination";
 import PetsGallery from "./PetsGallery/PetsGallery";
+import StatsCard from "./StatsCard/StatsCard";
 
 export {
   Navbar,
@@ -26,4 +27,5 @@ export {
   PetsBanner,
   Pagination,
   PetsGallery,
+  StatsCard,
 };
