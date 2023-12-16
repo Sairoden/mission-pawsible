@@ -64,7 +64,7 @@ function Contact() {
             variation="primary"
             icon={true}
             type="submit"
-            styles={{ padding: "1.6rem 7.5rem" }}
+            styles={{ padding: "2vh 3vw" }}
           >
             Send
           </Button>

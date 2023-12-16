@@ -24,7 +24,7 @@ function PetsCard({ image, title, gender, date }) {
         </div>
       </div>
 
-      <Button variation="secondary" styles={{ padding: "1rem 4rem" }}>
+      <Button variation="secondary" styles={{ padding: "1vh 2vw" }}>
         MORE INFO
       </Button>
     </div>

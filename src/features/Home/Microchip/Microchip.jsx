@@ -35,12 +35,12 @@ function Microchip() {
             <Button
               variation="primary"
               icon={true}
-              styles={{ padding: "1.6rem 3rem" }}
+              styles={{ padding: "2vh 2vw" }}
             >
               View Intro
             </Button>
 
-            <Button variation="secondary" styles={{ padding: "1.6rem 3rem" }}>
+            <Button variation="secondary" styles={{ padding: "2vh 2vw" }}>
               Explore Now
             </Button>
           </div>

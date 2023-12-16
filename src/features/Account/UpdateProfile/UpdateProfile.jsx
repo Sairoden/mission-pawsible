@@ -99,7 +99,7 @@ function UpdateProfile() {
             <Button
               variation="primary"
               icon={true}
-              styles={{ padding: "1.6rem 6rem" }}
+              styles={{ padding: "2vh 4vw" }}
             >
               SAVE
             </Button>

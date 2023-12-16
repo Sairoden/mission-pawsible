@@ -33,12 +33,12 @@ function Landing() {
           <Button
             variation="primary"
             icon={true}
-            styles={{ padding: "1.6rem 4.5rem" }}
+            styles={{ padding: "2vh 2vw" }}
           >
             Find Pets
           </Button>
 
-          <Button variation="secondary" styles={{ padding: "1.6rem 7.5rem" }}>
+          <Button variation="secondary" styles={{ padding: "2vh 3vw" }}>
             Join Us
           </Button>
         </div>

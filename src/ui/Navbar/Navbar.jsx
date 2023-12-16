@@ -74,7 +74,7 @@ const Navbar = () => {
           <Button
             variation="primary"
             styles={{
-              padding: "2rem 6rem",
+              padding: "2vh 3vw",
             }}
           >
             LOG IN

@@ -29,7 +29,7 @@ function ContactUs() {
             <Button
               variation="primary"
               icon={true}
-              styles={{ padding: "1.4rem 3rem" }}
+              styles={{ padding: "2vh 2vw" }}
             >
               Contact Us
             </Button>

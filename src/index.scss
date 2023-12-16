@@ -95,6 +95,7 @@ p {
     font-size: 1.4rem;
   }
 }
+
 label {
   font: 400 1.8rem $font;
   line-height: 2rem;
@@ -117,15 +118,17 @@ label {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.button {
-  margin: 0.5rem 0;
-  padding: 1rem 3rem;
-  border-radius: 19rem;
-  text-align: center;
-}
-.button:hover {
-  opacity: 0.75;
-}
+
+// .button {
+//   margin: 0.5rem 0;
+//   padding: 1rem 3rem;
+//   border-radius: 19rem;
+//   text-align: center;
+// }
+// .button:hover {
+//   opacity: 0.75;
+// }
+
 .container {
   width: 95vw;
   margin: auto;

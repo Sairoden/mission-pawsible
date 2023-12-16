@@ -70,11 +70,15 @@ function Profile() {
 
           <div className="footer-content">
             <NavLink to="/account/update">
-              <Button variation="primary" type="submit">
+              <Button variation="primary" styles={{ padding: "2vh 3vw" }}>
                 Update
               </Button>
             </NavLink>
-            <Button variation="secondary" onClick={logout}>
+            <Button
+              variation="secondary"
+              onClick={logout}
+              styles={{ padding: "2vh 3vw" }}
+            >
               Logout
             </Button>
           </div>
@@ -168,7 +172,9 @@ function Profile() {
               </div>
             </div>
             <div className="bottom-content">
-              <Button variation="primary">SHOW MORE</Button>
+              <Button variation="primary" styles={{ padding: "1.5vh 1.5vw" }}>
+                SHOW MORE
+              </Button>
             </div>
           </div>
 
@@ -258,7 +264,9 @@ function Profile() {
               </div>
             </div>
             <div className="bottom-content">
-              <Button variation="primary">SHOW MORE</Button>
+              <Button variation="primary" styles={{ padding: "1.5vh 1.5vw" }}>
+                SHOW MORE
+              </Button>
             </div>
           </div>
         </div>

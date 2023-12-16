@@ -27,7 +27,7 @@ function PetsBanner({ image, title, subtitle, bannerButton = true }) {
             <Button
               variation="primary"
               icon={true}
-              styles={{ padding: "2rem 4rem" }}
+              styles={{ padding: "2vh 2vw" }}
             >
               POST YOUR PET
             </Button>
