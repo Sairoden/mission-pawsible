@@ -9,16 +9,17 @@
         </div>
         <div class="menu">
             <div class="nav">
-                <a href="#" class="active"> HOME</a>
-                <a href="#"> LOST PETS</a>
-                <a href="#"> FOUND PETS</a>
-                <a href="#"> REUNITED PETS</a>
-                <a href="#"> RESOURCES</a>
-                <a href="#"> ABOUT US</a>
-                <a href="#"> CONTACT US</a>
-            </div>
-            <div class="btn">
-                <a href="#" class="button bg-orange"> LOGIN</a>
+                <a href="#" class="active"><h5>HOME</h5></a>
+                    <a href="#"><h5>LOST PETS</h5></a>
+                    <a href="#"><h5>FOUND PETS</h5></a>
+                    <a href="#"><h5>REUNITED PETS</h5></a>
+                    <a href="#"><h5>RESOURCES</h5></a>
+                    <a href="#"><h5>ABOUT US</h5></a>
+                    <a href="#"><h5>CONTACT US</h5></a>
+                </div>
+                <div class="btn">
+                    <a href="#" class="button bg-orange"><h5>LOGIN</h5></a>
+                </div>
             </div>
         </div>
     </div>
