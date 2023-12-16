@@ -1,0 +1,25 @@
+<!-- <nav>
+    <div class="container">
+        <div class="logo">
+            <h1>logo</h1>
+         </div>
+        <input type="checkbox" class="toggler">
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div class="nav">
+                <a href="#" class="active"> HOME</a>
+                <a href="#"> LOST PETS</a>
+                <a href="#"> FOUND PETS</a>
+                <a href="#"> REUNITED PETS</a>
+                <a href="#"> RESOURCES</a>
+                <a href="#"> ABOUT US</a>
+                <a href="#"> CONTACT US</a>
+            </div>
+            <div class="btn">
+                <a href="#" class="button bg-orange"> LOGIN</a>
+            </div>
+        </div>
+    </div>
+</nav> -->
