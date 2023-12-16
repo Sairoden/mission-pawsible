@@ -32,6 +32,7 @@ import Microchip from "./Home/Microchip/Microchip";
 import Showcase from "./Home/Showcase/Showcase";
 import ContactUs from "./Home/ContactUs/ContactUs";
 import Stats from "./Home/Stats/Stats";
+import Carousel from "./Home/Carousel/Carousel";
 import Other from "./Home/Other/Other";
 
 export {
@@ -69,5 +70,6 @@ export {
   Showcase,
   ContactUs,
   Stats,
+  Carousel,
   Other,
 };

@@ -1,11 +1,19 @@
 // FEATURES COMPONENTS
-import { Landing, Showcase, ContactUs, Stats, Other } from "../features";
+import {
+  Landing,
+  Showcase,
+  ContactUs,
+  Stats,
+  Carousel,
+  Other,
+} from "../features";
 
 function Home() {
   return (
     <>
       <Landing />
       <Stats />
+      <Carousel />
       <Showcase />
       {/* <Other /> */}
       <ContactUs />
