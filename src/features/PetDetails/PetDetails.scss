@@ -1,13 +1,76 @@
 @import "../../variables";
 
-.image-gallery {
-  width: 50%;
-  margin: auto;
-  text-align: center;
-  height: auto;
-}
+.petdetail-main-container {
+  display: grid;
+  grid-row: 100px auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
 
-.image-gallery-left-nav .image-gallery-svg,
-.image-gallery-right-nav .image-gallery-svg {
-  width: 4rem;
+  .petdetail-right-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .petdetail-chat-btn {
+      border-radius: 15px;
+      padding: 5px;
+      background-color: #ffffff;
+      border: 2px solid #ff9900;
+      cursor: pointer;
+      color: #ff9b00;
+      font-weight: 600;
+    }
+
+    .petdetail-right-header {
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 5px;
+    }
+
+    .petdetail-right-details {
+      display: grid;
+      border: 0px solid black;
+      border-bottom: 1px solid black;
+      justify-items: stretch;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-flow: row;
+    }
+
+    .petdetail-right-h4 {
+    }
+  }
+
+  .petdetail-footer-middle {
+    grid-column: 1 / 3 span;
+    grid-row: 2;
+
+    .image-gallery {
+      width: 50%;
+      margin: auto;
+      text-align: center;
+      height: auto;
+    }
+
+    .image-gallery-left-nav .image-gallery-svg,
+    .image-gallery-right-nav .image-gallery-svg {
+      width: 4rem;
+    }
+
+    .social-icon {
+      height: 5vh;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      .shareIcon {
+        width: 10px;
+      }
+    }
+  }
 }

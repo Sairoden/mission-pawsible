@@ -109,7 +109,7 @@ function Profile() {
                   />
                 </div>
                 <div>
-                  <div>
+                  <div className="register-h3">
                     <h3>MO5-POODLE TINY YELLOW</h3>
                   </div>
                   <div className="register-span-container">
@@ -133,7 +133,7 @@ function Profile() {
                   />
                 </div>
                 <div>
-                  <div>
+                  <div className="register-h3">
                     <h3>MO5-POODLE TINY YELLOW</h3>
                   </div>
                   <div className="register-span-container">
@@ -157,7 +157,7 @@ function Profile() {
                   />
                 </div>
                 <div>
-                  <div>
+                  <div className="register-h3">
                     <h3>MO5-POODLE TINY YELLOW</h3>
                   </div>
                   <div className="register-span-container">
@@ -201,7 +201,7 @@ function Profile() {
                   />
                 </div>
                 <div>
-                  <div>
+                  <div className="register-h3">
                     <h3>MO5-POODLE TINY YELLOW</h3>
                   </div>
                   <div className="register-span-container">
@@ -225,7 +225,7 @@ function Profile() {
                   />
                 </div>
                 <div>
-                  <div>
+                  <div className="register-h3">
                     <h3>MO5-POODLE TINY YELLOW</h3>
                   </div>
                   <div className="register-span-container">
@@ -249,7 +249,7 @@ function Profile() {
                   />
                 </div>
                 <div>
-                  <div>
+                  <div className="register-h3">
                     <h3>MO5-POODLE TINY YELLOW</h3>
                   </div>
                   <div className="register-span-container">
