@@ -2,68 +2,30 @@
 import "./PetsGallery.scss";
 
 // UI COMPONENTS
-import { PetsFilter, PetsCards, PetsCard } from "../index";
+import { PetsFilter, PetsCards, PetsCard, Spinner } from "../index";
 
-function PetsGallery() {
+// UTILITIES
+import { formatDate } from "../../utils";
+
+function PetsGallery({ pets, loading, total }) {
+  if (loading) return <Spinner />;
+
+  console.log(pets);
+
   return (
     <div className="pets-gallery">
       <PetsFilter />
 
-      <PetsCards total={57}>
-        <PetsCard
-          image="/shitsu.png"
-          title="MO502 - Poodle Tiny Yellow"
-          gender="Male"
-          date="Nov 12, 2023"
-        />
-        <PetsCard
-          image="/resource.png"
-          title="MO502 - Poodle Tiny Yellow"
-          gender="Male"
-          date="Nov 12, 2023"
-        />
-        <PetsCard
-          image="/shitsu.png"
-          title="MO502 - Poodle Tiny Yellow"
-          gender="Male"
-          date="Nov 12, 2023"
-        />
-        <PetsCard
-          image="/shitsu.png"
-          title="MO502 - Poodle Tiny Yellow"
-          gender="Male"
-          date="Nov 12, 2023"
-        />
-        <PetsCard
-          image="/shitsu.png"
-          title="MO502 - Poodle Tiny Yellow"
-          gender="Male"
-          date="Nov 12, 2023"
-        />
-        <PetsCard
-          image="/shitsu.png"
-          title="MO502 - Poodle Tiny Yellow"
-          gender="Male"
-          date="Nov 12, 2023"
-        />
-        <PetsCard
-          image="/shitsu.png"
-          title="MO502 - Poodle Tiny Yellow"
-          gender="Male"
-          date="Nov 12, 2023"
-        />
-        <PetsCard
-          image="/shitsu.png"
-          title="MO502 - Poodle Tiny Yellow"
-          gender="Male"
-          date="Nov 12, 2023"
-        />
-        <PetsCard
-          image="/shitsu.png"
-          title="MO502 - Poodle Tiny Yellow"
-          gender="Male"
-          date="Nov 12, 2023"
-        />
+      <PetsCards total={total}>
+        {pets?.map(pet => (
+          <PetsCard
+            key={pet.id}
+            image={pet.images[0]}
+            title={pet.petName}
+            gender={pet.gender}
+            date={formatDate(pet.date)}
+          />
+        ))}
       </PetsCards>
     </div>
   );

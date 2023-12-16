@@ -5,6 +5,9 @@ import { useLogout } from "./auth/useLogout";
 import { useSignup } from "./auth/useSignup";
 import { useResendEmail } from "./auth/useResendEmail";
 
+// PETS
+import { useGetLostPets } from "./pets/useGetLostPets";
+
 export {
   // AUTH
   useLogin,
@@ -12,4 +15,7 @@ export {
   useLogout,
   useSignup,
   useResendEmail,
+
+  // PETS
+  useGetLostPets,
 };

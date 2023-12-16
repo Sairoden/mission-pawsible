@@ -1,8 +1,8 @@
 @import "../../variables";
 
 .pets-card {
-  width: 25.6rem;
-  height: 42rem;
+  width: 15vw;
+  height: 45vh;
   background-color: #f4f4f4;
   box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
   position: relative;
@@ -19,9 +19,9 @@
 
   .pets-card-image {
     border-radius: 2rem;
-    padding: 1rem;
-    width: 26rem;
-    height: 28rem;
+    padding: 0.5rem;
+    width: 15vw;
+    height: 32vh;
     object-fit: cover;
   }
 
@@ -29,16 +29,15 @@
     color: #00171f;
     font-size: 1.6rem;
     font-weight: 700;
-    line-height: 24px;
     text-align: center;
+    margin-top: 0.2rem;
   }
 
   .pets-card-subtitle {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin: 0.5rem 0;
 
     .pets-card-subtitle-break {
       font-size: 1.2rem;

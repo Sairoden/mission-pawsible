@@ -2,7 +2,12 @@
 import { supabaseUrl, supabase } from "./supabase";
 
 // PETS
-import { getAllPets } from "./apiPets";
+import {
+  getAllPets,
+  getLostPets,
+  getFoundPets,
+  getReunitedPets,
+} from "./apiPets";
 
 // AUTH
 import {
@@ -20,6 +25,9 @@ export {
 
   // PETS
   getAllPets,
+  getLostPets,
+  getFoundPets,
+  getReunitedPets,
 
   // AUTH
   login,
