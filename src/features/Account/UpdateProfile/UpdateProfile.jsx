@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import "./UpdateProfile.scss";
 
 // UI COMPONENTS
-import { Button, Input } from "../../../ui";
+import { Button, Input, InputFile } from "../../../ui";
 
 function UpdateProfile() {
   // REACT-HOOK-FORM
@@ -27,8 +27,8 @@ function UpdateProfile() {
               className="update-left-image"
             />
           </div>
-          <div>
-            <input type="file" />
+          <div className="update-file-input">
+            <InputFile />
           </div>
         </div>
 
@@ -42,7 +42,7 @@ function UpdateProfile() {
               <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
-                LAST NAME:
+                LAST NAME
               </label>
             </div>
             <div className="update-form2">
@@ -62,41 +62,47 @@ function UpdateProfile() {
               />
               <br />
               <label htmlFor="text" className="right-form-label">
-                ADDRESS:
+                ADDRESS
               </label>
             </div>
             <div className="update-form4">
               <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
-                EMAIL:
+                EMAIL
               </label>
             </div>
             <div className="update-form5">
               <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
-                CONTACT NUMBER:
+                CONTACT NUMBER
               </label>
             </div>
             <div className="update-form6">
               <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
-                PASSWORD:
+                PASSWORD
               </label>
             </div>
             <div className="update-form7">
               <Input id="firstName" width="22vw" register={register} />
               <br />
               <label htmlFor="text" className="right-form-label">
-                CHANGE PASSWORD:
+                CHANGE PASSWORD
               </label>
             </div>
           </form>
 
           <div className="update-right-button">
-            <Button variation="primary">SAVE</Button>
+            <Button
+              variation="primary"
+              icon={true}
+              styles={{ padding: "1.6rem 6rem" }}
+            >
+              SAVE
+            </Button>
           </div>
         </div>
       </div>

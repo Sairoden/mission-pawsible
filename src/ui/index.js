@@ -12,6 +12,7 @@ import PetsBanner from "./PetsBanner/PetsBanner";
 import Pagination from "./Pagination/Pagination";
 import PetsGallery from "./PetsGallery/PetsGallery";
 import StatsCard from "./StatsCard/StatsCard";
+import InputFile from "./InputFile/InputFile";
 
 export {
   Navbar,
@@ -28,4 +29,5 @@ export {
   Pagination,
   PetsGallery,
   StatsCard,
+  InputFile,
 };
