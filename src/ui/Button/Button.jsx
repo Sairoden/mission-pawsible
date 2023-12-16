@@ -9,7 +9,6 @@ const Button = ({
   onClick,
   type = "button",
   disabled = false,
-  iconStyles,
 }) => {
   return (
     <button
