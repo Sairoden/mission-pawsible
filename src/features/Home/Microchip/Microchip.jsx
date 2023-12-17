@@ -25,24 +25,9 @@ function Microchip() {
           </p>
 
           <div className="btns">
-            {/* <div className="button bg-orange">
-              <h5>View Intro</h5>
-            </div>
-            <div className="button bg-blue">
-              <h5>Explore Now</h5>
-            </div> */}
+            <Button variation="primary" icon={true}> View Intro </Button>
 
-            <Button
-              variation="primary"
-              icon={true}
-              styles={{ padding: "2vh 2vw" }}
-            >
-              View Intro
-            </Button>
-
-            <Button variation="secondary" styles={{ padding: "2vh 2vw" }}>
-              Explore Now
-            </Button>
+            <Button variation="secondary"> Explore Now </Button>
           </div>
         </div>
       </div>
