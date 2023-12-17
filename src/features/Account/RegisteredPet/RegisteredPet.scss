@@ -1,0 +1,162 @@
+@import "../../../variables";
+
+// register outside container //
+.register_white_container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: $color-white;
+
+  .register-gray-container {
+    background-color: $color-mainlyblue;
+    border-radius: 15px;
+    padding: 10px;
+    height: auto;
+  }
+
+  .register-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0px;
+    grid-template-columns: 1fr 10px;
+    padding-right: 10px;
+
+    h4 {
+      color: $color-brown;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+}
+
+//registered pet middle container which is the Card
+
+.register-card-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+
+.register-middle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-white;
+  padding: 10px;
+  border-radius: 15px;
+
+  .register-h3 {
+    text-align: center;
+  }
+
+  .register-img {
+    border-radius: 15px;
+  }
+
+  .register-span-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    .span-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  }
+
+  .register-button-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .listing-btn {
+      border: 2px solid $color-blue;
+      border-radius: 2rem;
+      background-color: $color-white;
+      padding: 0.2rem 1rem;
+      color: $color-blue;
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .listing-btn:hover {
+      background: $color-blue;
+      color: $color-white;
+      transform: scale(0.9);
+      transition: 0.6s;
+    }
+    .listing-btn:active {
+      transform: translateY(4px);
+    }
+
+    .update-btn {
+      border: 2px solid $color-orange;
+      border-radius: 2rem;
+      background-color: $color-white;
+      padding: 0.2rem 2rem;
+      font-weight: 600;
+      color: $color-orange;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+    .update-btn:hover {
+      background: $color-orange;
+      color: $color-white;
+      transform: scale(0.9);
+      transition: 0.6s;
+
+      .update-btn:active {
+        transform: translateY(4px);
+      }
+    }
+  }
+}
+
+.register-btnAdd {
+  border: 2px solid $color-orange;
+  border-radius: 2rem;
+  color: $color-orange;
+  padding: 0.2rem 2rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.register-btnAdd:hover {
+  background: $color-orange;
+  color: $color-white;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+
+  .register-btnAdd:active {
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+  }
+}
+
+.bottom-content {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding-right: 0px;
+}
+.register-footer-text {
+  text-align: center;
+}

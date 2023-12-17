@@ -11,6 +11,7 @@ import SignupForm from "./Authentication/SignupForm/SignupForm";
 // ACCOUNT
 import Profile from "./Account/Profile/Profile";
 import UpdateProfile from "./Account/UpdateProfile/UpdateProfile";
+import RegisteredPet from "./Account/RegisteredPet/RegisteredPet";
 
 // RESOURCES
 import Resources from "./Resource/Resources/Resources";
@@ -49,6 +50,7 @@ export {
   // ACCOUNT
   Profile,
   UpdateProfile,
+  RegisteredPet,
 
   // RESOURCES
   Resources,
