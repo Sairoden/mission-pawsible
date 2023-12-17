@@ -2,24 +2,40 @@
 
 .petdetail-main-container {
   display: grid;
-  grid-row: 100px auto;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 20px;
+  width: 90%;
+  margin: auto;
+  gap: 2rem;
+
+  .petdetail-left-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .petdetail-social-icon {
+      display: flex;
+      gap: 10rem;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
 
   .petdetail-right-content {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 1.2rem;
 
     .petdetail-chat-btn {
       border-radius: 15px;
       padding: 5px;
-      background-color: #ffffff;
-      border: 2px solid #ff9900;
-      cursor: pointer;
-      color: #ff9b00;
+      background-color: $color-beige;
+      border: 2px solid $color-orange;
+      color: $color-orange;
+      font-size: 1.8rem;
       font-weight: 600;
+      cursor: pointer;
     }
 
     .petdetail-right-header {
@@ -30,13 +46,20 @@
       gap: 5px;
     }
 
+    .petdetail-right-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .petdetail-right-container {
+      height: 100%;
+    }
+
     .petdetail-right-details {
       display: grid;
-      border: 0px solid black;
-      border-bottom: 1px solid black;
-      justify-items: stretch;
       grid-template-columns: 1fr 1fr;
-      grid-auto-flow: row;
+      border-bottom: 1px solid black;
+      margin-bottom: 1rem;
     }
 
     .petdetail-right-h4 {

@@ -26,21 +26,36 @@ function PetDetails() {
   return (
     <div>
       <div className="petdetail-main-container">
-        <div className="left-content">
+        <div className="petdetail-left-content" height="100%">
           <div>
-            <img src="/public/resource.png" alt="petdetail dog" width="380px" />
+            <img
+              src="/public/resource.png"
+              alt="petdetail dog"
+              className="petdetail-left-img"
+              width="700vw"
+              height="550vh"
+            />
           </div>
-          <div className="social-icon">
-            <IoShareSocialOutline style={{ height: 25, width: 25 }} />
-            <FaFacebook style={{ height: 25, width: 25 }} />
-            <RiTwitterXFill style={{ height: 25, width: 25 }} />
-            <FaInstagram style={{ height: 25, width: 25 }} />
+          <div className="petdetail-social-icon">
+            <a href="share-link">
+              <IoShareSocialOutline style={{ height: 40, width: 40 }} />
+            </a>
+            <a href="fb-link">
+              <FaFacebook style={{ height: 40, width: 40 }} />
+            </a>
+            <a href="twitter-link">
+              <RiTwitterXFill style={{ height: 40, width: 40 }} />
+            </a>
+            <a href="instagram-link">
+              <FaInstagram style={{ height: 40, width: 40 }} />
+            </a>
           </div>
         </div>
+
         <div className="petdetail-right-content">
           <div className="petdetail-right-header">
             <h2>Shiba Inu Sepia</h2>
-            <button className="chat-btn">Chat with the person</button>
+            <button className="petdetail-chat-btn">Chat with the person</button>
           </div>
 
           <div className="petdetail-right-details">
@@ -126,7 +141,6 @@ function PetDetails() {
         </div>
 
         <div className="petdetail-footer-middle">
-          <h1>HELLO NUCUM</h1>
           <ImageGallery items={imageSlides} showPlayButton={false} />;
         </div>
       </div>
