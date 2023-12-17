@@ -13,7 +13,7 @@ function ReunitedPets() {
   return (
     <div className="reunited-pets-container">
       <PetsBanner
-        image="/reunited-pets-banner.png"
+        image="reunitedPetsBanner"
         title="Heartwarming Reunion"
         subtitle="Pets Reunited with Their Beloved Owners"
         bannerButton={false}
