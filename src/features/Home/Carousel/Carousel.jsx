@@ -11,7 +11,7 @@ function Carousel() {
         <div className="body">
             <h5>Help bring a paw back home! Start your search now, your furry friends can’t wait to see you!</h5>
         </div>
-        <div className="btn">
+        <div className="btns">
             <div className="button bg-orange">
                 <h5>Join Us</h5>
             </div>

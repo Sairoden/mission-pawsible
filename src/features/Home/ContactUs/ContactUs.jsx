@@ -19,23 +19,16 @@ function ContactUs() {
               conversation, share your thoughts or get the support you need.
               We’re here to listen, assist and make things happen.
             </p>
-
-            {/* <div className="btns">
-              <div className="button bg-orange">
-                <h5>Contact Us</h5>
-              </div>
-            </div> */}
-
-            <Button
-              variation="primary"
-              icon={true}
-              styles={{ padding: "2vh 2vw" }}
-            >
-              Contact Us
-            </Button>
+            <div className="btns">
+              <Button
+                variation="primary"
+                icon={true}
+              >
+                Contact Us
+              </Button>
+            </div>
           </div>
         </div>
-
         <div className="img">
           <img src="/img-contact.png" alt="Contact Us" />
         </div>
