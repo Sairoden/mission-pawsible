@@ -38,16 +38,16 @@ function PetDetails() {
           </div>
           <div className="petdetail-social-icon">
             <a href="share-link">
-              <IoShareSocialOutline style={{ height: 40, width: 40 }} />
+              <IoShareSocialOutline className="left-social-icon" />
             </a>
             <a href="fb-link">
-              <FaFacebook style={{ height: 40, width: 40 }} />
+              <FaFacebook className="left-social-icon" />
             </a>
             <a href="twitter-link">
-              <RiTwitterXFill style={{ height: 40, width: 40 }} />
+              <RiTwitterXFill className="left-social-icon" />
             </a>
             <a href="instagram-link">
-              <FaInstagram style={{ height: 40, width: 40 }} />
+              <FaInstagram className="left-social-icon" />
             </a>
           </div>
         </div>
