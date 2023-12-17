@@ -1,8 +1,8 @@
-// React & Libraries
+// REACT & LIBRARIES
 import { useQuery } from "@tanstack/react-query";
 import { useLocation, useNavigate } from "react-router-dom";
 
-// Services
+// SERVICES
 import { getCurrentUser } from "../../services";
 
 export const useGetCurrentUser = () => {

@@ -1,5 +1,5 @@
 // Services
-import { supabase, supabaseUrl } from "./index";
+import { supabase} from "./index";
 
 export const getAllPets = async () => {
   const { data, error } = await supabase

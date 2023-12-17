@@ -1,7 +1,7 @@
-// React & Libraries
+// REACT & LIBRARIES
 import { useQuery } from "@tanstack/react-query";
 
-// Services
+// SERVICES
 import { getLostPets } from "../../services";
 
 export const useGetLostPets = () => {

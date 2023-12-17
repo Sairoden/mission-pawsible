@@ -7,6 +7,7 @@ import { useResendEmail } from "./auth/useResendEmail";
 
 // PETS
 import { useGetLostPets } from "./pets/useGetLostPets";
+import { useGetFoundPets } from "./pets/useGetFoundPets";
 
 export {
   // AUTH
@@ -18,4 +19,5 @@ export {
 
   // PETS
   useGetLostPets,
+  useGetFoundPets,
 };
