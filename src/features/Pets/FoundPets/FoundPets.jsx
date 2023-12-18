@@ -2,13 +2,15 @@
 import "./FoundPets.scss";
 
 // UI COMPONENTS
-import { PetsBanner, PetsGallery, Pagination } from "../../../ui";
+import { PetsBanner, PetsGallery, Pagination, Spinner } from "../../../ui";
 
 // HOOKS
 import { useGetFoundPets } from "../../../hooks";
 
 function FoundPets() {
   const { foundPets, count, isPending } = useGetFoundPets();
+
+  if (isPending) return <Spinner />;
 
   return (
     <div className="found-pets-container">

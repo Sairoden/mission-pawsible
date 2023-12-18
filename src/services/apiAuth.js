@@ -49,6 +49,8 @@ export const signup = async ({
     password,
   });
 
+  console.log(error);
+
   if (error) throw new Error("Please try again later 🙏");
 
   const { data: user, error: userError } = await supabase

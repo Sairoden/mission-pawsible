@@ -11,7 +11,7 @@ export const useResendEmail = () => {
   const { mutate: resendEmail } = useMutation({
     mutationFn: resendEmailConfirmation,
     onSuccess: () => {
-      toast.success("Please check your new email confirmation.");
+      toast.success("Check your new email confirmation.");
     },
     onError: err => toast.error(err.message),
   });

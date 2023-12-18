@@ -2,13 +2,15 @@
 import "./ReunitedPets.scss";
 
 // UI COMPONENTS
-import { PetsBanner, PetsGallery, Pagination } from "../../../ui";
+import { PetsBanner, PetsGallery, Pagination, Spinner } from "../../../ui";
 
 // HOOKS
 import { useGetReunitedPets } from "../../../hooks";
 
 function ReunitedPets() {
   const { reunitedPets, count, isPending } = useGetReunitedPets();
+
+  if (isPending) return <Spinner />;
 
   return (
     <div className="reunited-pets-container">
