@@ -33,6 +33,7 @@ function Contact() {
         <div>
           <h1 className="header-text">CONTACT US</h1>
         </div>
+
         <div>
           <p className="description-text">
             We value your feedback and are here to assist you. Whether you have
@@ -41,24 +42,30 @@ function Contact() {
           </p>
         </div>
       </div>
+
       <div className="form-container">
-        <form className="form-content" onSubmit={handleSubmit(handleContact)}>
+        <form
+          className="form-content"
+          action="/"
+          method="POST"
+          data-netlify="true"
+        >
           <label className="label-text">Email</label>
           <br />
 
-          <input type="text" className="form-input" {...register("email")} />
+          <input type="email" className="form-input" />
           <br />
 
           <label className="label-text">Subject</label>
           <br />
 
-          <input type="text" className="form-input" {...register("subject")} />
+          <input type="text" className="form-input" />
           <br />
 
           <label className="label-text">Message</label>
           <br />
 
-          <textarea className="form-textarea" {...register("message")} />
+          <textarea className="form-textarea" />
 
           <Button
             variation="primary"
