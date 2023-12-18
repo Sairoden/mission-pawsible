@@ -1,9 +1,10 @@
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/" }],
+
   "redirects": [
     {
       "source": "/(.*)",
-      "destination": "https://example.app/:splat",
+      "destination": "https://mission-pawsible.vercel.app/:splat",
       "statusCode": 301
     }
   ]
