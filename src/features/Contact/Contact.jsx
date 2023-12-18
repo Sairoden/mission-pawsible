@@ -21,17 +21,6 @@ function Contact() {
     const formData = new FormData(myForm);
 
     console.log(formData);
-
-    // console.log(data);
-    // const formData = new FormData(data);
-
-    // fetch("/", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //   body: new URLSearchParams(formData).toString(),
-    // })
-    //   .then(() => console.log("Form successfully submitted"))
-    //   .catch(error => alert(error));
   };
 
   return (
@@ -65,27 +54,18 @@ function Contact() {
             Email
           </label>
           <br />
-
-          <input
-            name="email"
-            id="email"
-            type="email"
-            className="form-input"
-            {...register("email")}
-          />
+          <input name="email" id="email" type="email" className="form-input" />
           <br />
 
           <label id="subject" name="subject" className="label-text">
             Subject
           </label>
           <br />
-
           <input
             name="subject"
             id="subject"
             type="text"
             className="form-input"
-            {...register("subject")}
           />
           <br />
 
@@ -93,13 +73,7 @@ function Contact() {
             Message
           </label>
           <br />
-
-          <textarea
-            name="message"
-            id="message"
-            className="form-textarea"
-            {...register("message")}
-          />
+          <textarea name="message" id="message" className="form-textarea" />
 
           <Button
             variation="primary"

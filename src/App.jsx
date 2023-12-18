@@ -104,10 +104,10 @@ function App() {
           path: "/chat",
           element: <ChatMessage />,
         },
-        {
-          path: "*",
-          element: <PageNotFound />,
-        },
+        // {
+        //   path: "*",
+        //   element: <PageNotFound />,
+        // },
       ],
     },
   ]);
