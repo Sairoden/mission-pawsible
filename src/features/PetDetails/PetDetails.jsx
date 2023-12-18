@@ -9,6 +9,73 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { color } from "framer-motion";
 
+<div
+  style={{
+    width: "100%",
+    height: "100%",
+    paddingTop: 8,
+    paddingBottom: 8,
+    borderBottom: "1px #EBEEEF solid",
+    justifyContent: "flex-start",
+    alignItems: "flex-start",
+    display: "inline-flex",
+  }}
+>
+  <div
+    style={{
+      height: 26,
+      paddingTop: 4,
+      paddingBottom: 2,
+      paddingLeft: 11,
+      paddingRight: 11,
+      justifyContent: "flex-start",
+      alignItems: "center",
+      gap: 10,
+      display: "flex",
+    }}
+  >
+    <div
+      style={{
+        color: "#667479",
+        fontSize: 14,
+        fontFamily: "Poppins",
+        fontWeight: "500",
+        lineHeight: 20,
+        wordWrap: "break-word",
+      }}
+    >
+      Type
+    </div>
+  </div>
+  <div
+    style={{
+      flex: "1 1 0",
+      height: 26,
+      paddingTop: 4,
+      paddingBottom: 2,
+      paddingLeft: 11,
+      paddingRight: 11,
+      justifyContent: "flex-start",
+      alignItems: "flex-start",
+      gap: 10,
+      display: "flex",
+    }}
+  >
+    <div
+      style={{
+        color: "#667479",
+        fontSize: 14,
+        fontFamily: "Poppins",
+        fontWeight: "500",
+        lineHeight: 20,
+        wordWrap: "break-word",
+      }}
+    >
+      : Dog
+    </div>
+  </div>
+</div>;
+
 function PetDetails() {
   const imageSlides = [
     {
@@ -34,8 +101,7 @@ function PetDetails() {
           </div>
           <div className="petdetail-social-icon">
             <div className="share-icon">
-              <IoShareSocialOutline className="left-share-icon" />
-              :Share
+              <IoShareSocialOutline className="left-share-icon" />: Share
             </div>
 
             <a href="fb-link">
@@ -52,7 +118,7 @@ function PetDetails() {
 
         <div className="petdetail-right-content">
           <div className="petdetail-right-header">
-            <h2>Shiba Inu Sepia</h2>
+            <h2 className="petdetail-right-header-title">Shiba Inu Sepia</h2>
 
             <button className="petdetail-chat-btn">
               <IoChatboxEllipsesOutline className="chat-icon" />
@@ -62,89 +128,90 @@ function PetDetails() {
 
           <div className="petdetail-right-details">
             <div>
-              <h4>Gender</h4>
+              <h4 className="petdetail-right-details-text">Gender</h4>
             </div>
             <div>
-              <h4>: Female</h4>
+              <h4 className="petdetail-right-details-text">: Female</h4>
             </div>
           </div>
-          <hr />
 
           <div className="petdetail-right-details">
             <div>
-              <h4>Type</h4>
+              <h4 className="petdetail-right-details-text">Type</h4>
             </div>
             <div>
-              <h4>: Dog</h4>
+              <h4 className="petdetail-right-details-text">: Dog</h4>
             </div>
           </div>
-          <hr />
 
           <div className="petdetail-right-details">
             <div>
-              <h4>Size</h4>
+              <h4 className="petdetail-right-details-text">Size</h4>
             </div>
             <div>
-              <h4>: Small</h4>
+              <h4 className="petdetail-right-details-text">: Small</h4>
             </div>
           </div>
-          <hr />
 
           <div className="petdetail-right-details">
             <div>
-              <h4>Color</h4>
+              <h4 className="petdetail-right-details-text">Color</h4>
             </div>
             <div>
-              <h4>: Black</h4>
+              <h4 className="petdetail-right-details-text">: Black</h4>
             </div>
           </div>
-          <hr />
 
           <div className="petdetail-right-details">
             <div>
-              <h4>Microchipped</h4>
+              <h4 className="petdetail-right-details-text">Microchipped</h4>
             </div>
             <div>
-              <h4>: Yes</h4>
+              <h4 className="petdetail-right-details-text">: Yes</h4>
             </div>
           </div>
-          <hr />
 
           <div className="petdetail-right-details">
             <div>
-              <h4>Description</h4>
+              <h4 className="petdetail-right-details-text">Description</h4>
             </div>
             <div>
-              <h4>: Has red collar</h4>
+              <h4 className="petdetail-right-details-text">: Has red collar</h4>
             </div>
           </div>
-          <hr />
-          <div className="petdetail-right-details">
-            <div>
-              <h4>Message</h4>
-            </div>
-            <div>
-              <h4>: Help us to find</h4>
-            </div>
-          </div>
-          <hr />
 
           <div className="petdetail-right-details">
             <div>
-              <h4>Date Last Seen</h4>
+              <h4 className="petdetail-right-details-text">Message</h4>
             </div>
             <div>
-              <h4>: January 1, 2020</h4>
+              <h4 className="petdetail-right-details-text">
+                : Help us to find
+              </h4>
             </div>
           </div>
-          <hr />
 
           <div className="petdetail-right-details">
             <div>
-              <h4>Location Last Seen</h4>
+              <h4 className="petdetail-right-details-text">Date Last Seen</h4>
             </div>
             <div>
-              <h4>: Kamuning rd Quezon City</h4>
+              <h4 className="petdetail-right-details-text">
+                : January 1, 2020
+              </h4>
+            </div>
+          </div>
+
+          <div className="petdetail-right-details">
+            <div>
+              <h4 className="petdetail-right-details-text">
+                Location Last Seen
+              </h4>
+            </div>
+            <div>
+              <h4 className="petdetail-right-details-text">
+                : Kamuning rd Quezon City
+              </h4>
             </div>
           </div>
         </div>
