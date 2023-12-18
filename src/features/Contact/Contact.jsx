@@ -49,7 +49,14 @@ function Contact() {
       </div>
 
       <div className="form-container">
-        <form className="form-content" action="POST" data-netlify="true">
+        <form
+          className="form-content"
+          name="contact"
+          action="POST"
+          data-netlify="true"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+
           <label id="email" name="email" className="label-text">
             Email
           </label>
