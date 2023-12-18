@@ -25,6 +25,10 @@ import ReunitedPets from "./Pets/ReunitedPets/ReunitedPets";
 // PET DETAIL
 import PetDetails from "./PetDetails/PetDetails";
 
+// PET FORM
+import ReportPet from "./PetForm/ReportPet/ReportPet";
+import UpdatePet from "./PetForm/UpdatePet/UpdatePet";
+
 // HOME
 import Landing from "./Home/Landing/Landing";
 import Adoption from "./Home/Adoption/Adoption";
@@ -63,6 +67,10 @@ export {
 
   // PET DETAIL
   PetDetails,
+
+  // PET FORM
+  ReportPet,
+  UpdatePet,
 
   // HOME
   Landing,

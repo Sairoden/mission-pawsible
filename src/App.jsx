@@ -21,6 +21,8 @@ import {
   FoundPet,
   ReunitedPet,
   PetDetail,
+  ReportPet,
+  UpdatePet,
 } from "./pages";
 
 // UI COMPONENTS
@@ -69,12 +71,12 @@ function App() {
           element: <PetDetail />,
         },
         {
-          path: "/pet/update/:petId",
-          element: <h1>Update Pet Page</h1>,
+          path: "/report/:petId",
+          element: <UpdatePet />,
         },
         {
-          path: "/register-pet",
-          element: <h1>Register Pet Page</h1>,
+          path: "/report",
+          element: <ReportPet />,
         },
         {
           path: "/resources",

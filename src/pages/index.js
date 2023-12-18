@@ -13,6 +13,8 @@ import ReunitedPet from "./ReunitedPet";
 import AppLayout from "./AppLayout";
 import ProfileUpdate from "./ProfileUpdate";
 import PetDetail from "./PetDetail";
+import ReportPet from "./ReportPet";
+import UpdatePet from "./UpdatePet";
 
 export {
   ChatMessage,
@@ -30,4 +32,6 @@ export {
   AppLayout,
   ProfileUpdate,
   PetDetail,
+  ReportPet,
+  UpdatePet,
 };

@@ -13,6 +13,7 @@ import Pagination from "./Pagination/Pagination";
 import PetsGallery from "./PetsGallery/PetsGallery";
 import StatsCard from "./StatsCard/StatsCard";
 import InputFile from "./InputFile/InputFile";
+import InputSelect from "./InputSelect/InputSelect";
 
 export {
   Navbar,
@@ -30,4 +31,5 @@ export {
   PetsGallery,
   StatsCard,
   InputFile,
+  InputSelect,
 };
