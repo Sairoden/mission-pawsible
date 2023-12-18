@@ -1,6 +1,3 @@
-// REACT & LIBRARIES
-import { useForm } from "react-hook-form";
-
 // STYLES
 import "./Contact.scss";
 import Lottie from "lottie-react";
@@ -11,18 +8,6 @@ import contactAnimation from "../../assets/contact-animation.json";
 import { Button } from "../../ui";
 
 function Contact() {
-  // REACT-HOOK-FORM
-  const { register, handleSubmit } = useForm();
-
-  const handleContact = e => {
-    e.preventDefault();
-    const myForm = e.target;
-
-    const formData = new FormData(myForm);
-
-    console.log(formData);
-  };
-
   return (
     <div className="contact-container">
       <motion.div
@@ -52,11 +37,9 @@ function Contact() {
         <form
           className="form-content"
           name="contact"
-          action="POST"
-          data-netlify="true"
+          action="https://formspree.io/f/xnqeapvp"
+          method="POST"
         >
-          <input type="hidden" name="form-name" value="contact" />
-
           <label id="email" name="email" className="label-text">
             Email
           </label>
