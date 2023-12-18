@@ -44,12 +44,7 @@ function Contact() {
       </div>
 
       <div className="form-container">
-        <form
-          className="form-content"
-          action="/"
-          method="POST"
-          data-netlify="true"
-        >
+        <form className="form-content" method="POST" data-netlify="true">
           <label className="label-text">Email</label>
           <br />
 
