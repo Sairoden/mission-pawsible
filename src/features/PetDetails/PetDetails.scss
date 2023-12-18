@@ -5,7 +5,7 @@
   grid-template-columns: repeat(2, 1fr);
   width: 90%;
   margin: 2.5rem auto;
-  gap: 2rem;
+  gap: 4rem;
   background-color: $color-white;
   border-radius: 2.5rem;
   padding: 5rem;
@@ -15,6 +15,18 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+
+    .image-gallery {
+      width: 85%;
+      margin: auto;
+      text-align: center;
+      height: auto;
+    }
+
+    .image-gallery-left-nav .image-gallery-svg,
+    .image-gallery-right-nav .image-gallery-svg {
+      width: 4rem;
+    }
 
     .petdetail-social-icon {
       display: flex;
@@ -57,7 +69,7 @@
       align-items: center;
       border-radius: 20px;
       padding: 5px;
-      background-color: $color-beige;
+      background-color: $color-white;
       border: 2px solid $color-orange;
       color: $color-orange;
       font-size: 1.8rem;
@@ -75,7 +87,7 @@
       flex-direction: column;
       align-items: start;
       justify-content: flex-start;
-      gap: 5px;
+      gap: 2rem;
     }
 
     .petdetail-right-container {
@@ -89,37 +101,19 @@
 
     .petdetail-right-details {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      border-bottom: 1px solid black;
-      margin-bottom: 1rem;
+      grid-template-columns: repeat(2, 1fr);
       color: $color-lightgray;
     }
   }
 
   .petdetail-footer-middle {
-    grid-column: 1 / 3 span;
-    grid-row: 2;
+    grid-column: 1 / 4;
+    margin: auto;
+    width: fit-content;
+  }
 
-    .image-gallery {
-      width: 50%;
-      margin: auto;
-      text-align: center;
-      height: auto;
-    }
-
-    .image-gallery-left-nav .image-gallery-svg,
-    .image-gallery-right-nav .image-gallery-svg {
-      width: 4rem;
-    }
-
-    .social-icon {
-      height: 5vh;
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-    }
+  .petdetail-footer-img {
+    width: 80vw;
+    height: 50vh;
   }
 }

@@ -7,6 +7,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
+import { color } from "framer-motion";
 
 function PetDetails() {
   const imageSlides = [
@@ -29,13 +30,7 @@ function PetDetails() {
       <div className="petdetail-main-container">
         <div className="petdetail-left-content" height="100%">
           <div>
-            <img
-              src="/public/fakePet.png"
-              alt="petdetail dog"
-              className="petdetail-left-img"
-              width="700vw"
-              height="550vh"
-            />
+            <ImageGallery items={imageSlides} showPlayButton={false} />
           </div>
           <div className="petdetail-social-icon">
             <div className="share-icon">
@@ -73,6 +68,7 @@ function PetDetails() {
               <h4>: Female</h4>
             </div>
           </div>
+          <hr />
 
           <div className="petdetail-right-details">
             <div>
@@ -82,6 +78,7 @@ function PetDetails() {
               <h4>: Dog</h4>
             </div>
           </div>
+          <hr />
 
           <div className="petdetail-right-details">
             <div>
@@ -91,6 +88,7 @@ function PetDetails() {
               <h4>: Small</h4>
             </div>
           </div>
+          <hr />
 
           <div className="petdetail-right-details">
             <div>
@@ -100,6 +98,7 @@ function PetDetails() {
               <h4>: Black</h4>
             </div>
           </div>
+          <hr />
 
           <div className="petdetail-right-details">
             <div>
@@ -109,6 +108,7 @@ function PetDetails() {
               <h4>: Yes</h4>
             </div>
           </div>
+          <hr />
 
           <div className="petdetail-right-details">
             <div>
@@ -118,7 +118,7 @@ function PetDetails() {
               <h4>: Has red collar</h4>
             </div>
           </div>
-
+          <hr />
           <div className="petdetail-right-details">
             <div>
               <h4>Message</h4>
@@ -127,6 +127,7 @@ function PetDetails() {
               <h4>: Help us to find</h4>
             </div>
           </div>
+          <hr />
 
           <div className="petdetail-right-details">
             <div>
@@ -136,6 +137,7 @@ function PetDetails() {
               <h4>: January 1, 2020</h4>
             </div>
           </div>
+          <hr />
 
           <div className="petdetail-right-details">
             <div>
@@ -148,7 +150,11 @@ function PetDetails() {
         </div>
 
         <div className="petdetail-footer-middle">
-          <ImageGallery items={imageSlides} showPlayButton={false} />;
+          <img
+            src="/public/petdetailmap.png"
+            alt="map"
+            className="petdetail-footer-img"
+          />
         </div>
       </div>
     </div>
