@@ -50,22 +50,28 @@ function Contact() {
           method="POST"
           data-netlify="true"
         >
-          <label className="label-text">Email</label>
+          <label name="email" className="label-text">
+            Email
+          </label>
           <br />
 
-          <input type="email" className="form-input" />
+          <input id="email" type="email" className="form-input" />
           <br />
 
-          <label className="label-text">Subject</label>
+          <label name="subject" className="label-text">
+            Subject
+          </label>
           <br />
 
-          <input type="text" className="form-input" />
+          <input id="subject" type="text" className="form-input" />
           <br />
 
-          <label className="label-text">Message</label>
+          <label name="message" className="label-text">
+            Message
+          </label>
           <br />
 
-          <textarea className="form-textarea" />
+          <textarea id="message" className="form-textarea" />
 
           <Button
             variation="primary"
