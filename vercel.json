@@ -3,9 +3,14 @@
 
   "redirects": [
     {
+      "source": "https://mission-pawsible.vercel.com/$1",
+      "destination": "https://mission-pawsible.vercel.app/$1",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
-      "destination": "https://mission-pawsible.vercel.app/:splat",
-      "statusCode": 301
+      "destination": "https://mission-pawsible.vercel.app/$1",
+      "permanent": true
     }
   ]
 }
