@@ -49,7 +49,7 @@ export const signup = async ({
     password,
   });
 
-  if (error) throw new Error("Email has already been registered.");
+  if (error) throw new Error("Please try again later 🙏");
 
   const { data: user, error: userError } = await supabase
     .from("users")

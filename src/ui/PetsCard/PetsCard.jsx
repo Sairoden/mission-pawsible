@@ -7,22 +7,20 @@ import { Button } from "../index";
 function PetsCard({ image, title, gender, date }) {
   return (
     <div className="pets-card">
-      <img loading="lazy" src={image} alt={title} className="image" />
-      <div className="header">
-      <h4 className="title">{title}</h4>
-      </div>
+      <img src={image} alt={title} className="pets-card-image" />
+      <h4 className="pets-card-title">{title}</h4>
 
-      <div className="body">
-        <div className="gender">
-          <h4 className="main">Gender:</h4>
-          <h3 className="sub">{gender}</h3>
+      <div className="pets-card-subtitle">
+        <div className="pets-card-subtitle-content">
+          <span className="pets-card-subtitle-heading">Gender:</span>
+          <p className="pets-card-subtitle-subheading">{gender}</p>
         </div>
 
-        <div className="breaker">⭐</div>
+        <div className="pets-card-subtitle-break">⭐</div>
 
-        <div className="time">
-          <span className="main">Last Seen:</span>
-          <p className="sub">{date}</p>
+        <div className="pets-card-subtitle-content">
+          <span className="pets-card-subtitle-content-heading">Last Seen:</span>
+          <p className="pets-card-subtitle-content-subheading">{date}</p>
         </div>
       </div>
 
