@@ -8,6 +8,7 @@ import { FaInstagram } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { color } from "framer-motion";
+import { motion } from "framer-motion";
 
 <div
   style={{
@@ -94,7 +95,12 @@ function PetDetails() {
 
   return (
     <div>
-      <div className="petdetail-main-container">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 1 }}
+        className="petdetail-main-container"
+      >
         <div className="petdetail-left-content" height="100%">
           <div>
             <ImageGallery items={imageSlides} showPlayButton={false} />
@@ -223,7 +229,7 @@ function PetDetails() {
             className="petdetail-footer-img"
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

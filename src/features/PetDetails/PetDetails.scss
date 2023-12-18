@@ -76,6 +76,13 @@
       font-weight: 700;
       cursor: pointer;
 
+      &:hover {
+        background: $color-orange;
+        color: $color-white;
+        transition: 1s;
+        transform: scale(1.1);
+      }
+
       .chat-icon {
         width: 20px;
         height: 25px;
