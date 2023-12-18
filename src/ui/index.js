@@ -14,6 +14,7 @@ import PetsGallery from "./PetsGallery/PetsGallery";
 import StatsCard from "./StatsCard/StatsCard";
 import InputFile from "./InputFile/InputFile";
 import InputSelect from "./InputSelect/InputSelect";
+import InputTextArea from "./InputTextArea/InputTextArea";
 
 export {
   Navbar,
@@ -32,4 +33,5 @@ export {
   StatsCard,
   InputFile,
   InputSelect,
+  InputTextArea,
 };
