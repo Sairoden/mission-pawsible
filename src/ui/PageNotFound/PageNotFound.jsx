@@ -2,7 +2,7 @@ import "./PageNotFound.scss";
 
 function PageNotFound() {
   return (
-    <div className="container">
+    <div className="page-not-found">
       <div id="error" className="sixteen columns clearfix">
         <div id="error-monster-1" className="five columns alpha">
           <img
