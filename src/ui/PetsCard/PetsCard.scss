@@ -2,22 +2,22 @@
 
 .pets-card {
   width: 16vw;
-  // height: 48vh;
+  height: 48vh;
   background-color: #f4f4f4;
+  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
-  position: relative;
-  border-radius: 12px;
-  box-shadow: 0px 4px 28px -2px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-  
+
   &:hover {
     transform: scale(1.05);
   }
 
-  .image {
+  &-image {
     border-radius: 2rem;
     padding: 0.5rem;
     width: 16vw;
@@ -25,24 +25,26 @@
     object-fit: cover;
   }
 
-  .title {
+  &-title {
     color: #00171f;
+    font-size: 1.6rem;
+    font-weight: 700;
     text-align: center;
-    margin: 0.5rem 0;
+    margin-top: 0.2rem;
   }
 
-  .pets-card-subtitle {
+  &-subtitle {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin: 0.5rem 0;
 
-    .pets-card-subtitle-break {
+    &-break {
       font-size: 1.2rem;
       margin: 0 0.5rem;
     }
 
-    .pets-card-subtitle-content {
+    &-content {
       color: #667479;
       line-height: 18px;
       font-size: 1.8rem;
@@ -51,11 +53,11 @@
       align-items: center;
       gap: 0.5rem;
 
-      .pets-card-subtitle-heading {
+      &-heading {
         font-weight: 600;
       }
 
-      .pets-card-subtitle-subheading {
+      &-subheading {
         font-weight: 400;
       }
     }
