@@ -12,31 +12,36 @@ function PetsBanner({ image, title, subtitle, bannerButton = true }) {
   const navigate = useNavigate();
 
   return (
-    <motion.div
+    <div className="pet-banner">
+      <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className={`pets-banner-container ${image}`}
+      className={`image ${image}`}
     >
-      <div className="pets-banner-content">
-        <div className="pets-banner-text">
-          <h1 className="pets-banner-title">{title}</h1>
-          <p className="pets-banner-subtitle">{subtitle}</p>
-
-          {bannerButton && (
-            <Button
-              variation="primary"
-              icon={true}
-              styles={{ padding: "2vh 2vw" }}
-              onClick={() => navigate("/report")}
-            >
-              POST YOUR PET
-            </Button>
-          )}
+      <div className="info">
+        <div className="header">
+          <h2 className="main">{title}</h2>
+        </div>
+        <div className="body">
+          <h5 className="sub">{subtitle}</h5>
+          <div className="btns">
+            {bannerButton && (
+              <Button
+                variation="primary"
+                icon={true}
+                onClick={() => navigate("/report")}
+              >
+                POST YOUR PET
+              </Button>
+            )}
+          </div>
+    
         </div>
       </div>
     </motion.div>
+    </div>
   );
 }
 
