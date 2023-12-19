@@ -10,6 +10,9 @@ import { useGetLostPets } from "./pets/useGetLostPets";
 import { useGetFoundPets } from "./pets/useGetFoundPets";
 import { useGetReunitedPets } from "./pets/useGetReunitedPets";
 
+// RESOURCES
+import { useGetResources } from "./resources/useGetResources";
+
 export {
   // AUTH
   useLogin,
@@ -22,4 +25,7 @@ export {
   useGetLostPets,
   useGetFoundPets,
   useGetReunitedPets,
+
+  // RESORUCES
+  useGetResources,
 };

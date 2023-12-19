@@ -1,12 +1,15 @@
 // Services
-import { supabase} from "./index";
+import { supabase } from "./index";
 
 export const getAllPets = async () => {
   const { data, error } = await supabase
     .from("pets")
     .select("*, users(firstName, lastName)");
 
-  if (error) throw new Error("Pets could not be loaded");
+  if (error) {
+    console.error(error.message);
+    throw new Error("Pets could not be loaded");
+  }
 
   return data;
 };
@@ -17,7 +20,10 @@ export const getLostPets = async () => {
     .select("*", { count: "exact" })
     .eq("status", "Lost");
 
-  if (error) throw new Error("Lost Pets could not be loaded");
+  if (error) {
+    console.error(error.message);
+    throw new Error("Lost Pets could not be loaded");
+  }
 
   return { data, count };
 };
@@ -28,7 +34,10 @@ export const getFoundPets = async () => {
     .select("*", { count: "exact" })
     .eq("status", "Found");
 
-  if (error) throw new Error("Found Pets could not be loaded");
+  if (error) {
+    console.error(error.message);
+    throw new Error("Found Pets could not be loaded");
+  }
 
   return { data, count };
 };
@@ -39,7 +48,10 @@ export const getReunitedPets = async () => {
     .select("*", { count: "exact" })
     .eq("status", "Reunited");
 
-  if (error) throw new Error("Reunited Pets could not be loaded");
+  if (error) {
+    console.error(error.message);
+    throw new Error("Reunited Pets could not be loaded");
+  }
 
   return { data, count };
 };

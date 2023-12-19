@@ -8,8 +8,10 @@ export const getCurrentUser = async () => {
 
   const { data, error } = await supabase.auth.getUser();
 
-  if (error)
+  if (error) {
+    console.error(error.message);
     throw new Error("Unable to retrieve user information. Please try again.");
+  }
 
   return data?.user;
 };
@@ -20,10 +22,15 @@ export const login = async ({ email, password }) => {
     password,
   });
 
-  if (error?.message === "Email not confirmed")
+  if (error?.message === "Email not confirmed") {
+    console.error(error.message);
     throw new Error("Email is not confirmed. Please verify it.");
+  }
 
-  if (error) throw new Error("Invalid credentials. Please try again.");
+  if (error) {
+    console.error(error.message);
+    throw new Error("Invalid credentials. Please try again.");
+  }
 
   return data;
 };
@@ -49,9 +56,10 @@ export const signup = async ({
     password,
   });
 
-  console.log(error);
-
-  if (error) throw new Error("Please try again later 🙏");
+  if (error) {
+    console.error(error.message);
+    throw new Error("Please try again later 🙏");
+  }
 
   const { data: user, error: userError } = await supabase
     .from("users")
@@ -68,13 +76,19 @@ export const signup = async ({
     avatar: user[0]?.avatar,
   };
 
-  if (userError) throw new Error("Registration failed.");
+  if (userError) {
+    console.error(userError.message);
+    throw new Error("Registration failed.");
+  }
 };
 
 export const logout = async () => {
   const { error } = await supabase.auth.signOut();
 
-  if (error) throw new Error(error.message);
+  if (error) {
+    console.error(error.message);
+    throw new Error(error.message);
+  }
 };
 
 export const resendEmailConfirmation = async email => {
@@ -86,7 +100,10 @@ export const resendEmailConfirmation = async email => {
     },
   });
 
-  if (error) throw new Error("Failed to resend email confirmation");
+  if (error) {
+    console.error(error.message);
+    throw new Error("Failed to resend email confirmation");
+  }
 
   return data;
 };

@@ -18,6 +18,9 @@ import {
   resendEmailConfirmation,
 } from "./apiAuth";
 
+// RESOURCES
+import { getAllResources } from "./apiResource";
+
 export {
   // SUPABASE
   supabaseUrl,
@@ -35,4 +38,7 @@ export {
   logout,
   signup,
   resendEmailConfirmation,
+
+  // RESOURCES
+  getAllResources,
 };

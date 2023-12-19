@@ -16,6 +16,7 @@ import RegisteredPet from "./Account/RegisteredPet/RegisteredPet";
 // RESOURCES
 import Resources from "./Resource/Resources/Resources";
 import SpecificResource from "./Resource/SpecificResource/SpecificResource";
+import ResourceCard from "./Resource/ResourceCard/ResourceCard";
 
 // PETS
 import LostPets from "./Pets/LostPets/LostPets";
@@ -59,6 +60,7 @@ export {
   // RESOURCES
   Resources,
   SpecificResource,
+  ResourceCard,
 
   // PETS
   LostPets,
