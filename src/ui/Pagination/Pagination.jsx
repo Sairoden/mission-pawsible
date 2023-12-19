@@ -13,8 +13,7 @@ function Pagination({ total, pageSize }) {
   const handleChange = current => {
     searchParams.set("page", current);
     setSearchParams(searchParams);
-    const twentyPercentOfPage = document.body.scrollHeight * 0.2;
-    window.scrollTo({ top: twentyPercentOfPage, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
