@@ -1,3 +1,6 @@
+// REACT & LIBRARIES
+import { useSearchParams } from "react-router-dom";
+
 // STYLES
 import "./Resources.scss";
 
@@ -10,8 +13,24 @@ import { Pagination, Spinner } from "../../../ui";
 // HOOKS
 import { useGetResources } from "../../../hooks";
 
+// UTILITIES
+import { RESOURCES_PAGE_SIZE } from "../../../utils";
+
 function Resources() {
   const { resources, isPending } = useGetResources();
+  const [searchParams] = useSearchParams();
+
+  const currentPage = !searchParams.get("page")
+    ? 1
+    : Number(searchParams.get("page"));
+
+  const indexOfLastResource = currentPage * RESOURCES_PAGE_SIZE;
+  const indexOfFirstResource = indexOfLastResource - RESOURCES_PAGE_SIZE;
+
+  const newResources = resources?.slice(
+    indexOfFirstResource,
+    indexOfLastResource
+  );
 
   if (isPending) return <Spinner />;
 
@@ -22,7 +41,7 @@ function Resources() {
       </div>
 
       <div className="resources-middle-container">
-        {resources.map((resource, index) => (
+        {newResources?.map((resource, index) => (
           <ResourceCard
             key={index}
             index={index}
@@ -35,7 +54,7 @@ function Resources() {
         ))}
       </div>
 
-      <Pagination total={80} />
+      <Pagination total={resources?.length} pageSize={RESOURCES_PAGE_SIZE} />
     </div>
   );
 }
