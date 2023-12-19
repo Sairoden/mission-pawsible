@@ -1,46 +1,137 @@
 @import "../../variables";
 
-.pets-filter-container {
-  width: 10vw;
+// .pets-filter-container {
+//   width: 10vw;
 
-  .pets-filter-header {
-    color: $color-brown;
-    font-size: 3.2rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-  }
+//   .pets-filter-header {
+//     color: $color-brown;
+//     font-size: 3.2rem;
+//     font-weight: 700;
+//     margin-bottom: 2rem;
+//   }
 
-  .pets-filter-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1.6rem;
+//   .pets-filter-details {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1rem;
+//     margin-bottom: 1.6rem;
 
-    .pets-filter-detail-line {
-      border: 1px solid $color-brown;
-      margin-top: 1.5rem;
-      width: 15vw;
+//     .pets-filter-detail-line {
+//       border: 1px solid $color-brown;
+//       margin-top: 1.5rem;
+//       width: 15vw;
+//     }
+
+//     .pets-filter-details-title {
+//       color: $color-brown;
+//       font-size: 2rem;
+//       font-weight: 700;
+//     }
+
+//     .pets-filter-detail {
+//       display: flex;
+//       gap: 1rem;
+
+//       .pets-filter-detail-checkbox {
+//         width: 2rem;
+//       }
+
+//       .pets-filter-detail-label {
+//         color: $color-brown;
+//         font-size: 1.8rem;
+//         font-weight: 500;
+//       }
+//     }
+//   }
+// }
+
+.pet-filter {
+  position: relative;
+
+  .toggler {
+    display: none;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      cursor: pointer;
+      width: 10.45rem;
+      height: 4.4rem;
+      opacity: 0;
     }
 
-    .pets-filter-details-title {
-      color: $color-brown;
-      font-size: 2rem;
-      font-weight: 700;
-    }
-
-    .pets-filter-detail {
+    &:checked ~ .body {   
+      margin-top: 2.5rem;    
+      margin: auto;
+      width: 100%;
       display: flex;
-      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    } 
+  }
 
-      .pets-filter-detail-checkbox {
-        width: 2rem;
-      }
+  .header {
+    margin-top: 1rem;
+    width: 100%;
 
-      .pets-filter-detail-label {
-        color: $color-brown;
-        font-size: 1.8rem;
-        font-weight: 500;
+    @media screen and (max-width: 768px) {
+      display: flex;
+      justify-content: flex-end;      
+    }
+
+    h2 {
+      @media screen and (max-width: 768px) {
+        padding: .5rem;
+        border: .2rem solid $color-brown;
       }
     }
   }
+
+  .body {
+    display: block;
+    @media screen and (max-width: 768px) {
+      display: none;
+  }
+
+    & > * {
+      width: 75%;
+      padding: 0 .5rem;
+
+      @media screen and (max-width: 768px) {
+        margin: 1rem;
+        width: 15rem;
+      }
+    }
+
+    & > :not(:last-child) {
+      padding: .5rem 0;
+      border-bottom: .2rem solid $color-brown;
+
+      @media screen and (max-width: 768px) {
+        border-bottom: none;
+        // border-right: .2rem solid $color-brown;
+
+      }
+    }
+
+
+    // margin-top: 0.5rem;
+    .main {
+      // margin: 1rem 0;
+      text-transform: capitalize;
+      font-weight: 600;
+    }
+    .checkbox {
+      margin: 0 .5rem;
+      width: 2rem;
+    }
+    .label {
+      font: 400 1.8rem $font;
+      text-transform: capitalize;
+    }
+  }
+
 }

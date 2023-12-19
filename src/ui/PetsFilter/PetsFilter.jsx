@@ -3,134 +3,135 @@ import "./PetsFilter.scss";
 
 function PetsFilter() {
   return (
-    <form className="pets-filter-container">
-      <h1 className="pets-filter-header">FILTER</h1>
+    <div className="pet-filter">
+      <form className="filter-form">
+        <input type="checkbox" class="toggler" />
+        <div className="header">
+          <h2 className="click">FILTER</h2>
+        </div>
+      
+        <div className="body">
+          {/* SPECIES */}
+          <div className="species">
+            <h3 className="main">Species</h3>
 
-      {/* SPECIES */}
-      <div className="pets-filter-details">
-        <p className="pets-filter-details-title">Species</p>
+            <div className="choices">
+              <input
+                type="checkbox"
+                id="cat"
+                className="checkbox"
+              />
+              <label htmlFor="cat" className="label">
+                Cat
+              </label>
+            </div>
 
-        <div className="pets-filter-detail">
-          <input
-            type="checkbox"
-            id="cat"
-            className="pets-filter-detail-checkbox"
-          />
-          <label htmlFor="cat" className="pets-filter-detail-label">
-            Cat
-          </label>
+            <div className="choices">
+              <input
+                type="checkbox"
+                id="dog"
+                className="checkbox"
+              />
+              <label htmlFor="dog" className="label">
+                Dog
+              </label>
+            </div>
+          </div>
+
+        {/* GENDER */}
+        <div className="gender">
+          <h3 className="main">Gender</h3>
+
+          <div className="choices">
+            <input
+              type="checkbox"
+              id="male"
+              className="checkbox"
+            />
+            <label htmlFor="male" className="label">
+              Male
+            </label>
+          </div>
+
+          <div className="choices">
+            <input
+              type="checkbox"
+              id="female"
+              className="checkbox"
+            />
+            <label htmlFor="female" className="label">
+              Female
+            </label>
+          </div>
         </div>
 
-        <div className="pets-filter-detail">
-          <input
-            type="checkbox"
-            id="dog"
-            className="pets-filter-detail-checkbox"
-          />
-          <label htmlFor="dog" className="pets-filter-detail-label">
-            Dog
-          </label>
+        {/* SIZE */}
+        <div className="size">
+          <h3 className="main">Size</h3>
+
+          <div className="choices">
+            <input
+              type="checkbox"
+              id="small"
+              className="checkbox"
+            />
+            <label htmlFor="small" className="label">
+              Small
+            </label>
+          </div>
+
+          <div className="choice">
+            <input
+              type="checkbox"
+              id="medium"
+              className="checkbox"
+            />
+            <label htmlFor="medium" className="label">
+              Medium
+            </label>
+          </div>
+
+          <div className="choice">
+            <input
+              type="checkbox"
+              id="large"
+              className="checkbox"
+            />
+            <label htmlFor="large" className="label">
+              Large
+            </label>
+          </div>
         </div>
 
-        <div className="pets-filter-detail-line" />
-      </div>
+        {/* LOCATION */}
+        <div className="location">
+          <h3 className="main">Location</h3>
 
-      {/* GENDER */}
-      <div className="pets-filter-details">
-        <p className="pets-filter-details-title">Gender</p>
+          <div className="choices">
+            <input
+              type="checkbox"
+              id="manila"
+              className="checkbox"
+            />
+            <label htmlFor="manila" className="label">
+              Manila
+            </label>
+          </div>
 
-        <div className="pets-filter-detail">
-          <input
-            type="checkbox"
-            id="male"
-            className="pets-filter-detail-checkbox"
-          />
-          <label htmlFor="male" className="pets-filter-detail-label">
-            Male
-          </label>
+          <div className="choices">
+            <input
+              type="checkbox"
+              id="quezon"
+              className="checkbox"
+            />
+            <label htmlFor="quezon" className="label">
+              Quezon City
+            </label>
+          </div>
         </div>
-
-        <div className="pets-filter-detail">
-          <input
-            type="checkbox"
-            id="female"
-            className="pets-filter-detail-checkbox"
-          />
-          <label htmlFor="female" className="pets-filter-detail-label">
-            Female
-          </label>
         </div>
-
-        <div className="pets-filter-detail-line" />
-      </div>
-
-      {/* SIZE */}
-      <div className="pets-filter-details">
-        <p className="pets-filter-details-title">Size</p>
-
-        <div className="pets-filter-detail">
-          <input
-            type="checkbox"
-            id="small"
-            className="pets-filter-detail-checkbox"
-          />
-          <label htmlFor="small" className="pets-filter-detail-label">
-            Small
-          </label>
-        </div>
-
-        <div className="pets-filter-detail">
-          <input
-            type="checkbox"
-            id="medium"
-            className="pets-filter-detail-checkbox"
-          />
-          <label htmlFor="medium" className="pets-filter-detail-label">
-            Medium
-          </label>
-        </div>
-
-        <div className="pets-filter-detail">
-          <input
-            type="checkbox"
-            id="large"
-            className="pets-filter-detail-checkbox"
-          />
-          <label htmlFor="large" className="pets-filter-detail-label">
-            Large
-          </label>
-        </div>
-
-        <div className="pets-filter-detail-line" />
-      </div>
-
-      {/* LOCATION */}
-      <div className="pets-filter-details">
-        <p className="pets-filter-details-title">Location</p>
-
-        <div className="pets-filter-detail">
-          <input
-            type="checkbox"
-            id="manila"
-            className="pets-filter-detail-checkbox"
-          />
-          <label htmlFor="manila" className="pets-filter-detail-label">
-            Manila
-          </label>
-        </div>
-
-        <div className="pets-filter-detail">
-          <input
-            type="checkbox"
-            id="quezon"
-            className="pets-filter-detail-checkbox"
-          />
-          <label htmlFor="quezon" className="pets-filter-detail-label">
-            Quezon City
-          </label>
-        </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
 
