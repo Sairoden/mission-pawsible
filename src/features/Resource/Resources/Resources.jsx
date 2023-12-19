@@ -13,8 +13,6 @@ import { useGetResources } from "../../../hooks";
 function Resources() {
   const { resources, isPending } = useGetResources();
 
-  console.log(resources);
-
   if (isPending) return <Spinner />;
 
   return (

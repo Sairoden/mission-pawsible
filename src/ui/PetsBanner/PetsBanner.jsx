@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { Button } from "../index";
 
 function PetsBanner({ image, title, subtitle, bannerButton = true }) {
-  console.log(image);
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -13,8 +13,6 @@ export const getAllResources = async () => {
 
     const resources = data?.articles.filter(resource => resource.urlToImage);
 
-    console.log(resources);
-
     return resources;
   } catch (error) {
     console.error(error.message);
