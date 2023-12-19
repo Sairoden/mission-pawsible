@@ -1,3 +1,6 @@
+// REACT & LIBRARIES
+import { useNavigate } from "react-router-dom";
+
 // STYLES
 import "./PetsBanner.scss";
 import { motion } from "framer-motion";
@@ -6,6 +9,8 @@ import { motion } from "framer-motion";
 import { Button } from "../index";
 
 function PetsBanner({ image, title, subtitle, bannerButton = true }) {
+  const navigate = useNavigate();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -24,6 +29,7 @@ function PetsBanner({ image, title, subtitle, bannerButton = true }) {
               variation="primary"
               icon={true}
               styles={{ padding: "2vh 2vw" }}
+              onClick={() => navigate("/report")}
             >
               POST YOUR PET
             </Button>
