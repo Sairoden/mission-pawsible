@@ -74,7 +74,6 @@
   }
 
   .header {
-    margin-top: 1rem;
     width: 100%;
 
     @media screen and (max-width: 768px) {
@@ -129,7 +128,7 @@
       width: 2rem;
     }
     .label {
-      font: 400 1.8rem $font;
+      font: 400 1.4rem $font;
       text-transform: capitalize;
     }
   }

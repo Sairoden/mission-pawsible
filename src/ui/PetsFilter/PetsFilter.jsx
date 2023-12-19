@@ -13,7 +13,7 @@ function PetsFilter() {
         <div className="body">
           {/* SPECIES */}
           <div className="species">
-            <h3 className="main">Species</h3>
+            <h4 className="main">Species</h4>
 
             <div className="choices">
               <input
@@ -40,7 +40,7 @@ function PetsFilter() {
 
         {/* GENDER */}
         <div className="gender">
-          <h3 className="main">Gender</h3>
+          <h4 className="main">Gender</h4>
 
           <div className="choices">
             <input
@@ -67,7 +67,7 @@ function PetsFilter() {
 
         {/* SIZE */}
         <div className="size">
-          <h3 className="main">Size</h3>
+          <h4 className="main">Size</h4>
 
           <div className="choices">
             <input
@@ -105,7 +105,7 @@ function PetsFilter() {
 
         {/* LOCATION */}
         <div className="location">
-          <h3 className="main">Location</h3>
+          <h4 className="main">Location</h4>
 
           <div className="choices">
             <input
