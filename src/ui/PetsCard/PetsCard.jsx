@@ -6,27 +6,35 @@ import { Button } from "../index";
 
 function PetsCard({ image, title, gender, date }) {
   return (
-    <div className="pets-card">
-      <img src={image} alt={title} className="pets-card-image" />
-      <h4 className="pets-card-title">{title}</h4>
-
-      <div className="pets-card-subtitle">
-        <div className="pets-card-subtitle-content">
-          <span className="pets-card-subtitle-heading">Gender:</span>
-          <p className="pets-card-subtitle-subheading">{gender}</p>
+    <div className="pet-card">
+      <div className="image">
+       <img src={image} alt={title} />
+      </div>
+      <div className="info">
+        <div className="header">
+        <h3 className="title">{title}</h3>
         </div>
 
-        <div className="pets-card-subtitle-break">⭐</div>
+        <div className="body">
+          <div className="gender">
+            <h5 className="main">Gender:</h5>
+            <h5 className="sub">{gender}</h5>
+          </div>
 
-        <div className="pets-card-subtitle-content">
-          <span className="pets-card-subtitle-content-heading">Last Seen:</span>
-          <p className="pets-card-subtitle-content-subheading">{date}</p>
+          <div className="breaker"><h4>⭐</h4></div>
+
+          <div className="time">
+            <h5 className="main">Last Seen:</h5>
+            <h5 className="sub">{date}</h5>
+          </div>
+        </div>
+
+        <div className="btns">
+          <Button variation="secondary">
+            MORE INFO
+          </Button>
         </div>
       </div>
-
-      <Button variation="secondary" styles={{ padding: "1vh 2vw" }}>
-        MORE INFO
-      </Button>
     </div>
   );
 }

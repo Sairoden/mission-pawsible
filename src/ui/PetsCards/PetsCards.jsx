@@ -3,10 +3,12 @@ import "./PetsCards.scss";
 
 function PetsCards({ total, children }) {
   return (
-    <div className="pets-cards-container">
-      <h1 className="pets-cards-header">TOTAL: {total}</h1>
+    <div className="gallery-card">
+      <div className="header">
+      <h2>TOTAL: {total}</h2>
+      </div>
 
-      <div className="pets-cards-grid">{children}</div>
+      <div className="grid">{children}</div>
     </div>
   );
 }

@@ -1,7 +1,44 @@
 @import "../../variables";
 
-.pets-gallery {
-  padding: 10rem;
-  display: grid;
-  grid-template-columns: 1fr auto;
+// .pets-gallery {
+//   padding: 10rem;
+//   display: grid;
+//   grid-template-columns: 1fr auto;
+// }
+
+.pet-gallery {
+  margin-bottom: 5rem;
+
+  .container {
+    margin-top: 5rem;
+    display: flex;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  .header {
+    margin-top: 1rem;
+  }
+
+  .filter {
+    width: 25%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .gallery {
+    width: 75%;
+
+    @media screen and (min-width: 1441px) {
+      width: 70%;
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
 }
