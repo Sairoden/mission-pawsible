@@ -5,11 +5,9 @@
   background-image: url(/img-other.png);
   background-size: contain;
 
-  .title {
-    padding-top: 10rem;
-    margin-bottom: 2.5rem;
-    text-align: center;
-  }
+  // .title {
+  //   padding-top: 10rem;
+  // }
 
   .header {
     @media screen and (max-width: 768px) {

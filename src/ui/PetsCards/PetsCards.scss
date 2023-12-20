@@ -23,6 +23,9 @@
   width: 100%;
   padding: 0 1rem;
 
+  @media screen and (max-width: 426px) {
+    padding: 0;
+  }
   .header {
     margin-bottom: 1rem;
   }
@@ -43,7 +46,10 @@
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 3rem;
     }
-
+    
+    @media screen and (max-width: 426px) {
+      grid-gap: 1rem;
+    }
 
   }
 }

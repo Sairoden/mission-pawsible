@@ -12,7 +12,7 @@ function PetsCard({ image, title, gender, date }) {
       </div>
       <div className="info">
         <div className="header">
-        <h3 className="title">{title}</h3>
+        <h3 className="main">{title}</h3>
         </div>
 
         <div className="body">
