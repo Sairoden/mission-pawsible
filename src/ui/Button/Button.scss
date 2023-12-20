@@ -27,22 +27,43 @@
 }
 
 .button {
-  position: relative;
   color: $color-white;
-  font-size: 1.8rem;
-  font-weight: 600;
-  word-wrap: break-word;
-  padding: 2vh 2vw;
-  border-radius: 999px;
-  overflow: hidden;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 10px;
-  display: inline-flex;
-  cursor: pointer;
+  margin: .5rem 0;
+  padding: 1.2rem 3rem;
   border: none;
+  border-radius: 19rem;
+  text-align: center;
+  font: 400 1.4rem $font;
+  position: relative;
+  display: flex;
+  align-items: center;
   transition: background 0.3s ease, transform 0.2s ease;
+  
+  @media screen and (min-width: 1441px) {
+    font-size: 1.8rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+
+  // position: relative;
+  // color: $color-white;
+  // // font-size: 1.8rem;
+  // // font-weight: 600;
+  // word-wrap: break-word;
+  // padding: 2vh 2vw;
+  // border-radius: 19rem;
+  // overflow: hidden;
+  // justify-content: center;
+  // align-items: center;
+  // text-align: center;
+  // gap: 10px;
+  // display: inline-flex;
+  // cursor: pointer;
+  // border: none;
+  // transition: background 0.3s ease, transform 0.2s ease;
 
   &:before {
     content: "";
@@ -53,7 +74,7 @@
     width: 0;
     height: 100%;
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 999px;
+    border-radius: 19rem;
     transition: width 0.3s ease;
     z-index: -1;
   }
@@ -64,8 +85,11 @@
 }
 
 .button-icon {
-  width: 2.8rem;
-  height: 2.8rem;
+  // width: 2.5rem;
+  // height: 2.5rem;
+  height: 80%;
+  margin: auto;
+  margin-left: .5rem;
   transition: transform 0.3s ease;
 }
 
