@@ -17,14 +17,15 @@ function Pagination({ total, pageSize }) {
   };
 
   return (
-    <RCPagination
-      className="pagination"
+    <div className="pagination">
+      <RCPagination
       total={total}
       pageSize={pageSize}
       prevIcon={<HiOutlineArrowLeft />}
       nextIcon={<HiOutlineArrowRight />}
       onChange={handleChange}
     />
+    </div>
   );
 }
 
