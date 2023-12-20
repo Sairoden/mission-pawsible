@@ -20,7 +20,8 @@ function PetsBanner({ image, title, subtitle, bannerButton = true }) {
       transition={{ duration: 1 }}
       className={`image ${image}`}
     >
-      <div className="info">
+    </motion.div>
+    <div className="info">
         <div className="header">
           <h2 className="main">{title}</h2>
         </div>
@@ -40,7 +41,6 @@ function PetsBanner({ image, title, subtitle, bannerButton = true }) {
     
         </div>
       </div>
-    </motion.div>
     </div>
   );
 }
