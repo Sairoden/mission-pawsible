@@ -80,7 +80,6 @@ $reunitedPetsBanner: url("../../assets/banner-reunited-pets.png");
 
 .pet-banner {
   height: 50vh;
-  width: 100vw;
   position: relative;
 
   .image {
@@ -91,7 +90,6 @@ $reunitedPetsBanner: url("../../assets/banner-reunited-pets.png");
     background-repeat: no-repeat;
     @media screen and (max-width: 768px) {
       background-position: center left;
-      background-size:auto;
     }
   }
 
@@ -117,6 +115,7 @@ $reunitedPetsBanner: url("../../assets/banner-reunited-pets.png");
       align-content: center;
       align-items: center;
 
+      h2,
       h5 {
         text-align: center;
       }
