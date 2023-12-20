@@ -9,7 +9,7 @@ import { Button } from "../../ui";
 
 function Contact() {
   return (
-    <div className="contact-container">
+    <div className="contact container">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -19,22 +19,18 @@ function Contact() {
         <Lottie animationData={contactAnimation} />
       </motion.div>
 
-      <div className="Header-container">
-        <div>
-          <h1 className="header-text">CONTACT US</h1>
+      <div className="info">
+        <div className="title">
+          <h2>CONTACT US</h2>
         </div>
-
-        <div>
-          <p className="description-text">
+        <div className="body">
+          <p className="text">
             We value your feedback and are here to assist you. Whether you have
             questions, suggestions, or need assistance, our team is ready to
             help.
           </p>
-        </div>
-      </div>
 
-      <div className="form-container">
-        <form
+          <form
           className="form-content"
           name="contact"
           action="https://formspree.io/f/xnqeapvp"
@@ -65,15 +61,17 @@ function Contact() {
           <br />
           <textarea name="message" id="message" className="form-textarea" />
 
+          <div className="btns">
           <Button
             variation="primary"
             icon={true}
             type="submit"
-            styles={{ padding: "2vh 3vw" }}
           >
             Send
           </Button>
+          </div>
         </form>
+        </div>
       </div>
     </div>
   );
