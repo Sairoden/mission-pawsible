@@ -46,10 +46,10 @@ function Resources() {
             key={index}
             index={index}
             title={resource.title}
-            author={resource.author}
+            author={resource.source.name}
             description={resource.description}
             publishedAt={resource.publishedAt}
-            image={resource.urlToImage}
+            image={resource.image}
           />
         ))}
       </div>
