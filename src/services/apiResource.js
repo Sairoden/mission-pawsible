@@ -1,19 +1,16 @@
 export const getAllResources = async () => {
   try {
     const res = await fetch(
-      `https://newsapi.org/v2/everything?qInTitle="pets"&sortBy=publishedAt&language=en&apiKey=${
+      `https://gnews.io/api/v4/search?q=pets&lang=en&max=100&apikey=${
         import.meta.env.VITE_NEWS_KEY
       }`
     );
 
+    if (!res.status) throw new Error("News articles could not be loaded");
+
     const data = await res.json();
 
-    if (data.status !== "ok")
-      throw new Error("News articles could not be loaded");
-
-    const resources = data?.articles.filter(resource => resource.urlToImage);
-
-    return resources;
+    return data?.articles;
   } catch (error) {
     console.error(error.message);
   }
