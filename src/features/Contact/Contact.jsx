@@ -9,7 +9,7 @@ import { Button } from "../../ui";
 
 function Contact() {
   return (
-    <div className="contact container">
+    <div className="contact container spacing-t spacing-b">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -29,7 +29,7 @@ function Contact() {
             questions, suggestions, or need assistance, our team is ready to
             help.
           </p>
-
+    
           <form
           className="form-content"
           name="contact"
