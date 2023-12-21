@@ -8,7 +8,7 @@ function AboutUs() {
       {/* <div className="container"> */}
         <div className="info">
           <div class="title">
-            <h2>Adopt a Pet</h2>
+            <h2>About Us</h2>
           </div>
           <div className="body">
 
