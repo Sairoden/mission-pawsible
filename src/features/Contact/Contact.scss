@@ -139,11 +139,11 @@ $navbarHeight: 80vh;
 .contact {
   padding: 5rem 1rem;
 
-.contact-animation {
-  width: 70%;
-  margin: auto;
-}
-  
+  .contact-animation {
+    width: 70%;
+    margin: auto;
+  }
+
   .title {
     margin: 1.5rem 0;
   }
@@ -156,18 +156,17 @@ $navbarHeight: 80vh;
     flex-direction: column;
     .label-text {
       width: 100%;
-      margin-top: .5rem;
+      margin-top: 0.5rem;
     }
 
     .form-input,
     .form-textarea {
       width: 100%;
-      margin-bottom: .5rem;
-      padding: .5rem;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
       background-color: transparent;
-      border: .1rem solid $color-brown;
+      border: 0.1rem solid $color-brown;
       border-radius: $radius;
-      font: $h5-style;
 
       &:hover,
       &:focus {
@@ -184,7 +183,7 @@ $navbarHeight: 80vh;
     }
   }
 
-  @media (min-width: 768px) { 
+  @media (min-width: 768px) {
     .contact-animation {
       width: 30%;
     }
@@ -193,5 +192,5 @@ $navbarHeight: 80vh;
       margin: auto;
       width: 70%;
     }
-   }
+  }
 }
