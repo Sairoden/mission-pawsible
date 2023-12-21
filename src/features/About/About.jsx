@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function AboutUs() {
   return (
-    <div className="about-us container">
+    <div className="about-us container spacing-t spacing-b">
       {/* <div className="container"> */}
         <div className="info">
           <div class="title">
