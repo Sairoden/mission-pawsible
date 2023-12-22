@@ -1,24 +1,138 @@
 @import "../../../variables";
 
-.img-paw {
-  margin-bottom: -0.5rem;
-  height: 2.5rem;
-  width: 100%;
-  background-size: auto 100%; /* The width is dependent on the height, height covers 100% of the container */
-  background-image: url("/img-paw.png");
-  background-repeat: repeat-x;
-  background-position: center;
-}
-.statistic {
-  padding: 5rem 0;
-  background-color: $color-lbrown;
+.stats-container {
+  background: $color-white;
+  height: 65vh;
 
-  .container {
+  .stats-content {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    padding: 4rem 0 4rem 0;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
 
-    @media screen and (max-width: 768px) {
-      // flex-direction: column;
+    .stats-header-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+
+      .stats-one {
+        font-size: 4.8rem;
+        font-weight: 400;
+      }
+      .stats-one::after {
+        content: " Community,";
+        color: $color-orange;
+      }
+
+      .stats-many {
+        font-size: 4.8rem;
+        font-weight: 400;
+      }
+      .stats-many::after {
+        content: " Reunions";
+        color: $color-blue;
+        font-size: 4.8rem;
+        font-weight: 400;
+      }
+    }
+
+    .stats-circle-card {
+      display: flex;
+      flex-direction: row;
+      gap: 15rem;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      .stats-line {
+        border-bottom: solid 1px $color-darkgray;
+        margin-top: 1.5rem;
+      }
+
+      .stats-circle1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: $color-blue;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        background-color: $color-semiwhite;
+        border: 5px solid $color-white;
+        box-shadow: 1px 1px 5px 5px $color-blue;
+      }
+      .stats-circle2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $color-orange;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        background-color: $color-semiwhite;
+        border: 5px solid $color-white;
+        box-shadow: 1px 1px 5px 5px $color-orange;
+      }
+
+      .stats-circle3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 20rem;
+        height: 20rem;
+        border-radius: 50%;
+        color: $color-brown;
+        background-color: $color-semiwhite;
+        border: 5px solid $color-white;
+        box-shadow: 1px 1px 5px 5px $color-brown;
+      }
+      .stats-circle-number {
+        font-size: 4.8rem;
+        font-weight: 700;
+      }
+      .stats-circle-text {
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+    }
+    .stats-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      font-weight: 400;
     }
   }
 }
+
+// .img-paw {
+//   margin-bottom: -0.5rem;
+//   height: 2.5rem;
+//   width: 100%;
+//   background-size: auto 100%; /* The width is dependent on the height, height covers 100% of the container */
+//   background-image: url("/img-paw.png");
+//   background-repeat: repeat-x;
+//   background-position: center;
+// }
+// .statistic {
+//   padding: 5rem 0;
+//   background-color: $color-lbrown;
+
+//   .container {
+//     display: flex;
+//     justify-content: space-evenly;
+
+//     @media screen and (max-width: 768px) {
+//       // flex-direction: column;
+//     }
+//   }
+// }
