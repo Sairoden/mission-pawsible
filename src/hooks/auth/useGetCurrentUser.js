@@ -2,8 +2,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { useLocation, useNavigate } from "react-router-dom";
 
+// STYLES
+import { toast } from "react-hot-toast";
+
 // SERVICES
 import { getCurrentUser } from "../../services";
+import { useEffect } from "react";
 
 export const useGetCurrentUser = () => {
   const location = useLocation();
@@ -14,12 +18,23 @@ export const useGetCurrentUser = () => {
     queryKey: ["user"],
   });
 
-  if (user && location.pathname === "/login") navigate("/");
-  if (
-    (!user && location.pathname === "/account") ||
-    (!user && location.pathname === "/account/update")
-  )
-    navigate("/");
+  useEffect(() => {
+    if (
+      (user && location.pathname === "/login") ||
+      (user && location.pathname === "/signup")
+    ) {
+      toast.error("You are already logged in");
+      navigate("/");
+    }
+    if (
+      (!user && location.pathname === "/account") ||
+      (!user && location.pathname === "/account/update") ||
+      (!user && location.pathname === "/report")
+    ) {
+      toast.error("Please create an account");
+      navigate("/");
+    }
+  }, [user, location, navigate]);
 
   return { isPending, user, isAuthenticated: user?.role === "authenticated" };
 };
