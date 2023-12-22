@@ -13,6 +13,24 @@ export const getCurrentUser = async () => {
     throw new Error("Unable to retrieve user information. Please try again.");
   }
 
+  let { data: user, error: userError } = await supabase
+    .from("users")
+    .select("*")
+    .eq("email", data.user.email);
+
+  data.user.user_metadata = {
+    firstName: user[0]?.firstName,
+    lastName: user[0]?.lastName,
+    contactNumber: user[0]?.contactNumber,
+    address: user[0]?.address,
+    avatar: user[0]?.avatar,
+  };
+
+  if (userError) {
+    console.error(error.message);
+    throw new Error("Unable to retrieve user information");
+  }
+
   return data?.user;
 };
 

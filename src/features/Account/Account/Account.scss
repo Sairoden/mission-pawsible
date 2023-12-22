@@ -1,0 +1,12 @@
+@import "../../../variables";
+
+.profile-container {
+  width: 90%;
+  margin: auto;
+  color: $color-darkgray;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+  padding-bottom: 10rem;
+}

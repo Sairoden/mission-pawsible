@@ -1,8 +1,8 @@
 // FEATURES COMPONENTS
-import { Profile } from "../features";
+import { Account as AccountForm } from "../features";
 
 function Account() {
-  return <Profile />;
+  return <AccountForm />;
 }
 
 export default Account;

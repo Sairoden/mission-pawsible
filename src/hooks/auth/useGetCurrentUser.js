@@ -13,7 +13,7 @@ export const useGetCurrentUser = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { isPending, data: user } = useQuery({
+  const { isPending, data: user = {} } = useQuery({
     queryFn: getCurrentUser,
     queryKey: ["user"],
   });
