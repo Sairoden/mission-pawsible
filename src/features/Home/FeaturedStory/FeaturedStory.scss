@@ -13,15 +13,14 @@
   }
 
   .featured-middle-container {
-    // display: grid;
-    // grid-template-columns: 38% 60%;
     display: flex;
     flex: 1 1;
     gap: 3rem;
-    background: $color-white;
+    background: $color-semiwhite;
     border-radius: 20px;
     padding: 4rem;
     justify-content: center;
+    align-items: center;
 
     @media screen and (max-width: 1700px) {
       display: flex;
@@ -40,17 +39,23 @@
 
       .featured-story-title {
         color: $color-orange;
+        font-weight: 700;
+      }
+
+      .featured-date {
+        color: $color-blue;
       }
 
       .featured-text {
         font-size: 1.8rem;
         font-weight: 400;
-        line-height: 1.8;
+        text-align: justify;
+        color: $color-brown;
       }
     }
 
     .featured-img {
-      border-radius: 20px 0px 0px 20px;
+      border-radius: 20px;
 
       @media screen and (max-width: 1700px) {
         margin-top: 2rem;
