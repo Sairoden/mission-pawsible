@@ -4,18 +4,10 @@
 import "./ResourceCard.scss";
 import { motion } from "framer-motion";
 
-function ResourceCard({
-  index,
-  title,
-  author,
-  description,
-  publishedAt,
-  image,
-}) {
-  let originalDate = new Date(publishedAt);
-  let options = { year: "numeric", month: "long", day: "2-digit" };
-  let formattedDate = originalDate.toLocaleDateString("en-US", options);
+// UTILITIES
+import { formatFullDate } from "../../../utils";
 
+function ResourceCard({ index, title, author, description, date, image }) {
   return (
     <div className="resources-middle-container">
       <motion.div
@@ -51,7 +43,7 @@ function ResourceCard({
               <h3 className="resources-author-text">
                 {author ? author : "No Author"}
               </h3>
-              <h3 className="resources-date-text">{formattedDate}</h3>
+              <h3 className="resources-date-text">{formatFullDate(date)}</h3>
             </div>
             <p className="resource-span-text">{description}</p>
           </div>

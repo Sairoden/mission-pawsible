@@ -1,24 +1,42 @@
+// REACT & LIBRARIES
+import { useParams } from "react-router-dom";
+
 // STYLES
 import "./SpecificResource.scss";
 import { motion } from "framer-motion";
 import { RiTwitterXFill } from "react-icons/ri";
 import { FaFacebook } from "react-icons/fa";
 
+// UI COMPONENTS
+import { Spinner } from "../../../ui";
+
+// HOOKS
+import { useResourceContext } from "../../../contexts";
+
+// UTILITIES
+import { formatFullDate } from "../../../utils";
+
 function SpecificResource() {
+  const { resources, isPending } = useResourceContext();
+  const { resourceId } = useParams();
+
+  const {
+    title,
+    source: { name: author },
+    description,
+    publishedAt: date,
+    image,
+  } = resources[resourceId];
+
+  if (isPending) return <Spinner />;
+
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ ease: "easeOut", duration: 1 }}
-      className="detail-container"
-    >
+    <div className="detail-container">
       <div className="detail-header">
-        <h1 className="detail-header-text">
-          What is a Pomeranian? How to Identify Pomeranian Dogs
-        </h1>
+        <h1 className="detail-header-text">{title}</h1>
         <div className="header-span">
-          <p className="span_name">Jaime Lannister</p>
-          <p className="span_date">December 1, 2000</p>
+          <p className="span_name">{author}</p>
+          <p className="span_date">{formatFullDate(date)}</p>
           <div className="resource-social-media">
             <a
               href="https://www.facebook.com/"
@@ -112,7 +130,7 @@ function SpecificResource() {
           Aldus PageMaker including versions of Lorem Ipsum.
         </p>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

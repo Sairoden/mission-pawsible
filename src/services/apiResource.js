@@ -10,7 +10,7 @@ export const getAllResources = async () => {
 
     const data = await res.json();
 
-    return data?.articles;
+    return data?.articles || [];
   } catch (error) {
     console.error(error.message);
   }

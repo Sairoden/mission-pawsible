@@ -1,5 +1,5 @@
 // REACT & LIBRARIES
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, NavLink } from "react-router-dom";
 
 // STYLES
 import "./Resources.scss";
@@ -10,14 +10,14 @@ import { ResourceCard } from "../../index";
 // UI COMPONENTS
 import { Pagination, Spinner } from "../../../ui";
 
-// HOOKS
-import { useGetResources } from "../../../hooks";
+// CONTEXTS
+import { useResourceContext } from "../../../contexts";
 
 // UTILITIES
 import { RESOURCES_PAGE_SIZE } from "../../../utils";
 
 function Resources() {
-  const { resources, isPending } = useGetResources();
+  const { resources, isPending } = useResourceContext();
   const [searchParams] = useSearchParams();
 
   const currentPage = !searchParams.get("page")
@@ -41,17 +41,24 @@ function Resources() {
       </div>
 
       <div className="resources-middle-container">
-        {newResources?.map((resource, index) => (
-          <ResourceCard
-            key={index}
-            index={index}
-            title={resource.title}
-            author={resource.source.name}
-            description={resource.description}
-            publishedAt={resource.publishedAt}
-            image={resource.image}
-          />
-        ))}
+        {newResources.length > 0 ? (
+          newResources?.map((resource, index) => (
+            <NavLink key={index} to={`/resources/${index}`}>
+              <ResourceCard
+                index={index}
+                title={resource.title}
+                author={resource.source.name}
+                description={resource.description}
+                date={resource.publishedAt}
+                image={resource.image}
+              />
+            </NavLink>
+          ))
+        ) : (
+          <h4 className="no-resources">
+            No resources currently. Please come back again later! 📚
+          </h4>
+        )}
       </div>
 
       <Pagination total={resources?.length} pageSize={RESOURCES_PAGE_SIZE} />
