@@ -1,1 +1,37 @@
 // @import "../Showcase/Showcase.scss";
+@import "../../../variables";
+
+.adoption-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+
+  .adoption-header-text {
+    font-size: 4.8rem;
+    font-weight: 600;
+  }
+
+  .adoption-detail-container {
+    text-align: center;
+
+    .adoption-detail-text {
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: $color-brown;
+    }
+  }
+
+  .adoption-img {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    margin-bottom: 5rem;
+    align-items: center;
+    width: 100%;
+
+    .adoption-img-content {
+      text-align: center;
+    }
+  }
+}
