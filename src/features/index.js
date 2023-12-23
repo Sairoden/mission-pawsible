@@ -40,7 +40,6 @@ import Showcase from "./Home/Showcase/Showcase";
 import ContactUs from "./Home/ContactUs/ContactUs";
 import Stats from "./Home/Stats/Stats";
 import Carousel from "./Home/Carousel/Carousel";
-import Other from "./Home/Other/Other";
 
 export {
   // ABOUT US
@@ -85,5 +84,4 @@ export {
   ContactUs,
   Stats,
   Carousel,
-  Other,
 };

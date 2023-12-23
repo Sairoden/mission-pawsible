@@ -9,14 +9,12 @@ function ContactUs() {
     <section className="contact-section-container">
       <div className="contact-info-container">
         <div>
-          {" "}
           <h2 className="contact-section-title">
             Lost Paws? We’re here to help!
           </h2>
         </div>
         <div>
           <p className="contact-middle-info">
-            {" "}
             Reach out and let’s connect! Contact us today to start a
             conversation,
             <br /> share your thoughts or get the support you need. We’re here
@@ -25,13 +23,16 @@ function ContactUs() {
           </p>
         </div>
         <div>
-          <Button variation="primary" icon={true}>
+          <Button
+            variation="primary"
+            icon={true}
+            styles={{ padding: "2vh 2vw" }}
+          >
             Contact Us
           </Button>
         </div>
       </div>
       <div>
-        {" "}
         <img
           src="/img-contact.png"
           alt="Contact Us"

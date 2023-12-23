@@ -1,12 +1,5 @@
 // FEATURES COMPONENTS
-import {
-  Landing,
-  Showcase,
-  ContactUs,
-  Stats,
-  Carousel,
-  Other,
-} from "../features";
+import { Landing, Showcase, ContactUs, Stats, Carousel } from "../features";
 
 function Home() {
   return (
@@ -15,7 +8,6 @@ function Home() {
       <Stats />
       <Carousel />
       <Showcase />
-      {/* <Other /> */}
       <ContactUs />
     </>
   );
