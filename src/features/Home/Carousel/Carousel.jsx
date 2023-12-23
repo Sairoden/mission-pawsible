@@ -1,5 +1,6 @@
 // STYLES
 import "./Carousel.scss";
+import { Button } from "../../../ui";
 
 // ASSETS
 import Carousel1 from "../../../assets/carousel-slide-1.png";
@@ -15,13 +16,13 @@ function Carousel() {
         </div>
         <div className="body">
           <h5>
-            Help bring a paw back home! Start your search now, your furry
+            Help bring a paw back home! Start your search now, <br /> your furry
             friends can’t wait to see you!
           </h5>
         </div>
         <div className="btns">
           <div className="button bg-orange">
-            <h5>Join Us</h5>
+            <Button variation="primary">Join Us</Button>
           </div>
         </div>
       </div>
