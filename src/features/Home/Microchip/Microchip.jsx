@@ -27,9 +27,10 @@ function Microchip() {
         </div>
         <div>
           <p className="microchip-text">
-            Protect your furry friend with peace of mind. <br /> Get them
-            microchipped today and increase their chances of being reunited if
-            lost. <br /> Act now and ensure their safety
+            Protect your furry friend by getting them microchipped today. <br />{" "}
+            This simple procedure can significantly increase the chances of
+            being reunited <br /> if they ever get lost. Act now to ensure their
+            safety and give yourself peace of mind.
           </p>
         </div>
         <div className="microchip-btn">
