@@ -16,6 +16,7 @@ function Input({
   register,
   required = false,
   password,
+  defaultValue,
 }) {
   const [showPassword, setShowPassword] = useState(false);
   const inputType = showPassword ? "text" : type;
@@ -50,6 +51,7 @@ function Input({
         style={{
           width,
         }}
+        defaultValue={defaultValue || undefined}
         type={inputType}
         id={id}
         disabled={disabled}

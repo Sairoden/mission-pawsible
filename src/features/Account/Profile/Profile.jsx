@@ -12,15 +12,13 @@ import { useLogout, useGetCurrentUser } from "../../../hooks";
 
 function Profile() {
   const { logout, isPending } = useLogout();
-  const { user } = useGetCurrentUser();
-
-  console.log(user);
+  const { user, isPending: isPending2 } = useGetCurrentUser();
 
   const { email } = user;
   const { address, avatar, contactNumber, firstName, lastName } =
     user.user_metadata || {};
 
-  if (isPending) return <Spinner />;
+  if (isPending || isPending2) return <Spinner />;
 
   return (
     <div className="profile-main-container">
