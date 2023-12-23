@@ -18,41 +18,44 @@ function FeaturedStory() {
             />
           </div>
           <div className="featured-right-details">
-            <h6 className="featured-date">December 09, 2023</h6>
-            <h2 className="featured-story-title">
-              A Bark Away: The Journey of Max&apos;s Return
-            </h2>
-            <br />
-            <br />
-            <p className="featured-text">
-              Determined not to lose hope, he posted Max's details on Mission
-              Pawsible. Raffy's post reached many kind hearts. Everyone shared
-              Max's story, helping the search grow bigger each day.
+            <div>
+              <h6 className="featured-date">December 09, 2023</h6>
+              <h2 className="featured-story-title">
+                A Bark Away: The Journey of Max&apos;s Return
+              </h2>
+            </div>
+            <div>
               <br />
               <br />
-              Justin, a Manila resident, lived a joyous life alongside his dog
-              Max. One day, during a city festival, Max got lost in the crowd.
-              Justin felt lost himself, his home emptier without his cheerful
-              Golden Retriever.
-              <br />
-              <br />
-              After some anxious weeks, help came from Charice, another website
-              user. She found Max in Quiapo, recognized him from his photos, and
-              immediately contacted Justin.
-              <br />
-              <br />
-              Justin drove through Manila, his heart pounding. The sight of Max
-              wagging his tail brought tears to Justin's eyes. Overwhelmed, he
-              realized the power of community what seemed impossible alone was
-              effortless when people stood together.
-              <br />
-              <br />
-              Max's return filled Justin with deep gratitude for Mission
-              Pawsible. Today, he happily shares their story, hoping it will
-              bring hope to others still searching for their lost friends. His
-              story is a testament to the miracles our platform can create
-              alongside a robust and caring community.{" "}
-            </p>
+              <p className="featured-text">
+                Determined not to lose hope, he posted Max's details on Mission
+                Pawsible. Raffy's post reached many kind hearts. Everyone shared
+                Max's story, helping the search grow bigger each day.
+                <br />
+                Justin, a Manila resident, lived a joyous life alongside his dog
+                Max. One day, during a city festival, Max got lost in the crowd.
+                Justin felt lost himself, his home emptier without his cheerful
+                Golden Retriever.
+                <br />
+                <br />
+                After some anxious weeks, help came from Charice, another
+                website user. She found Max in Quiapo, recognized him from his
+                photos, and immediately contacted Justin.
+                <br />
+                <br />
+                Justin drove through Manila, his heart pounding. The sight of
+                Max wagging his tail brought tears to Justin's eyes.
+                Overwhelmed, he realized the power of community what seemed
+                impossible alone was effortless when people stood together.
+                <br />
+                <br />
+                Max's return filled Justin with deep gratitude for Mission
+                Pawsible. Today, he happily shares their story, hoping it will
+                bring hope to others still searching for their lost friends. His
+                story is a testament to the miracles our platform can create
+                alongside a robust and caring community.{" "}
+              </p>
+            </div>
           </div>
         </div>
       </div>

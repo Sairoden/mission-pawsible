@@ -39,7 +39,7 @@ function Stats() {
             Join the community of pet owners to reunite missing pets with their
             families
           </span>
-          <Button variation="primary">Sign up Now</Button>
+          <Button variation="primary">Sign up Now!</Button>
         </div>
       </div>
     </div>
