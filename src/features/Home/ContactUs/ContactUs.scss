@@ -8,7 +8,7 @@
   background: $color-coffee;
 
   @media screen and (max-width: 1940px) {
-    height: 35vh;
+    height: 40vh;
   }
   @media screen and (max-width: 1660px) {
     height: 25vh;
@@ -20,7 +20,7 @@
   object-fit: fill;
 
   @media screen and (max-width: 1940px) {
-    height: 35vh;
+    height: 40vh;
     object-fit: fill;
   }
   @media screen and (max-width: 1660px) {
@@ -31,10 +31,9 @@
 .contact-info-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 3rem;
   align-items: center;
+  justify-content: center;
   margin-top: 5rem;
 
   .contact-section-title {
@@ -45,9 +44,9 @@
 
   .contact-middle-info {
     text-align: center;
-    font-size: 2rem;
-    font-weight: 500;
     color: $color-brown;
+    font-size: 1.8rem;
+    font-weight: 500;
   }
 }
 

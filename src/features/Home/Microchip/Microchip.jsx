@@ -4,12 +4,15 @@ import "./Michopchip.scss";
 // UI COMPONENTS
 import { Button } from "../../../ui";
 
+// ASSETS
+import microchips from "../../../assets/microchips.png";
+
 function Microchip() {
   return (
     <div className="microchip-container">
       <div>
         <img
-          src="/img-microchipped.png"
+          src={microchips}
           alt="Person with a dog"
           className="microchip-img"
         />
@@ -32,8 +35,16 @@ function Microchip() {
           </p>
         </div>
         <div className="microchip-btn">
-          <Button variation="primary">View Intro</Button>
-          <Button variation="secondary">Explore Now</Button>
+          <Button
+            variation="primary"
+            icon={true}
+            styles={{ padding: "2vh 2vw" }}
+          >
+            View Intro
+          </Button>
+          <Button variation="secondary" styles={{ padding: "2vh 2vw" }}>
+            Explore Now
+          </Button>
         </div>
       </div>
     </div>

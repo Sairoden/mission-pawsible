@@ -4,6 +4,9 @@ import "./ContactUs.scss";
 // UI COMPONENTS
 import { Button } from "../../../ui";
 
+// ASSETS
+import contactUsImage from "../../../assets/contactUs.png";
+
 function ContactUs() {
   return (
     <section className="contact-section-container">
@@ -34,7 +37,7 @@ function ContactUs() {
       </div>
       <div>
         <img
-          src="/img-contact.png"
+          src={contactUsImage}
           alt="Contact Us"
           className="contact-section-img"
         />

@@ -1,6 +1,9 @@
 // STYLES
 import "./FeaturedStory.scss";
 
+// ASSETS
+import featuredStoryBanner from "../../../assets/featuredStoryBanner.png";
+
 function FeaturedStory() {
   return (
     <div className="featured-container">
@@ -12,7 +15,7 @@ function FeaturedStory() {
           <div>
             <img
               className="featured-img"
-              src="/img-story.png"
+              src={featuredStoryBanner}
               alt="featured story image"
               width="600vw"
             />

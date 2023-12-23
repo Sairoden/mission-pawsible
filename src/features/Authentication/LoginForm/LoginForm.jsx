@@ -14,6 +14,9 @@ import { Button, Input, ErrorInput, Spinner } from "../../../ui";
 // HOOKS
 import { useLogin, useResendEmail } from "../../../hooks";
 
+// ASSETS
+import loginBanner from "../../../assets/login-banner.png";
+
 function LoginForm() {
   // REACT-HOOK-FORM
   const {
@@ -56,7 +59,7 @@ function LoginForm() {
   return (
     <div className="login-container">
       <motion.img
-        src="login-banner.png"
+        src={loginBanner}
         alt="Guy with a dog image"
         className="login-banner"
         initial={{ opacity: 0 }}

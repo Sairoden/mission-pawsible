@@ -60,6 +60,7 @@ function Carousel() {
         showBullets={true}
         showPlayButton={false}
         autoPlay={true}
+        lazyLoad={true}
       />
     </section>
   );
