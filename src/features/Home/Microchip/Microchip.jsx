@@ -8,7 +8,6 @@ function Microchip() {
   return (
     <div className="microchip-container">
       <div>
-        {" "}
         <img
           src="/img-microchipped.png"
           alt="Person with a dog"
@@ -17,7 +16,6 @@ function Microchip() {
       </div>
       <div className="microchip-detail-container">
         <div>
-          {" "}
           <h2 className="microchip-title">Secure their Return</h2>
         </div>
         <div>
@@ -27,7 +25,7 @@ function Microchip() {
         </div>
         <div>
           <p className="microchip-text">
-            Protect your furry friend by getting them microchipped today. <br />{" "}
+            Protect your furry friend by getting them microchipped today. <br />
             This simple procedure can significantly increase the chances of
             being reunited <br /> if they ever get lost. Act now to ensure their
             safety and give yourself peace of mind.

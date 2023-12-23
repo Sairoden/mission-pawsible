@@ -3,7 +3,7 @@
 
 .microchip-container {
   display: grid;
-  grid-template-columns: 55% 45%;
+  grid-template-columns: 50% 50%;
   background: $color-white;
   margin-top: 10rem;
   height: 49vh;
@@ -32,7 +32,7 @@
       color: $color-blue;
     }
     .microchip-text {
-      font-size: 1.4rem;
+      font-size: 1.8rem;
       color: $color-brown;
       font-weight: 400;
       text-align: right;

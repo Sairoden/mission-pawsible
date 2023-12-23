@@ -47,7 +47,7 @@
       gap: 15rem;
       justify-content: center;
       align-items: center;
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
 
       .stats-line {
         border-bottom: solid 1px $color-darkgray;
@@ -65,7 +65,7 @@
         border-radius: 50%;
         background-color: $color-semiwhite;
         border: 5px solid $color-white;
-        box-shadow: 1px 1px 5px 5px $color-blue;
+        border: solid;
       }
       .stats-circle2 {
         display: flex;
@@ -78,7 +78,7 @@
         border-radius: 50%;
         background-color: $color-semiwhite;
         border: 5px solid $color-white;
-        box-shadow: 1px 1px 5px 5px $color-orange;
+        border: solid;
       }
 
       .stats-circle3 {
@@ -92,7 +92,7 @@
         color: $color-brown;
         background-color: $color-semiwhite;
         border: 5px solid $color-white;
-        box-shadow: 1px 1px 5px 5px $color-brown;
+        border: solid;
       }
       .stats-circle-number {
         font-size: 4.8rem;

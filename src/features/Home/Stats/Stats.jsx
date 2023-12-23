@@ -24,12 +24,12 @@ function Stats() {
             <div className="stats-circle2">
               <h2 className="stats-circle-number">285</h2>
               <br />
-              <span className="stats-circle-text">Missing Pets</span>
+              <span className="stats-circle-text">Found Pets</span>
             </div>
             <div className="stats-circle3">
               <h2 className="stats-circle-number">285</h2>
               <br />
-              <span className="stats-circle-text">Missing Pets</span>
+              <span className="stats-circle-text">Reunited Pets</span>
             </div>
           </div>
           <hr className="stats-line" />
@@ -39,7 +39,9 @@ function Stats() {
             Join the community of pet owners to reunite missing pets with their
             families
           </span>
-          <Button variation="primary">Sign up Now!</Button>
+          <Button variation="primary" styles={{ padding: "2vh 2vw" }}>
+            Sign up now!
+          </Button>
         </div>
       </div>
     </div>
