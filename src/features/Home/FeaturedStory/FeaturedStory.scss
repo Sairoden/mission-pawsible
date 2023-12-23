@@ -26,19 +26,19 @@
       justify-content: center;
       align-items: center;
       padding: 1rem;
-      gap: 1rem;
     }
 
     .featured-right-details {
       display: flex;
       flex-direction: column;
       align-content: flex-start;
-      gap: 5px;
+      gap: 0.5rem;
       font-weight: 400;
 
       .featured-story-title {
         color: $color-orange;
         font-weight: 700;
+        margin-top: 1rem;
       }
 
       .featured-date {
@@ -47,10 +47,11 @@
       }
 
       .featured-text {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 400;
         text-align: justify;
         color: $color-brown;
+        margin-top: 1.5rem;
 
         @media screen and (max-width: 1700px) {
           font-size: 1.6rem;
@@ -59,7 +60,7 @@
     }
 
     .featured-img {
-      border-radius: 20px;
+      border-radius: 5px;
 
       @media screen and (max-width: 1700px) {
         margin-top: 2rem;
