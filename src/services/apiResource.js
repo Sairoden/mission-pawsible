@@ -1,7 +1,7 @@
 export const getAllResources = async () => {
   try {
     const res = await fetch(
-      `https://gnews.io/api/v4/search?q=pets&lang=en&max=100&apikey=${
+      `https://gnews.io/api/v4/search?q=pets&lang=en&apikey=${
         import.meta.env.VITE_NEWS_KEY
       }`
     );

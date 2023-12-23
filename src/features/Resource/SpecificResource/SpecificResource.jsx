@@ -1,5 +1,6 @@
 // REACT & LIBRARIES
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 
 // STYLES
 import "./SpecificResource.scss";
@@ -19,14 +20,25 @@ import { formatFullDate } from "../../../utils";
 function SpecificResource() {
   const { resources, isPending } = useResourceContext();
   const { resourceId } = useParams();
+  const navigate = useNavigate();
 
-  const {
-    title,
-    source: { name: author },
-    description,
-    publishedAt: date,
-    image,
-  } = resources[resourceId];
+  const [title, setTitle] = useState("");
+  const [author, setAuthor] = useState("");
+  const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
+  const [image, setImage] = useState("");
+
+  useEffect(() => {
+    const resource = resources[resourceId];
+
+    if (!resource) return navigate("/resources");
+
+    setTitle(resource.title);
+    setAuthor(resource.source.name);
+    setDescription(resource.description);
+    setDate(resource.publishedAt);
+    setImage(resource.image);
+  }, [navigate, resources, resourceId]);
 
   if (isPending) return <Spinner />;
 
