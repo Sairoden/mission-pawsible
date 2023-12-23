@@ -7,27 +7,42 @@
   height: 41vh;
   background: $color-coffee;
 
-  .contact-section-img {
-    height: 41vh;
+  @media screen and (max-width: 1940px) {
+    height: 35vh;
+  }
+  @media screen and (max-width: 1660px) {
+    height: 25vh;
+  }
+}
+
+.contact-section-img {
+  height: 41vh;
+  object-fit: fill;
+
+  @media screen and (max-width: 1940px) {
+    height: 35vh;
     object-fit: fill;
   }
+  @media screen and (max-width: 1660px) {
+    height: 25vh;
+  }
+}
 
-  .contact-info-container {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    align-items: center;
-    margin-top: 5rem;
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  margin-top: 5rem;
 
-    .contact-section-title {
-      color: $color-blue;
-      font-size: 5.2rem;
-      font-weight: 700;
-    }
+  .contact-section-title {
+    color: $color-blue;
+    font-size: 5.2rem;
+    font-weight: 700;
+  }
 
-    .contact-middle-info {
-      text-align: center;
-    }
+  .contact-middle-info {
+    text-align: center;
   }
 }
 

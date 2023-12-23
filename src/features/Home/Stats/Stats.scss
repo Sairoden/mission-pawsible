@@ -21,22 +21,23 @@
 
       .stats-one {
         font-size: 4.8rem;
-        font-weight: 400;
+        font-weight: 600;
       }
       .stats-one::after {
-        content: " Community,";
+        content: " Community";
         color: $color-orange;
+        font-weight: 700;
       }
 
       .stats-many {
         font-size: 4.8rem;
-        font-weight: 400;
+        font-weight: 600;
       }
       .stats-many::after {
         content: " Reunions";
         color: $color-blue;
         font-size: 4.8rem;
-        font-weight: 400;
+        font-weight: 700;
       }
     }
 
