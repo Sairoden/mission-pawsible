@@ -26,8 +26,8 @@ function Adoption() {
           </a>
         </div>
         <div className="adoption-img-content">
-          <a href="https://pawssionproject.org.ph/">
-            <img src="/img-pawssion.png" alt="pawssion-project" width="300vw" />
+          <a href="https://akf.org.ph/">
+            <img src="/img-akf.png" alt="pawssion-project" width="150vw" />
           </a>
         </div>
         <div className="adoption-img-content">
