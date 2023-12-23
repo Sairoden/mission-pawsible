@@ -7,75 +7,7 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
-import { color } from "framer-motion";
 import { motion } from "framer-motion";
-
-<div
-  style={{
-    width: "100%",
-    height: "100%",
-    paddingTop: 8,
-    paddingBottom: 8,
-    borderBottom: "1px #EBEEEF solid",
-    justifyContent: "flex-start",
-    alignItems: "flex-start",
-    display: "inline-flex",
-  }}
->
-  <div
-    style={{
-      height: 26,
-      paddingTop: 4,
-      paddingBottom: 2,
-      paddingLeft: 11,
-      paddingRight: 11,
-      justifyContent: "flex-start",
-      alignItems: "center",
-      gap: 10,
-      display: "flex",
-    }}
-  >
-    <div
-      style={{
-        color: "#667479",
-        fontSize: 14,
-        fontFamily: "Poppins",
-        fontWeight: "500",
-        lineHeight: 20,
-        wordWrap: "break-word",
-      }}
-    >
-      Type
-    </div>
-  </div>
-  <div
-    style={{
-      flex: "1 1 0",
-      height: 26,
-      paddingTop: 4,
-      paddingBottom: 2,
-      paddingLeft: 11,
-      paddingRight: 11,
-      justifyContent: "flex-start",
-      alignItems: "flex-start",
-      gap: 10,
-      display: "flex",
-    }}
-  >
-    <div
-      style={{
-        color: "#667479",
-        fontSize: 14,
-        fontFamily: "Poppins",
-        fontWeight: "500",
-        lineHeight: 20,
-        wordWrap: "break-word",
-      }}
-    >
-      : Dog
-    </div>
-  </div>
-</div>;
 
 function PetDetails() {
   const imageSlides = [
@@ -95,12 +27,7 @@ function PetDetails() {
 
   return (
     <div>
-      <motion.div
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 0.5, duration: 1 }}
-        className="petdetail-main-container"
-      >
+      <motion.div className="petdetail-main-container">
         <div className="petdetail-left-content" height="100%">
           <div>
             <ImageGallery items={imageSlides} showPlayButton={false} />
