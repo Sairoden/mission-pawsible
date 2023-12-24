@@ -27,6 +27,7 @@ function SpecificResource() {
   const [content, setContent] = useState("");
   const [date, setDate] = useState("");
   const [image, setImage] = useState("");
+  const [link, setLink] = useState("");
 
   useEffect(() => {
     const resource = resources?.filter(
@@ -35,8 +36,11 @@ function SpecificResource() {
 
     if (!resource) return navigate("/resources");
 
+    console.log(resource);
+
+    setLink(resource[0].link);
     setTitle(resource[0].title);
-    setAuthor(resource[0].author);
+    setAuthor(resource[0].creator);
     setContent(resource[0].content);
     setDate(resource[0].pubDate);
     setImage(resource[0].image_url);
@@ -44,12 +48,16 @@ function SpecificResource() {
 
   if (isPending) return <Spinner />;
 
+  console.log(author);
+
   return (
     <div className="detail-container">
       <div className="detail-header">
-        <h1 className="detail-header-text">{title}</h1>
+        <a href={link} target="_blank" rel="noreferrer">
+          <h1 className="detail-header-text">{title}</h1>
+        </a>
         <div className="header-span">
-          <p className="span_name">{author}</p>
+          <p className="span_name">{author ? author : "No Author"}</p>
           <p className="span_date">{formatFullDate(date)}</p>
           <div className="resource-social-media">
             <a
@@ -67,7 +75,18 @@ function SpecificResource() {
         </div>
       </div>
       <div className="detail-img">
-        <img src={image} alt="resourcesImage" width={600} />
+        <img
+          src={
+            image &&
+            !image.includes("3D") &&
+            !image.includes("s.webp") &&
+            !image.includes("k.jpg")
+              ? image
+              : "https://img.freepik.com/premium-vector/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available_87543-11093.jpg"
+          }
+          alt="resourceImage"
+          width={600}
+        />
       </div>
       <div className="detail-text">
         <p className="detail-footer-span">{content}</p>

@@ -29,7 +29,10 @@ function ResourceCard({ index, title, author, description, date, image }) {
           <div className="resources-image">
             <img
               src={
-                image && !image.includes("3D") && !image.includes("s.webp")
+                image &&
+                !image.includes("3D") &&
+                !image.includes("s.webp") &&
+                !image.includes("k.jpg")
                   ? image
                   : "https://img.freepik.com/premium-vector/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available_87543-11093.jpg"
               }
