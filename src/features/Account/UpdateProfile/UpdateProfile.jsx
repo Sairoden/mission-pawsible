@@ -28,7 +28,7 @@ function UpdateProfile() {
   if (isPending) return <Spinner />;
 
   const handleUpdateProfile = data => {
-    console.log("YEESE TESTING");
+    console.log("YES SIR TESTING");
   };
 
   return (

@@ -28,9 +28,6 @@ import {
 // UI COMPONENTS
 import { PageNotFound } from "./ui";
 
-// CONTEXTS
-import { ResourceProvider } from "./contexts";
-
 // TANSTACK QUERY
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -125,26 +122,24 @@ function App() {
         </div>
       )}
 
-      <ResourceProvider>
-        <RouterProvider router={router} />
+      <RouterProvider router={router} />
 
-        <Toaster
-          position="top-center"
-          gutter={12}
-          containerStyle={{ margin: "8px" }}
-          toastOptions={{
-            success: { duration: 4000 },
-            error: { duration: 5000 },
-            style: {
-              fontSize: "3.5rem",
-              maxWidth: "500px",
-              padding: "16px 18px",
-              backgroundColor: "#fff",
-              color: "var(--color-grey-700)",
-            },
-          }}
-        />
-      </ResourceProvider>
+      <Toaster
+        position="top-center"
+        gutter={12}
+        containerStyle={{ margin: "8px" }}
+        toastOptions={{
+          success: { duration: 4000 },
+          error: { duration: 5000 },
+          style: {
+            fontSize: "3.5rem",
+            maxWidth: "500px",
+            padding: "16px 18px",
+            backgroundColor: "#fff",
+            color: "var(--color-grey-700)",
+          },
+        }}
+      />
     </QueryClientProvider>
   );
 }

@@ -10,14 +10,14 @@ import { ResourceCard } from "../../index";
 // UI COMPONENTS
 import { Pagination, Spinner } from "../../../ui";
 
-// CONTEXTS
-import { useResourceContext } from "../../../contexts";
+// HOOKS
+import { useGetResources } from "../../../hooks";
 
 // UTILITIES
-import { RESOURCES_PAGE_SIZE } from "../../../utils";
+import { RESOURCES_PAGE_SIZE, limitWords } from "../../../utils";
 
 function Resources() {
-  const { resources, isPending } = useResourceContext();
+  const { resources, isPending } = useGetResources();
   const [searchParams] = useSearchParams();
 
   const currentPage = !searchParams.get("page")
@@ -42,15 +42,17 @@ function Resources() {
 
       <div className="resources-middle-container">
         {newResources.length > 0 ? (
-          newResources?.map((resource, index) => (
-            <NavLink key={index} to={`/resources/${index}`}>
+          newResources?.map(resource => (
+            <NavLink
+              key={resource.article_id}
+              to={`/resources/${resource.article_id}`}
+            >
               <ResourceCard
-                index={index}
                 title={resource.title}
-                author={resource.source.name}
-                description={resource.description}
-                date={resource.publishedAt}
-                image={resource.image}
+                author={resource.creator}
+                description={limitWords(resource.description, 600)}
+                date={resource.pubDate}
+                image={resource.image_url}
               />
             </NavLink>
           ))
