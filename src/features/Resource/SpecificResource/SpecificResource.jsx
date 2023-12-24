@@ -24,22 +24,22 @@ function SpecificResource() {
 
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
-  const [description, setDescription] = useState("");
+  const [content, setContent] = useState("");
   const [date, setDate] = useState("");
   const [image, setImage] = useState("");
 
   useEffect(() => {
-    const resource = resources[resourceId];
+    const resource = resources?.filter(
+      resource => resource.article_id === resourceId
+    );
 
     if (!resource) return navigate("/resources");
 
-    setTitle(resource.title);
-    setAuthor(resource.source.name);
-    setDescription(resource.content);
-    setDate(resource.publishedAt);
-    setImage(resource.image);
-
-    console.log(resource);
+    setTitle(resource[0].title);
+    setAuthor(resource[0].author);
+    setContent(resource[0].content);
+    setDate(resource[0].pubDate);
+    setImage(resource[0].image_url);
   }, [navigate, resources, resourceId]);
 
   if (isPending) return <Spinner />;
@@ -70,7 +70,7 @@ function SpecificResource() {
         <img src={image} alt="resourcesImage" width={600} />
       </div>
       <div className="detail-text">
-        <p className="detail-footer-span">{description}</p>
+        <p className="detail-footer-span">{content}</p>
       </div>
     </div>
   );
