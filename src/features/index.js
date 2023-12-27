@@ -16,7 +16,6 @@ import Account from "./Account/Account/Account";
 
 // RESOURCES
 import Resources from "./Resource/Resources/Resources";
-import SpecificResource from "./Resource/SpecificResource/SpecificResource";
 import ResourceCard from "./Resource/ResourceCard/ResourceCard";
 
 // PETS
@@ -60,7 +59,6 @@ export {
 
   // RESOURCES
   Resources,
-  SpecificResource,
   ResourceCard,
 
   // PETS

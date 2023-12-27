@@ -1,16 +1,15 @@
 export const getAllResources = async () => {
   try {
     const res = await fetch(
-      "https://mission-pawsible-backend.onrender.com/api/v1/resources"
+      `https://mission-pawsible-backend.onrender.com/api/v1/resources`
     );
 
-    if (!res.ok) throw new Error("News articles could not be loaded");
+    if (!res.ok) throw new Error("Resources could not be loaded");
 
     const data = await res.json();
 
-    const resources = data?.results.filter(
-      (resource, index, self) =>
-        index === self.findIndex(r => r.title === resource.title)
+    const resources = data?.resources?.filter(
+      resource => resource.title !== "[Removed]"
     );
 
     return resources;
@@ -18,5 +17,3 @@ export const getAllResources = async () => {
     console.error(error.message);
   }
 };
-
-

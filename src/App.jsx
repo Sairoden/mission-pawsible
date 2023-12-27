@@ -14,7 +14,6 @@ import {
   Account,
   AboutUs,
   Resource,
-  ResourceDetail,
   LostPet,
   AppLayout,
   ProfileUpdate,
@@ -81,10 +80,6 @@ function App() {
         {
           path: "/resources",
           element: <Resource />,
-        },
-        {
-          path: "/resources/:resourceId",
-          element: <ResourceDetail />,
         },
         {
           path: "/about-us",

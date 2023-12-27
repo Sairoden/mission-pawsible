@@ -6,7 +6,6 @@ import Signup from "./Signup";
 import Account from "./Account";
 import AboutUs from "./AboutUs";
 import Resource from "./Resource";
-import ResourceDetail from "./ResourceDetail";
 import LostPet from "./LostPet";
 import FoundPet from "./FoundPet";
 import ReunitedPet from "./ReunitedPet";
@@ -25,7 +24,6 @@ export {
   Account,
   AboutUs,
   Resource,
-  ResourceDetail,
   LostPet,
   FoundPet,
   ReunitedPet,

@@ -43,18 +43,20 @@ function Resources() {
       <div className="resources-middle-container">
         {newResources.length > 0 ? (
           newResources?.map(resource => (
-            <NavLink
-              key={resource.article_id}
-              to={`/resources/${resource.article_id}`}
+            <a
+              key={`${resource.author} ${resource.title}`}
+              target="_blank"
+              rel="noreferrer"
+              href={resource.url}
             >
               <ResourceCard
                 title={resource.title}
-                author={resource.creator}
+                author={resource.author}
                 description={limitWords(resource.description, 600)}
-                date={resource.pubDate}
-                image={resource.image_url}
+                date={resource.publishedAt}
+                image={resource.urlToImage}
               />
-            </NavLink>
+            </a>
           ))
         ) : (
           <h4 className="no-resources">
