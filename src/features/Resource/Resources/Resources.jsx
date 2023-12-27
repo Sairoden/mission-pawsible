@@ -1,5 +1,5 @@
 // REACT & LIBRARIES
-import { useSearchParams, NavLink } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 // STYLES
 import "./Resources.scss";

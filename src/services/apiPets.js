@@ -55,3 +55,14 @@ export const getReunitedPets = async () => {
 
   return { data, count };
 };
+
+export const getSinglePet = async id => {
+  const { data, error } = await supabase.from("pets").select("*").eq("id", id);
+
+  if (error) {
+    console.error(error.message);
+    throw new Error("Pet could not be loaded");
+  }
+
+  return data[0];
+};

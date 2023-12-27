@@ -1,3 +1,6 @@
+// UI COMPONENTS
+import { Spinner } from "../../ui";
+
 // STYLES
 import "./PetDetails.scss";
 import ImageGallery from "react-image-gallery";
@@ -9,21 +12,38 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { motion } from "framer-motion";
 
+// HOOKS
+import { useGetSinglePet } from "../../hooks";
+import { formatFullDate } from "../../utils";
+
 function PetDetails() {
-  const imageSlides = [
-    {
-      original: "/fakePet.png",
-      thumbnail: "/fakePet.png",
-    },
-    {
-      original: "/shitsu.png",
-      thumbnail: "/shitsu.png",
-    },
-    {
-      original: "/fakePet.png",
-      thumbnail: "/fakePet.png",
-    },
-  ];
+  const { pet, isPending } = useGetSinglePet();
+
+  if (isPending) return <Spinner />;
+  console.log(pet);
+
+  const {
+    petName,
+    petType,
+    breed,
+    color,
+    size,
+    gender,
+    location,
+    date,
+    microchipped,
+    description,
+    message,
+    images,
+    lat,
+    lng,
+    status,
+  } = pet;
+
+  const imageSlides = images.map(image => ({
+    original: image,
+    thumbnail: image,
+  }));
 
   return (
     <div>
@@ -51,7 +71,9 @@ function PetDetails() {
 
         <div className="petdetail-right-content">
           <div className="petdetail-right-header">
-            <h2 className="petdetail-right-header-title">Shiba Inu Sepia</h2>
+            <h2 className="petdetail-right-header-title">
+              {petName} ⭐ {breed}
+            </h2>
 
             <button className="petdetail-chat-btn">
               <IoChatboxEllipsesOutline className="chat-icon" />
@@ -64,7 +86,7 @@ function PetDetails() {
               <h4 className="petdetail-right-details-text">Gender</h4>
             </div>
             <div>
-              <h4 className="petdetail-right-details-text">: Female</h4>
+              <h4 className="petdetail-right-details-text">: {gender}</h4>
             </div>
           </div>
 
@@ -73,7 +95,7 @@ function PetDetails() {
               <h4 className="petdetail-right-details-text">Type</h4>
             </div>
             <div>
-              <h4 className="petdetail-right-details-text">: Dog</h4>
+              <h4 className="petdetail-right-details-text">: {petType}</h4>
             </div>
           </div>
 
@@ -82,7 +104,7 @@ function PetDetails() {
               <h4 className="petdetail-right-details-text">Size</h4>
             </div>
             <div>
-              <h4 className="petdetail-right-details-text">: Small</h4>
+              <h4 className="petdetail-right-details-text">: {size}</h4>
             </div>
           </div>
 
@@ -91,7 +113,7 @@ function PetDetails() {
               <h4 className="petdetail-right-details-text">Color</h4>
             </div>
             <div>
-              <h4 className="petdetail-right-details-text">: Black</h4>
+              <h4 className="petdetail-right-details-text">: {color}</h4>
             </div>
           </div>
 
@@ -100,7 +122,7 @@ function PetDetails() {
               <h4 className="petdetail-right-details-text">Microchipped</h4>
             </div>
             <div>
-              <h4 className="petdetail-right-details-text">: Yes</h4>
+              <h4 className="petdetail-right-details-text">: {microchipped}</h4>
             </div>
           </div>
 
@@ -109,7 +131,7 @@ function PetDetails() {
               <h4 className="petdetail-right-details-text">Description</h4>
             </div>
             <div>
-              <h4 className="petdetail-right-details-text">: Has red collar</h4>
+              <h4 className="petdetail-right-details-text">: {description}</h4>
             </div>
           </div>
 
@@ -118,9 +140,7 @@ function PetDetails() {
               <h4 className="petdetail-right-details-text">Message</h4>
             </div>
             <div>
-              <h4 className="petdetail-right-details-text">
-                : Help us to find
-              </h4>
+              <h4 className="petdetail-right-details-text">: {message}</h4>
             </div>
           </div>
 
@@ -130,7 +150,7 @@ function PetDetails() {
             </div>
             <div>
               <h4 className="petdetail-right-details-text">
-                : January 1, 2020
+                : {formatFullDate(date)}
               </h4>
             </div>
           </div>
@@ -142,9 +162,7 @@ function PetDetails() {
               </h4>
             </div>
             <div>
-              <h4 className="petdetail-right-details-text">
-                : Kamuning rd Quezon City
-              </h4>
+              <h4 className="petdetail-right-details-text">: {location}</h4>
             </div>
           </div>
         </div>

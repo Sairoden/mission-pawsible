@@ -9,6 +9,7 @@ import { useResendEmail } from "./auth/useResendEmail";
 import { useGetLostPets } from "./pets/useGetLostPets";
 import { useGetFoundPets } from "./pets/useGetFoundPets";
 import { useGetReunitedPets } from "./pets/useGetReunitedPets";
+import { useGetSinglePet } from "./pets/useGetSinglePet";
 
 // RESOURCES
 import { useGetResources } from "./resources/useGetResources";
@@ -25,6 +26,7 @@ export {
   useGetLostPets,
   useGetFoundPets,
   useGetReunitedPets,
+  useGetSinglePet,
 
   // RESORUCES
   useGetResources,

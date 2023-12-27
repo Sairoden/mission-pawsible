@@ -13,26 +13,27 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
   return (
     <div className="pet-gallery">
       <div className="container">
-      <div className="filter">
-        <PetsFilter />
-      </div>
-      <div className="gallery">
-        <PetsCards total={total}>
-          {pets.length > 1 ? (
-            pets?.map(pet => (
-              <PetsCard
-                key={pet.id}
-                image={pet.images[0]}
-                title={pet.petName}
-                gender={pet.gender}
-                date={formatDate(pet.date)}
-              />
-            ))
-          ) : (
-            <h3>No pets currently 🐕</h3>
-          )}
-        </PetsCards>
-      </div>
+        <div className="filter">
+          <PetsFilter />
+        </div>
+        <div className="gallery">
+          <PetsCards total={total}>
+            {pets.length > 1 ? (
+              pets?.map(pet => (
+                <PetsCard
+                  key={pet.id}
+                  id={pet.id}
+                  image={pet.images[0]}
+                  title={pet.petName}
+                  gender={pet.gender}
+                  date={formatDate(pet.date)}
+                />
+              ))
+            ) : (
+              <h3>No pets currently 🐕</h3>
+            )}
+          </PetsCards>
+        </div>
       </div>
     </div>
   );

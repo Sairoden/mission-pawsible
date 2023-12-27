@@ -7,6 +7,7 @@ import {
   getLostPets,
   getFoundPets,
   getReunitedPets,
+  getSinglePet,
 } from "./apiPets";
 
 // AUTH
@@ -31,6 +32,7 @@ export {
   getLostPets,
   getFoundPets,
   getReunitedPets,
+  getSinglePet,
 
   // AUTH
   login,
