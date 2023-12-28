@@ -25,7 +25,7 @@ import {
 } from "./pages";
 
 // UI COMPONENTS
-import { PageNotFound } from "./ui";
+import { PageNotFound, Map } from "./ui";
 
 // TANSTACK QUERY
 const queryClient = new QueryClient({
@@ -45,6 +45,7 @@ function App() {
           path: "/",
           element: <Home />,
         },
+        { path: "/map", element: <Map /> },
         {
           path: "/signup",
           element: <Signup />,
