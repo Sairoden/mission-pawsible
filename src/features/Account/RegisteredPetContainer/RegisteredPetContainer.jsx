@@ -19,16 +19,18 @@ function RegisteredPetContainer({ title }) {
         </div>
       </div>
 
-      <div>
-        <h3 className="register-footer-text">No Entry</h3>
-      </div>
+      <div className="register-middle-content">
+        <div>
+          <h3 className="register-footer-text">No Entry</h3>
+        </div>
 
-      <RegisteredPetCards />
+        <RegisteredPetCards />
 
-      <div className="bottom-content">
-        <Button variation="primary" styles={{ padding: "1.5vh 1.5vw" }}>
-          SHOW MORE
-        </Button>
+        <div className="bottom-content">
+          <Button variation="primary" styles={{ padding: "1.5vh 1.5vw" }}>
+            SHOW MORE
+          </Button>
+        </div>
       </div>
     </div>
   );

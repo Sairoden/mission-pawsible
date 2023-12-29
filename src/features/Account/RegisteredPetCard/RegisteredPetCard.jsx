@@ -8,7 +8,6 @@ function RegisteredPetCard() {
         <img
           src="/public/shitsu.png"
           alt="shitsupic"
-          width={330}
           className="register-img"
         />
       </div>

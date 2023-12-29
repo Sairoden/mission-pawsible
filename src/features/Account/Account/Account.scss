@@ -1,11 +1,9 @@
 @import "../../../variables";
 
 .profile-container {
-  width: 90%;
-  margin: auto;
   color: $color-darkgray;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 25% 65%;
   gap: 5rem;
   justify-content: center;
   padding-bottom: 10rem;
