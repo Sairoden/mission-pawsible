@@ -5,20 +5,12 @@ import { NavLink } from "react-router-dom";
 import "./Profile.scss";
 
 // UI COMPONENTS
-import { Button, Spinner } from "../../../ui";
+import { Button } from "../../../ui";
 
-// HOOKS
-import { useLogout, useGetCurrentUser } from "../../../hooks";
-
-function Profile() {
-  const { logout, isPending } = useLogout();
-  const { user, isPending: isPending2 } = useGetCurrentUser();
-
+function Profile({ user, logout }) {
   const { email } = user;
   const { address, avatar, contactNumber, firstName, lastName } =
     user.user_metadata || {};
-
-  if (isPending || isPending2) return <Spinner />;
 
   return (
     <div className="profile-main-container">

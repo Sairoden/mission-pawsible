@@ -10,6 +10,7 @@ import { useGetLostPets } from "./pets/useGetLostPets";
 import { useGetFoundPets } from "./pets/useGetFoundPets";
 import { useGetReunitedPets } from "./pets/useGetReunitedPets";
 import { useGetSinglePet } from "./pets/useGetSinglePet";
+import { useGetUserPets } from "./pets/useGetUserPets";
 
 // RESOURCES
 import { useGetResources } from "./resources/useGetResources";
@@ -27,6 +28,7 @@ export {
   useGetFoundPets,
   useGetReunitedPets,
   useGetSinglePet,
+  useGetUserPets,
 
   // RESORUCES
   useGetResources,

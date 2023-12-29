@@ -8,6 +8,7 @@ import {
   getFoundPets,
   getReunitedPets,
   getSinglePet,
+  getUserPets,
 } from "./apiPets";
 
 // AUTH
@@ -33,6 +34,7 @@ export {
   getFoundPets,
   getReunitedPets,
   getSinglePet,
+  getUserPets,
 
   // AUTH
   login,

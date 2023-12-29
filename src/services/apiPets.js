@@ -66,3 +66,21 @@ export const getSinglePet = async id => {
 
   return data[0];
 };
+
+export const getUserPets = async () => {
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  const { data, error } = await supabase
+    .from("pets")
+    .select("*")
+    .eq("userId", user.id);
+
+  if (error) {
+    console.error(error.message);
+    throw new Error("User pets could not be loaded");
+  }
+
+  return data;
+};
