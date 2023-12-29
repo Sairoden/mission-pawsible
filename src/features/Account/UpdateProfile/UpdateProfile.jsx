@@ -27,7 +27,7 @@ function UpdateProfile() {
 
   if (isPending) return <Spinner />;
 
-  const handleUpdateProfile = data => {
+  const handleUpdateProfile = (data) => {
     console.log("YES SIR TESTING");
   };
 
@@ -52,51 +52,51 @@ function UpdateProfile() {
             className="update-form-content"
             onSubmit={handleSubmit(handleUpdateProfile)}
           >
-            <div className="update-form1">
-              <Input
-                id="lastName"
-                width="22vw"
-                register={register}
-                defaultValue={lastName}
-              />
-              <br />
-              <label htmlFor="lastName" className="right-form-label">
-                LAST NAME
-              </label>
+            <div className="update-right-form1">
+              <div>
+                <Input
+                  id="lastName"
+                  width="22vw"
+                  register={register}
+                  defaultValue={lastName}
+                />
+                <br />
+                <label htmlFor="lastName" className="right-form-label">
+                  LAST NAME
+                </label>
+                <br />
+              </div>
+
+              <div>
+                <Input
+                  id="firstName"
+                  width="22vw"
+                  register={register}
+                  defaultValue={firstName}
+                />
+                <br />
+                <label htmlFor="firstName" className="right-form-label">
+                  FIRST NAME
+                </label>
+              </div>
             </div>
 
-            <div className="update-form2">
-              <Input
-                id="firstName"
-                width="22vw"
-                register={register}
-                defaultValue={firstName}
-              />
-              <br />
-              <label htmlFor="firstName" className="right-form-label">
-                FIRST NAME
-              </label>
-            </div>
-
-            <div className="update-form3">
+            <div className="update-right-form2">
               <Input
                 id="address"
-                width="47vw"
+                width="45vw"
                 register={register}
-                className="address-input"
                 defaultValue={address}
               />
               <br />
-              <label htmlFor="address" className="right-form-label">
-                ADDRESS
-              </label>
+              <label htmlFor="address">ADDRESS</label>
             </div>
 
-            <div className="update-form4">
+            <div className="update-right-form3">
               <Input
                 type="email"
                 id="email"
-                width="22vw"
+                width="45vw"
                 register={register}
                 defaultValue={email}
               />
@@ -106,44 +106,32 @@ function UpdateProfile() {
               </label>
             </div>
 
-            <div className="update-form5">
-              <Input
-                id="contactNumber"
-                width="22vw"
-                register={register}
-                defaultValue={contactNumber}
-              />
-              <br />
-              <label htmlFor="contactNumber" className="right-form-label">
-                CONTACT NUMBER
-              </label>
-            </div>
-
-            <div className="update-form6">
-              <Input
-                id="contactNumber"
-                width="22vw"
-                register={register}
-                required={false}
-              />
-              <br />
-              <label htmlFor="contactNumber" className="right-form-label">
-                CONTACT NUMBER
-              </label>
-            </div>
-
-            <div className="update-form7">
-              <Input
-                type="password"
-                id="password"
-                width="22vw"
-                register={register}
-                required={false}
-              />
-              <br />
-              <label htmlFor="password" className="right-form-label">
-                CHANGE PASSWORD
-              </label>
+            <div className="update-right-form4">
+              <div>
+                <Input
+                  id="contactNumber"
+                  width="22vw"
+                  register={register}
+                  required={false}
+                />
+                <br />
+                <label htmlFor="contactNumber" className="right-form-label">
+                  CONTACT NUMBER
+                </label>
+              </div>
+              <div>
+                <Input
+                  type="password"
+                  id="password"
+                  width="22vw"
+                  register={register}
+                  required={false}
+                />
+                <br />
+                <label htmlFor="password" className="right-form-label">
+                  CHANGE PASSWORD
+                </label>
+              </div>
             </div>
 
             <div className="update-right-button">
