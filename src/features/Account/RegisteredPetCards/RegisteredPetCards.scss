@@ -1,0 +1,10 @@
+@import "../../../variables";
+
+//registered pet middle container which is the Card
+
+.register-card-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}

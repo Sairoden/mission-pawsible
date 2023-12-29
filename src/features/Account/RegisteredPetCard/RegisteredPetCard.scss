@@ -1,0 +1,81 @@
+@import "../../../variables";
+
+.register-middle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-white;
+  padding: 10px;
+  border-radius: 15px;
+
+  .register-h3 {
+    text-align: center;
+  }
+
+  .register-img {
+    border-radius: 15px;
+  }
+
+  .register-span-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    .span-text {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+  }
+
+  .register-button-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .listing-btn {
+      border: 2px solid $color-blue;
+      border-radius: 2rem;
+      background-color: $color-white;
+      padding: 0.2rem 1rem;
+      color: $color-blue;
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .listing-btn:hover {
+      background: $color-blue;
+      color: $color-white;
+      transform: scale(0.9);
+      transition: 0.6s;
+    }
+    .listing-btn:active {
+      transform: translateY(4px);
+    }
+
+    .update-btn {
+      border: 2px solid $color-orange;
+      border-radius: 2rem;
+      background-color: $color-white;
+      padding: 0.2rem 2rem;
+      font-weight: 600;
+      color: $color-orange;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+    .update-btn:hover {
+      background: $color-orange;
+      color: $color-white;
+      transform: scale(0.9);
+      transition: 0.6s;
+
+      .update-btn:active {
+        transform: translateY(4px);
+      }
+    }
+  }
+}

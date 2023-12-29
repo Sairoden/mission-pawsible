@@ -11,8 +11,11 @@ import SignupForm from "./Authentication/SignupForm/SignupForm";
 // ACCOUNT
 import Profile from "./Account/Profile/Profile";
 import UpdateProfile from "./Account/UpdateProfile/UpdateProfile";
-import RegisteredPet from "./Account/RegisteredPet/RegisteredPet";
 import Account from "./Account/Account/Account";
+import RegisteredPet from "./Account/RegisteredPet/RegisteredPet";
+import RegisteredPetContainer from "./Account/RegisteredPetContainer/RegisteredPetContainer";
+import RegisteredPetCards from "./Account/RegisteredPetCards/RegisteredPetCards";
+import RegisteredPetCard from "./Account/RegisteredPetCard/RegisteredPetCard";
 
 // RESOURCES
 import Resources from "./Resource/Resources/Resources";
@@ -54,8 +57,11 @@ export {
   // ACCOUNT
   Profile,
   UpdateProfile,
-  RegisteredPet,
   Account,
+  RegisteredPet,
+  RegisteredPetContainer,
+  RegisteredPetCards,
+  RegisteredPetCard,
 
   // RESOURCES
   Resources,
