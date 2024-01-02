@@ -27,7 +27,7 @@ function UpdateProfile() {
 
   if (isPending) return <Spinner />;
 
-  const handleUpdateProfile = (data) => {
+  const handleUpdateProfile = data => {
     console.log("YES SIR TESTING");
   };
 
@@ -113,6 +113,7 @@ function UpdateProfile() {
                   width="22vw"
                   register={register}
                   required={false}
+                  defaultValue={contactNumber}
                 />
                 <br />
                 <label htmlFor="contactNumber" className="right-form-label">

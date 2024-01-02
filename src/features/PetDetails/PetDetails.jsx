@@ -7,7 +7,6 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import { FaFacebook } from "react-icons/fa";
 import { RiTwitterXFill } from "react-icons/ri";
-import { FaInstagram } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 

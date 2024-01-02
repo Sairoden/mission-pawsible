@@ -6,16 +6,34 @@ import { PetsFilter, PetsCards, PetsCard, Spinner } from "../index";
 
 // UTILITIES
 import { formatDate } from "../../utils";
+import { useState } from "react";
 
 function PetsGallery({ pets = [], loading, total = 0 }) {
+  const [petTypes, setPetTypes] = useState([]);
+  const [genders, setGenders] = useState([]);
+  const [sizes, setSizes] = useState([]);
+  const [locations, setLocations] = useState([]);
+
+  if (petTypes.length > 0) {
+    pets = pets.filter(pet => {
+      return petTypes.includes(pet.petType);
+    });
+  }
+
   if (loading) return <Spinner />;
 
   return (
     <div className="pet-gallery">
       <div className="container">
         <div className="filter">
-          <PetsFilter />
+          <PetsFilter
+            setPetTypes={setPetTypes}
+            setGenders={setGenders}
+            setSizes={setSizes}
+            setLocations={setLocations}
+          />
         </div>
+
         <div className="gallery">
           <PetsCards total={total}>
             {pets.length > 1 ? (
