@@ -1,5 +1,6 @@
 // Auth
 import { useLogin } from "./auth/useLogin";
+import { useLoginWithGoogle } from "./auth/useLoginWithGoogle";
 import { useGetCurrentUser } from "./auth/useGetCurrentUser";
 import { useLogout } from "./auth/useLogout";
 import { useSignup } from "./auth/useSignup";
@@ -17,6 +18,7 @@ import { useGetResources } from "./resources/useGetResources";
 
 export {
   // AUTH
+  useLoginWithGoogle,
   useLogin,
   useGetCurrentUser,
   useLogout,

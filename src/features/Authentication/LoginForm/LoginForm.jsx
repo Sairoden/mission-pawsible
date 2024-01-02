@@ -12,7 +12,7 @@ import toast from "react-hot-toast";
 import { Button, Input, ErrorInput, Spinner } from "../../../ui";
 
 // HOOKS
-import { useLogin, useResendEmail } from "../../../hooks";
+import { useLogin, useResendEmail, useLoginWithGoogle } from "../../../hooks";
 
 // ASSETS
 import loginBanner from "../../../assets/login-banner.png";
@@ -28,12 +28,17 @@ function LoginForm() {
 
   // HOOKS
   const { login, isPending } = useLogin();
+  const { loginWithGoogle, isPending: isPending2 } = useLoginWithGoogle();
   const { resendEmail } = useResendEmail();
 
   const handleLogin = data => {
     if (!data.email || !data.password) return;
 
     login(data);
+  };
+
+  const handleGoogleLogin = () => {
+    loginWithGoogle();
   };
 
   const handleResendEmail = () => {
@@ -54,7 +59,7 @@ function LoginForm() {
     console.log(getValues().email, getValues().password);
   };
 
-  if (isPending) return <Spinner />;
+  if (isPending || isPending2) return <Spinner />;
 
   return (
     <div className="login-container">
@@ -80,7 +85,7 @@ function LoginForm() {
           type="email"
           register={register}
           required="Please provide a valid email address"
-          disabled={isPending}
+          disabled={isPending || isPending2}
         />
 
         <label htmlFor="password" className="login-label">
@@ -92,7 +97,7 @@ function LoginForm() {
           type="password"
           register={register}
           required="Please provide a password"
-          disabled={isPending}
+          disabled={isPending || isPending2}
         />
 
         <div className="forgot-container">
@@ -114,7 +119,12 @@ function LoginForm() {
         </div>
 
         <div className="login-buttons-container">
-          <button type="button" className="login-google" disabled={isPending}>
+          <button
+            type="button"
+            className="login-google"
+            disabled={isPending || isPending2}
+            onClick={handleGoogleLogin}
+          >
             Sign in with Google <FcGoogle className="login-google-icon" />
           </button>
 
@@ -122,7 +132,7 @@ function LoginForm() {
             variation="primary"
             icon={true}
             type="submit"
-            disabled={isPending}
+            disabled={isPending || isPending2}
             styles={{ padding: "1.8rem 8rem" }}
           >
             Log in

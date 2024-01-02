@@ -34,6 +34,12 @@ export const getCurrentUser = async () => {
   return data?.user;
 };
 
+export const loginWithGoogle = async () => {
+  supabase.auth.signInWithOAuth({
+    provider: "google",
+  });
+};
+
 export const login = async ({ email, password }) => {
   const { data, error } = await supabase.auth.signInWithPassword({
     email,
@@ -79,12 +85,11 @@ export const signup = async ({
     throw new Error("Please try again later 🙏");
   }
 
-  const { data: user, error: userError } = await supabase
+  let { data: user, error: userError } = await supabase
     .from("users")
-    .insert([
-      { id: data.user.id, firstName, lastName, email, contactNumber, address },
-    ])
-    .select();
+    .update({ firstName, lastName, contactNumber, address })
+    .eq("email", data.user.email)
+    .select("*");
 
   data.user.user_metadata = {
     firstName: user[0]?.firstName,

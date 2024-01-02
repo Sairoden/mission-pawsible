@@ -4,11 +4,11 @@ import "./RegisteredPetCards.scss";
 // FEATURES COMPONENTS
 import { RegisteredPetCard } from "../../index";
 
-function RegisteredPetCards() {
+function RegisteredPetCards({ pets = [] }) {
   return (
     <div className="register-card-grid">
-      <RegisteredPetCard />
-      <RegisteredPetCard />
+      <RegisteredPetCard pets={pets} />
+      <RegisteredPetCard pets={pets} />
     </div>
   );
 }

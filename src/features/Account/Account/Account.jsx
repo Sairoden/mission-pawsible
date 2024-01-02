@@ -21,7 +21,7 @@ function Account() {
   return (
     <div className="profile-container">
       <Profile logout={logout} user={user} />
-      <RegisteredPet userPets={userPets}/>
+      <RegisteredPet userPets={userPets} />
     </div>
   );
 }

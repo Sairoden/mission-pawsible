@@ -13,6 +13,7 @@ import {
 
 // AUTH
 import {
+  loginWithGoogle,
   login,
   getCurrentUser,
   logout,
@@ -37,6 +38,7 @@ export {
   getUserPets,
 
   // AUTH
+  loginWithGoogle,
   login,
   getCurrentUser,
   logout,
