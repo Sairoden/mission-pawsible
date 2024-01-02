@@ -14,11 +14,22 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
   const [sizes, setSizes] = useState([]);
   const [locations, setLocations] = useState([]);
 
-  if (petTypes.length > 0) {
+  if (petTypes.length > 0)
+    pets = pets.filter(pet => petTypes.includes(pet.petType));
+
+  if (genders.length > 0)
+    pets = pets.filter(pet => genders.includes(pet.gender));
+
+  if (sizes.length > 0) pets = pets.filter(pet => sizes.includes(pet.size));
+
+  if (locations.length > 0)
     pets = pets.filter(pet => {
-      return petTypes.includes(pet.petType);
+      for (let location of locations) {
+        if (location === "Manila") return pet.location.includes("Manila");
+        else if (location === "Quezon") return pet.location.includes("Quezon");
+        else return;
+      }
     });
-  }
 
   if (loading) return <Spinner />;
 
