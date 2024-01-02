@@ -20,16 +20,32 @@ function Footer() {
           <h4 className="footer-text">CIIT College of Arts and Technology</h4>
         </a>
         <div className="footer-social-media">
-          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.facebook.com/ciitphilippines"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaFacebook className="social-media" />
           </a>
-          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/ciit_philippines/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaInstagram className="social-media" />
           </a>
-          <a href="https://twitter.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://twitter.com/ciitphilippines"
+            target="_blank"
+            rel="noreferrer"
+          >
             <RiTwitterXFill className="social-media" />
           </a>
-          <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.youtube.com/@CIITPhilippinesOfficial"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaYoutube className="social-media" />
           </a>
         </div>

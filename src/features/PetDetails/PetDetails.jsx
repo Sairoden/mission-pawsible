@@ -10,19 +10,17 @@ import { RiTwitterXFill } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
-import { motion } from "framer-motion";
 
 // HOOKS
 import { useGetSinglePet } from "../../hooks";
 import { formatFullDate } from "../../utils";
-
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 
 function PetDetails() {
   const { pet, isPending } = useGetSinglePet();
 
   if (isPending) return <Spinner />;
   const {
+    id,
     petName,
     petType,
     breed,
@@ -37,7 +35,6 @@ function PetDetails() {
     images,
     lat,
     lng,
-    status,
   } = pet;
 
   const imageSlides = images.map(image => ({
@@ -56,14 +53,20 @@ function PetDetails() {
             <IoShareSocialOutline className="left-share-icon" />: Share
           </div>
 
-          <a href="fb-link">
+          <a
+            href={`https://www.facebook.com/sharer/sharer.php?u=https://mission-pawsible.netlify.app/pet/${id}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <FaFacebook className="left-social-icon" />
           </a>
-          <a href="twitter-link">
+
+          <a
+            href={`https://twitter.com/intent/tweet?url=https://mission-pawsible.netlify.app/pet/${id}&text=Help us find this pet! Your help is needed to reunite a lost pet with its family. Please share this post to spread the word and increase the chances of finding the missing pet. Together, we can make a difference and bring a beloved furry friend back home.`}
+            target="_blank"
+            rel="noreferrer"
+          >
             <RiTwitterXFill className="left-social-icon" />
-          </a>
-          <a href="instagram-link">
-            <FaInstagram className="left-social-icon" />
           </a>
         </div>
       </div>

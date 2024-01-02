@@ -9,7 +9,6 @@ function RegisteredPetCards() {
     <div className="register-card-grid">
       <RegisteredPetCard />
       <RegisteredPetCard />
-      <RegisteredPetCard />
     </div>
   );
 }

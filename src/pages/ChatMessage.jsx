@@ -1,3 +1,5 @@
+// REACT & LIBRARIES
+import { useEffect, useState } from "react";
 import { StreamChat } from "stream-chat";
 import {
   Chat,
@@ -9,15 +11,16 @@ import {
   Thread,
   Window,
 } from "stream-chat-react";
+
+// STYLES
 import "@stream-io/stream-chat-css/dist/css/index.css";
-import { useEffect, useState } from "react";
 
 const apiKey = import.meta.env.VITE_STREAM_KEY;
 
 const user = {
   id: "sairoden",
   name: "Sairoden Gandarosa",
-  imaeg: "https://getstream.imgix.net/images/random_svg/FS.png",
+  image: "https://getstream.imgix.net/images/random_svg/FS.png",
 };
 
 const filters = { type: "messaging", members: { $in: [user.id] } };

@@ -114,7 +114,7 @@ export const resendEmailConfirmation = async email => {
     type: "signup",
     email,
     options: {
-      emailRedirectTo: "http://localhost:5173/",
+      emailRedirectTo: "https://mission-pawsible.netlify.app",
     },
   });
 
