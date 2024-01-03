@@ -8,10 +8,10 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 // UI COMPONENTS
-import { Button, Input, ErrorInput } from "../../../ui";
+import { Button, Input, ErrorInput, Spinner } from "../../../ui";
 
 // HOOKS
-import { useSignup } from "../../../hooks";
+import { useSignup, useLoginWithGoogle } from "../../../hooks";
 
 // ASSETS
 import signupBanner from "../../../assets/signup-banner.png";
@@ -26,6 +26,11 @@ function SignupForm() {
   } = useForm();
 
   const { signup, isPending } = useSignup();
+  const { loginWithGoogle, isPending: isPending2 } = useLoginWithGoogle();
+
+  const handleGoogleLogin = () => {
+    loginWithGoogle();
+  };
 
   const handleSignup = data => {
     if (
@@ -43,6 +48,8 @@ function SignupForm() {
 
     signup(data);
   };
+
+  if (isPending || isPending2) return <Spinner />;
 
   return (
     <div className="signup-container">
@@ -68,7 +75,7 @@ function SignupForm() {
               width="22vw"
               register={register}
               required="Please provide a first name"
-              disabled={isPending}
+              disabled={isPending || isPending2}
             />
           </div>
 
@@ -81,7 +88,7 @@ function SignupForm() {
               width="22vw"
               register={register}
               required="Please provide a last name"
-              disabled={isPending}
+              disabled={isPending || isPending2}
             />
           </div>
 
@@ -95,7 +102,7 @@ function SignupForm() {
               type="email"
               register={register}
               required="Please provide a valid email address"
-              disabled={isPending}
+              disabled={isPending || isPending2}
             />
           </div>
 
@@ -109,7 +116,7 @@ function SignupForm() {
               width="22vw"
               register={register}
               required="Please provide"
-              disabled={isPending}
+              disabled={isPending || isPending2}
             />
           </div>
 
@@ -122,7 +129,7 @@ function SignupForm() {
               width="49vw"
               register={register}
               required="Please provide an address"
-              disabled={isPending}
+              disabled={isPending || isPending2}
             />
           </div>
 
@@ -136,7 +143,7 @@ function SignupForm() {
               type="password"
               register={register}
               required="Please provide a password"
-              disabled={isPending}
+              disabled={isPending || isPending2}
             />
           </div>
 
@@ -152,21 +159,26 @@ function SignupForm() {
               register={register}
               required="Password need to match"
               password={getValues().password}
-              disabled={isPending}
+              disabled={isPending || isPending2}
             />
           </div>
         </div>
 
         <div className="signup-buttons-container">
-          <button type="button" className="signup-google" disabled={isPending}>
-            Sign in with Google <FcGoogle className="signup-google-icon" />
+          <button
+            type="button"
+            className="signup-google"
+            disabled={isPending || isPending2}
+            onClick={handleGoogleLogin}
+          >
+            Sign up with Google <FcGoogle className="signup-google-icon" />
           </button>
 
           <Button
             variation="primary"
             icon={true}
             type="submit"
-            disabled={isPending}
+            disabled={isPending || isPending2}
             styles={{ padding: "2vh 4vw" }}
           >
             Signup

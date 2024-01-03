@@ -1,15 +1,13 @@
 // STYLES
 import "./RegisteredPetCard.scss";
 
+import shitsu from "../../../assets/shitsu.png";
+
 function RegisteredPetCard() {
   return (
     <div className="register-middle-container">
       <div className="middle-img-container">
-        <img
-          src="/public/shitsu.png"
-          alt="shitsupic"
-          className="register-img"
-        />
+        <img src={shitsu} alt="shitsupic" className="register-img" />
       </div>
       <div>
         <div className="register-h3">
