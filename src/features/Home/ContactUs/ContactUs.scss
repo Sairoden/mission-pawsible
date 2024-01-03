@@ -7,11 +7,18 @@
   height: 41vh;
   background: $color-coffee;
 
-  @media screen and (max-width: 1940px) {
+  @media only screen and (max-width: 1940px) {
     height: 40vh;
   }
-  @media screen and (max-width: 1660px) {
-    height: 25vh;
+  @media only screen and (max-width: 1890px) {
+    height: 35vh;
+  }
+
+  @media only screen and (max-width: 1660px) {
+    height: 30vh;
+  }
+  @media only screen and (max-width: 1600px) {
+    display: flex;
   }
 }
 
@@ -19,12 +26,18 @@
   height: 41vh;
   object-fit: fill;
 
-  @media screen and (max-width: 1940px) {
+  @media only screen and (max-width: 1940px) {
     height: 40vh;
     object-fit: fill;
   }
-  @media screen and (max-width: 1660px) {
-    height: 25vh;
+  @media only screen and (max-width: 1890px) {
+    height: 35vh;
+  }
+  @media only screen and (max-width: 1660px) {
+    height: 30vh;
+  }
+  @media only screen and (max-width: 1600px) {
+    display: none;
   }
 }
 
@@ -35,6 +48,14 @@
   align-items: center;
   justify-content: center;
   margin-top: 5rem;
+
+  @media only screen and (max-width: 1600px) {
+    text-align: center;
+  }
+
+  @media only screen and (max-width: 800px) {
+    margin-bottom: 5rem;
+  }
 
   .contact-section-title {
     color: $color-blue;

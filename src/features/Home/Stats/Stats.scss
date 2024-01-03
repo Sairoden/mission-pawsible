@@ -2,13 +2,13 @@
 
 .stats-container {
   background: $color-white;
-  height: 65vh;
+  height: auto;
 
   .stats-content {
     display: flex;
     flex-direction: column;
-    padding: 4rem 0 4rem 0;
-    gap: 4rem;
+    padding: 5rem 0 5rem 0;
+    gap: 5rem;
     justify-content: center;
     align-items: center;
 

@@ -1,9 +1,10 @@
 // @import "../Showcase/Showcase.scss";
 @import "../../../variables";
+@import "../../../index.scss";
 
 .microchip-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
+  display: flex;
+  flex-direction: row;
   background: $color-white;
   margin-top: 10rem;
   height: 49vh;
@@ -12,6 +13,15 @@
     width: 52vw;
     height: 49vh;
     object-fit: fill;
+
+    @media only screen and (max-width: 1740px) {
+      width: 50vw;
+      object-fit: fill;
+    }
+    @media only screen and (max-width: 1700px) {
+      width: 45vw;
+      object-fit: fill;
+    }
   }
 
   .microchip-detail-container {
@@ -27,12 +37,10 @@
       color: $color-blue;
     }
     .microchip-subtitle {
-      font-size: 2.4rem;
       font-weight: 600;
       color: $color-blue;
     }
     .microchip-text {
-      font-size: 1.8rem;
       color: $color-brown;
       font-weight: 400;
       text-align: right;
