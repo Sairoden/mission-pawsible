@@ -26,6 +26,8 @@ import {
 
 // UI COMPONENTS
 import { PageNotFound, Map } from "./ui";
+import { getAllResources } from "./services";
+import { useEffect } from "react";
 
 // TANSTACK QUERY
 const queryClient = new QueryClient({
@@ -37,6 +39,14 @@ const queryClient = new QueryClient({
 });
 
 function App() {
+  useEffect(() => {
+    queryClient.prefetchQuery({
+      queryKey: ["resources"],
+      queryFn: getAllResources,
+      staleTime: 3600000,
+    });
+  }, []);
+
   const router = createBrowserRouter([
     {
       element: <AppLayout />,
