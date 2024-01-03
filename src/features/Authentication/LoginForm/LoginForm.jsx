@@ -133,7 +133,6 @@ function LoginForm() {
             icon={true}
             type="submit"
             disabled={isPending || isPending2}
-            styles={{ padding: "1.8rem 8rem" }}
           >
             Log in
           </Button>

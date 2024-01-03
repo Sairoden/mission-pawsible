@@ -61,15 +61,9 @@ function Profile({ user, logout }) {
 
         <div className="footer-content">
           <NavLink to="/account/update">
-            <Button variation="primary" styles={{ padding: "2vh 3vw" }}>
-              Update
-            </Button>
+            <Button variation="primary">Update</Button>
           </NavLink>
-          <Button
-            variation="secondary"
-            onClick={logout}
-            styles={{ padding: "2vh 3vw" }}
-          >
+          <Button variation="secondary" onClick={logout}>
             Logout
           </Button>
         </div>

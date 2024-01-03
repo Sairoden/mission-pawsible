@@ -179,8 +179,7 @@ function SignupForm() {
             icon={true}
             type="submit"
             disabled={isPending || isPending2}
-            styles={{ padding: "2vh 4vw" }}
-          >
+            >
             Signup
           </Button>
         </div>

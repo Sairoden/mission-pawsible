@@ -136,12 +136,7 @@ function UpdateProfile() {
             </div>
 
             <div className="update-right-button">
-              <Button
-                variation="primary"
-                icon={true}
-                styles={{ padding: "2vh 4vw" }}
-                type="submit"
-              >
+              <Button variation="primary" icon={true} type="submit">
                 SAVE
               </Button>
             </div>

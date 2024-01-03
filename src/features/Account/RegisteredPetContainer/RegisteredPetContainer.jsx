@@ -35,9 +35,7 @@ function RegisteredPetContainer({ title, pets = [] }) {
         <RegisteredPetCards pets={pets} />
 
         <div className="bottom-content">
-          <Button variation="primary" styles={{ padding: "1.5vh 1.5vw" }}>
-            SHOW MORE
-          </Button>
+          <Button variation="primary">SHOW MORE</Button>
         </div>
       </div>
     </div>

@@ -38,11 +38,7 @@ function Carousel() {
           </h5>
         </div>
         <div className="btns">
-          <Button
-            variation="primary"
-            icon={true}
-            styles={{ padding: "2vh 2vw" }}
-          >
+          <Button variation="primary" icon={true}>
             Check Out
           </Button>
         </div>

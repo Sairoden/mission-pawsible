@@ -26,11 +26,7 @@ function ContactUs() {
           </p>
         </div>
         <div>
-          <Button
-            variation="primary"
-            icon={true}
-            styles={{ padding: "2vh 2vw" }}
-          >
+          <Button variation="primary" icon={true}>
             Contact Us
           </Button>
         </div>

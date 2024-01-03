@@ -71,25 +71,11 @@ const Navbar = () => {
 
       {!user ? (
         <NavLink to="/login">
-          <Button
-            variation="primary"
-            styles={{
-              padding: "2vh 3vw",
-            }}
-          >
-            LOG IN
-          </Button>
+          <Button variation="primary">LOG IN</Button>
         </NavLink>
       ) : (
         <NavLink to="/account">
-          <Button
-            variation="primary"
-            styles={{
-              padding: "2vh 2vw",
-            }}
-          >
-            ACCOUNT
-          </Button>
+          <Button variation="primary">ACCOUNT</Button>
         </NavLink>
       )}
     </nav>

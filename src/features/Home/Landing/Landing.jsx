@@ -4,6 +4,9 @@ import "./Landing.scss";
 // UI COMPONENTS
 import { Button } from "../../../ui";
 
+// ASSETS
+import landing from "../../../assets/landing.png";
+
 function Landing() {
   return (
     <section className="landing container">
@@ -22,30 +25,17 @@ function Landing() {
         </div>
 
         <div className="btns">
-          {/* <div className="button bg-orange">
-            <h5>Find Pets</h5>
-          </div>
-
-          <div className="button bg-blue">
-            <h5>Join Us</h5>
-          </div> */}
-
-          <Button
-            variation="primary"
-            icon={true}
-          >
+          <Button variation="primary" icon={true}>
             Find Pets
           </Button>
 
-          <Button variation="secondary">
-            Join Us
-          </Button>
+          <Button variation="secondary">Join Us</Button>
         </div>
       </div>
 
       <div className="img">
         <div>
-          <h1>hello</h1>
+          <img src={landing} alt="Pet reunion" />
         </div>
       </div>
     </section>
