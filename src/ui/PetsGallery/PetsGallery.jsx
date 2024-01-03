@@ -2,7 +2,7 @@
 import "./PetsGallery.scss";
 
 // UI COMPONENTS
-import { PetsFilter, PetsCards, PetsCard, Spinner } from "../index";
+import { PetsFilter, PetsCardContainer, PetsCard, Spinner } from "../index";
 
 // UTILITIES
 import { formatDate } from "../../utils";
@@ -46,7 +46,7 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
         </div>
 
         <div className="gallery">
-          <PetsCards total={total}>
+          <PetsCardContainer total={total}>
             {pets.length > 1 ? (
               pets?.map(pet => (
                 <PetsCard
@@ -61,7 +61,7 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
             ) : (
               <h3>No pets currently 🐕</h3>
             )}
-          </PetsCards>
+          </PetsCardContainer>
         </div>
       </div>
     </div>

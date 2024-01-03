@@ -6,7 +6,7 @@ import ErrorInput from "./ErrorInput/ErrorInput";
 import Spinner from "./Spinner/Spinner";
 import PageNotFound from "./PageNotFound/PageNotFound";
 import PetsCard from "./PetsCard/PetsCard";
-import PetsCards from "./PetsCards/PetsCards";
+import PetsCardContainer from "./PetsCardContainer/PetsCardContainer";
 import PetsFilter from "./PetsFilter/PetsFilter";
 import PetsBanner from "./PetsBanner/PetsBanner";
 import Pagination from "./Pagination/Pagination";
@@ -26,7 +26,7 @@ export {
   Spinner,
   PageNotFound,
   PetsCard,
-  PetsCards,
+  PetsCardContainer,
   PetsFilter,
   PetsBanner,
   Pagination,
