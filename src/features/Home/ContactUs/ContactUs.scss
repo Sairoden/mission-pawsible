@@ -17,8 +17,10 @@
   @media only screen and (max-width: 1660px) {
     height: 30vh;
   }
-  @media only screen and (max-width: 1600px) {
+  @media only screen and (max-width: 1625px) {
     display: flex;
+    height: auto;
+    padding: 10rem;
   }
 }
 
@@ -36,7 +38,7 @@
   @media only screen and (max-width: 1660px) {
     height: 30vh;
   }
-  @media only screen and (max-width: 1600px) {
+  @media only screen and (max-width: 1625px) {
     display: none;
   }
 }
@@ -49,18 +51,18 @@
   justify-content: center;
   margin-top: 5rem;
 
-  @media only screen and (max-width: 1600px) {
+  @media only screen and (max-width: 1625px) {
     text-align: center;
-  }
-
-  @media only screen and (max-width: 800px) {
-    margin-bottom: 5rem;
   }
 
   .contact-section-title {
     color: $color-blue;
     font-size: 5.2rem;
     font-weight: 700;
+
+    @media only screen and (max-width: 1625px) {
+      font-size: 4.4rem;
+    }
   }
 
   .contact-middle-info {
@@ -68,6 +70,10 @@
     color: $color-brown;
     font-size: 1.8rem;
     font-weight: 500;
+
+    @media only screen and (max-width: 1625px) {
+      font-size: 1.2rem;
+    }
   }
 }
 
