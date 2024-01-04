@@ -1,6 +1,7 @@
 // STYLES
 import "./Carousel.scss";
 import { Button } from "../../../ui";
+import { NavLink } from "react-router-dom";
 
 // ASSETS
 import Carousel1 from "../../../assets/carousel-slide-1.png";
@@ -29,20 +30,22 @@ function Carousel() {
     <section className="carousel">
       <div className="info">
         <div className="header">
-          <h1 className="header-title">Recent Listings</h1>
-        </div>
+          <h1 className="header-title"> Recent Listings </h1>{" "}
+        </div>{" "}
         <div className="body">
           <h5 className="body-text">
-            Help bring every paw back home! Start your search <br />
-            now, your furry friends can’t wait to see you!
-          </h5>
-        </div>
+            Help bring every paw back home!Start your search <br />
+            now, your furry friends can’ t wait to see you!
+          </h5>{" "}
+        </div>{" "}
         <div className="btns">
-          <Button variation="primary" icon={true}>
-            Check Out
-          </Button>
-        </div>
-      </div>
+          <NavLink to="/lost-pets">
+            <Button variation="primary" icon={true}>
+              Check Out{" "}
+            </Button>{" "}
+          </NavLink>{" "}
+        </div>{" "}
+      </div>{" "}
       <ImageGallery
         items={imageSlides}
         infinite={true}
@@ -57,7 +60,7 @@ function Carousel() {
         showPlayButton={false}
         autoPlay={true}
         lazyLoad={true}
-      />
+      />{" "}
     </section>
   );
 }

@@ -1,5 +1,6 @@
 // STYLES
 import "./ContactUs.scss";
+import { NavLink } from "react-router-dom";
 
 // UI COMPONENTS
 import { Button } from "../../../ui";
@@ -13,31 +14,31 @@ function ContactUs() {
       <div className="contact-info-container">
         <div>
           <h2 className="contact-section-title">
-            Lost Paws? We’re here to help!
-          </h2>
-        </div>
+            Lost Paws ? We’ re here to help!
+          </h2>{" "}
+        </div>{" "}
         <div>
           <p className="contact-middle-info">
-            Reach out and let’s connect! Contact us today to start a
-            conversation,
-            <br /> share your thoughts or get the support you need. We’re here
-            to listen,
-            <br /> assist and make things happen.
-          </p>
-        </div>
+            Reach out and let’ s connect!Contact us today to start a
+            conversation, <br /> share your thoughts or get the support you
+            need.We’ re here to listen, <br /> assist and make things happen.{" "}
+          </p>{" "}
+        </div>{" "}
         <div>
-          <Button variation="primary" icon={true}>
-            Contact Us
-          </Button>
-        </div>
-      </div>
+          <NavLink to="/contact-us">
+            <Button variation="primary" icon={true}>
+              Contact Us{" "}
+            </Button>{" "}
+          </NavLink>{" "}
+        </div>{" "}
+      </div>{" "}
       <div>
         <img
           src={contactUsImage}
           alt="Contact Us"
           className="contact-section-img"
         />
-      </div>
+      </div>{" "}
     </section>
     // <section className="contact-us">
     //   <div className="container">
