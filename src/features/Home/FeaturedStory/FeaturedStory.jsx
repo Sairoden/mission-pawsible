@@ -17,7 +17,7 @@ function FeaturedStory() {
               className="featured-img"
               src={featuredStoryBanner}
               alt="featured story image"
-              width="600vw"
+              width="580vw"
             />
           </div>
           <div className="featured-right-details">

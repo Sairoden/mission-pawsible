@@ -20,7 +20,14 @@
     border-radius: 20px;
     padding: 4rem;
 
-    @media screen and (max-width: 1600px) {
+    @media screen and (max-width: 1625px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    @media screen and (max-width: 1500px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -47,15 +54,9 @@
       }
 
       .featured-text {
-        font-size: 1.6rem;
-        font-weight: 400;
         text-align: justify;
         color: $color-brown;
         margin-top: 1.5rem;
-
-        @media screen and (max-width: 1700px) {
-          font-size: 1.6rem;
-        }
       }
     }
 
@@ -63,16 +64,13 @@
       border-radius: 5px;
 
       @media screen and (max-width: 1700px) {
-        margin-top: 2rem;
-        border-radius: 20px;
-        -webkit-border-radius: 20px;
-        -moz-border-radius: 20px;
-        -ms-border-radius: 20px;
-        -o-border-radius: 20px;
+      }
+      @media screen and (max-width: 1500px) {
+        width: 500px;
       }
 
       @media screen and (max-width: 1000px) {
-        width: 50rem;
+        width: 400px;
       }
     }
   }
