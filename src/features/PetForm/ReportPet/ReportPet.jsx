@@ -106,11 +106,11 @@ function ReportPet() {
               </div>
               <div className="right-form3">
                 <label htmlFor="text">Description</label>
-                <InputTextArea rows={10} cols={40} />
+                <InputTextArea />
               </div>
               <div className="right-form4">
                 <label htmlFor="text">Message</label>
-                <InputTextArea rows={10} cols={40} />
+                <InputTextArea />
               </div>
             </div>
           </div>

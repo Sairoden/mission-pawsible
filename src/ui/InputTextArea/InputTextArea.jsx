@@ -1,13 +1,13 @@
 // STYLES
 import "./InputTextArea.scss";
 
-function InputTextArea({ cols = 50, rows = 10 }) {
+function InputTextArea({ name = "", id = "" }) {
   return (
     <textarea
-      name=""
-      id=""
-      cols={cols}
-      rows={rows}
+      name={name}
+      id={id}
+      cols={50}
+      rows={10}
       className="input-textarea"
     />
   );
