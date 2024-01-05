@@ -14,11 +14,9 @@ function Stats() {
         </div>{" "}
         <div>
           <div className="stats-circle-card">
-            <div>
-              <div className="stats-circle1">
-                <h2 className="stats-circle-number"> 285 </h2> <br />
-                <span className="stats-circle-text"> Missing Pets </span>{" "}
-              </div>{" "}
+            <div className="stats-circle1">
+              <h2 className="stats-circle-number"> 285 </h2> <br />
+              <span className="stats-circle-text"> Missing Pets </span>{" "}
             </div>{" "}
             <div className="stats-circle2">
               <h2 className="stats-circle-number"> 285 </h2> <br />

@@ -19,7 +19,8 @@ function Adoption() {
           opportunities now!
         </h5>
       </div>
-      <div className="adoption-img">
+
+      <div className="adoption-img-container">
         <div className="adoption-img-content">
           <a href="https://www.caraphil.org/" target="_blank" rel="noreferrer">
             <img src={adopt1} alt="caraphil" width="150vw" />

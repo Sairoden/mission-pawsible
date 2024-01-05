@@ -7,7 +7,7 @@
   .stats-content {
     display: flex;
     flex-direction: column;
-    padding: 5rem 0;
+    padding: 10rem 0;
     gap: 5rem;
     justify-content: center;
     align-items: center;
@@ -22,22 +22,42 @@
       .stats-one {
         font-size: 4.8rem;
         font-weight: 600;
+
+        @media only screen and (max-width: 1200px) {
+          font-size: 4.2rem;
+          font-weight: 600;
+        }
       }
       .stats-one::after {
         content: " Community";
         color: $color-orange;
         font-weight: 700;
+
+        @media only screen and (max-width: 1200px) {
+          font-size: 4.2rem;
+          font-weight: 600;
+        }
       }
 
       .stats-many {
         font-size: 4.8rem;
         font-weight: 600;
+
+        @media only screen and (max-width: 1200px) {
+          font-size: 4.2rem;
+          font-weight: 600;
+        }
       }
       .stats-many::after {
         content: " Reunions";
         color: $color-blue;
         font-size: 4.8rem;
         font-weight: 700;
+
+        @media only screen and (max-width: 1200px) {
+          font-size: 4.2rem;
+          font-weight: 600;
+        }
       }
     }
 
@@ -48,6 +68,12 @@
       justify-content: center;
       align-items: center;
       margin-bottom: 3rem;
+
+      @media only screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+      }
 
       .stats-line {
         border-bottom: solid 1px $color-darkgray;
