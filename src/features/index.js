@@ -14,7 +14,7 @@ import UpdateProfile from "./Account/UpdateProfile/UpdateProfile";
 import Account from "./Account/Account/Account";
 import RegisteredPet from "./Account/RegisteredPet/RegisteredPet";
 import RegisteredPetContainer from "./Account/RegisteredPetContainer/RegisteredPetContainer";
-import RegisteredPetCards from "./Account/RegisteredPetCards/RegisteredPetCards";
+import RegisteredPetGallery from "./Account/RegisteredPetGallery/RegisteredPetGallery";
 import RegisteredPetCard from "./Account/RegisteredPetCard/RegisteredPetCard";
 
 // RESOURCES
@@ -60,7 +60,7 @@ export {
   Account,
   RegisteredPet,
   RegisteredPetContainer,
-  RegisteredPetCards,
+  RegisteredPetGallery,
   RegisteredPetCard,
 
   // RESOURCES

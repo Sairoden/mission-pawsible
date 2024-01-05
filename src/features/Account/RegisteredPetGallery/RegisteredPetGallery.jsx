@@ -1,10 +1,10 @@
 // STYLES
-import "./RegisteredPetCards.scss";
+import "./RegisteredPetGallery.scss";
 
 // FEATURES COMPONENTS
 import { RegisteredPetCard } from "../../index";
 
-function RegisteredPetCards({ pets = [] }) {
+function RegisteredPetGallery({ pets = [] }) {
   return (
     <div className="register-card-grid">
       <RegisteredPetCard pets={pets} />
@@ -13,4 +13,4 @@ function RegisteredPetCards({ pets = [] }) {
   );
 }
 
-export default RegisteredPetCards;
+export default RegisteredPetGallery;

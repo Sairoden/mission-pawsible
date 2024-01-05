@@ -27,14 +27,23 @@
       outline: none;
     }
 
+    &-extra-small {
+      width: 18vw;
+    }
+
     &-small {
+      width: 22vw;
     }
 
     &-medium {
+      width: 45vw;
     }
 
     &-large {
       width: 49vw;
+    }
+
+    &-extra-large {
     }
   }
 

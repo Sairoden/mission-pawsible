@@ -1,9 +1,9 @@
 // STYLES
 import "./InputSelect.scss";
 
-function InputSelect({ width }) {
+function InputSelect({ name, id }) {
   return (
-    <select name="cars" id="cars" className="input-select" style={{ width }}>
+    <select name={name} id={id} className="input-select">
       <option value="volvo">Volvo</option>
       <option value="saab">Saab</option>
       <option value="mercedes">Mercedes</option>

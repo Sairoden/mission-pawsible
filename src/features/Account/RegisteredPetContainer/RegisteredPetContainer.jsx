@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./RegisteredPetContainer.scss";
 
 // FEATURES COMPONENTS
-import { RegisteredPetCards } from "../../index";
+import { RegisteredPetGallery } from "../../index";
 
 // UI COMPONENTS
 import { Button } from "../../../ui";
@@ -32,7 +32,7 @@ function RegisteredPetContainer({ title, pets = [] }) {
           <h3 className="register-footer-text">No Entry</h3>
         </div>
 
-        <RegisteredPetCards pets={pets} />
+        <RegisteredPetGallery pets={pets} />
 
         <div className="bottom-content">
           <Button variation="primary">SHOW MORE</Button>

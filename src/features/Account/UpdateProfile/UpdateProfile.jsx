@@ -56,7 +56,7 @@ function UpdateProfile() {
               <div>
                 <Input
                   id="lastName"
-                  width="22vw"
+                  size="small"
                   register={register}
                   defaultValue={lastName}
                 />
@@ -70,7 +70,7 @@ function UpdateProfile() {
               <div>
                 <Input
                   id="firstName"
-                  width="22vw"
+                  size="small"
                   register={register}
                   defaultValue={firstName}
                 />
@@ -84,7 +84,7 @@ function UpdateProfile() {
             <div className="update-right-form2">
               <Input
                 id="address"
-                width="45vw"
+                size="medium"
                 register={register}
                 defaultValue={address}
               />
@@ -96,7 +96,7 @@ function UpdateProfile() {
               <Input
                 type="email"
                 id="email"
-                width="45vw"
+                size="medium"
                 register={register}
                 defaultValue={email}
               />
@@ -110,7 +110,7 @@ function UpdateProfile() {
               <div>
                 <Input
                   id="contactNumber"
-                  width="22vw"
+                  size="small"
                   register={register}
                   required={false}
                   defaultValue={contactNumber}
@@ -124,7 +124,7 @@ function UpdateProfile() {
                 <Input
                   type="password"
                   id="password"
-                  width="22vw"
+                  size="small"
                   register={register}
                   required={false}
                 />
