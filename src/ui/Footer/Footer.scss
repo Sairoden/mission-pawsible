@@ -3,8 +3,9 @@
 .footer-container {
   background: $color-blue;
   width: 100%;
-  height: calc(100vh - 70vh);
+  height: 35rem;
   color: $color-white;
+  margin-top: auto;
 
   .footer-logo {
     display: flex;
@@ -14,7 +15,7 @@
   }
 
   .logo {
-    width: 8%;
+    width: 15rem;
     align-items: center;
     text-align: center;
     justify-items: center;
@@ -37,8 +38,8 @@
       gap: 2rem;
 
       .social-media {
-        height: 24px;
-        width: 28.44px;
+        height: 2.4rem;
+        width: 2.8rem;
       }
     }
   }
@@ -51,11 +52,46 @@
   }
 
   .footer-copyright {
-    margin-top: 2rem;
+    margin-top: 5rem;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 30px;
     word-wrap: break-word;
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .footer-container {
+    .footer-main {
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .footer-container {
+    .logo {
+      width: 13rem;
+    }
+
+    .footer-text {
+      font-size: 1.6rem;
+    }
+
+    .social-media {
+      height: 2.2rem;
+      width: 2.6rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    .footer-copyright {
+      margin-top: 3rem;
+      font-size: 1.6rem;
+    }
   }
 }
