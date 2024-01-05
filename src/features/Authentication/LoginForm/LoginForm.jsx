@@ -81,7 +81,7 @@ function LoginForm() {
         </label>
         <Input
           id="email"
-          width="49vw"
+          size="large"
           type="email"
           register={register}
           required="Please provide a valid email address"
@@ -93,7 +93,7 @@ function LoginForm() {
         </label>
         <Input
           id="password"
-          width="49vw"
+          size="large"
           type="password"
           register={register}
           required="Please provide a password"

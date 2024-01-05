@@ -17,6 +17,7 @@ function Input({
   required = false,
   password,
   defaultValue,
+  size,
 }) {
   const [showPassword, setShowPassword] = useState(false);
   const inputType = showPassword ? "text" : type;
@@ -45,6 +46,8 @@ function Input({
     message: "Should start with 09",
   };
 
+  const sizes = {};
+
   return (
     <div className="input-container">
       <input
@@ -55,7 +58,7 @@ function Input({
         type={inputType}
         id={id}
         disabled={disabled}
-        className="input"
+        className={`input input-${size}`}
         value={value || undefined}
         placeholder={placeholder || undefined}
         onChange={onChange}

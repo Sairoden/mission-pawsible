@@ -5,6 +5,7 @@
   display: inline-block;
 
   .input {
+    width: 100%;
     height: 4.3rem;
     border-radius: 20px;
     border: 1px $color-brown solid;
@@ -24,6 +25,16 @@
 
     &:focus {
       outline: none;
+    }
+
+    &-small {
+    }
+
+    &-medium {
+    }
+
+    &-large {
+      width: 49vw;
     }
   }
 
