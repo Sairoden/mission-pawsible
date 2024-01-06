@@ -9,13 +9,16 @@ const Button = ({
   onClick,
   type = "button",
   disabled = false,
+  size,
 }) => {
   return (
     <button
       onClick={onClick}
       style={styles}
       type={type}
-      className={`button ${variation} ${disabled && "button-disabled"}`}
+      className={`button ${variation} ${
+        disabled && "button-disabled"
+      } button-${size}`}
       disabled={disabled}
     >
       {children}

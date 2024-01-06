@@ -40,6 +40,18 @@
   transition: background 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 
+  &-small {
+    padding: 1.2rem 4rem;
+  }
+
+  &-medium {
+    padding: 1.4rem 6rem;
+  }
+
+  &-large {
+    padding: 1.8rem 8rem;
+  }
+
   @media screen and (min-width: 1441px) {
     font-size: 1.8rem;
   }

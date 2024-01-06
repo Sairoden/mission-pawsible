@@ -73,7 +73,7 @@ function LoginForm() {
         transition={{ duration: 3 }}
       />
 
-      <h1 className="login-title">Log in</h1>
+      <h1 className="login-title">Welcome back to our growing family!</h1>
 
       <form className="login-form" onSubmit={handleSubmit(handleLogin)}>
         <label htmlFor="email" className="login-label">
@@ -133,8 +133,9 @@ function LoginForm() {
             icon={true}
             type="submit"
             disabled={isPending || isPending2}
+            size="large"
           >
-            Log in
+            Login
           </Button>
         </div>
       </form>

@@ -179,7 +179,8 @@ function SignupForm() {
             icon={true}
             type="submit"
             disabled={isPending || isPending2}
-            >
+            size="large"
+          >
             Signup
           </Button>
         </div>

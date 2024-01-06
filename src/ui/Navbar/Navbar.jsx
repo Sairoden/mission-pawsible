@@ -83,11 +83,15 @@ const Navbar = () => {
 
           {!user ? (
             <NavLink to="/login">
-              <Button variation="primary">LOG IN</Button>
+              <Button variation="primary" size="small">
+                LOG IN
+              </Button>
             </NavLink>
           ) : (
             <NavLink to="/account">
-              <Button variation="primary">ACCOUNT</Button>
+              <Button variation="primary" size="small">
+                ACCOUNT
+              </Button>
             </NavLink>
           )}
         </div>
