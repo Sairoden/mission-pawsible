@@ -61,9 +61,11 @@ function Profile({ user, logout }) {
 
         <div className="footer-content">
           <NavLink to="/account/update">
-            <Button variation="primary">Update</Button>
+            <Button variation="primary" size="medium">
+              Update
+            </Button>
           </NavLink>
-          <Button variation="secondary" onClick={logout}>
+          <Button variation="secondary" onClick={logout} size="medium">
             Logout
           </Button>
         </div>

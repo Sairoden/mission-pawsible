@@ -35,7 +35,9 @@ function RegisteredPetContainer({ title, pets = [] }) {
         <RegisteredPetGallery pets={pets} />
 
         <div className="bottom-content">
-          <Button variation="primary">SHOW MORE</Button>
+          <Button variation="primary" size="small">
+            SHOW MORE
+          </Button>
         </div>
       </div>
     </div>

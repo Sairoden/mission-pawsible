@@ -35,10 +35,12 @@ function Microchip() {
           </p>
         </div>
         <div className="microchip-btn">
-          <Button variation="primary" icon={true}>
+          <Button variation="primary" icon={true} size="small">
             View Intro
           </Button>
-          <Button variation="secondary">Explore Now</Button>
+          <Button variation="secondary" size="small">
+            Explore Now
+          </Button>
         </div>
       </div>
     </div>

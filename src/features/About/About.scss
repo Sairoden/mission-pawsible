@@ -46,13 +46,14 @@
   .info {
     .text {
       margin-bottom: 1.5rem;
+      font-size: 1.2rem;
     }
-  }    
+  }
   .img {
     display: none;
   }
-  
-  @media (min-width: 768px) { 
+
+  @media (min-width: 768px) {
     display: flex;
 
     .info {
@@ -62,15 +63,19 @@
       .title {
         text-align: end;
       }
+
+      .text {
+        font-size: 1.6rem;
+      }
     }
-    
+
     .img {
       margin: auto;
       width: 33%;
       max-width: 44rem;
       display: flex;
       flex-direction: column;
-      
+
       img {
         height: 17.5rem;
         cursor: pointer;
@@ -80,5 +85,5 @@
         justify-content: flex-end;
       }
     }
-   }
+  }
 }

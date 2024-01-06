@@ -68,7 +68,12 @@ function Contact() {
 
             <InputTextArea name="message" id="message" />
             <div className="btns">
-              <Button variation="primary" icon={true} type="submit">
+              <Button
+                variation="primary"
+                icon={true}
+                type="submit"
+                size="medium"
+              >
                 Send
               </Button>
             </div>

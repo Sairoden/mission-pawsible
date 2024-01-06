@@ -136,7 +136,12 @@ function UpdateProfile() {
             </div>
 
             <div className="update-right-button">
-              <Button variation="primary" icon={true} type="submit">
+              <Button
+                variation="primary"
+                icon={true}
+                type="submit"
+                size="medium"
+              >
                 SAVE
               </Button>
             </div>

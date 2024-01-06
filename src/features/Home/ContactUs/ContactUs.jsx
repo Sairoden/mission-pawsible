@@ -15,30 +15,30 @@ function ContactUs() {
         <div>
           <h2 className="contact-section-title">
             Lost Paws ? We’ re here to help!
-          </h2>{" "}
-        </div>{" "}
+          </h2>
+        </div>
         <div>
           <p className="contact-middle-info">
             Reach out and let’ s connect!Contact us today to start a
             conversation, <br /> share your thoughts or get the support you
-            need.We’ re here to listen, <br /> assist and make things happen.{" "}
-          </p>{" "}
-        </div>{" "}
+            need.We’ re here to listen, <br /> assist and make things happen.
+          </p>
+        </div>
         <div>
           <NavLink to="/contact-us">
-            <Button variation="primary" icon={true}>
-              Contact Us{" "}
-            </Button>{" "}
-          </NavLink>{" "}
-        </div>{" "}
-      </div>{" "}
+            <Button variation="primary" icon={true} size="small">
+              Contact Us
+            </Button>
+          </NavLink>
+        </div>
+      </div>
       <div>
         <img
           src={contactUsImage}
           alt="Contact Us"
           className="contact-section-img"
         />
-      </div>{" "}
+      </div>
     </section>
     // <section className="contact-us">
     //   <div className="container">

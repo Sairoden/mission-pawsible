@@ -59,19 +59,15 @@
     word-wrap: break-word;
     text-align: center;
   }
-}
 
-@media only screen and (max-width: 1400px) {
-  .footer-container {
+  @media only screen and (max-width: 1400px) {
     .footer-main {
       flex-direction: column;
       gap: 2rem;
     }
   }
-}
 
-@media only screen and (max-width: 1000px) {
-  .footer-container {
+  @media only screen and (max-width: 1000px) {
     .logo {
       width: 13rem;
     }
@@ -85,10 +81,8 @@
       width: 2.6rem;
     }
   }
-}
 
-@media only screen and (max-width: 768px) {
-  .footer-container {
+  @media only screen and (max-width: 768px) {
     .footer-copyright {
       margin-top: 3rem;
       font-size: 1.6rem;

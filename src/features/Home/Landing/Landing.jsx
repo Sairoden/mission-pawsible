@@ -25,11 +25,13 @@ function Landing() {
         </div>
 
         <div className="btns">
-          <Button variation="primary" icon={true}>
+          <Button variation="primary" icon={true} size="small">
             Find Pets
           </Button>
 
-          <Button variation="secondary">Join Us</Button>
+          <Button variation="secondary" size="medium">
+            Join Us
+          </Button>
         </div>
       </div>
 
