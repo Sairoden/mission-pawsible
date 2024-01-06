@@ -45,11 +45,16 @@ function PetDetails() {
     <div className="petdetail-main-container">
       <div className="petdetail-left-content" height="100%">
         <div>
-          <ImageGallery items={imageSlides} showPlayButton={false} />
+          <ImageGallery
+            items={imageSlides}
+            showPlayButton={false}
+            // thumbnailPosition="left"
+          />
         </div>
         <div className="petdetail-social-icon">
           <div className="share-icon">
-            <IoShareSocialOutline className="left-share-icon" />: Share
+            <IoShareSocialOutline className="left-share-icon" />
+            Share:
           </div>
 
           <a

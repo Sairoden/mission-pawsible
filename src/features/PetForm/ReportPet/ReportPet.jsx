@@ -33,7 +33,7 @@ function ReportPet() {
             <div className="reportpet-left-container">
               <div className="left-form1">
                 <label htmlFor="text">Pet Name</label>
-                <Input width="95%" id="name" register={register} />
+                <Input size="medium" id="name" register={register} />
               </div>
 
               <div className="left-form2">
@@ -42,6 +42,7 @@ function ReportPet() {
                   <br />
                   <InputSelect id="name" register={register} />
                 </div>
+
                 <div>
                   <label htmlFor="text">Breed</label>
                   <br />
@@ -70,18 +71,18 @@ function ReportPet() {
 
               <div className="left-form5">
                 <label htmlFor="text">Color</label>
-                <Input width="95%" id="name" register={register} />
+                <Input size="medium" id="name" register={register} />
                 <label></label>
               </div>
 
               <div className="left-form6">
                 <div className="left-form6-content">
                   <label htmlFor="text">Size</label>
-                  <InputSelect width="19vw" />
+                  <InputSelect />
                 </div>
                 <div className="left-form6-content">
                   <label htmlFor="text">Gender</label>
-                  <InputSelect width="18.9vw" />
+                  <InputSelect />
                 </div>
               </div>
             </div>
@@ -91,7 +92,7 @@ function ReportPet() {
                 <div>
                   <label htmlFor="text">Microchipped</label>
                   <br />
-                  <InputSelect width="18vw" />
+                  <InputSelect />
                 </div>
 
                 <div>
@@ -99,9 +100,9 @@ function ReportPet() {
                   <br />
                   <Input
                     type="date"
-                    width="18vw"
                     id="name"
                     register={register}
+                    size="small"
                   />
                 </div>
               </div>
@@ -110,7 +111,7 @@ function ReportPet() {
                 <label htmlFor="text">
                   Location Last Seen (Please provide a detailed address)
                 </label>
-                <Input width="42vw" id="name" register={register} />
+                <Input id="name" register={register} size="medium" />
               </div>
 
               <div className="right-form3">

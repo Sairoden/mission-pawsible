@@ -1,4 +1,4 @@
-import ChatMessage from "./ChatMessage";
+import Chat from "./Chat";
 import Home from "./Home";
 import ContactUs from "./ContactUs";
 import Login from "./Login";
@@ -16,7 +16,7 @@ import ReportPet from "./ReportPet";
 import UpdatePet from "./UpdatePet";
 
 export {
-  ChatMessage,
+  Chat,
   Home,
   ContactUs,
   Login,

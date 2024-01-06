@@ -7,7 +7,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 // PAGES
 import {
   Home,
-  ChatMessage,
+  Chat,
   ContactUs,
   Login,
   Signup,
@@ -110,7 +110,7 @@ function App() {
         },
         {
           path: "/chat",
-          element: <ChatMessage />,
+          element: <Chat />,
         },
         {
           path: "*",

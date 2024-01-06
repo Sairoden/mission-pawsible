@@ -43,6 +43,9 @@ import ContactUs from "./Home/ContactUs/ContactUs";
 import Stats from "./Home/Stats/Stats";
 import Carousel from "./Home/Carousel/Carousel";
 
+// CHAT MESSAGE
+import ChatMessage from "./ChatMessage/ChatMessage";
+
 export {
   // ABOUT US
   About,
@@ -88,4 +91,7 @@ export {
   ContactUs,
   Stats,
   Carousel,
+
+  // CHAT MESSAGE
+  ChatMessage,
 };

@@ -13,7 +13,11 @@ import {
 } from "stream-chat-react";
 
 // STYLES
+import "./ChatMessage.scss";
 import "@stream-io/stream-chat-css/dist/css/index.css";
+
+// UI COMPONENTS
+import { Spinner } from "../../ui";
 
 const apiKey = import.meta.env.VITE_STREAM_KEY;
 
@@ -55,20 +59,22 @@ function ChatMessage() {
     if (client) return () => client.disconnectUser();
   }, []);
 
-  if (!client) return <h1>Loading...</h1>;
+  if (!client) return <Spinner />;
 
   return (
-    <Chat client={client} theme="messaging light">
-      <ChannelList />
-      <Channel>
-        <Window>
-          <ChannelHeader />
-          <MessageList />
-          <MessageInput />
-        </Window>
-        <Thread />
-      </Channel>
-    </Chat>
+    <div className="chat-message">
+      <Chat client={client} theme="messaging light">
+        <ChannelList />
+        <Channel>
+          <Window>
+            <ChannelHeader />
+            <MessageList />
+            <MessageInput />
+          </Window>
+          <Thread />
+        </Channel>
+      </Chat>
+    </div>
   );
 }
 
