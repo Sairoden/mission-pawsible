@@ -23,7 +23,12 @@ function Adoption() {
       <div className="adoption-img-container">
         <div className="adoption-img-content">
           <a href="https://www.caraphil.org/" target="_blank" rel="noreferrer">
-            <img src={adopt1} alt="caraphil" width="150vw" />
+            <img
+              src={adopt1}
+              alt="caraphil"
+              width="150vw"
+              className="adoption-image"
+            />
           </a>
         </div>
 
@@ -33,13 +38,23 @@ function Adoption() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={adopt2} alt="phil-animal-rescue" width="150vw" />
+            <img
+              src={adopt2}
+              alt="phil-animal-rescue"
+              width="150vw"
+              className="adoption-image"
+            />
           </a>
         </div>
 
         <div className="adoption-img-content">
           <a href="https://akf.org.ph/" target="_blank" rel="noreferrer">
-            <img src={adopt3} alt="pawssion-project" width="150vw" />
+            <img
+              src={adopt3}
+              alt="pawssion-project"
+              width="150vw"
+              className="adoption-image"
+            />
           </a>
         </div>
 
@@ -49,7 +64,12 @@ function Adoption() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={adopt4} alt="pawssion-project" width="300vw" />
+            <img
+              src={adopt4}
+              alt="pawssion-project"
+              width="300vw"
+              className="adoption-image"
+            />
           </a>
         </div>
       </div>

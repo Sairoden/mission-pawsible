@@ -14,6 +14,10 @@
       font-size: 4.2rem;
       font-weight: 600;
     }
+
+    @media only screen and (max-width: 375px) {
+      font-size: 3.2rem;
+    }
   }
 
   .featured-middle-container {
@@ -50,6 +54,19 @@
         color: $color-orange;
         font-weight: 700;
         margin-top: 1rem;
+
+        @media only screen and (max-width: 1000px) {
+          font-size: 2.8rem;
+        }
+        @media only screen and (max-width: 720px) {
+          font-size: 2.2rem;
+        }
+        @media only screen and (max-width: 590px) {
+          font-size: 1.6rem;
+        }
+        @media only screen and (max-width: 378px) {
+          font-size: 1.4rem;
+        }
       }
 
       .featured-date {
@@ -75,6 +92,9 @@
 
       @media screen and (max-width: 1000px) {
         width: 400px;
+      }
+      @media screen and (max-width: 500px) {
+        width: 300px;
       }
     }
   }

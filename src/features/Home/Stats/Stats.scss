@@ -7,7 +7,7 @@
   .stats-content {
     display: flex;
     flex-direction: column;
-    padding: 10rem 0;
+    padding: 10rem 2rem;
     gap: 5rem;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,18 @@
 
         @media only screen and (max-width: 1200px) {
           font-size: 4.2rem;
-          font-weight: 600;
+        }
+        @media only screen and (max-width: 735px) {
+          font-size: 3.6rem;
+        }
+        @media only screen and (max-width: 620px) {
+          font-size: 3.2rem;
+        }
+        @media only screen and (max-width: 575px) {
+          font-size: 2.4rem;
+        }
+        @media only screen and (max-width: 445px) {
+          font-size: 2rem;
         }
       }
       .stats-one::after {
@@ -35,7 +46,18 @@
 
         @media only screen and (max-width: 1200px) {
           font-size: 4.2rem;
-          font-weight: 600;
+        }
+        @media only screen and (max-width: 735px) {
+          font-size: 3.6rem;
+        }
+        @media only screen and (max-width: 620px) {
+          font-size: 3.2rem;
+        }
+        @media only screen and (max-width: 575px) {
+          font-size: 2.4rem;
+        }
+        @media only screen and (max-width: 445px) {
+          font-size: 2rem;
         }
       }
 
@@ -45,7 +67,18 @@
 
         @media only screen and (max-width: 1200px) {
           font-size: 4.2rem;
-          font-weight: 600;
+        }
+        @media only screen and (max-width: 735px) {
+          font-size: 3.6rem;
+        }
+        @media only screen and (max-width: 620px) {
+          font-size: 3.2rem;
+        }
+        @media only screen and (max-width: 575px) {
+          font-size: 2.4rem;
+        }
+        @media only screen and (max-width: 445px) {
+          font-size: 2rem;
         }
       }
       .stats-many::after {
@@ -56,7 +89,18 @@
 
         @media only screen and (max-width: 1200px) {
           font-size: 4.2rem;
-          font-weight: 600;
+        }
+        @media only screen and (max-width: 735px) {
+          font-size: 3.2rem;
+        }
+        @media only screen and (max-width: 620px) {
+          font-size: 3.2rem;
+        }
+        @media only screen and (max-width: 575px) {
+          font-size: 2.4rem;
+        }
+        @media only screen and (max-width: 445px) {
+          font-size: 2rem;
         }
       }
     }
@@ -92,6 +136,11 @@
         background-color: $color-semiwhite;
         border: 5px solid $color-white;
         border: solid;
+
+        @media only screen and (max-width: 575px) {
+          width: 15rem;
+          height: 15rem;
+        }
       }
       .stats-circle2 {
         display: flex;
@@ -105,6 +154,10 @@
         background-color: $color-semiwhite;
         border: 5px solid $color-white;
         border: solid;
+        @media only screen and (max-width: 575px) {
+          width: 15rem;
+          height: 15rem;
+        }
       }
 
       .stats-circle3 {
@@ -119,14 +172,25 @@
         background-color: $color-semiwhite;
         border: 5px solid $color-white;
         border: solid;
+        @media only screen and (max-width: 575px) {
+          width: 15rem;
+          height: 15rem;
+        }
       }
       .stats-circle-number {
         font-size: 4.8rem;
         font-weight: 700;
+
+        @media only screen and (max-width: 575px) {
+          font-size: 3.6rem;
+        }
       }
       .stats-circle-text {
         font-size: 1.8rem;
         font-weight: 600;
+        @media only screen and (max-width: 575px) {
+          font-size: 1.6rem;
+        }
       }
     }
     .stats-footer {
@@ -137,6 +201,18 @@
       justify-content: center;
       font-size: 4rem;
       font-weight: 400;
+
+      .stats-footer-text {
+        @media only screen and (max-width: 1000px) {
+          font-size: 2.2rem;
+          text-align: center;
+        }
+
+        @media only screen and (max-width: 460px) {
+          text-align: center;
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 }

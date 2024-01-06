@@ -35,7 +35,11 @@ function Landing() {
 
       <div className="img">
         <div>
-          <img src={landing} alt="Pet reunion" />
+          <img
+            src={landing}
+            alt="Pet reunion"
+            className="landing-image-gallery"
+          />
         </div>
       </div>
     </section>

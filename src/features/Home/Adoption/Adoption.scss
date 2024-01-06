@@ -12,6 +12,10 @@
   .adoption-header-text {
     font-size: 4.8rem;
     font-weight: 600;
+
+    @media only screen and (max-width: 375px) {
+      font-size: 3.8rem;
+    }
   }
 
   .adoption-detail-container {
@@ -44,6 +48,12 @@
 
     .adoption-img-content {
       text-align: center;
+
+      .adoption-image {
+        @media only screen and (max-width: 375px) {
+          width: 100px;
+        }
+      }
     }
   }
 }

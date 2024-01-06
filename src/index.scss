@@ -90,6 +90,9 @@ h6 {
   @media (min-width: 1200px) {
     font-size: 1.6rem;
   }
+  @media (min-width: 378px) {
+    font-size: 1.2rem;
+  }
 }
 p {
   font: 400 1.2rem $font;
@@ -98,6 +101,9 @@ p {
 
   @media (min-width: 1200px) {
     font-size: 1.6rem;
+  }
+  @media (min-width: 378px) {
+    font-size: 1.2rem;
   }
 }
 

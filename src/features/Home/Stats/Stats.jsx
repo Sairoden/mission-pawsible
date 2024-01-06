@@ -30,7 +30,7 @@ function Stats() {
           <hr className="stats-line" />
         </div>{" "}
         <div className="stats-footer">
-          <span>
+          <span className="stats-footer-text">
             Join the community of pet owners to reunite missing pets with their
             families{" "}
           </span>{" "}
