@@ -33,7 +33,7 @@
   border: none;
   border-radius: 19rem;
   text-align: center;
-  font: 600 1.4rem $font;
+  font: 600 1.8rem $font;
   position: relative;
   display: flex;
   align-items: center;
@@ -49,15 +49,29 @@
   }
 
   &-large {
-    padding: 1.8rem 8rem;
+    padding: 1.6rem 8rem;
   }
 
-  @media screen and (min-width: 1441px) {
-    font-size: 1.8rem;
+  @media screen and (max-width: 1441px) {
+    font-size: 1.6rem;
+
+    &-small {
+      padding: 1rem 2rem;
+    }
+
+    &-medium {
+      padding: 1.2rem 4rem;
+    }
+
+    &-large {
+      padding: 1.4rem 6rem;
+    }
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 1.2rem;
+    &-large {
+      padding: 1.2rem 4rem;
+    }
   }
 
   // position: relative;
