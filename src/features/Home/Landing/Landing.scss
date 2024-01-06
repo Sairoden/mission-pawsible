@@ -58,12 +58,9 @@
     justify-content: center;
     align-items: center;
 
-    .landing-img {
+    .landing-image-gallery {
       @media only screen and (max-width: 800px) {
-        width: 400px;
-      }
-      @media only screen and (max-width: 375px) {
-        width: 300px;
+        width: 350px;
       }
     }
   }
