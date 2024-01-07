@@ -1,6 +1,8 @@
+// REACT & LIBRARIES
+import { useNavigate } from "react-router-dom";
+
 // STYLES
 import "./ContactUs.scss";
-import { NavLink } from "react-router-dom";
 
 // UI COMPONENTS
 import { Button } from "../../../ui";
@@ -9,6 +11,8 @@ import { Button } from "../../../ui";
 import contactUsImage from "../../../assets/contactUs.png";
 
 function ContactUs() {
+  const navigate = useNavigate();
+
   return (
     <section className="contact-section-container">
       <div className="contact-info-container">
@@ -25,11 +29,17 @@ function ContactUs() {
           </p>
         </div>
         <div>
-          <NavLink to="/contact-us">
-            <Button variation="primary" icon={true} size="small">
-              Contact Us
-            </Button>
-          </NavLink>
+          <Button
+            variation="primary"
+            icon={true}
+            size="small"
+            onClick={() => {
+              navigate("/lost-pets");
+              scrollTo(0, 0);
+            }}
+          >
+            Contact Us
+          </Button>
         </div>
       </div>
       <div>

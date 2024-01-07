@@ -1,3 +1,6 @@
+// REACT & LIBRARIES
+import { useNavigate } from "react-router-dom";
+
 // STYLES
 import "./Landing.scss";
 
@@ -8,6 +11,8 @@ import { Button } from "../../../ui";
 import landing from "../../../assets/landing.png";
 
 function Landing() {
+  const navigate = useNavigate();
+
   return (
     <section className="landing container">
       <div className="cta">
@@ -25,11 +30,26 @@ function Landing() {
         </div>
 
         <div className="btns">
-          <Button variation="primary" icon={true} size="small">
+          <Button
+            variation="primary"
+            icon={true}
+            size="small"
+            onClick={() => {
+              navigate("/lost-pets");
+              scrollTo(0, 0);
+            }}
+          >
             Find Pets
           </Button>
 
-          <Button variation="secondary" size="medium">
+          <Button
+            variation="secondary"
+            size="medium"
+            onClick={() => {
+              navigate("/signup");
+              scrollTo(0, 0);
+            }}
+          >
             Join Us
           </Button>
         </div>

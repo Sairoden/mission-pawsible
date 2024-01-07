@@ -35,12 +35,21 @@ function Microchip() {
           </p>
         </div>
         <div className="microchip-btn">
-          <Button variation="primary" icon={true} size="small">
-            View Intro
-          </Button>
-          <Button variation="secondary" size="small">
-            Explore Now
-          </Button>
+          <a
+            href="https://www.youtube.com/watch?v=dp0Dpe6AwgI"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Button variation="primary" icon={true} size="small">
+              View Intro
+            </Button>
+          </a>
+
+          <a href="https://petdentity.com.ph" target="_blank" rel="noreferrer">
+            <Button variation="secondary" size="small">
+              Explore Now
+            </Button>
+          </a>
         </div>
       </div>
     </div>

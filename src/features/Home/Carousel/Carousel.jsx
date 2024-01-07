@@ -1,7 +1,9 @@
+// REACT & LIBRARIES
+import { useNavigate } from "react-router-dom";
+
 // STYLES
 import "./Carousel.scss";
 import { Button } from "../../../ui";
-import { NavLink } from "react-router-dom";
 
 // ASSETS
 import Carousel1 from "../../../assets/carousel-slide-1.png";
@@ -11,6 +13,8 @@ import Carousel4 from "../../../assets/carousel-slide-4.png";
 import ImageGallery from "react-image-gallery";
 
 function Carousel() {
+  const navigate = useNavigate();
+
   const imageSlides = [
     {
       original: Carousel1,
@@ -39,11 +43,17 @@ function Carousel() {
           </h5>
         </div>
         <div className="btns">
-          <NavLink to="/lost-pets">
-            <Button variation="primary" icon={true} size="small">
-              Check Out
-            </Button>
-          </NavLink>
+          <Button
+            variation="primary"
+            icon={true}
+            size="small"
+            onClick={() => {
+              navigate("/lost-pets");
+              scrollTo(0, 0);
+            }}
+          >
+            Check Out
+          </Button>
         </div>
       </div>
       <ImageGallery

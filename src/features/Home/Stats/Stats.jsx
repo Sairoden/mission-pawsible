@@ -1,10 +1,14 @@
+// REACT & LIBRARIES
+import { useNavigate } from "react-router-dom";
+
 // STYLES
 import "./Stats.scss";
-import { NavLink } from "react-router-dom";
 // UI COMPONENTS
 import { Button } from "../../../ui";
 
 function Stats() {
+  const navigate = useNavigate();
+
   return (
     <div className="stats-container">
       <div className="stats-content">
@@ -39,11 +43,16 @@ function Stats() {
             families
           </span>
 
-          <NavLink to="/signup">
-            <Button variation="primary" size="small">
-              Sign up now!
-            </Button>
-          </NavLink>
+          <Button
+            variation="primary"
+            size="small"
+            onClick={() => {
+              navigate("/signup");
+              scrollTo(0, 0);
+            }}
+          >
+            Sign up now!
+          </Button>
         </div>
       </div>
     </div>
