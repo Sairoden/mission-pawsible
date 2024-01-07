@@ -11,7 +11,10 @@
 
   .adoption-header-text {
     font-size: 4.8rem;
-    font-weight: 600;
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 4rem;
+    }
 
     @media only screen and (max-width: 375px) {
       font-size: 3.8rem;

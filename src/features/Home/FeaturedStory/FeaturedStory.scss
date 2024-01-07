@@ -10,13 +10,13 @@
 
   .featured-header {
     font-size: 4.8rem;
-    @media only screen and (max-width: 1500px) {
-      font-size: 4.2rem;
-      font-weight: 600;
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 4rem;
     }
 
     @media only screen and (max-width: 375px) {
-      font-size: 3.2rem;
+      font-size: 3.8rem;
     }
   }
 
@@ -35,7 +35,7 @@
       padding: 1rem;
     }
 
-    @media screen and (max-width: 1500px) {
+    @media screen and (max-width: 1600px) {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -72,12 +72,29 @@
       .featured-date {
         color: $color-blue;
         font-weight: 600;
+
+        @media only screen and (min-width: 1200px) {
+          font-size: 1.4rem;
+        }
+
+        @media only screen and (min-width: 1600px) {
+          font-size: 1.6rem;
+        }
       }
 
       .featured-text {
         text-align: justify;
         color: $color-brown;
         margin-top: 1.5rem;
+        font-size: 1.2rem;
+
+        @media only screen and (min-width: 1200px) {
+          font-size: 1.4rem;
+        }
+
+        @media only screen and (min-width: 1800px) {
+          font-size: 1.6rem;
+        }
       }
     }
 
@@ -86,7 +103,7 @@
 
       @media screen and (max-width: 1700px) {
       }
-      @media screen and (max-width: 1500px) {
+      @media screen and (max-width: 1600px) {
         width: 500px;
       }
 
