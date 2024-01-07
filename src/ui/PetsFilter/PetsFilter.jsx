@@ -51,9 +51,9 @@ function PetsFilter({ setPetTypes, setGenders, setSizes, setLocations }) {
   return (
     <div className="pet-filter">
       <form className="filter-form">
-        <input type="checkbox" className="toggler" />
+        <input type="checkbox" className="toggler"/>
         <div className="header">
-          <h2 className="click">FILTER</h2>
+          <h3 className="click">FILTER</h3>
         </div>
 
         <div className="body">
@@ -86,6 +86,20 @@ function PetsFilter({ setPetTypes, setGenders, setSizes, setLocations }) {
               />
               <label htmlFor="dog" className="label">
                 Dog
+              </label>
+            </div>
+
+            <div className="choices">
+              <input
+                type="checkbox"
+                id="other"
+                className="checkbox"
+                value="Other"
+                name="petType"
+                onChange={handleFilter}
+              />
+              <label htmlFor="other" className="label">
+                Other
               </label>
             </div>
           </div>

@@ -1,25 +1,32 @@
 @import "../../variables";
 
 .pagination {
-  margin: 5.5rem 0;
+  // margin: 5.5rem 0;
 
   .rc-pagination {
     text-align: center;
-  
-    .rc-pagination-item {
-      font-size: 1.8rem !important;
-      font-weight: 700 !important;
+
+    .rc-pagination-item, 
+    .rc-pagination-item a,
+    .rc-pagination-item-link {
+      font: 700 1.8rem $font;
       color: $color-blue !important;
-      margin-right: 2rem !important;
+      
+      @media screen and (min-width: 1200px) {
+        font-size: 2.2rem !important;
+      }
+    
+      @media screen and (max-width: 767px) {
+        font-size: 1.6rem !important;
+      }
+    }
+
+    .rc-pagination-item {
+      width: 3rem;
       border: none;
       background: none;
-  
-      a {
-        font-family: $font;
-        color: $color-blue;
-      }
-  
-      &:hover a {
+      
+      a:hover {
         color: $color-orange !important;
       }
     }
@@ -29,35 +36,38 @@
       border-radius: 8px !important;
       // color: #fdfdfd !important;
       color: red !important;
-  
+
+      &:hover {
+        background: $color-blue !important;
+      }
+
       a {
         color: #fdfdfd !important;
       }
     }
   
-    .rc-pagination-prev svg {
-      width: 2.4rem;
-      height: 2.4rem;
-      color: $color-blue;
+    .rc-pagination-prev {
+      margin-right: 1rem;
     }
-  
+    
+    .rc-pagination-next {
+      margin-left: 1rem;
+    }
+
+    .rc-pagination-prev svg,
     .rc-pagination-next svg {
       width: 2.4rem;
       height: 2.4rem;
       color: $color-blue;
     }
   
-    .rc-pagination-item-link {
-      font-size: 1.8rem;
-      color: $color-blue;
   
+    .rc-pagination-item-link {  
+      display: flex;
+      justify-content: center;
       &::after {
         padding-top: 0.5rem;
       }
-    }
-  
-    .rc-pagination-prev {
-      padding-right: 1rem;
     }
   }
   

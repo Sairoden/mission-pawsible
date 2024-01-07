@@ -1,66 +1,28 @@
 @import "../../variables";
 
-// .pets-filter-container {
-//   width: 10vw;
-
-//   .pets-filter-header {
-//     color: $color-brown;
-//     font-size: 3.2rem;
-//     font-weight: 700;
-//     margin-bottom: 2rem;
-//   }
-
-//   .pets-filter-details {
-//     display: flex;
-//     flex-direction: column;
-//     gap: 1rem;
-//     margin-bottom: 1.6rem;
-
-//     .pets-filter-detail-line {
-//       border: 1px solid $color-brown;
-//       margin-top: 1.5rem;
-//       width: 15vw;
-//     }
-
-//     .pets-filter-details-title {
-//       color: $color-brown;
-//       font-size: 2rem;
-//       font-weight: 700;
-//     }
-
-//     .pets-filter-detail {
-//       display: flex;
-//       gap: 1rem;
-
-//       .pets-filter-detail-checkbox {
-//         width: 2rem;
-//       }
-
-//       .pets-filter-detail-label {
-//         color: $color-brown;
-//         font-size: 1.8rem;
-//         font-weight: 500;
-//       }
-//     }
-//   }
-// }
-
 .pet-filter {
+  width: 100%;
   position: relative;
+  
+  @media screen and (min-width: 768px) {
+    width: 25%;
+  }
 
   .toggler {
-    display: none;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 8.2rem;
+    height: 4.7rem;
+    opacity: 0;
 
-    @media screen and (max-width: 768px) {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 2;
-      cursor: pointer;
-      width: 10.45rem;
-      height: 4.4rem;
-      opacity: 0;
+    @media screen and (min-width: 768px) {
+      display: none;
     }
 
     &:checked ~ .body {    
@@ -70,73 +32,93 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-evenly;
+
+      @media screen and (min-width: 768px) {
+        margin: 0;
+      }
     } 
   }
 
   .header {
     width: 100%;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: flex-end;  
 
-    @media screen and (max-width: 768px) {
-      display: flex;
-      justify-content: flex-end;      
+    @media screen and (min-width: 768px) {
+      padding-right: 0;
+      justify-content: flex-start;  
     }
 
-    h2 {
-      @media screen and (max-width: 768px) {
+    h3 {
         padding: .5rem;
         border: .2rem solid $color-brown;
+
+        @media screen and (min-width: 768px) {
+          padding: 0;
+          border: none;
+        }
       }
-    }
+    
   }
 
   .body {
-    display: block;
-    @media screen and (max-width: 768px) {
-      display: none;
-  }
+    display: none;
 
+    @media screen and (min-width: 768px) {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+    }
     & > * {
-      width: 75%;
-      padding: 0 .5rem;
-
-      @media screen and (max-width: 768px) {
-        margin: 1rem;
-        width: auto;
-      }
+      padding: 1rem;
     }
 
     & > :not(:last-child) {
-      padding: .5rem 0;
-      border-bottom: .2rem solid $color-brown;
-
-      @media screen and (max-width: 768px) {
-        border-bottom: none;
-        // border-right: .2rem solid $color-brown;
+      @media screen and (min-width: 768px) {
+        border-bottom: .2rem solid $color-brown;
 
       }
     }
 
+    .species *,
+    .gender *,
+    .size *,
+    .location * {
+        padding-bottom: 0.5rem;
 
-    // margin-top: 0.5rem;
+        @media screen and (min-width: 768px) {
+          padding-bottom: .7rem;
+        }
+
+        @media screen and (min-width: 1200px) {
+          padding-bottom: 1.3rem;
+        }
+    }
+
     .main {
-      // margin: 1rem 0;
       text-transform: capitalize;
       font-weight: 600;
-    }
-    .checkbox {
-      margin: 0 .5rem;
-      width: 2rem;
-    }
-    .label {
-      font: 400 1.4rem $font;
-      text-transform: capitalize;
-      &:not(:last-child) {
-        margin-bottom: .5rem;
-      }
-      @media screen and (min-width: 1441px) {
+      font-size:  1.8rem;
+    
+      @media screen and (min-width: 768px) {
         font-size: 2rem;
       }
 
+      @media screen and (min-width: 1200px) {
+        font-size: 2.4rem;
+      }
+    }
+
+    input.checkbox {
+      margin: 0 .25rem;
+      width: 2rem;
+      cursor: pointer;
+    }
+
+    .label {
+      font-weight: 400;
+      text-transform: capitalize;
     }
   }
 

@@ -66,7 +66,7 @@ function Contact() {
             </label>
             <br />
 
-            <InputTextArea name="message" id="message" />
+            <InputTextArea name="message" id="message" className = "form-textarea" />
             <div className="btns">
               <Button
                 variation="primary"

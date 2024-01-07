@@ -17,7 +17,7 @@ function Pagination({ total, pageSize }) {
   };
 
   return (
-    <div className="pagination">
+    <div className="pagination container spacing-t spacing-b">
       <RCPagination
       total={total}
       pageSize={pageSize}

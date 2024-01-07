@@ -36,16 +36,13 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
   return (
     <div className="pet-gallery">
       <div className="container">
-        <div className="filter">
           <PetsFilter
             setPetTypes={setPetTypes}
             setGenders={setGenders}
             setSizes={setSizes}
             setLocations={setLocations}
           />
-        </div>
-
-        <div className="gallery">
+          
           <PetsCardContainer total={total}>
             {pets.length > 1 ? (
               pets?.map(pet => (
@@ -62,7 +59,6 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
               <h3>No pets currently 🐕</h3>
             )}
           </PetsCardContainer>
-        </div>
       </div>
     </div>
   );

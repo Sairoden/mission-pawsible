@@ -5,16 +5,24 @@
   display: inline-block;
 
   .input {
+    // width: 100%;
+    // height: 4.3rem;
+    // border-radius: 20px;
+    // border: 1px $color-brown solid;
+    
+    // background-color: transparent;
+    // margin-top: 0.5rem;
+    // margin-bottom: 0.5rem;
+    // font-size: 2rem;
+    // padding-left: 2rem;
+  
     width: 100%;
-    height: 4.3rem;
-    border-radius: 20px;
-    border: 1px $color-brown solid;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    background-color: transparent;
-    margin-top: 0.5rem;
     margin-bottom: 0.5rem;
-    font-size: 2rem;
-    padding-left: 2rem;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border: 0.1rem solid $color-brown;
+    border-radius: $radius;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
     &:hover,
@@ -27,17 +35,24 @@
       outline: none;
     }
 
-    &-small {
-      width: 20vw;
-    }
+    // &-extra-small {
+    //   width: 18vw;
+    // }
 
-    &-medium {
-      width: 41vw;
-    }
+    // &-small {
+    //   width: 22vw;
+    // }
 
-    &-large {
-      width: 49vw;
-    }
+    // &-medium {
+    //   width: 45vw;
+    // }
+
+    // &-large {
+    //   width: 49vw;
+    // }
+
+    // &-extra-large {
+    // }
   }
 
   .password-icon {
@@ -50,4 +65,5 @@
     cursor: pointer;
     color: #8d8a86;
   }
+
 }

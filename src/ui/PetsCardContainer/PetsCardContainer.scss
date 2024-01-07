@@ -18,38 +18,77 @@
 //   }
 // }
 
-.gallery-card {
-  // max-width: 145rem;
-  width: 100%;
-  padding: 0 1rem;
+// .gallery-card {
+//   // max-width: 145rem;
+//   width: 100%;
+//   padding: 0 1rem;
 
-  @media screen and (max-width: 426px) {
-    padding: 0;
+//   // @media screen and (max-width: 426px) {
+//   //   padding: 0;
+//   // }
+//   // .header {
+//   //   margin-bottom: 1rem;
+//   // }
+
+//   .grid{
+//     // height: calc(45rem * 3);
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-gap: 4rem;
+    
+//     // @media screen and (min-width: 1441px) {
+//     //   height: auto;
+//     //   grid-gap: 5rem;
+//     // }
+
+//     // @media screen and (max-width: 768px) {
+//     //   // height: calc(80rem * 3);
+//     //   grid-template-columns: repeat(2, 1fr);
+//     //   grid-gap: 3rem;
+//     // }
+    
+//     // @media screen and (max-width: 426px) {
+//     //   grid-gap: 1rem;
+//     // }
+
+//   }
+// }
+
+.gallery-card {
+  width: 100%;
+
+  @media screen and (min-width: 426px) {
+    padding: 0 1rem;
   }
+
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    width: 75%;
+  }
+
   .header {
     margin-bottom: 1rem;
   }
 
-  .grid{
-    // height: calc(45rem * 3);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 4rem;
-    
-    @media screen and (min-width: 1441px) {
-      height: auto;
-      grid-gap: 5rem;
-    }
+  // .grid {
+  //   height: 250vh;
+  //   display: grid;
+  //   grid-template-columns: repeat(2, 1fr);
+  //   grid-gap: 1rem;
 
-    @media screen and (max-width: 768px) {
-      // height: calc(80rem * 3);
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 3rem;
-    }
-    
-    @media screen and (max-width: 426px) {
-      grid-gap: 1rem;
-    }
+  //   @media screen and (min-width: 426px) {
+  //     grid-gap: 2rem;
+  //   }
 
+  //   @media screen and (min-width: 1200px) {
+  //     grid-template-columns: repeat(3, 1fr);
+  //   }
+  // }
+
+  .grid {
+    // height: 225vh;
+    display: flex;
+    flex-wrap: wrap;
   }
+
 }

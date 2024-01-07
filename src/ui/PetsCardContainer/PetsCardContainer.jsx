@@ -5,7 +5,7 @@ function PetsCardContainer({ total, children }) {
   return (
     <div className="gallery-card">
       <div className="header">
-        <h2>TOTAL: {total}</h2>
+        <h3>TOTAL: {total}</h3>
       </div>
 
       <div className="grid">{children}</div>

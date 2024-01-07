@@ -30,7 +30,7 @@ h1 {
   //   font-size: 4.4rem;
   // }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 3rem;
   }
 }
@@ -39,11 +39,11 @@ h2 {
   font: 600 3.2rem $font;
   line-height: 1;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 3.6rem;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 2.8rem;
   }
 }
@@ -51,23 +51,23 @@ h2 {
 h3 {
   font: 700 2.4rem $font;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 3rem;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 2.2rem;
   }
 }
 // sub title
-h4 {
+h4, label {
   font: 700 1.8rem $font;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 2.2rem;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 1.4rem;
   }
 }
@@ -75,46 +75,54 @@ h4 {
 h5 {
   font: 400 1.4rem $font;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 2rem;
   }
 
-  @media (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-size: 1.2rem;
   }
 }
 //regular text
-h6 {
+h6, 
+.input,
+.input-textarea {
   font: 400 1.2rem $font;
 
-  @media (min-width: 1200px) {
+  @media screen and (min-width: 1200px) {
     font-size: 1.6rem;
   }
-  @media (min-width: 378px) {
-    font-size: 1.2rem;
-  }
+  // @media screen and (max-width: 767px) {
+  //   font-size: 1.0rem;
+  // }
 }
+// paragraph
 p {
-  font: 400 1.2rem $font;
+  font: 400 1.3rem $font;
   text-align: justify;
   line-height: 2.5rem;
 
-  @media (min-width: 1200px) {
+  @media screen and  (min-width: 1200px) {
     font-size: 1.6rem;
   }
-  @media (min-width: 378px) {
-    font-size: 1.2rem;
-  }
+  // @media screen and (max-width: 767px) {
+  //   font-size: 1.0rem;
+  // }
 }
 
 .title {
-  // padding-top: 10rem;
   margin-bottom: 2.5rem;
   text-align: center;
 }
 
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
 label {
-  font: 400 1.8rem $font;
+  // width: 100%;
+  margin-top: 0.5rem;
   font-weight: 600;
   line-height: 2rem;
 }
