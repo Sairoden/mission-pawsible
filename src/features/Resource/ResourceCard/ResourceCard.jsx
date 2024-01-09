@@ -9,6 +9,7 @@ import { formatFullDate } from "../../../utils";
 
 function ResourceCard({ index, title, author, description, date, image }) {
   return (
+    // resource container
     <div className="resources-middle-container">
       <motion.div
         initial={{
@@ -41,12 +42,12 @@ function ResourceCard({ index, title, author, description, date, image }) {
             />
           </div>
           <div className="resources-detail-content">
-            <h2 className="resources-detail-header">{title}</h2>
+            <h3 className="resources-detail-header">{title}</h3>
             <div className="resource-author-container">
-              <h3 className="resources-author-text">
+              <h4 className="resources-author-text">
                 {author ? author : "No Author"}
-              </h3>
-              <h3 className="resources-date-text">{formatFullDate(date)}</h3>
+              </h4>
+              <h4 className="resources-date-text">{formatFullDate(date)}</h4>
             </div>
             <p className="resource-span-text">{description}</p>
           </div>

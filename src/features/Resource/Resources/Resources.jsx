@@ -35,12 +35,13 @@ function Resources() {
   if (isPending) return <Spinner />;
 
   return (
-    <div className="resources_container">
+    <div className="resources spacing-t">
+      <div className="container">
       <div className="resources_header">
-        <h1 className="resources_header_text">Resources</h1>
+        <h2 className="resources_header_main">Resources</h2>
       </div>
 
-      <div className="resources-middle-container">
+      <div className="resources_body spacing-t">
         {newResources.length > 0 ? (
           newResources?.map(resource => (
             <a
@@ -59,13 +60,16 @@ function Resources() {
             </a>
           ))
         ) : (
-          <h4 className="no-resources">
+          <h3 className="resources_nource">
             No resources currently. Please come back again later! 📚
-          </h4>
+          </h3>
         )}
+
+
       </div>
 
       <Pagination total={resources?.length} pageSize={RESOURCES_PAGE_SIZE} />
+      </div>
     </div>
   );
 }

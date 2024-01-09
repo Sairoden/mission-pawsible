@@ -34,7 +34,7 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
   if (loading) return <Spinner />;
 
   return (
-    <div className="pet-gallery">
+    <div className="pet-gallery spacing-t">
       <div className="container">
           <PetsFilter
             setPetTypes={setPetTypes}

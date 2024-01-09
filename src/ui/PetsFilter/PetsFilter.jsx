@@ -53,7 +53,7 @@ function PetsFilter({ setPetTypes, setGenders, setSizes, setLocations }) {
       <form className="filter-form">
         <input type="checkbox" className="toggler"/>
         <div className="header">
-          <h3 className="click">FILTER</h3>
+          <h2 className="click">FILTER</h2>
         </div>
 
         <div className="body">

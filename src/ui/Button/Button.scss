@@ -33,7 +33,8 @@
   border: none;
   border-radius: 19rem;
   text-align: center;
-  font: 600 1.8rem $font;
+  // font: 600 1.8rem $font;
+  font-weight: 600 !important;
   position: relative;
   display: flex;
   align-items: center;

@@ -1,34 +1,10 @@
 @import "../../../variables";
 
-.resources_container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 90%;
-  margin: auto;
-  padding-bottom: 10rem;
-
-  .resources_header {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-
-    .resources_header_text {
-      font-size: 4.8rem;
-      color: $color-brown;
-      font-weight: 600;
-    }
+.resources {
+  &_header_main {
+    text-align: center;
   }
-}
-
-.resources-middle-container {
-  gap: 25px;
-  justify-items: end;
-  flex-direction: column;
-}
-
-.no-resources {
-  text-align: center;
-  height: 20vh;
+  &_noSource {
+    text-align: center;
+  }
 }

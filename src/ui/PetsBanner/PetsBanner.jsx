@@ -26,7 +26,7 @@ function PetsBanner({ image, title, subtitle, bannerButton = true }) {
           <h2 className="main">{title}</h2>
         </div>
         <div className="body">
-          <h5 className="sub">{subtitle}</h5>
+          <h4 className="sub">{subtitle}</h4>
           <div className="btns">
             {bannerButton && (
               <Button
