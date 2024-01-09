@@ -39,7 +39,7 @@ h2 {
   font: 600 3.2rem $font;
   line-height: 1;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     font-size: 3.6rem;
   }
 
@@ -51,7 +51,7 @@ h2 {
 h3 {
   font: 700 2.4rem $font;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     font-size: 3rem;
   }
 
@@ -60,10 +60,10 @@ h3 {
   }
 }
 // sub title
-h4, label {
+h4 {
   font: 700 1.8rem $font;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     font-size: 2.2rem;
   }
 
@@ -72,10 +72,11 @@ h4, label {
   }
 }
 
-h5 {
+h5,
+.button {
   font: 400 1.4rem $font;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     font-size: 2rem;
   }
 
@@ -89,7 +90,7 @@ h6,
 .input-textarea {
   font: 400 1.2rem $font;
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     font-size: 1.6rem;
   }
   // @media screen and (max-width: 767px) {
@@ -102,12 +103,12 @@ p {
   text-align: justify;
   line-height: 2.5rem;
 
-  @media screen and  (min-width: 1200px) {
+  @media screen and  (min-width: 1440px) {
     font-size: 1.6rem;
   }
-  // @media screen and (max-width: 767px) {
-  //   font-size: 1.0rem;
-  // }
+  @media screen and (max-width: 767px) {
+    font-size: 1.1rem;
+  }
 }
 
 .title {
@@ -121,17 +122,24 @@ p {
 }
 
 label {
-  // width: 100%;
   margin-top: 0.5rem;
   font-weight: 600;
   line-height: 2rem;
+  font-size: 1.6rem;
+
+  @media screen and  (min-width: 1440px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1.4rem;
+  }
 }
 
 .container {
   width: 95vw;
   margin: auto;
 
-  @media (min-width: 1200px) {
+  @media (min-width: 1440px) {
     width: 90vw;
   }
 }
@@ -151,10 +159,6 @@ label {
 a {
   cursor: pointer !important;
   all: unset;
-}
-
-button {
-  font-family: $font;
 }
 
 .btns {
