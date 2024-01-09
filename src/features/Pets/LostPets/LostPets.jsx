@@ -29,7 +29,7 @@ function LostPets() {
   if (isPending) return <Spinner />;
 
   return (
-    <div className="lost-pets-container">
+    <div className="lost-pets-container spacing-t">
       <PetsBanner
         image="lostPetsBanner"
         title="Find Your Lost Pet"

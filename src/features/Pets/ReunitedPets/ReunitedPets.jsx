@@ -29,7 +29,7 @@ function ReunitedPets() {
   if (isPending) return <Spinner />;
 
   return (
-    <div className="reunited-pets-container">
+    <div className="reunited-pets-container spacing-t">
       <PetsBanner
         image="reunitedPetsBanner"
         title="Heartwarming Reunion"

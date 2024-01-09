@@ -29,7 +29,7 @@ function FoundPets() {
   if (isPending) return <Spinner />;
 
   return (
-    <div className="found-pets-container">
+    <div className="found-pets-container spacing-t">
       <PetsBanner
         image="foundPetsBanner"
         title="Reunite A Found Pet"
