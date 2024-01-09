@@ -5,6 +5,11 @@
   width: 100%;
   height: calc(100vh - 80vh);
 
+  @media only screen and (max-width: 1160px) {
+    height: auto;
+    background: linear-gradient(45deg, #fac695 0%, #f5ab66 47%, #ef8d31 100%);
+  }
+
   .menu {
     display: flex;
     justify-content: space-around;
