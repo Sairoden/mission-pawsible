@@ -39,10 +39,6 @@
   align-items: center;
   transition: background 0.3s ease, transform 0.2s ease;
   cursor: pointer;
-  
-  @media screen and (max-width: 319px) {
-    padding: 1rem 2rem;
-  }
 
   &-small {
     padding: 1.2rem 4rem;
@@ -73,8 +69,16 @@
   }
 
   @media screen and (max-width: 768px) {
+    font-size: 1.4rem;
+
     &-large {
       padding: 1.2rem 4rem;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    &-large {
+      padding: 1rem 2rem;
     }
   }
 
