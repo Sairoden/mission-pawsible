@@ -7,6 +7,7 @@ import { useSignup } from "./auth/useSignup";
 import { useResendEmail } from "./auth/useResendEmail";
 
 // PETS
+import { useGetAllPets } from "./pets/useGetAllPets";
 import { useGetLostPets } from "./pets/useGetLostPets";
 import { useGetFoundPets } from "./pets/useGetFoundPets";
 import { useGetReunitedPets } from "./pets/useGetReunitedPets";
@@ -26,6 +27,7 @@ export {
   useResendEmail,
 
   // PETS
+  useGetAllPets,
   useGetLostPets,
   useGetFoundPets,
   useGetReunitedPets,

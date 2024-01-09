@@ -3,10 +3,22 @@ import { useNavigate } from "react-router-dom";
 
 // STYLES
 import "./Stats.scss";
+
 // UI COMPONENTS
 import { Button } from "../../../ui";
 
+// HOOKS
+import {
+  useGetLostPets,
+  useGetFoundPets,
+  useGetReunitedPets,
+} from "../../../hooks";
+
 function Stats() {
+  const { lostPets } = useGetLostPets();
+  const { foundPets } = useGetFoundPets();
+  const { reunitedPets } = useGetReunitedPets();
+
   const navigate = useNavigate();
 
   return (
@@ -20,17 +32,22 @@ function Stats() {
         <div>
           <div className="stats-circle-card">
             <div className="stats-circle1">
-              <h2 className="stats-circle-number"> 285 </h2> <br />
+              <h2 className="stats-circle-number"> {lostPets?.length || 0} </h2>
+              <br />
               <span className="stats-circle-text"> Missing Pets </span>
             </div>
 
             <div className="stats-circle2">
-              <h2 className="stats-circle-number"> 285 </h2> <br />
+              <h2 className="stats-circle-number"> {foundPets?.length || 0}</h2>{" "}
+              <br />
               <span className="stats-circle-text"> Found Pets </span>
             </div>
 
             <div className="stats-circle3">
-              <h2 className="stats-circle-number"> 285 </h2> <br />
+              <h2 className="stats-circle-number">
+                {reunitedPets?.length || 0}
+              </h2>
+              <br />
               <span className="stats-circle-text"> Reunited Pets </span>
             </div>
           </div>
