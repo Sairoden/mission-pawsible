@@ -46,7 +46,9 @@
   }
 
   .active {
-    color: $color-orange;
+    @media only screen and (max-width: 950px) {
+      color: $color-white;
+    }
   }
 
   .nav-link {
@@ -82,6 +84,7 @@
   // toggler animation
   .toggler:checked + .hamburger > div {
     transform: rotate(135deg);
+    background-color: $color-beige;
   }
 
   .toggler:checked + .hamburger > div::before,
@@ -153,7 +156,6 @@
     }
 
     .toggler {
-      background-color: white !important;
       margin: 0.5rem;
       margin-top: 2rem;
       position: absolute;
