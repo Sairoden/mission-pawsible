@@ -56,7 +56,7 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
                 />
               ))
             ) : (
-              <h3>No pets currently 🐕</h3>
+              <h3 className=" no-data">No pets currently 🐕</h3>
             )}
           </PetsCardContainer>
       </div>
