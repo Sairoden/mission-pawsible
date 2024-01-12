@@ -60,7 +60,7 @@ function Resources() {
             </a>
           ))
         ) : (
-          <h3 className="resources_nource">
+          <h3 className="no-data">
             No resources currently. Please come back again later! 📚
           </h3>
         )}
