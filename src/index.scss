@@ -153,7 +153,12 @@ label {
   padding: 1rem 2rem;
   border-radius: 1.5rem;
 }
+.no-data {
+  padding-top: 5rem;
+  text-align: center;
+  display: flex;
 
+}
 a {
   cursor: pointer !important;
   all: unset;
