@@ -73,7 +73,8 @@ h4 {
 }
 
 h5,
-.button {
+.button,
+.file-input {
   font: 400 1.4rem $font;
 
   @media screen and (min-width: 1440px) {
@@ -122,16 +123,18 @@ p {
 }
 
 label {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   font-weight: 600;
   line-height: 2rem;
   font-size: 1.6rem;
 
   @media screen and (min-width: 1440px) {
     font-size: 2rem;
+    margin-top: 1.2rem;
   }
   @media screen and (max-width: 767px) {
     font-size: 1.4rem;
+    margin-top: .7rem;
   }
 }
 

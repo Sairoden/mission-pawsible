@@ -1,17 +1,18 @@
 @import "../../variables";
 
 .file-input {
-  border-radius: 5px;
-  font-size: 1.6rem;
-  font-family: "Poppins";
+  max-width: 21.5rem;
+  min-width: 19.5rem;
+
+  @media screen and (min-width: 1440px) {
+    max-width: 30rem;
+  }
 
   &::file-selector-button {
-    font: inherit;
-    font-weight: 500;
-    padding: 0.8rem 1.2rem;
-    margin-right: 1.2rem;
-    border-radius: 5px;
+    padding: 1rem 1.5rem;
+    margin-right: 1rem;
     border: none;
+    border-radius: 5px;
     color: $color-white;
     background-color: $color-orange;
     cursor: pointer;

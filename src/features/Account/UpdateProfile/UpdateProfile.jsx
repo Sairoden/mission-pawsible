@@ -32,28 +32,28 @@ function UpdateProfile() {
   };
 
   return (
-    <div className="update-white-container">
-      <div className="update-main-container">
-        <div className="update-left-container">
-          <div>
-            <img src={avatar} alt="profileIcon" className="update-left-image" />
+    <div className="updateProfile spacing-t spacing-b">
+      <div className="container">
+      <div className="updateProfile-header">
+            <h2 className="updateProfile-header-main">UPDATE PROFILE</h2>
           </div>
-          <div className="update-file-input">
+        <div className="updateProfile-left">
+          <div className="updateProfile-left-image">
+            <img src={avatar} alt="profileIcon" className="updateProfile-left-image-content" />
+          </div>
+          <div className="updateProfile-left-fileUpload">
             <InputFile />
           </div>
         </div>
 
-        <div className="update-right-container">
-          <div className="update-right-header">
-            <h1 className="update-header-text">UPDATE PROFILE</h1>
-          </div>
-
+        <div className="updateProfile-right">
           <form
-            className="update-form-content"
+            className="updateProfile-right-body"
             onSubmit={handleSubmit(handleUpdateProfile)}
           >
-            <div className="update-right-form1">
-              <div>
+            <div className="updateProfile-right-body-name">
+              {/* last name */}
+              <div className="updateProfile-right-body-input">
                 <Input
                   id="lastName"
                   size="small"
@@ -66,8 +66,8 @@ function UpdateProfile() {
                 </label>
                 <br />
               </div>
-
-              <div>
+              {/* first name */}
+              <div className="updateProfile-right-body-input">
                 <Input
                   id="firstName"
                   size="small"
@@ -81,33 +81,37 @@ function UpdateProfile() {
               </div>
             </div>
 
-            <div className="update-right-form2">
-              <Input
-                id="address"
-                size="medium"
-                register={register}
-                defaultValue={address}
-              />
-              <br />
-              <label htmlFor="address">ADDRESS</label>
+            <div className="updateProfile-right-body-address">
+              {/* address */}
+              <div className="updateProfile-right-body-input">
+                <Input
+                  id="address"
+                  size="medium"
+                  register={register}
+                  defaultValue={address}
+                />
+                <br />
+                <label htmlFor="address">ADDRESS</label>
+              </div>
             </div>
 
-            <div className="update-right-form3">
-              <Input
-                type="email"
-                id="email"
-                size="medium"
-                register={register}
-                defaultValue={email}
-              />
-              <br />
-              <label htmlFor="email" className="right-form-label">
-                EMAIL
-              </label>
-            </div>
-
-            <div className="update-right-form4">
-              <div>
+            <div className="updateProfile-right-body-contact">
+              {/* email */}
+              <div className="updateProfile-right-body-input">
+                <Input
+                  type="email"
+                  id="email"
+                  size="medium"
+                  register={register}
+                  defaultValue={email}
+                />
+                <br />
+                <label htmlFor="email" className="right-form-label">
+                  EMAIL
+                </label>
+              </div>
+              {/* contact number */}
+              <div className="updateProfile-right-body-input">
                 <Input
                   id="contactNumber"
                   size="small"
@@ -120,7 +124,11 @@ function UpdateProfile() {
                   CONTACT NUMBER
                 </label>
               </div>
-              <div>
+            </div>
+
+            <div className="update-right-form4">
+              
+              <div className="updateProfile-right-body-input">
                 <Input
                   type="password"
                   id="password"
@@ -135,7 +143,7 @@ function UpdateProfile() {
               </div>
             </div>
 
-            <div className="update-right-button">
+            <div className="update-right-button btns">
               <Button
                 variation="primary"
                 icon={true}
@@ -148,7 +156,7 @@ function UpdateProfile() {
           </form>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
 

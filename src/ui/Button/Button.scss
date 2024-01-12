@@ -83,23 +83,6 @@
     }
   }
 
-  // position: relative;
-  // color: $color-white;
-  // // font-size: 1.8rem;
-  // // font-weight: 600;
-  // word-wrap: break-word;
-  // padding: 2vh 2vw;
-  // border-radius: 19rem;
-  // overflow: hidden;
-  // justify-content: center;
-  // align-items: center;
-  // text-align: center;
-  // gap: 10px;
-  // display: inline-flex;
-  // cursor: pointer;
-  // border: none;
-  // transition: background 0.3s ease, transform 0.2s ease;
-
   &:before {
     content: "";
     position: absolute;
@@ -122,10 +105,14 @@
 .button-icon {
   // width: 2.5rem;
   // height: 2.5rem;
-  height: 80%;
+  width: 25%;
   margin: auto;
-  margin-left: 0.5rem;
+  // margin-left: 0.5rem;
   transition: transform 0.3s ease;
+
+  @media screen and (min-width: 768px) {
+      height: 80%;
+    }
 }
 
 .button-disabled {
