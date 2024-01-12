@@ -64,9 +64,9 @@
   @media screen and (min-width: 768px) {
     padding: 0;
     width: 75%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
   }
 
   .header {
@@ -91,5 +91,6 @@
   .grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
