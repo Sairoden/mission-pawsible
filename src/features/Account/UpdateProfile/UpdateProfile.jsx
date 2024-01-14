@@ -45,7 +45,7 @@ function UpdateProfile() {
             <InputFile />
           </div>
         </div>
-
+        <hr className="divider"/>
         <div className="updateProfile-right">
           <form
             className="updateProfile-right-body"
