@@ -3,7 +3,7 @@
 .input-container {
   position: relative;
 
-  .input {
+  .input-textbox {
   
     width: 100%;
     margin-bottom: 0.5rem;
@@ -45,6 +45,7 @@
   }
 
   .password-icon {
+    // display: none;
     height: 2.4rem;
     width: 2.4rem;
     position: absolute;
