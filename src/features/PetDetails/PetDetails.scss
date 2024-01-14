@@ -1,5 +1,4 @@
 @import "../../variables";
-
 .petdetail-main-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -9,7 +8,6 @@
   background-color: $color-white;
   border-radius: 2.5rem;
   padding: 5rem;
-
   @media only screen and (max-width: 1345px) {
     display: flex;
     flex-direction: column;
@@ -17,42 +15,35 @@
     align-items: center;
     padding: 3rem;
   }
-
   .petdetail-left-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-
     .image-gallery {
       width: 75%;
       margin: auto;
       text-align: center;
       height: auto;
-
       .image-gallery-image {
         border-radius: 1rem;
       }
     }
-
     .image-gallery-left-nav .image-gallery-svg,
     .image-gallery-right-nav .image-gallery-svg {
       width: 4rem;
     }
-
     .petdetail-social-icon {
       display: flex;
       gap: 3rem;
       align-items: center;
       justify-content: center;
       color: $color-darkgray;
-
       .left-social-icon {
         width: 30px;
         height: 5vh;
       }
     }
-
     .share-icon {
       display: flex;
       gap: 5px;
@@ -61,19 +52,16 @@
       font-size: 2rem;
       font-weight: bold;
       color: $color-blue;
-
       .left-share-icon {
         width: 30px;
         height: 3vh;
       }
     }
   }
-
   .petdetail-right-content {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-
     .petdetail-chat-btn {
       display: flex;
       gap: 5px;
@@ -87,20 +75,17 @@
       font-size: 1.8rem;
       font-weight: 700;
       cursor: pointer;
-
       &:hover {
         background: $color-orange;
         color: $color-white;
-        transition: all 0.5s;
-        transform: scale(1.1);
+        transition: all ease-in-out 0.5s;
+        transform: scale(1);
       }
-
       .chat-icon {
         width: 20px;
         height: 25px;
       }
     }
-
     .petdetail-right-header {
       display: flex;
       flex-direction: column;
@@ -108,47 +93,39 @@
       justify-content: flex-start;
       gap: 2rem;
       padding-bottom: 2rem;
-
       @media only screen and (max-width: 1345px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
       }
-
       .petdetail-right-header-title {
         font-size: 2.8rem;
         font-weight: 700;
         color: $color-blue;
-
         @media only screen and (max-width: 430px) {
           font-size: 2.4rem;
         }
       }
     }
-
     .petdetail-right-container {
       display: flex;
       flex-direction: column;
     }
-
     .petdetail-right-container {
       height: 100%;
     }
-
     .petdetail-right-details {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       color: $color-lightgray;
       border-bottom: 1px #ebeeef solid;
       padding-bottom: 5px;
-
       .petdetail-right-details-text {
         font-weight: 500;
       }
     }
   }
-
   .petdetail-footer-middle {
     grid-column: 1 / 4;
     margin: auto;
