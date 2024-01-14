@@ -23,121 +23,159 @@ function ReportPet() {
   } = useForm();
 
   return (
-    <div>
-      <div className="reportpet_container">
-        <div className="reportpet-header">
-          <h1>REPORT PET</h1>
+    <div className="reportPet spacing-t spacing-b">
+      <div className="container">
+        <div className="reportPet-header">
+          <h2 className="reportPet-header-main">REPORT PET</h2>
         </div>
-        <form action="">
-          <div className="reportpet-middle-container">
-            <div className="reportpet-left-container">
-              <div className="left-form1">
-                <label htmlFor="text">Pet Name</label>
-                <Input size="medium" id="name" register={register} />
-              </div>
+        <form className= "reportPet-body" action="">
+            <div className="reportPet-body-left">
+              {/* pet name */}
+              <div className="reportPet-body-left-name">
 
-              <div className="left-form2">
-                <div>
-                  <label htmlFor="text">Pet Type</label>
+                <div className="reportPet-body-input">
+                  <label htmlFor="text" className="label"> Pet Name </label>
+                  <br />
+                  <Input id="name" register={register} />
+                </div>
+
+            </div>
+              {/* breed & type */}
+              <div className="reportPet-body-left-class">
+
+              <div className="reportPet-body-input">
+                  <label htmlFor="text" className="label"> Pet Type </label>
                   <br />
                   <InputSelect id="name" register={register} />
                 </div>
 
-                <div>
-                  <label htmlFor="text">Breed</label>
+                <div className="reportPet-body-input">
+                  <label htmlFor="text" className="label"> Breed </label>
                   <br />
-                  <Input size="small" id="name" register={register} />
+                  <Input id="name" register={register} />
                 </div>
-              </div>
 
-              <div className="left-form3">
-                <label htmlFor="text">Upload an Image</label>
-                <InputFile />
-              </div>
+            </div>
+              {/* image */}
+              <div className="reportPet-body-left-image">
 
-              <div className="left-form4">
-                <label htmlFor="text">Pet Status</label>
-                <div className="form4-content">
-                  <div className="form4-radio-input">
-                    <input type="radio" />
-                    <label htmlFor="text">Lost Pet</label>
-                  </div>
-                  <div className="form4-radio-input">
-                    <input type="radio" />
-                    <label htmlFor="text">Found Pet</label>
+                <div className="reportPet-body-input">
+                  <label htmlFor="text" className="label"> Upload an Image </label>
+                  <br />
+                  <div className="reportPet-body-fileUpload">
+                    <InputFile />
                   </div>
                 </div>
+                
               </div>
+              {/* status */}
+              <div className="reportPet-body-left-status">
+                <div className="reportPet-body-input">
+                  <label htmlFor="text" className="label"> Pet Status </label>
+                  <br />
+                  <div className="reportPet-body-left-radio">
 
-              <div className="left-form5">
-                <label htmlFor="text">Color</label>
-                <Input size="medium" id="name" register={register} />
-                <label></label>
+                    <div className="reportPet-body-radio-input">
+                      <input type="radio" />
+                      <label htmlFor="text" className="label"> Lost Pet </label>
+                    </div>
+
+                    <div className="reportPet-body-radio-input">
+                      <input type="radio" />
+                      <label htmlFor="text" className="label"> Found Pet </label>
+                    </div>
+
+                  </div>
+                </div>
+                
+
               </div>
+              {/* color */}
+              <div className="reportPet-body-left-color">
 
-              <div className="left-form6">
-                <div className="left-form6-content">
-                  <label htmlFor="text">Size</label>
-                  <InputSelect />
-                </div>
-                <div className="left-form6-content">
-                  <label htmlFor="text">Gender</label>
-                  <InputSelect />
-                </div>
+              <div className="reportPet-body-input">
+                  <label htmlFor="text" className="label"> Color </label>
+                  <br />
+                  <Input size="medium" id="name" register={register} />
+              </div>
+                
+              </div>
+              {/* other */}
+              <div className="reportPet-body-left-other">
+
+                  <div className="reportPet-body-input">
+                    <label htmlFor="text" className="label"> Size </label>
+                    <br />
+                    <InputSelect />
+                  </div>
+
+                  <div className="reportPet-body-input">
+                    <label htmlFor="text" className="label"> Gender </label>
+                    <br />
+                    <InputSelect />
+                  </div>
+
+              </div>
+          </div>
+
+          <div className="reportPet-body-right">
+              {/* micro & date */}
+            <div className="reportPet-body-right-other">
+              <div className="reportPet-body-input">
+                <label htmlFor="text" className="label"> Microchipped </label>
+                <br />
+                <InputSelect />
+              </div>
+              <div className="reportPet-body-input">
+                <label htmlFor="text" className="label"> Date last seen </label>
+                <br />
+                <Input
+                  type="date"
+                  id="name"
+                  register={register}
+                />
               </div>
             </div>
-
-            <div className="reportper-right-container">
-              <div className="right-form1">
-                <div>
-                  <label htmlFor="text">Microchipped</label>
-                  <br />
-                  <InputSelect />
-                </div>
-
-                <div>
-                  <label htmlFor="text">Date last seen</label>
-                  <br />
-                  <Input
-                    type="date"
-                    id="name"
-                    register={register}
-                    size="small"
-                  />
-                </div>
-              </div>
-
-              <div className="right-form2">
-                <label htmlFor="text">
-                  Location Last Seen (Please provide a detailed address)
-                </label>
+            {/* location */}
+            <div className="reportPet-body-right-location">
+              <div className="reportPet-body-input">
+                <label htmlFor="text" className="label"> Location Last Seen (Please provide a detailed address) </label>
+                <br />
                 <Input id="name" register={register} size="medium" />
               </div>
-
-              <div className="right-form3">
-                <label htmlFor="text">Description</label>
+            </div>
+            {/* description */}
+            <div className="reportPet-body-right-desc">
+              <div className="reportPet-body-input">
+                <label htmlFor="text" className="label"> Description </label>
+                <br />
                 <InputTextArea />
               </div>
-
-              <div className="right-form4">
-                <label htmlFor="text">Message</label>
+            </div>
+            {/* message */}
+            <div className="reportPet-body-right-msg">
+              <div className="reportPet-body-input">
+                <label htmlFor="text" className="label"> Message </label>
+                <br />
                 <InputTextArea />
               </div>
             </div>
           </div>
+          {/* </div> */}
         </form>
 
-        <div className="reportpet-footer-btn">
-          <Button type="cancel" variation="secondary" size="small">
-            CANCEL
-          </Button>
-          <Button type="submit" variation="primary" icon={true} size="small">
-            SAVE & POST
-          </Button>
+        <div className="reportpet-footer-btn btns">
+            <Button type="cancel" variation="secondary" size="small">
+              CANCEL
+            </Button>
+            <Button type="submit" variation="primary" icon={true} size="small">
+              SAVE & POST
+            </Button>
         </div>
       </div>
     </div>
-  );
+    
+ );
 }
 
 export default ReportPet;
