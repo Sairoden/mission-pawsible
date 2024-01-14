@@ -78,9 +78,7 @@ h5,
 }
 
 //regular text
-h6,
-.input,
-.input-textarea {
+h6 {
   font: 400 1.2rem $font;
   @media screen and (min-width: 1440px) {
     font-size: 1.6rem;
@@ -113,7 +111,7 @@ p {
   flex-direction: column;
 }
 
-label {
+.label {
   margin-top: 1rem;
   font-weight: 600;
   line-height: 2rem;
@@ -127,7 +125,15 @@ label {
     margin-top: 0.7rem;
   }
 }
-
+.input-textbox,
+.input-textarea,
+.input-select,
+.input-select option {
+  font: 400 1.2rem $font;
+  @media screen and (min-width: 1440px) {
+    font-size: 1.6rem;
+  }
+}
 .container {
   width: 95vw;
   margin: auto;
