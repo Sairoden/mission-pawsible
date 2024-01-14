@@ -3,6 +3,7 @@
   color: $color-blue;
   width: 100%;
   height: calc(100vh - 80vh);
+
   @media only screen and (max-width: 950px) {
     height: fit-content;
     position: fixed;
@@ -40,6 +41,8 @@
     width: 8vw;
   }
   .active {
+    color: $color-orange;
+
     @media only screen and (max-width: 950px) {
       color: $color-white;
     }
