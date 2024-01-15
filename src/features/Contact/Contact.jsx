@@ -46,7 +46,13 @@ function Contact() {
               Email
             </label>
             <br />
-            <Input register={register} name="email" id="email" type="email" />
+            <Input
+              register={register}
+              name="email"
+              id="email"
+              type="email"
+              required={true}
+            />
 
             <br />
             <label id="subject" name="subject" className="label">
@@ -58,6 +64,7 @@ function Contact() {
               name="subject"
               id="subject"
               type="text"
+              required={true}
             />
             <br />
 
@@ -66,7 +73,12 @@ function Contact() {
             </label>
             <br />
 
-            <InputTextArea name="message" id="message" className = "form-textarea" />
+            <InputTextArea
+              name="message"
+              id="message"
+              className="form-textarea"
+              required={true}
+            />
             <div className="btns">
               <Button
                 variation="primary"

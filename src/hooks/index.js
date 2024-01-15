@@ -5,6 +5,7 @@ import { useGetCurrentUser } from "./auth/useGetCurrentUser";
 import { useLogout } from "./auth/useLogout";
 import { useSignup } from "./auth/useSignup";
 import { useResendEmail } from "./auth/useResendEmail";
+import { useGetUserToken } from "./auth/useGetUserToken";
 
 // PETS
 import { useGetAllPets } from "./pets/useGetAllPets";
@@ -17,6 +18,11 @@ import { useGetUserPets } from "./pets/useGetUserPets";
 // RESOURCES
 import { useGetResources } from "./resources/useGetResources";
 
+// CHATS
+import { useCreateChatConnection } from "./chats/useCreateChatConnection";
+import { useGetChatMembers } from "./chats/useGetChatMembers";
+import { useGetChatConnection } from "./chats/useGetChatConnection";
+
 export {
   // AUTH
   useLoginWithGoogle,
@@ -25,6 +31,7 @@ export {
   useLogout,
   useSignup,
   useResendEmail,
+  useGetUserToken,
 
   // PETS
   useGetAllPets,
@@ -36,4 +43,9 @@ export {
 
   // RESORUCES
   useGetResources,
+
+  // CHATS
+  useGetChatMembers,
+  useCreateChatConnection,
+  useGetChatConnection,
 };

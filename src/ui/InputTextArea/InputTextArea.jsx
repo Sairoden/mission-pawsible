@@ -1,7 +1,7 @@
 // STYLES
 import "./InputTextArea.scss";
 
-function InputTextArea({ name = "", id = "" }) {
+function InputTextArea({ name = "", id = "", required = false }) {
   return (
     <textarea
       name={name}
@@ -9,6 +9,7 @@ function InputTextArea({ name = "", id = "" }) {
       cols={50}
       rows={10}
       className="input-textarea"
+      required={required}
     />
   );
 }

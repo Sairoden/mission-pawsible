@@ -1,3 +1,6 @@
+// REACT & LIBRARIES
+import { useNavigate } from "react-router-dom";
+
 // UI COMPONENTS
 import { Spinner, Map } from "../../ui";
 
@@ -11,13 +14,19 @@ import { IoShareSocialOutline } from "react-icons/io5";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 
 // HOOKS
-import { useGetSinglePet } from "../../hooks";
+import { useGetSinglePet, useCreateChatConnection } from "../../hooks";
+
+// UTILITIES
 import { formatFullDate } from "../../utils";
 
 function PetDetails() {
+  const navigate = useNavigate();
   const { pet, isPending } = useGetSinglePet();
+  const { createChatConnection, isPending: isPending2 } =
+    useCreateChatConnection();
 
-  if (isPending) return <Spinner />;
+  if (isPending || isPending2) return <Spinner />;
+
   const {
     id,
     petName,
@@ -36,6 +45,11 @@ function PetDetails() {
     lng,
   } = pet;
 
+  const handleChat = () => {
+    createChatConnection();
+    navigate(`/chat`);
+  };
+
   const imageSlides = images.map(image => ({
     original: image,
     thumbnail: image,
@@ -45,11 +59,7 @@ function PetDetails() {
     <div className="petdetail-main-container">
       <div className="petdetail-left-content" height="100%">
         <div>
-          <ImageGallery
-            items={imageSlides}
-            showPlayButton={false}
-            // thumbnailPosition="left"
-          />
+          <ImageGallery items={imageSlides} showPlayButton={false} />
         </div>
         <div className="petdetail-social-icon">
           <div className="share-icon">
@@ -81,7 +91,7 @@ function PetDetails() {
             {petName} ⭐ {breed}
           </h2>
 
-          <button className="petdetail-chat-btn">
+          <button className="petdetail-chat-btn" onClick={handleChat}>
             <IoChatboxEllipsesOutline className="chat-icon" />
             Chat with the person
           </button>
