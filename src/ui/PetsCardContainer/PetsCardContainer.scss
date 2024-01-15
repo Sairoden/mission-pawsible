@@ -1,59 +1,5 @@
 @import "../../variables";
 
-// .pets-cards-container {
-//   width: 65vw;
-
-//   .pets-cards-header {
-//     color: $color-brown;
-//     font-size: 3.2rem;
-//     font-weight: 700;
-//     margin-bottom: 2rem;
-//   }
-
-//   .pets-cards-grid {
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-template-rows: auto;
-//     grid-gap: 3rem;
-//   }
-// }
-
-// .gallery-card {
-//   // max-width: 145rem;
-//   width: 100%;
-//   padding: 0 1rem;
-
-//   // @media screen and (max-width: 426px) {
-//   //   padding: 0;
-//   // }
-//   // .header {
-//   //   margin-bottom: 1rem;
-//   // }
-
-//   .grid{
-//     // height: calc(45rem * 3);
-//     display: grid;
-//     grid-template-columns: repeat(3, 1fr);
-//     grid-gap: 4rem;
-    
-//     // @media screen and (min-width: 1441px) {
-//     //   height: auto;
-//     //   grid-gap: 5rem;
-//     // }
-
-//     // @media screen and (max-width: 768px) {
-//     //   // height: calc(80rem * 3);
-//     //   grid-template-columns: repeat(2, 1fr);
-//     //   grid-gap: 3rem;
-//     // }
-    
-//     // @media screen and (max-width: 426px) {
-//     //   grid-gap: 1rem;
-//     // }
-
-//   }
-// }
-
 .gallery-card {
   width: 100%;
 
@@ -62,15 +8,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding: 0;
+  //   padding: 0;
     width: 75%;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-  }
-
-  .header {
-    margin-bottom: 1rem;
   }
 
   // .grid {
@@ -89,8 +28,16 @@
   // }
 
   .grid {
+    // width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    // margin: auto;
+    // // justify-content: center;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+
+    // & > div:last-child {
+    //   margin: .5rem 0;
+    // }
   }
 }

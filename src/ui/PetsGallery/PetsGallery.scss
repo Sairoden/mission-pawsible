@@ -17,19 +17,8 @@
     }
   }
 
-  .header {
+  .pet-filter .header,
+  .pet-gallery .header {
     margin-top: 1rem;
   }
-
-  // .gallery {
-  //   width: 75%;
-
-  //   @media screen and (min-width: 1441px) {
-  //     width: 70%;
-  //   }
-
-  //   @media screen and (max-width: 768px) {
-  //     width: 100%;
-  //   }
-  // }
 }

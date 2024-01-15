@@ -27,92 +27,99 @@
 }
 
 .button {
+  margin: .5rem 0;
+  padding: .75rem 2.5rem;
+  height: 3.8rem;
+  // width: 90%;
   color: $color-white;
-  margin: 0.5rem 0;
-  padding: 1.2rem 3rem;
+  // font-weight: 600 !important;
   border: none;
   border-radius: 19rem;
-  text-align: center;
-  // font: 600 1.8rem $font;
-  font-weight: 600 !important;
-  position: relative;
-  display: flex;
-  align-items: center;
   transition: background 0.3s ease, transform 0.2s ease;
   cursor: pointer;
-
-  &-small {
-    padding: 1.2rem 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @media screen and (min-width: 768px) {
+    height: 4.1rem;
+    padding: 1rem 3.5rem;
   }
 
-  &-medium {
-    padding: 1.4rem 6rem;
+  @media screen and (min-width: 1440px) {
+    height: 5rem;
+    padding: 1rem 4.5rem;
   }
 
-  &-large {
-    padding: 1.6rem 8rem;
+  &-petCard {
+    width: 80%;
+    margin-bottom: 1rem;
+
   }
+//   &-small {
+//     padding: 1.2rem 4rem;
+//   }
 
-  @media screen and (max-width: 1441px) {
-    font-size: 1.6rem;
+//   &-medium {
+//     padding: 1.4rem 6rem;
+//   }
 
-    &-small {
-      padding: 1rem 2rem;
-    }
+//   &-large {
+//     padding: 1.6rem 8rem;
+//   }
 
-    &-medium {
-      padding: 1.2rem 4rem;
-    }
+//   @media screen and (max-width: 1441px) {
+//     font-size: 1.6rem;
 
-    &-large {
-      padding: 1.4rem 6rem;
-    }
-  }
+//     &-small {
+//       padding: 1rem 2rem;
+//     }
 
-  @media screen and (max-width: 768px) {
-    font-size: 1.4rem;
+//     &-medium {
+//       padding: 1.2rem 4rem;
+//     }
 
-    &-large {
-      padding: 1.2rem 4rem;
-    }
-  }
+//     &-large {
+//       padding: 1.4rem 6rem;
+//     }
+//   }
 
-  @media screen and (max-width: 400px) {
-    &-large {
-      padding: 1rem 2rem;
-    }
-  }
+//   @media screen and (max-width: 768px) {
+//     font-size: 1.4rem;
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 0;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 19rem;
-    transition: width 0.3s ease;
-    z-index: -1;
-  }
+//     &-large {
+//       padding: 1.2rem 4rem;
+//     }
+//   }
 
-  &:active {
-    transform: scale(0.95);
-  }
-}
+//   @media screen and (max-width: 400px) {
+//     &-large {
+//       padding: 1rem 2rem;
+//     }
+//   }
+
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 0;
+//     height: 100%;
+//     background: rgba(255, 255, 255, 0.2);
+//     border-radius: 19rem;
+//     transition: width 0.3s ease;
+//     z-index: -1;
+//   }
+
+//   &:active {
+//     transform: scale(0.95);
+//   }
+// }
 
 .button-icon {
-  // width: 2.5rem;
-  // height: 2.5rem;
-  height: 65%;
-  margin: auto;
-  // margin-left: 0.5rem;
-  transition: transform 0.3s ease;
-
-  @media screen and (min-width: 768px) {
-      height: 80%;
-    }
+  padding-left: .3rem;
+  height: 100%;
 }
 
 .button-disabled {
@@ -131,4 +138,6 @@
   &:active {
     transform: scale(1);
   }
+}
+
 }

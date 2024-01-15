@@ -39,7 +39,7 @@ function PetsCard({ id, image, title, gender, date }) {
             </div>
         </div>
         <div className="btns">
-          <Button variation="secondary" onClick={handleInfo}>
+          <Button variation="secondary" size={"petCard"} onClick={handleInfo}>
             MORE INFO
           </Button>
         </div>
