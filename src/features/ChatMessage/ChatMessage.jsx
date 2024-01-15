@@ -1,5 +1,6 @@
 // REACT & LIBRARIES
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { StreamChat } from "stream-chat";
 import {
   Chat,
@@ -11,60 +12,101 @@ import {
   Thread,
   Window,
 } from "stream-chat-react";
+import axios from "axios";
 
 // STYLES
 import "./ChatMessage.scss";
 import "@stream-io/stream-chat-css/dist/css/index.css";
+import toast from "react-hot-toast";
 
 // UI COMPONENTS
 import { Spinner } from "../../ui";
 
+// CONTEXTS
+import { useChatContext } from "../../contexts";
+
 const apiKey = import.meta.env.VITE_STREAM_KEY;
-
-const user = {
-  id: "sairoden",
-  name: "Sairoden Gandarosa",
-  image: "https://getstream.imgix.net/images/random_svg/FS.png",
-};
-
-const filters = { type: "messaging", members: { $in: [user.id] } };
-const sort = { last_message_at: -1 };
 
 function ChatMessage() {
   const [client, setClient] = useState(null);
+  const [channel, setChannel] = useState(null);
+  const { chatConnection, setConnected } = useChatContext();
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function init() {
-      const chatClient = StreamChat.getInstance(apiKey);
+      try {
+        const chatClient = StreamChat.getInstance(apiKey);
 
-      // await chatClient.connectUser(user, chatClient.devToken(user.id));
-      await chatClient.connectUser(
-        user,
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoic2Fpcm9kZW4ifQ.P-hno23wt76_yCvc4oA_h6GQpIpC3CCINPb-6vaJ2Uo"
-      );
+        let user = {};
+        const channelId = `${chatConnection?.id}-${chatConnection?.pet?.id}`;
+        let channelName = `${chatConnection?.pet?.name} - ${chatConnection?.messenger?.name}`;
+        let channelImage = chatConnection?.pet?.image;
 
-      const channel = chatClient.channel("messaging", "react-talk", {
-        image: "https://www.drupal.org/files/project-images/react.png",
-        name: "Talk about react",
-        members: [user.id],
-      });
+        if (
+          chatConnection?.messenger?.id === chatConnection?.messengerId ||
+          chatConnection?.messenger?.id !== chatConnection?.ownerId
+        ) {
+          user = chatConnection.messenger;
+        } else {
+          user = chatConnection.owner;
+        }
 
-      await channel.watch();
+        const res = await axios(
+          `https://mission-pawsible-backend.onrender.com/api/v1/getToken/${user?.id}`
+        );
 
-      setClient(chatClient);
+        await chatClient.connectUser(user, res.data.token);
+
+        const channel = chatClient.channel("messaging", channelId, {
+          name: channelName,
+          image: channelImage,
+        });
+
+        await channel.create();
+
+        if (chatConnection?.messenger?.id !== chatConnection?.ownerId) {
+          await channel.addMembers([
+            chatConnection?.owner.id,
+            chatConnection?.messenger.id,
+          ]);
+        } else {
+          await channel.addMembers([chatConnection?.owner.id]);
+        }
+
+        setChannel(channel);
+        setClient(chatClient);
+      } catch (err) {
+        if (err) {
+          console.log(err);
+          toast.error("Something went wrong.");
+          navigate(-1);
+        }
+      }
     }
 
-    init();
+    if (chatConnection) init();
 
-    if (client) return () => client.disconnectUser();
-  }, []);
+    if (client)
+      return () => {
+        setConnected(false);
+        return client.disconnectUser();
+      };
+  }, [chatConnection, client, navigate, setConnected]);
 
-  if (!client) return <Spinner />;
+  if (!client || !channel) return <Spinner />;
 
   return (
     <div className="chat-message">
       <Chat client={client} theme="messaging light">
-        <ChannelList />
+        <ChannelList
+          filters={{
+            members: {
+              $in: [chatConnection?.messenger?.id],
+            },
+          }}
+        />
+
         <Channel>
           <Window>
             <ChannelHeader />

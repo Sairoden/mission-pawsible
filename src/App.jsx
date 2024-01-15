@@ -29,6 +29,9 @@ import { PageNotFound, Map } from "./ui";
 import { getAllResources } from "./services";
 import { useEffect } from "react";
 
+// CONTEXTS
+import { ChatProvider } from "./contexts";
+
 // TANSTACK QUERY
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -128,7 +131,9 @@ function App() {
         </div>
       )}
 
-      <RouterProvider router={router} />
+      <ChatProvider>
+        <RouterProvider router={router} />
+      </ChatProvider>
 
       <Toaster
         position="top-center"

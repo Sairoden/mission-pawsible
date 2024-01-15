@@ -24,6 +24,16 @@ import {
 // RESOURCES
 import { getAllResources } from "./apiResource";
 
+// TOKENS
+import { getUserToken } from "./apiToken";
+
+// CHATS
+import {
+  createChatConnection,
+  getChatMembers,
+  getChatConnection,
+} from "./apiChats";
+
 export {
   // SUPABASE
   supabaseUrl,
@@ -47,4 +57,12 @@ export {
 
   // RESOURCES
   getAllResources,
+
+  // TOKENS
+  getUserToken,
+
+  // CHATS
+  getChatMembers,
+  getChatConnection,
+  createChatConnection,
 };
