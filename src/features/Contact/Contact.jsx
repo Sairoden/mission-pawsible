@@ -84,7 +84,7 @@ function Contact() {
                 variation="primary"
                 icon={true}
                 type="submit"
-                size="medium"
+                size="width"
               >
                 Send
               </Button>

@@ -139,7 +139,7 @@ function UpdateProfile() {
                   variation="primary"
                   icon={true}
                   type="submit"
-                  size="medium"
+                  size="width"
                 >
                   SAVE
                 </Button>

@@ -165,10 +165,11 @@ function ReportPet() {
         </form>
 
         <div className="reportpet-footer-btn btns">
-            <Button type="cancel" variation="secondary" size="small">
+            <Button type="cancel" variation="secondary" size="width">
               CANCEL
             </Button>
-            <Button type="submit" variation="primary" icon={true} size="small">
+            <br />
+            <Button type="submit" variation="primary" icon={true} size="width">
               SAVE & POST
             </Button>
         </div>
