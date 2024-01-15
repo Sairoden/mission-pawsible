@@ -17,8 +17,8 @@
     right: 0;
     z-index: 2;
     cursor: pointer;
-    width: 8.2rem;
-    height: 4.7rem;
+    width: 9.85rem;
+    height: 4.2rem;
     opacity: 0;
 
     @media screen and (min-width: 768px) {
@@ -50,7 +50,7 @@
       justify-content: flex-start;  
     }
 
-    h3 {
+    .click {
         padding: .5rem;
         border: .2rem solid $color-brown;
 

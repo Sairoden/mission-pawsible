@@ -42,14 +42,14 @@ function Contact() {
             action="https://formspree.io/f/xnqeapvp"
             method="POST"
           >
-            <label id="email" name="email" className="label-text">
+            <label id="email" name="email" className="label">
               Email
             </label>
             <br />
             <Input register={register} name="email" id="email" type="email" />
 
             <br />
-            <label id="subject" name="subject" className="label-text">
+            <label id="subject" name="subject" className="label">
               Subject
             </label>
             <br />
@@ -61,7 +61,7 @@ function Contact() {
             />
             <br />
 
-            <label id="message" className="label-text">
+            <label id="message" className="label">
               Message
             </label>
             <br />

@@ -1,8 +1,6 @@
 // Variable
 @import "_variables";
-
 // universal css
-
 * {
   margin: 0;
   padding: 0;
@@ -25,71 +23,71 @@ body {
 h1 {
   line-height: 1;
   font: 700 4rem $font;
-
   // @media screen and (min-width: 1441px) {
   //   font-size: 4.4rem;
   // }
-
   @media screen and (max-width: 767px) {
     font-size: 3rem;
   }
 }
+
 // sub heading
 h2 {
   font: 600 3.2rem $font;
   line-height: 1;
-
   @media screen and (min-width: 1440px) {
     font-size: 3.6rem;
   }
-
   @media screen and (max-width: 767px) {
     font-size: 2.8rem;
   }
 }
+
 //title
 h3 {
   font: 700 2.4rem $font;
-
   @media screen and (min-width: 1440px) {
     font-size: 3rem;
   }
-
   @media screen and (max-width: 767px) {
     font-size: 2.2rem;
   }
 }
+
 // sub title
 h4 {
   font: 700 1.8rem $font;
-
   @media screen and (min-width: 1440px) {
     font-size: 2.2rem;
   }
-
   @media screen and (max-width: 767px) {
     font-size: 1.4rem;
   }
 }
 
 h5,
-.button {
+.button,
+.file-input {
   font: 400 1.4rem $font;
-
   @media screen and (min-width: 1440px) {
     font-size: 2rem;
   }
-
   @media screen and (max-width: 767px) {
     font-size: 1.2rem;
   }
 }
+<<<<<<< HEAD
 //regular text
 h6,
 .input,
 .input-textarea {
   font: 400 1.2rem $font;
+=======
+>>>>>>> 58df3063c7aa3b7f5f611e76813b696df7b8afbc
 
+//regular text
+h6 {
+  font: 400 1.2rem $font;
   @media screen and (min-width: 1440px) {
     font-size: 1.6rem;
   }
@@ -97,12 +95,16 @@ h6,
   //   font-size: 1.0rem;
   // }
 }
+
 // paragraph
 p {
   font: 400 1.3rem $font;
   text-align: justify;
   line-height: 2.5rem;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 58df3063c7aa3b7f5f611e76813b696df7b8afbc
   @media screen and (min-width: 1440px) {
     font-size: 1.6rem;
   }
@@ -121,24 +123,32 @@ p {
   flex-direction: column;
 }
 
-label {
-  margin-top: 0.5rem;
+.label {
+  margin-top: 1rem;
   font-weight: 600;
   line-height: 2rem;
   font-size: 1.6rem;
-
   @media screen and (min-width: 1440px) {
     font-size: 2rem;
+    margin-top: 1.2rem;
   }
   @media screen and (max-width: 767px) {
     font-size: 1.4rem;
+    margin-top: 0.7rem;
   }
 }
-
+.input-textbox,
+.input-textarea,
+.input-select,
+.input-select option {
+  font: 400 1.2rem $font;
+  @media screen and (min-width: 1440px) {
+    font-size: 1.6rem;
+  }
+}
 .container {
   width: 95vw;
   margin: auto;
-
   @media (min-width: 1440px) {
     width: 90vw;
   }
@@ -151,14 +161,38 @@ label {
 .spacing-b {
   padding-bottom: 5rem;
 }
+
 .card {
   padding: 1rem 2rem;
   border-radius: 1.5rem;
 }
 
+.no-data {
+  width: 100%;
+  padding-top: 5rem;
+  text-align: center;
+  // display: flex;
+}
+
 a {
   cursor: pointer !important;
   all: unset;
+}
+.nav-link {
+  transition: all ease 0.5s;
+}
+.nav-link:hover {
+  transform: scale(1.1);
+  transition: all ease 0.5s;
+
+  @media only screen and (max-width: 950px) {
+    transform: scale(1.5);
+    transition: all ease 0.5s;
+    -webkit-transition: all ease 0.5s;
+    -moz-transition: all ease 0.5s;
+    -ms-transition: all ease 0.5s;
+    -o-transition: all ease 0.5s;
+  }
 }
 
 .btns {

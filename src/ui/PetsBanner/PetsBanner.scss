@@ -84,6 +84,10 @@ $reunitedPetsBanner: url("../../assets/banner-reunited-pets.png");
   height: 50vh;
   position: relative;
 
+  @media screen and (max-width: 767px) {
+    height: 30vh;
+  }
+
   .image {
     height: 100%;
     width: 100%;

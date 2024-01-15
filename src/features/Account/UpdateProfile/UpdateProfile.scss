@@ -1,102 +1,105 @@
 @import "../../../variables";
 
-.update-white-container {
-  height: calc(80vh - 2rem);
-  width: 90%;
-  margin: 10rem auto;
-  background-color: $color-white;
-  border-radius: 25px;
-}
-.update-main-container {
-  display: flex;
-  flex-direction: row;
-  padding: 2rem;
-  height: 100%;
-}
+.updateProfile{
+  .container {
+    background-color: $color-white;
+    border-radius: $radius;
+    padding: 2.5rem 1rem;
 
-.update-left-container {
-  width: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-
-  .update-file-input {
-    margin-left: 22rem;
+    @media screen and (min-width: 768px) {
+      padding: 3%;
+    }
+    // @media screen and (min-width: 992px) {
+    //   padding: 3rem;
+    // }
   }
-}
-
-.update-left-image {
-  border-radius: 50%;
-  width: 20rem;
-  height: 20rem;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-}
-
-.update-right-container {
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  gap: 5rem;
-  margin: auto;
-
-  .update-right-header {
+  &-header {
     text-align: center;
   }
+  .divider {
+    // display: none;
 
-  .update-form-content {
+      width: 90%;
+      margin:  2% auto;
+      opacity: .5;
+
+    @media screen and (min-width: 900px) {
+      display: block;
+      // height: 90%;
+      width: auto;
+      margin:  2.5% auto;
+    }
+  }
+  &-body {
+    margin-top: 2.5rem;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
 
-    .update-right-form1 {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
+    &-left {
+      width: 90%;
+      max-width: 35rem;
+      margin: auto;
+
+      @media screen and (min-width: 900px) {
+        // min-width: 15rem;
+        max-width: 40%;
+      }
+      &-image {
+        display: flex;
+        justify-content: center;
+  
+        &-content{
+          width: 50%;
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          border-radius: 50%;
+  
+          @media screen and (min-width: 1200px) {
+            width: 35%;
+          }
+        }
+      }
+  
+      &-fileUpload {
+        width: 100%;
+        margin: 2.5rem 0;
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width: 900px) {
+          margin: 5% 0;
+        }
+      }
     }
 
-    .update-right-form4 {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem;
+    &-right {
+      width: 100%;
+      @media screen and (min-width: 900px) {
+        width: 55%;
+        // margin-top: 3rem;
+      }
+      &-form {
+  
+        @media screen and (min-width: 425px) {
+          &-name,
+          &-contact {
+            display: flex;
+            justify-content: space-between;
+          }
+          &-name .updateProfile-body-right-form-input,
+          &-contact .updateProfile-body-right-form-input {
+            width: 49%;
+          }
+        }
+  
+        &-input {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+      }
+  
     }
   }
-  .update-input {
-    width: 25vw;
-    height: 4vh;
-    border-radius: 25px;
-    border: 1px solid black;
-    margin-bottom: 5px;
-  }
-  .update-right-button {
-    text-align: center;
-  }
-}
-
-.file-input {
-  border-radius: 5px;
-  font-size: 1.6rem;
-  font-family: "Poppins";
-
-  &::file-selector-button {
-    font: inherit;
-    font-weight: 500;
-    padding: 0.8rem 1.2rem;
-    margin-right: 1.2rem;
-    border-radius: 5px;
-    border: none;
-    color: $color-white;
-    background-color: $color-orange;
-    cursor: pointer;
-    transition: color 0.2s, background-color 0.2s;
-
-    &:hover {
-      background-color: darken($color-orange, 10%);
-    }
-  }
+  
 }

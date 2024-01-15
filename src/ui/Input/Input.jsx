@@ -58,7 +58,7 @@ function Input({
         type={inputType}
         id={id}
         disabled={disabled}
-        className={`input input-${size}`}
+        className={`input-textbox input-${size}`}
         value={value || undefined}
         placeholder={placeholder || undefined}
         onChange={onChange}
