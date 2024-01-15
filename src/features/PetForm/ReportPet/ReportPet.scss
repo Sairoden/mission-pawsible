@@ -73,4 +73,11 @@
       margin: 0 1rem ;
     }
   }
+  .btns {
+    flex-direction: column-reverse !important;
+
+    @media screen and (min-width: 425px) {
+      flex-direction: row !important;
+    }
+  }
 }
