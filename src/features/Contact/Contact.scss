@@ -7,11 +7,15 @@ $navbarHeight: 80vh;
   padding-left: 1rem;
   
   .contact-animation {
-    width: 60%;
+    width: 90%;
     margin: auto;
 
+    @media screen and (min-width: 425px) {
+      width: 60%;
+    }
+
     @media screen and (min-width: 768px) {
-      width: 30%;
+      width: 40%;
     }
   }
   .info {
