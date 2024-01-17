@@ -26,6 +26,23 @@
   }
 }
 
+.other {
+  background: $color-white;
+  color: $color-orange !important;
+  font-weight: 600 !important;
+
+  &:hover {
+    background: darken($color-orange, 10%);
+    &:before {
+      width: 100%;
+    }
+
+    .button-icon {
+      transform: scale(1.2);
+    }
+  }
+}
+
 .button {
   margin: .5rem 0;
   padding: .75rem 2.5rem;
@@ -124,6 +141,7 @@
 //     transform: scale(0.95);
 //   }
 // }
+}
 
 .button-icon {
   padding-left: .3rem;
@@ -146,6 +164,4 @@
   &:active {
     transform: scale(1);
   }
-}
-
 }
