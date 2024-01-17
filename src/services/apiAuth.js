@@ -1,5 +1,5 @@
 // SERVICES
-import { supabase } from "./supabase";
+import { supabase, supabaseUrl } from "./supabase";
 
 export const getCurrentUser = async () => {
   const { data: session } = await supabase.auth.getSession();
@@ -127,6 +127,104 @@ export const resendEmailConfirmation = async email => {
     console.error(error.message);
     throw new Error("Failed to resend email confirmation");
   }
+
+  return data;
+};
+
+export const updateProfile = async ({
+  firstName,
+  lastName,
+  address,
+  email,
+  contactNumber,
+  avatar,
+  password,
+}) => {
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  const { error } = await supabase
+    .from("users")
+    .update({
+      firstName,
+      lastName,
+      address,
+      contactNumber,
+    })
+    .eq("id", user.id);
+
+  if (error) {
+    console.error(error?.message);
+    throw new Error("Update user went wrong");
+  }
+
+  if (password) {
+    const { error } = await supabase.auth.updateUser({
+      password,
+      data: {
+        address,
+        avatar,
+        contactNumber,
+        firstName,
+        lastName,
+      },
+    });
+
+    if (error) console.error(error?.message);
+  }
+
+  if (user.email !== email) {
+    const { error } = await supabase.auth.updateUser({
+      email,
+      data: {
+        address,
+        avatar,
+        contactNumber,
+        firstName,
+        lastName,
+      },
+    });
+
+    if (error) console.error(error?.message);
+
+    if (
+      error ||
+      error?.message === "Email rate limit exceeded" ||
+      error?.message.includes("rate")
+    )
+      throw new Error("Please update your email later.");
+  }
+
+  if (avatar.length < 1) return;
+  // CHECK FOR AVATAR
+
+  // 1. Upload the avatar image to supabase bucket
+  const fileName = `avatar-${user.id}-${Math.random()}`;
+
+  const { error: storageError } = await supabase.storage
+    .from("avatars")
+    .upload(fileName, avatar[0]);
+
+  if (storageError) throw new Error(storageError.message);
+
+  // 2. Update avatar in the user
+  const { error: userError } = await supabase
+    .from("users")
+    .update({
+      avatar: `${supabaseUrl}/storage/v1/object/public/avatars/${fileName}`,
+    })
+    .eq("id", user.id);
+
+  if (userError) throw new Error(userError.message);
+
+  const { data, error: userError2 } = await supabase.auth.updateUser({
+    data: {
+      avatar: `${supabaseUrl}/storage/v1/object/public/avatars/${fileName}`,
+    },
+  });
+
+  if (userError2) throw new Error(userError2.message);
 
   return data;
 };
