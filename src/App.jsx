@@ -22,6 +22,7 @@ import {
   PetDetail,
   ReportPet,
   UpdatePet,
+  Email,
 } from "./pages";
 
 // UI COMPONENTS
@@ -114,6 +115,10 @@ function App() {
         {
           path: "/chat",
           element: <Chat />,
+        },
+        {
+          path: "/email",
+          element: <Email />,
         },
         {
           path: "*",

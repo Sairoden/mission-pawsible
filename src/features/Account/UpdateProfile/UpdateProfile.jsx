@@ -3,32 +3,45 @@ import { useForm } from "react-hook-form";
 
 // STYLES
 import "./UpdateProfile.scss";
+import toast from "react-hot-toast";
 
 // UI COMPONENTS
-import { Button, Input, InputFile, Spinner } from "../../../ui";
+import { Button, Input, InputFile, Spinner, ErrorInput } from "../../../ui";
 
 // HOOKS
-import { useGetCurrentUser } from "../../../hooks";
+import { useGetCurrentUser, useUpdateProfile } from "../../../hooks";
 
 function UpdateProfile() {
   const { user, isPending } = useGetCurrentUser();
+  const { updateProfile, isPending: isPending2 } = useUpdateProfile();
 
-  const { email } = user;
+  const { email } = user || "";
   const { address, avatar, contactNumber, firstName, lastName } =
-    user.user_metadata || {};
+    user?.user_metadata || {};
 
   // REACT-HOOK-FORM
   const {
     register,
     formState: { errors },
     handleSubmit,
-    getdefaultValues,
   } = useForm();
 
-  if (isPending) return <Spinner />;
+  if (isPending || isPending2) return <Spinner />;
 
   const handleUpdateProfile = data => {
-    console.log("YES SIR TESTING");
+    if (
+      !data.firstName ||
+      !data.lastName ||
+      !data.email ||
+      !data.contactNumber ||
+      !data.address
+    )
+      return;
+
+    if (data.email !== email)
+      toast.error("Email Change Confirmation Required", { duration: 10000 });
+
+    updateProfile(data);
   };
 
   return (
@@ -37,21 +50,29 @@ function UpdateProfile() {
         <div className="title">
           <h2>UPDATE PROFILE</h2>
         </div>
-        <div className="updateProfile-body">
-          <div className="updateProfile-body-left">
-            <div className="updateProfile-body-left-image">
-              <img src={avatar} alt="profileIcon" className="updateProfile-body-left-image-content" />
+
+        <form
+          className="updateProfile-body-right-form"
+          onSubmit={handleSubmit(handleUpdateProfile)}
+        >
+          <div className="updateProfile-body">
+            <div className="updateProfile-body-left">
+              <div className="updateProfile-body-left-image">
+                <img
+                  src={avatar}
+                  alt="profileIcon"
+                  className="updateProfile-body-left-image-content"
+                />
+              </div>
+
+              <div className="updateProfile-body-left-fileUpload">
+                <InputFile register={register} id="avatar" accept="image/*" />
+              </div>
             </div>
-            <div className="updateProfile-body-left-fileUpload">
-              <InputFile />
-            </div>
-          </div>
-          <hr className="divider"/>
-          <div className="updateProfile-body-right">
-            <form
-              className="updateProfile-body-right-form"
-              onSubmit={handleSubmit(handleUpdateProfile)}
-            >
+
+            <hr className="divider" />
+
+            <div className="updateProfile-body-right">
               <div className="updateProfile-body-right-form-name">
                 {/* last name */}
                 <div className="updateProfile-body-right-form-input">
@@ -62,9 +83,13 @@ function UpdateProfile() {
                     defaultValue={lastName}
                   />
                   <br />
-                  <label htmlFor="lastName" className="label"> LAST NAME </label>
+                  <label htmlFor="lastName" className="label">
+                    LAST NAME
+                    <ErrorInput>{errors?.lastName?.message}</ErrorInput>
+                  </label>
                   <br />
                 </div>
+
                 {/* first name */}
                 <div className="updateProfile-body-right-form-input">
                   <Input
@@ -74,7 +99,10 @@ function UpdateProfile() {
                     defaultValue={firstName}
                   />
                   <br />
-                  <label htmlFor="firstName" className="label"> FIRST NAME </label>
+                  <label htmlFor="firstName" className="label">
+                    FIRST NAME
+                    <ErrorInput>{errors?.firstName?.message}</ErrorInput>
+                  </label>
                 </div>
               </div>
 
@@ -88,7 +116,10 @@ function UpdateProfile() {
                     defaultValue={address}
                   />
                   <br />
-                  <label htmlFor="address" className="label"> ADDRESS </label>
+                  <label htmlFor="address" className="label">
+                    ADDRESS
+                    <ErrorInput>{errors?.address?.message}</ErrorInput>
+                  </label>
                 </div>
               </div>
 
@@ -103,8 +134,12 @@ function UpdateProfile() {
                     defaultValue={email}
                   />
                   <br />
-                  <label htmlFor="email" className="label"> EMAIL </label>
+                  <label htmlFor="email" className="label">
+                    EMAIL
+                    <ErrorInput>{errors?.email?.message}</ErrorInput>
+                  </label>
                 </div>
+
                 {/* contact number */}
                 <div className="updateProfile-body-right-form-input">
                   <Input
@@ -115,12 +150,14 @@ function UpdateProfile() {
                     defaultValue={contactNumber}
                   />
                   <br />
-                  <label htmlFor="contactNumber" className="label"> CONTACT NUMBER </label>
+                  <label htmlFor="contactNumber" className="label">
+                    CONTACT NUMBER
+                    <ErrorInput>{errors?.contactNumber?.message}</ErrorInput>
+                  </label>
                 </div>
               </div>
 
               <div className="updateProfile-body-right-form-password">
-                
                 <div className="updateProfile-body-right-form-input">
                   <Input
                     type="password"
@@ -130,7 +167,10 @@ function UpdateProfile() {
                     required={false}
                   />
                   <br />
-                  <label htmlFor="password" className="label"> CHANGE PASSWORD </label>
+                  <label htmlFor="password" className="label">
+                    CHANGE PASSWORD
+                    <ErrorInput>{errors?.password?.message}</ErrorInput>
+                  </label>
                 </div>
               </div>
 
@@ -144,11 +184,11 @@ function UpdateProfile() {
                   SAVE
                 </Button>
               </div>
-            </form>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
-   </div>
+    </div>
   );
 }
 
