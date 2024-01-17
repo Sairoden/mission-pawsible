@@ -65,9 +65,7 @@ h4 {
   }
 }
 
-h5,
-.button,
-.file-input {
+h5 {
   font: 400 1.4rem $font;
   @media screen and (min-width: 1440px) {
     font-size: 2rem;
@@ -132,6 +130,16 @@ p {
   font: 400 1.2rem $font;
   @media screen and (min-width: 1440px) {
     font-size: 1.6rem;
+  }
+}
+.button,
+.file-input {
+  font: 400 1.4rem $font;
+  @media screen and (min-width: 1440px) {
+    font-size: 2rem;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1.2rem;
   }
 }
 .container {
