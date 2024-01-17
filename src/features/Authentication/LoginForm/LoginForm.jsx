@@ -62,90 +62,103 @@ function LoginForm() {
   if (isPending || isPending2) return <Spinner />;
 
   return (
-    <div className="login-container">
-      <motion.img
-        src={loginBanner}
-        alt="Guy with a dog image"
-        className="login-banner"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 3 }}
-      />
-
-      <h1 className="login-title">Welcome back to our growing family!</h1>
-
-      <form className="login-form" onSubmit={handleSubmit(handleLogin)}>
-        <label htmlFor="email" className="login-label">
-          Email <ErrorInput>{errors?.email?.message}</ErrorInput>
-        </label>
-        <Input
-          id="email"
-          size="large"
-          type="email"
-          register={register}
-          required="Please provide a valid email address"
-          disabled={isPending || isPending2}
+    <div className="login container spacing-t spacing-b">
+      <div className="login-img">
+        <motion.img
+          src={loginBanner}
+          alt="Guy with a dog image"
+          className="login-img-content"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 3 }}
         />
+      </div>
+      <div className="title">
+        <h2>Welcome back to our growing family!</h2>
+      </div>
 
-        <label htmlFor="password" className="login-label">
-          Password <ErrorInput>{errors?.password?.message}</ErrorInput>
-        </label>
-        <Input
-          id="password"
-          size="large"
-          type="password"
-          register={register}
-          required="Please provide a password"
-          disabled={isPending || isPending2}
-        />
-
-        <div className="forgot-container">
-          <button
-            type="button"
-            className="forgot-button"
-            onClick={handleForgotPassword}
-          >
-            <p className="login-forgot">Forget Password?</p>
-          </button>
-
-          <button
-            type="button"
-            className="forgot-button"
-            onClick={handleResendEmail}
-          >
-            <p className="login-forgot">Resend Email?</p>
-          </button>
-        </div>
-
-        <div className="login-buttons-container">
-          <button
-            type="button"
-            className="login-google"
+      <div className="login-body">
+        <form className="login-body-form" onSubmit={handleSubmit(handleLogin)}>
+          {/* email */}
+          <label htmlFor="email" className="label">
+            Email <ErrorInput>{errors?.email?.message}</ErrorInput>
+          </label>
+          <br />
+          <Input
+            id="email"
+            type="email"
+            register={register}
+            required="Please provide a valid email address"
             disabled={isPending || isPending2}
-            onClick={handleGoogleLogin}
-          >
-            Sign in with Google <FcGoogle className="login-google-icon" />
-          </button>
-
-          <Button
-            variation="primary"
-            icon={true}
-            type="submit"
+          />
+          <br />
+          {/* password */}
+          <label htmlFor="password" className="label">
+            Password <ErrorInput>{errors?.password?.message}</ErrorInput>
+          </label>
+          <br />
+          <Input
+            id="password"
+            type="password"
+            register={register}
+            required="Please provide a password"
             disabled={isPending || isPending2}
-            size="large"
-          >
-            Login
-          </Button>
-        </div>
-      </form>
+          />
+          <br />
+          {/* forgot password */}
+          <div className="login-body-form-forget">
+            <button
+              type="button"
+              className="login-body-form-forget-button"
+              onClick={handleForgotPassword}
+            >
+              <h6 className="label">Forget Password?</h6>
+            </button>
+            {/* forgot email */}
+            <button
+              type="button"
+              className="login-body-form-forget-button"
+              onClick={handleResendEmail}
+            >
+              <h6 className="label">Resend Email?</h6>
+            </button>
+          </div>
+          <br />
+          <div className="login-body-form-login">
+            <button
+              type="button"
+              className="login-body-form-google-button button other"
+              disabled={isPending || isPending2}
+              onClick={handleGoogleLogin}
+            >
+              Sign in with Google 
+              <FcGoogle className="login-body-form-google-logo" />
+            </button>
 
-      <Link to="/signup" onClick={() => scrollTo(0, 0)}>
-        <p className="signup-link">
-          Don't have an account?{" "}
-          <span className="signup-link-bold">Sign up</span>
-        </p>
-      </Link>
+            <Button
+              variation="primary"
+              icon={true}
+              type="submit"
+              disabled={isPending || isPending2}
+            >
+              Login
+            </Button>
+          </div>
+        </form>
+      </div>
+      <br />
+      <div className="login-body-signup">
+        
+          <h4 className="login-body-signup-text">
+            Don't have an account?{" "}
+            <Link to="/signup" onClick={() => scrollTo(0, 0)}>
+            <span className="login-body-signup-text-span">Sign up</span>
+            </Link>
+          </h4>
+        
+      </div>
+      
     </div>
   );
 }
