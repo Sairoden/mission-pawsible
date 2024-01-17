@@ -7,6 +7,7 @@ import Contact from "./Contact/Contact";
 // AUTHENTICATION
 import LoginForm from "./Authentication/LoginForm/LoginForm";
 import SignupForm from "./Authentication/SignupForm/SignupForm";
+import EmailForm from "./Authentication/EmailForm/EmailForm";
 
 // ACCOUNT
 import Profile from "./Account/Profile/Profile";
@@ -56,6 +57,7 @@ export {
   // AUTHENTICATION
   LoginForm,
   SignupForm,
+  EmailForm,
 
   // ACCOUNT
   Profile,

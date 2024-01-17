@@ -14,6 +14,7 @@ import ProfileUpdate from "./ProfileUpdate";
 import PetDetail from "./PetDetail";
 import ReportPet from "./ReportPet";
 import UpdatePet from "./UpdatePet";
+import Email from "./Email";
 
 export {
   Chat,
@@ -32,4 +33,5 @@ export {
   PetDetail,
   ReportPet,
   UpdatePet,
+  Email,
 };
