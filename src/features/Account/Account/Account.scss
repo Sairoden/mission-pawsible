@@ -7,4 +7,11 @@
   gap: 5rem;
   justify-content: center;
   padding-bottom: 10rem;
+
+  @media only screen and (max-width: 1075px) {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+  }
 }

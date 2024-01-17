@@ -8,8 +8,14 @@
   border-radius: 15px;
   background-color: $color-white;
   font-size: 1rem;
-  width: 25vw;
+  width: 100%;
   height: 70vh;
+  box-shadow: 5px 10px 10px #888888;
+
+  @media only screen and (max-width: 1075px) {
+    height: auto;
+    margin-top: 5rem;
+  }
 
   .profile-img {
     border-radius: 50%;
@@ -23,10 +29,15 @@
   .main-content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+
     justify-items: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 5rem;
+
+    @media only screen and (max-width: 1075px) {
+      gap: 3rem;
+      padding-top: 2rem;
+    }
   }
 
   .account-text {
@@ -37,12 +48,15 @@
   .middle_container {
     display: flex;
     flex-direction: column;
-    gap: 5rem;
+    gap: 2rem;
   }
   .middle-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media only screen and (max-width: 1075px) {
+      gap: 5rem;
+    }
   }
   .account-details {
     display: flex;
@@ -51,6 +65,19 @@
     grid-template-columns: 1fr 75%;
     border-bottom: 1px solid $color-mainlyblue;
     padding-bottom: 1rem;
+
+    @media only screen and (max-width: 1075px) {
+      width: 50%;
+      margin: auto;
+    }
+    @media only screen and (max-width: 500px) {
+      width: 60%;
+      margin: auto;
+    }
+    @media only screen and (max-width: 400px) {
+      width: 70%;
+      margin: auto;
+    }
   }
 
   .account-contact {
@@ -58,21 +85,93 @@
     gap: 10px;
     border-bottom: 1px solid $color-mainlyblue;
     padding-bottom: 1rem;
+    @media only screen and (max-width: 1075px) {
+      width: 50%;
+      margin: auto;
+    }
+    @media only screen and (max-width: 500px) {
+      width: 60%;
+      margin: auto;
+    }
+    @media only screen and (max-width: 400px) {
+      width: 70%;
+      margin: auto;
+    }
   }
 
   .account-address {
     display: flex;
     gap: 20px;
+    @media only screen and (max-width: 1075px) {
+      width: 50%;
+      margin: auto;
+    }
+    @media only screen and (max-width: 500px) {
+      width: 60%;
+      margin: auto;
+    }
+    @media only screen and (max-width: 400px) {
+      width: 70%;
+      margin: auto;
+    }
   }
 
   .account-span {
     font-weight: 400;
     font-size: 1.6rem;
+    @media only screen and (max-width: 1445px) {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 1170px) {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 1075px) {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 1000px) {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 800px) {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
   }
 
   .account_emailText {
     font-size: 1.6rem;
     font-weight: 300;
+    @media only screen and (max-width: 1445px) {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 1170px) {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 1075px) {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 1055px) {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 920px) {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 800px) {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    @media only screen and (max-width: 665px) {
+      font-size: 1rem;
+      font-weight: 600;
+    }
   }
 
   .account-header {

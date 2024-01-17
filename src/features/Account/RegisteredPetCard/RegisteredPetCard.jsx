@@ -11,7 +11,7 @@ function RegisteredPetCard() {
       </div>
       <div>
         <div className="register-h3">
-          <h3>MO5-POODLE TINY YELLOW</h3>
+          <h3 className="register-h3-text">MO5-POODLE TINY YELLOW</h3>
         </div>
         <div className="register-span-container">
           <span className="span-text">Gender: male</span>
