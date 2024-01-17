@@ -42,6 +42,7 @@ function Contact() {
             action="https://formspree.io/f/xnqeapvp"
             method="POST"
           >
+            {/* email */}
             <label id="email" name="email" className="label">
               Email
             </label>
@@ -53,8 +54,8 @@ function Contact() {
               type="email"
               required={true}
             />
-
             <br />
+            {/* subject */}
             <label id="subject" name="subject" className="label">
               Subject
             </label>
@@ -67,18 +68,18 @@ function Contact() {
               required={true}
             />
             <br />
-
+            {/* message */}
             <label id="message" className="label">
               Message
             </label>
             <br />
-
             <InputTextArea
               name="message"
               id="message"
               className="form-textarea"
               required={true}
             />
+            {/* button */}
             <div className="btns">
               <Button
                 variation="primary"

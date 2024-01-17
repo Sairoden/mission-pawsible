@@ -38,10 +38,10 @@ function Resources() {
     <div className="resources spacing-t">
       <div className="container">
       <div className="resources_header">
-        <h2 className="resources_header_main">Resources</h2>
+        <h2 className="title">Resources</h2>
       </div>
 
-      <div className="resources_body spacing-t">
+      <div className="resources_body">
         {newResources.length > 0 ? (
           newResources?.map(resource => (
             <a

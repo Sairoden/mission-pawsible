@@ -34,8 +34,8 @@ function UpdateProfile() {
   return (
     <div className="updateProfile spacing-t spacing-b">
       <div className="container">
-        <div className="updateProfile-header">
-          <h2 className="updateProfile-header-main">UPDATE PROFILE</h2>
+        <div className="title">
+          <h2>UPDATE PROFILE</h2>
         </div>
         <div className="updateProfile-body">
           <div className="updateProfile-body-left">
