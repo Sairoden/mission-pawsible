@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 20px;
+  padding: 2rem;
   border-radius: 15px;
   background-color: $color-white;
   font-size: 1rem;
@@ -13,8 +13,18 @@
   box-shadow: 5px 10px 10px #888888;
 
   @media only screen and (max-width: 1075px) {
+    display: flex;
+    flex-direction: row;
     height: auto;
     margin-top: 5rem;
+    padding: 5rem;
+  }
+
+  @media only screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .profile-img {
@@ -54,8 +64,12 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     @media only screen and (max-width: 1075px) {
       gap: 5rem;
+    }
+    @media only screen and (max-width: 700px) {
+      gap: 3rem;
     }
   }
   .account-details {
@@ -65,55 +79,18 @@
     grid-template-columns: 1fr 75%;
     border-bottom: 1px solid $color-mainlyblue;
     padding-bottom: 1rem;
-
-    @media only screen and (max-width: 1075px) {
-      width: 50%;
-      margin: auto;
-    }
-    @media only screen and (max-width: 500px) {
-      width: 60%;
-      margin: auto;
-    }
-    @media only screen and (max-width: 400px) {
-      width: 70%;
-      margin: auto;
-    }
   }
 
   .account-contact {
     display: flex;
-    gap: 10px;
+    gap: 2rem;
     border-bottom: 1px solid $color-mainlyblue;
     padding-bottom: 1rem;
-    @media only screen and (max-width: 1075px) {
-      width: 50%;
-      margin: auto;
-    }
-    @media only screen and (max-width: 500px) {
-      width: 60%;
-      margin: auto;
-    }
-    @media only screen and (max-width: 400px) {
-      width: 70%;
-      margin: auto;
-    }
   }
 
   .account-address {
     display: flex;
-    gap: 20px;
-    @media only screen and (max-width: 1075px) {
-      width: 50%;
-      margin: auto;
-    }
-    @media only screen and (max-width: 500px) {
-      width: 60%;
-      margin: auto;
-    }
-    @media only screen and (max-width: 400px) {
-      width: 70%;
-      margin: auto;
-    }
+    gap: 2.5rem;
   }
 
   .account-span {
@@ -144,6 +121,7 @@
   .account_emailText {
     font-size: 1.6rem;
     font-weight: 300;
+
     @media only screen and (max-width: 1445px) {
       font-size: 1.2rem;
       font-weight: 600;
