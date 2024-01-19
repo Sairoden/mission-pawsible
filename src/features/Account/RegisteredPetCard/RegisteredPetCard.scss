@@ -62,7 +62,7 @@
 
   .register-button-container {
     display: flex;
-    margin-top: 10px;
+    margin-top: 1rem;
     justify-content: center;
     align-items: center;
     gap: 1rem;
@@ -73,7 +73,7 @@
       background-color: $color-white;
       padding: 0.2rem 1rem;
       color: $color-blue;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       font-weight: 600;
       cursor: pointer;
     }
@@ -94,7 +94,7 @@
       padding: 0.2rem 2rem;
       font-weight: 600;
       color: $color-orange;
-      font-size: 1.6rem;
+      font-size: 1.4rem;
       cursor: pointer;
     }
     .update-btn:hover {
