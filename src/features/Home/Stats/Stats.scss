@@ -38,6 +38,9 @@
         @media only screen and (max-width: 445px) {
           font-size: 2rem;
         }
+        @media only screen and (max-width: 400px) {
+          font-size: 1.8rem;
+        }
       }
       .stats-one::after {
         content: " Community";
@@ -58,6 +61,9 @@
         }
         @media only screen and (max-width: 445px) {
           font-size: 2rem;
+        }
+        @media only screen and (max-width: 400px) {
+          font-size: 1.8rem;
         }
       }
 
@@ -80,6 +86,9 @@
         @media only screen and (max-width: 445px) {
           font-size: 2rem;
         }
+        @media only screen and (max-width: 400px) {
+          font-size: 1.8rem;
+        }
       }
       .stats-many::after {
         content: " Reunions";
@@ -101,6 +110,9 @@
         }
         @media only screen and (max-width: 445px) {
           font-size: 2rem;
+        }
+        @media only screen and (max-width: 400px) {
+          font-size: 1.8rem;
         }
       }
     }
