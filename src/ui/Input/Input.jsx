@@ -18,6 +18,7 @@ function Input({
   password,
   defaultValue,
   size,
+  max,
 }) {
   const [showPassword, setShowPassword] = useState(false);
   const inputType = showPassword ? "text" : type;
@@ -51,6 +52,7 @@ function Input({
   return (
     <div className="input-container">
       <input
+        max={max}
         style={{
           width,
         }}

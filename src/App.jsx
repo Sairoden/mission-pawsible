@@ -148,7 +148,7 @@ function App() {
           success: { duration: 4000 },
           error: { duration: 5000 },
           style: {
-            fontSize: "3.5rem",
+            fontSize: "3rem",
             maxWidth: "500px",
             padding: "16px 18px",
             backgroundColor: "#fff",

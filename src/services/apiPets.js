@@ -1,5 +1,5 @@
 // Services
-import { supabase } from "./index";
+import { supabase, supabaseUrl, getCoordsForAddress } from "./index";
 
 export const getAllPets = async () => {
   const { data, error } = await supabase
@@ -81,6 +81,55 @@ export const getUserPets = async () => {
     console.error(error.message);
     throw new Error("User pets could not be loaded");
   }
+
+  return data;
+};
+
+export const createPet = async newPet => {
+  const newImages = [];
+  for (let image of newPet.images) {
+    let imageName = `${Math.random()}-${image.name}`.replaceAll("/", "");
+    let imagePath = `${supabaseUrl}/storage/v1/object/public/pet-images/${encodeURI(
+      imageName
+    )}`;
+
+    // 1. Upload image
+    const { error: storageError } = await supabase.storage
+      .from("pet-images")
+      .upload(imageName, image);
+
+    if (storageError)
+      throw new Error(
+        "Pet image could not be uploaded and the pet was not created"
+      );
+
+    newImages.push(imagePath);
+  }
+
+  // 2. Get latitude and longitude
+  const coordinates = await getCoordsForAddress(newPet.location);
+
+  newPet.location = coordinates.formattedAddress;
+
+  // 3. Get User ID
+  const { data: userData, error: userError } = await supabase.auth.getUser();
+
+  if (userError) throw new Error("User could not be loaded");
+
+  const { data, error } = await supabase
+    .from("pets")
+    .insert([
+      {
+        ...newPet,
+        images: newImages,
+        lat: coordinates.lat,
+        lng: coordinates.lng,
+        userId: userData.user.id,
+      },
+    ])
+    .select();
+
+  if (error) throw new Error("Pet could not be registered");
 
   return data;
 };

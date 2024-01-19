@@ -78,6 +78,7 @@ function Contact() {
               id="message"
               className="form-textarea"
               required={true}
+              register={register}
             />
             {/* button */}
             <div className="btns">

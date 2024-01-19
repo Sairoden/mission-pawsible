@@ -1,5 +1,5 @@
 // REACT & LIBRARIES
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 
 // STYLES
 import "./ReportPet.scss";
@@ -11,16 +11,70 @@ import {
   InputFile,
   InputTextArea,
   Button,
+  ErrorInput,
+  Spinner,
 } from "../../../ui";
 
+// UTILITIES
+import {
+  cats,
+  dogs,
+  sizes,
+  genders,
+  microchips,
+  petTypes,
+  inputFormat,
+} from "../../../utils";
+
+// HOOKS
+import { useCreatePet } from "../../../hooks";
+
 function ReportPet() {
+  const { createPet, isPending } = useCreatePet();
+
   // REACT-HOOK-FORM
   const {
-    register,
     formState: { errors },
+    register,
     handleSubmit,
-    getValues,
+    reset,
+    watch,
+    control,
   } = useForm();
+
+  const petTypeOptions = petTypes.map(petType => ({
+    value: petType,
+    label: petType,
+  }));
+  const catOptions = cats.map(cat => ({ value: cat, label: cat }));
+  const dogOptions = dogs.map(dog => ({ value: dog, label: dog }));
+  const sizeOptions = sizes.map(size => ({ value: size, label: size }));
+  const genderOptions = genders.map(gender => ({
+    value: gender,
+    label: gender,
+  }));
+  const microchipOptions = microchips.map(microchip => ({
+    value: microchip,
+    label: microchip,
+  }));
+
+  const today = new Date().toISOString().split("T")[0];
+
+  const selectedPetType = watch("petType");
+
+  const onSubmit = data => {
+    data.petName = inputFormat(data.petName);
+    data.color = inputFormat(data.color);
+    data.location = inputFormat(data.location);
+    data.description = inputFormat(data.description);
+    data.message = inputFormat(data.message);
+
+    createPet(data);
+  };
+
+  const handleReset = () => reset();
+
+  if (isPending) return <Spinner />;
 
   return (
     <div className="reportPet spacing-t spacing-b">
@@ -28,155 +82,311 @@ function ReportPet() {
         <div className="reportPet-header">
           <h2 className="reportPet-header-main">REPORT PET</h2>
         </div>
-        <form className= "reportPet-body" action="">
-            <div className="reportPet-body-left">
-              {/* pet name */}
-              <div className="reportPet-body-left-name">
 
-                <div className="reportPet-body-input">
-                  <label htmlFor="text" className="label"> Pet Name </label>
-                  <br />
-                  <Input id="name" register={register} />
-                </div>
-
-            </div>
-              {/* breed & type */}
-              <div className="reportPet-body-left-class">
-
+        <form className="reportPet-body" onSubmit={handleSubmit(onSubmit)}>
+          <div className="reportPet-body-left">
+            {/* pet name */}
+            <div className="reportPet-body-left-name">
               <div className="reportPet-body-input">
-                  <label htmlFor="text" className="label"> Pet Type </label>
-                  <br />
-                  <InputSelect id="name" register={register} />
-                </div>
-
-                <div className="reportPet-body-input">
-                  <label htmlFor="text" className="label"> Breed </label>
-                  <br />
-                  <Input id="name" register={register} />
-                </div>
-
-            </div>
-              {/* image */}
-              <div className="reportPet-body-left-image">
-
-                <div className="reportPet-body-input">
-                  <label htmlFor="text" className="label"> Upload an Image </label>
-                  <br />
-                  <div className="reportPet-body-fileUpload">
-                    <InputFile />
-                  </div>
-                </div>
-                
-              </div>
-              {/* status */}
-              <div className="reportPet-body-left-status">
-                <div className="reportPet-body-input">
-                  <label htmlFor="text" className="label"> Pet Status </label>
-                  <br />
-                  <div className="reportPet-body-left-radio">
-
-                    <div className="reportPet-body-radio-input">
-                      <input type="radio" />
-                      <label htmlFor="text" className="label"> Lost Pet </label>
-                    </div>
-
-                    <div className="reportPet-body-radio-input">
-                      <input type="radio" />
-                      <label htmlFor="text" className="label"> Found Pet </label>
-                    </div>
-
-                  </div>
-                </div>
-                
-
-              </div>
-              {/* color */}
-              <div className="reportPet-body-left-color">
-
-              <div className="reportPet-body-input">
-                  <label htmlFor="text" className="label"> Color </label>
-                  <br />
-                  <Input size="medium" id="name" register={register} />
-              </div>
-                
-              </div>
-              {/* other */}
-              <div className="reportPet-body-left-other">
-
-                  <div className="reportPet-body-input">
-                    <label htmlFor="text" className="label"> Size </label>
-                    <br />
-                    <InputSelect />
-                  </div>
-
-                  <div className="reportPet-body-input">
-                    <label htmlFor="text" className="label"> Gender </label>
-                    <br />
-                    <InputSelect />
-                  </div>
-
-              </div>
-          </div>
-
-          <div className="reportPet-body-right">
-              {/* micro & date */}
-            <div className="reportPet-body-right-other">
-              <div className="reportPet-body-input">
-                <label htmlFor="text" className="label"> Microchipped </label>
-                <br />
-                <InputSelect />
-              </div>
-              <div className="reportPet-body-input">
-                <label htmlFor="text" className="label"> Date last seen </label>
+                <label htmlFor="petName" className="label">
+                  Pet Name <ErrorInput>{errors?.petName?.message}</ErrorInput>
+                </label>
                 <br />
                 <Input
-                  type="date"
-                  id="name"
+                  id="petName"
+                  required="Please provide a pet name"
                   register={register}
                 />
               </div>
             </div>
-            {/* location */}
-            <div className="reportPet-body-right-location">
+
+            {/* breed & type */}
+            <div className="reportPet-body-left-class">
               <div className="reportPet-body-input">
-                <label htmlFor="text" className="label"> Location Last Seen (Please provide a detailed address) </label>
+                <label htmlFor="petType" className="label">
+                  Pet Type <ErrorInput>{errors?.petType?.message}</ErrorInput>
+                </label>
                 <br />
-                <Input id="name" register={register} size="medium" />
+                <Controller
+                  name="petType"
+                  disabled={isPending}
+                  control={control}
+                  rules={{ required: "Please select a pet type" }}
+                  render={({ field }) => (
+                    <InputSelect
+                      id="petType"
+                      options={[
+                        { value: "", label: "Select one" },
+                        ...petTypeOptions,
+                      ]}
+                      {...field}
+                    />
+                  )}
+                />
+              </div>
+
+              <div className="reportPet-body-input">
+                <label htmlFor="breed" className="label">
+                  Breed <ErrorInput>{errors?.breed?.message}</ErrorInput>
+                </label>
+                <br />
+                <Controller
+                  name="breed"
+                  disabled={isPending}
+                  control={control}
+                  rules={{ required: "Please select a breed" }}
+                  render={({ field }) => (
+                    <InputSelect
+                      id="breed"
+                      options={[
+                        { value: "", label: "Select one" },
+                        ...(selectedPetType === "Dog"
+                          ? dogOptions
+                          : catOptions), // Render dog options if "Pet Type" is Dog, otherwise cat options
+                      ]}
+                      {...field}
+                    />
+                  )}
+                />
               </div>
             </div>
-            {/* description */}
-            <div className="reportPet-body-right-desc">
+
+            {/* image */}
+            <div className="reportPet-body-left-image">
               <div className="reportPet-body-input">
-                <label htmlFor="text" className="label"> Description </label>
+                <label htmlFor="images" className="label">
+                  Upload an Image
+                  <ErrorInput>{errors?.images?.message}</ErrorInput>
+                </label>
                 <br />
-                <InputTextArea />
+                <div className="reportPet-body-fileUpload">
+                  <InputFile
+                    register={register}
+                    accept="image/*"
+                    multiple={true}
+                    required="Please provide an image"
+                    id="images"
+                    disabled={isPending}
+                  />
+                </div>
               </div>
             </div>
-            {/* message */}
-            <div className="reportPet-body-right-msg">
+
+            {/* status */}
+            <div className="reportPet-body-left-status">
               <div className="reportPet-body-input">
-                <label htmlFor="text" className="label"> Message </label>
+                <label htmlFor="status" className="label">
+                  Status <ErrorInput>{errors?.status?.message}</ErrorInput>
+                </label>
                 <br />
-                <InputTextArea />
+                <Controller
+                  name="status"
+                  control={control}
+                  rules={{ required: "Please select a pet status" }}
+                  render={({ field }) => (
+                    <InputSelect
+                      id="status"
+                      disabled={isPending}
+                      options={[
+                        { value: "", label: "Select one" },
+                        { value: "Lost", label: "Lost" },
+                        { value: "Found", label: "Found" },
+                      ]}
+                      {...field}
+                    />
+                  )}
+                />
+              </div>
+            </div>
+
+            {/* color */}
+            <div className="reportPet-body-left-color">
+              <div className="reportPet-body-input">
+                <label htmlFor="color" className="label">
+                  Color <ErrorInput>{errors?.color?.message}</ErrorInput>
+                </label>
+                <br />
+                <Input
+                  register={register}
+                  id="color"
+                  required="Please provide a color"
+                  disabled={isPending}
+                />
+              </div>
+            </div>
+
+            {/* sizer */}
+            <div className="reportPet-body-left-other">
+              <div className="reportPet-body-input">
+                <label htmlFor="size" className="label">
+                  Size <ErrorInput>{errors?.size?.message}</ErrorInput>
+                </label>
+                <br />
+                <Controller
+                  name="size"
+                  control={control}
+                  rules={{ required: "Please select a size" }}
+                  render={({ field }) => (
+                    <InputSelect
+                      id="size"
+                      disabled={isPending}
+                      options={[
+                        { value: "", label: "Select one" },
+                        ...sizeOptions,
+                      ]}
+                      {...field}
+                    />
+                  )}
+                />
+              </div>
+
+              {/* gender */}
+              <div className="reportPet-body-input">
+                <label htmlFor="gender" className="label">
+                  Gender <ErrorInput>{errors?.gender?.message}</ErrorInput>
+                </label>
+                <br />
+                <Controller
+                  name="gender"
+                  control={control}
+                  rules={{ required: "Please select a gender" }}
+                  render={({ field }) => (
+                    <InputSelect
+                      id="gender"
+                      disabled={isPending}
+                      options={[
+                        { value: "", label: "Select one" },
+                        ...genderOptions,
+                      ]}
+                      {...field}
+                    />
+                  )}
+                />
               </div>
             </div>
           </div>
-          {/* </div> */}
-        </form>
 
-        <div className="reportpet-footer-btn btns">
-            <Button type="cancel" variation="secondary" size="width">
+          <div className="reportPet-body-right">
+            {/* micro & date */}
+            <div className="reportPet-body-right-other">
+              <div className="reportPet-body-input">
+                <label htmlFor="microchipped" className="label">
+                  Microchipped
+                  <ErrorInput>{errors?.microchipped?.message}</ErrorInput>
+                </label>
+                <br />
+                <Controller
+                  name="microchipped"
+                  control={control}
+                  rules={{ required: "Please select a microchip" }}
+                  render={({ field }) => (
+                    <InputSelect
+                      id="microchipped"
+                      disabled={isPending}
+                      options={[
+                        { value: "", label: "Select one" },
+                        ...microchipOptions,
+                      ]}
+                      {...field}
+                    />
+                  )}
+                />
+              </div>
+
+              <div className="reportPet-body-input">
+                <label htmlFor="date" className="label">
+                  Date last seen
+                  <ErrorInput>{errors?.date?.message}</ErrorInput>
+                </label>
+                <br />
+                <Input
+                  disabled={isPending}
+                  type="date"
+                  register={register}
+                  id="date"
+                  required="This field is required"
+                  max={today}
+                />
+              </div>
+            </div>
+
+            {/* location */}
+            <div className="reportPet-body-right-location">
+              <div className="reportPet-body-input">
+                <label htmlFor="location" className="label">
+                  Location Last Seen (Please provide a detailed address)
+                  <ErrorInput>{errors?.location?.message}</ErrorInput>
+                </label>
+                <br />
+                <Input
+                  disabled={isPending}
+                  register={register}
+                  id="location"
+                  required="This field is required"
+                />
+              </div>
+            </div>
+
+            {/* description */}
+            <div className="reportPet-body-right-desc">
+              <div className="reportPet-body-input">
+                <label htmlFor="description" className="label">
+                  Description
+                  <ErrorInput>{errors?.description?.message}</ErrorInput>
+                </label>
+                <br />
+                <InputTextArea
+                  disabled={isPending}
+                  name="description"
+                  id="description"
+                  required="This field is required"
+                  register={register}
+                />
+              </div>
+            </div>
+
+            {/* message */}
+            <div className="reportPet-body-right-msg">
+              <div className="reportPet-body-input">
+                <label htmlFor="message" className="label">
+                  Message <ErrorInput>{errors?.message?.message}</ErrorInput>
+                </label>
+                <br />
+                <InputTextArea
+                  disabled={isPending}
+                  name="message"
+                  id="message"
+                  required="This field is required"
+                  register={register}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="reportpet-footer-btn btns">
+            <Button
+              disabled={isPending}
+              variation="secondary"
+              size="width"
+              onClick={handleReset}
+            >
               CANCEL
             </Button>
             <br />
-            <Button type="submit" variation="primary" icon={true} size="width">
+            <Button
+              disabled={isPending}
+              type="submit"
+              variation="primary"
+              icon={true}
+              size="width"
+            >
               SAVE & POST
             </Button>
-        </div>
+          </div>
+        </form>
       </div>
     </div>
-    
- );
+  );
 }
 
 export default ReportPet;

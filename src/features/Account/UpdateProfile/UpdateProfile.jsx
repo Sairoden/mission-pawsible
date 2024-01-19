@@ -66,7 +66,12 @@ function UpdateProfile() {
               </div>
 
               <div className="updateProfile-body-left-fileUpload">
-                <InputFile register={register} id="avatar" accept="image/*" />
+                <InputFile
+                  register={register}
+                  id="avatar"
+                  accept="image/*"
+                  disabled={isPending || isPending2}
+                />
               </div>
             </div>
 
@@ -81,6 +86,7 @@ function UpdateProfile() {
                     size="small"
                     register={register}
                     defaultValue={lastName}
+                    disabled={isPending || isPending2}
                   />
                   <br />
                   <label htmlFor="lastName" className="label">
@@ -97,6 +103,7 @@ function UpdateProfile() {
                     size="small"
                     register={register}
                     defaultValue={firstName}
+                    disabled={isPending || isPending2}
                   />
                   <br />
                   <label htmlFor="firstName" className="label">
@@ -114,6 +121,7 @@ function UpdateProfile() {
                     size="medium"
                     register={register}
                     defaultValue={address}
+                    disabled={isPending || isPending2}
                   />
                   <br />
                   <label htmlFor="address" className="label">
@@ -132,6 +140,7 @@ function UpdateProfile() {
                     size="medium"
                     register={register}
                     defaultValue={email}
+                    disabled={isPending || isPending2}
                   />
                   <br />
                   <label htmlFor="email" className="label">
@@ -148,6 +157,7 @@ function UpdateProfile() {
                     register={register}
                     required={false}
                     defaultValue={contactNumber}
+                    disabled={isPending || isPending2}
                   />
                   <br />
                   <label htmlFor="contactNumber" className="label">
@@ -165,6 +175,7 @@ function UpdateProfile() {
                     size="small"
                     register={register}
                     required={false}
+                    disabled={isPending || isPending2}
                   />
                   <br />
                   <label htmlFor="password" className="label">
@@ -180,6 +191,7 @@ function UpdateProfile() {
                   icon={true}
                   type="submit"
                   size="width"
+                  disabled={isPending || isPending2}
                 >
                   SAVE
                 </Button>

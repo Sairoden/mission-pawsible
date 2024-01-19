@@ -9,6 +9,7 @@ import {
   getReunitedPets,
   getSinglePet,
   getUserPets,
+  createPet,
 } from "./apiPets";
 
 // AUTH
@@ -35,6 +36,9 @@ import {
   getChatConnection,
 } from "./apiChats";
 
+// LOCATIONS
+import { getCoordsForAddress } from "./apiLocation";
+
 export {
   // SUPABASE
   supabaseUrl,
@@ -47,6 +51,7 @@ export {
   getReunitedPets,
   getSinglePet,
   getUserPets,
+  createPet,
 
   // AUTH
   loginWithGoogle,
@@ -67,4 +72,7 @@ export {
   getChatMembers,
   getChatConnection,
   createChatConnection,
+
+  // LOCATIONS
+  getCoordsForAddress,
 };

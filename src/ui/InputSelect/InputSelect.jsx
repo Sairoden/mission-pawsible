@@ -1,13 +1,31 @@
 // STYLES
 import "./InputSelect.scss";
 
-function InputSelect({ name, id }) {
+function InputSelect({
+  id,
+  required = false,
+  disabled = false,
+  onChange,
+  options,
+  value,
+  ...props
+}) {
   return (
-    <select name={name} id={id} className="input-select">
-      <option value="volvo">Volvo</option>
-      <option value="saab">Saab</option>
-      <option value="mercedes">Mercedes</option>
-      <option value="audi">Audi</option>
+    <select
+      {...props}
+      name={id}
+      id={id}
+      className="input-select"
+      value={value}
+      onChange={onChange}
+      required={required}
+      disabled={disabled}
+    >
+      {options.map(option => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      ))}
     </select>
   );
 }
