@@ -15,8 +15,12 @@
       font-size: 4rem;
     }
 
-    @media only screen and (max-width: 375px) {
-      font-size: 3.5rem;
+    @media only screen and (max-width: 410px) {
+      font-size: 3rem;
+    }
+
+    @media only screen and (max-width: 340px) {
+      font-size: 2rem;
     }
   }
 
