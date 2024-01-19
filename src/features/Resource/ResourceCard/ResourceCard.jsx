@@ -21,7 +21,7 @@ function ResourceCard({ index, title, author, description, date, image }) {
           duration: 1.5,
         },
       }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
       className="resources-body-card"
     >
       <div className="resources-body-card-image">
@@ -36,6 +36,7 @@ function ResourceCard({ index, title, author, description, date, image }) {
           }
           alt="resourcesImage"
           className="resources-body-card-image-content"
+          loading="lazy"
         />
       </div>
       <div className="resources-body-card-info">
@@ -46,7 +47,9 @@ function ResourceCard({ index, title, author, description, date, image }) {
           <h4 className="resources-body-card-info-body-author">
             {author ? author : "No Author"}
           </h4>
-          <h4 className="resources-body-card-info-body-date">{formatFullDate(date)}</h4>
+          <h4 className="resources-body-card-info-body-date">
+            {formatFullDate(date)}
+          </h4>
           <p className="resources-body-card-info-body-text">{description}</p>
         </div>
       </div>
