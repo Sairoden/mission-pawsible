@@ -1,3 +1,4 @@
+// STYLES
 import "./PageNotFound.scss";
 
 function PageNotFound() {

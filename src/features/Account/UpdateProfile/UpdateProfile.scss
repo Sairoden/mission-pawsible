@@ -1,6 +1,6 @@
 @import "../../../variables";
 
-.updateProfile{
+.updateProfile {
   .container {
     background-color: $color-white;
     border-radius: $radius;
@@ -9,22 +9,16 @@
     @media screen and (min-width: 768px) {
       padding: 3%;
     }
-    // @media screen and (min-width: 992px) {
-    //   padding: 3rem;
-    // }
   }
   .divider {
-    // display: none;
-
-      width: 90%;
-      margin:  2% auto;
-      opacity: .5;
+    width: 90%;
+    margin: 2% auto;
+    opacity: 0.5;
 
     @media screen and (min-width: 900px) {
       display: block;
-      // height: 90%;
       width: auto;
-      margin:  2.5% auto;
+      margin: 2.5% auto;
     }
   }
   &-body {
@@ -39,25 +33,24 @@
       margin: auto;
 
       @media screen and (min-width: 900px) {
-        // min-width: 15rem;
         max-width: 40%;
       }
       &-image {
         display: flex;
         justify-content: center;
-  
-        &-content{
+
+        &-content {
           width: 50%;
           aspect-ratio: 1/1;
           object-fit: cover;
           border-radius: 50%;
-  
+
           @media screen and (min-width: 1200px) {
             width: 35%;
           }
         }
       }
-  
+
       &-fileUpload {
         width: 100%;
         margin: 2.5rem 0;
@@ -74,10 +67,8 @@
       width: 100%;
       @media screen and (min-width: 900px) {
         width: 55%;
-        // margin-top: 3rem;
       }
       &-form {
-  
         @media screen and (min-width: 425px) {
           &-name,
           &-contact {
@@ -89,14 +80,12 @@
             width: 49%;
           }
         }
-  
+
         &-input {
           display: flex;
           flex-direction: column-reverse;
         }
       }
-  
     }
   }
-  
 }

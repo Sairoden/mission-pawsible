@@ -1,5 +1,6 @@
 @import "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css";
 @import "../../variables";
+
 .mapContainer {
   height: 70vh;
   @media only screen and (max-width: 900px) {

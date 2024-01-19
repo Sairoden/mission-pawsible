@@ -1,6 +1,6 @@
 @import "../../../variables";
 
-.reportPet{
+.reportPet {
   .container {
     background-color: $color-white;
     border-radius: $radius;
@@ -9,9 +9,6 @@
     @media screen and (min-width: 768px) {
       padding: 3%;
     }
-    // @media screen and (min-width: 992px) {
-    //   padding: 3rem;
-    // }
   }
 
   &-header {
@@ -35,23 +32,22 @@
     }
     &-left-class .reportPet-body-input,
     &-left-other .reportPet-body-input,
-    &-right-other .reportPet-body-input{
+    &-right-other .reportPet-body-input {
       @media screen and (min-width: 425px) {
         width: 49%;
       }
     }
     &-left {
       width: 100%;
-      
+
       @media screen and (min-width: 992px) {
         width: 48%;
       }
-      
+
       &-radio {
         display: flex;
         justify-content: space-evenly;
       }
-      
     }
 
     &-right {
@@ -70,7 +66,7 @@
     }
 
     &-fileUpload {
-      margin: 0 1rem ;
+      margin: 0 1rem;
     }
   }
   .btns {

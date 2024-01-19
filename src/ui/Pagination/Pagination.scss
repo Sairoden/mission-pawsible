@@ -1,21 +1,19 @@
 @import "../../variables";
 
 .pagination {
-  // margin: 5.5rem 0;
-
   .rc-pagination {
     text-align: center;
 
-    .rc-pagination-item, 
+    .rc-pagination-item,
     .rc-pagination-item a,
     .rc-pagination-item-link {
       font: 700 1.8rem $font;
       color: $color-blue !important;
-      
+
       @media screen and (min-width: 1200px) {
         font-size: 2.2rem !important;
       }
-    
+
       @media screen and (max-width: 767px) {
         font-size: 1.6rem !important;
       }
@@ -25,16 +23,16 @@
       width: 3rem;
       border: none;
       background: none;
-      
+
       a:hover {
         color: $color-orange !important;
       }
     }
-  
+
     .rc-pagination-item-active {
       background: $color-orange !important;
       border-radius: 8px !important;
-      // color: #fdfdfd !important;
+      padding-top: 0.1px;
       color: red !important;
 
       &:hover {
@@ -45,11 +43,11 @@
         color: #fdfdfd !important;
       }
     }
-  
+
     .rc-pagination-prev {
       margin-right: 1rem;
     }
-    
+
     .rc-pagination-next {
       margin-left: 1rem;
     }
@@ -60,9 +58,8 @@
       height: 2.4rem;
       color: $color-blue;
     }
-  
-  
-    .rc-pagination-item-link {  
+
+    .rc-pagination-item-link {
       display: flex;
       justify-content: center;
       &::after {
@@ -70,5 +67,4 @@
       }
     }
   }
-  
 }

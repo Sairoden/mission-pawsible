@@ -2,72 +2,68 @@
 @import "../../../variables";
 
 .resources-body-card {
-    margin: 2rem 1rem;
-    padding: 2rem;
-    background-color: $color-white;
+  margin: 2rem 1rem;
+  padding: 2rem;
+  background-color: $color-white;
+  border-radius: $radius;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+
+  &-image {
+    width: 100%;
     border-radius: $radius;
-    // display: flex;
 
-    @media screen and (min-width: 768px) { 
-        display: flex;
+    @media screen and (min-width: 768px) {
+      width: 50%;
+      display: flex;
+      align-items: center;
+    }
+    @media screen and (min-width: 992px) {
+      width: 40%;
     }
 
-    &-image {
-        width: 100%;
-        border-radius: $radius;
+    &-content {
+      width: 100%;
+      aspect-ratio: 2/1;
+      object-fit: fill;
+      border-radius: $radius;
 
-        @media screen and (min-width: 768px) { 
-            width: 50%;
-            display: flex;
-            align-items: center;
-            
-        }
-        @media screen and (min-width: 992px) { 
-            width: 40%;
-        }
+      @media screen and (min-width: 768px) {
+        aspect-ratio: 3/2;
+      }
 
-        &-content {
-            width: 100%;
-            aspect-ratio: 2/1;
-            object-fit:fill;
-            border-radius: $radius;
+      @media screen and (min-width: 992px) {
+        aspect-ratio: 2/1;
+      }
+    }
+  }
 
-            @media screen and (min-width: 768px) { 
-               aspect-ratio: 3/2;
-                
-            }
+  &-info {
+    margin-top: 1rem;
 
-            @media screen and (min-width: 992px) { 
-                aspect-ratio: 2/1;
-            }
-        }
+    @media screen and (min-width: 768px) {
+      height: 100%;
+      width: 60%;
+      margin-top: 0;
+      padding-left: 2rem;
+    }
+    @media screen and (min-width: 992px) {
+      margin-top: 1rem;
     }
 
-    &-info {
-        margin-top: 1rem;
-
-        @media screen and (min-width: 768px) { 
-            height: 100%;
-            width: 60%;
-            margin-top: 0;
-            padding-left: 2rem;
-        }
-        @media screen and (min-width: 992px) { 
-            margin-top: 1rem;
-        }
-
-        &-header {
-            color: $color-blue;
-        }
-        &-body {
-            & > * {
-                margin-top: .5rem;
-            }
-
-            &-author {
-                color: $color-orange;
-            }
-        }
+    &-header {
+      color: $color-blue;
     }
+    &-body {
+      & > * {
+        margin-top: 0.5rem;
+      }
 
+      &-author {
+        color: $color-orange;
+      }
+    }
+  }
 }

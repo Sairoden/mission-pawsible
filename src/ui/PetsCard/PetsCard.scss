@@ -3,7 +3,6 @@
 .pet-card {
   min-height: 29.5rem;
   width: calc(100% - 1rem);
-  // width: calc(50% - 2rem);
   aspect-ratio: 1/1.5;
   margin: 1rem;
   background-color: $color-white;
@@ -35,10 +34,10 @@
   .image {
     height: 60%;
     width: 100%;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: $radius;
     overflow: hidden;
-    
+
     img {
       width: 100%;
       height: 100%;
@@ -58,43 +57,16 @@
 
     .header .main {
       text-align: center;
-
-      // @media screen and (min-width: 425px) {
-      //   font-size: 1.6rem;
-      // }
-
-      // @media screen and (min-width: 768px) {
-      //   font-size: 1.8rem;
-      // }
-
-      // @media screen and (min-width: 1440px) {
-      //   font-size: 2.2rem;
-      // }
     }
     .body {
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-
-      h5 {
-
-        // @media screen and (min-width: 425px) {
-        //   font-size: 1.4rem;
-        // }
-
-        // @media screen and (min-width: 519px) {
-        //   font-size: 1.6rem;
-        // }
-
-        // @media screen and (min-width: 1440px) {
-        //   font-size: 2rem;
-        // }
-      }
     }
     .btns {
-      margin-top: .5rem !important;
+      margin-top: 0.5rem !important;
     }
   }
 }

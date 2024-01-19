@@ -3,7 +3,7 @@
 .pet-filter {
   width: 100%;
   position: relative;
-  
+
   @media screen and (min-width: 768px) {
     width: 25%;
   }
@@ -25,9 +25,9 @@
       display: none;
     }
 
-    &:checked ~ .body {    
+    &:checked ~ .body {
       margin: auto;
-      margin: 2rem 0;   
+      margin: 2rem 0;
       width: 100%;
       display: flex;
       flex-wrap: wrap;
@@ -36,30 +36,29 @@
       @media screen and (min-width: 768px) {
         margin: 0;
       }
-    } 
+    }
   }
 
   .header {
     width: 100%;
     padding-right: 2rem;
     display: flex;
-    justify-content: flex-end;  
+    justify-content: flex-end;
 
     @media screen and (min-width: 768px) {
       padding-right: 0;
-      justify-content: flex-start;  
+      justify-content: flex-start;
     }
 
     .click {
-        padding: .5rem;
-        border: .2rem solid $color-brown;
+      padding: 0.5rem;
+      border: 0.2rem solid $color-brown;
 
-        @media screen and (min-width: 768px) {
-          padding: 0;
-          border: none;
-        }
+      @media screen and (min-width: 768px) {
+        padding: 0;
+        border: none;
       }
-    
+    }
   }
 
   .body {
@@ -76,8 +75,7 @@
 
     & > :not(:last-child) {
       @media screen and (min-width: 768px) {
-        border-bottom: .2rem solid $color-brown;
-
+        border-bottom: 0.2rem solid $color-brown;
       }
     }
 
@@ -85,22 +83,22 @@
     .gender *,
     .size *,
     .location * {
-        padding-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
 
-        @media screen and (min-width: 768px) {
-          padding-bottom: .7rem;
-        }
+      @media screen and (min-width: 768px) {
+        padding-bottom: 0.7rem;
+      }
 
-        @media screen and (min-width: 1440px) {
-          padding-bottom: 1.3rem;
-        }
+      @media screen and (min-width: 1440px) {
+        padding-bottom: 1.3rem;
+      }
     }
 
     .main {
       text-transform: capitalize;
       font-weight: 600;
-      font-size:  1.8rem;
-    
+      font-size: 1.8rem;
+
       @media screen and (min-width: 768px) {
         font-size: 2rem;
       }
@@ -111,7 +109,7 @@
     }
 
     input.checkbox {
-      margin: 0 .25rem;
+      margin: 0 0.25rem;
       width: 2rem;
       cursor: pointer;
     }
@@ -121,5 +119,4 @@
       text-transform: capitalize;
     }
   }
-
 }

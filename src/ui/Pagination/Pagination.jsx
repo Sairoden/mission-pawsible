@@ -1,4 +1,4 @@
-// REACT * LIBRARIES
+// REACT & LIBRARIES
 import { useSearchParams } from "react-router-dom";
 
 // STYLES
