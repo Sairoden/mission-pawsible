@@ -88,7 +88,6 @@ function ChatMessage() {
           const otherMembers = otherMemberIds.map(id => members[id]);
 
           if (otherMembers[0]?.user?.online === false) {
-            toast("New message");
             newMessageNotification(otherMembers[0]?.user?.id);
           }
         });
