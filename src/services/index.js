@@ -34,6 +34,7 @@ import {
   createChatConnection,
   getChatMembers,
   getChatConnection,
+  newMessageNotification,
 } from "./apiChats";
 
 // LOCATIONS
@@ -72,6 +73,7 @@ export {
   getChatMembers,
   getChatConnection,
   createChatConnection,
+  newMessageNotification,
 
   // LOCATIONS
   getCoordsForAddress,

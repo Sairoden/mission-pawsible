@@ -25,12 +25,16 @@ import { Spinner } from "../../ui";
 // CONTEXTS
 import { useChatContext } from "../../contexts";
 
+// HOOKS
+import { useNewMessageNotification } from "../../hooks";
+
 const apiKey = import.meta.env.VITE_STREAM_KEY;
 
 function ChatMessage() {
   const [client, setClient] = useState(null);
   const [channel, setChannel] = useState(null);
   const { chatConnection, setConnected } = useChatContext();
+  const { newMessageNotification } = useNewMessageNotification();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -76,6 +80,18 @@ function ChatMessage() {
 
         setChannel(channel);
         setClient(chatClient);
+
+        channel.on("message.new", event => {
+          const members = channel?.state?.members;
+          const memberIds = Object.keys(members);
+          const otherMemberIds = memberIds.filter(id => id !== event?.user?.id);
+          const otherMembers = otherMemberIds.map(id => members[id]);
+
+          if (otherMembers[0]?.user?.online === false) {
+            toast("New message");
+            newMessageNotification(otherMembers[0]?.user?.id);
+          }
+        });
       } catch (err) {
         if (err) {
           console.log(err);

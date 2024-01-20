@@ -1,3 +1,6 @@
+// REACT & LIBRARIES
+import axios from "axios";
+
 // SERVICES
 import { supabase } from "./supabase";
 
@@ -101,7 +104,6 @@ export const createChatConnection = async petId => {
 
   if (chatConnection[0]) return chatData;
 
-
   // // IF NO CONNECTIONS - CREATE ONE
   const { data: chatConnection2, error: error5 } = await supabase
     .from("chats")
@@ -139,4 +141,17 @@ export const createChatConnection = async petId => {
   };
 
   return chatData2;
+};
+
+export const newMessageNotification = async id => {
+  const { data, error } = await supabase.from("users").select("*").eq("id", id);
+
+  if (error) throw new Error("User could not be loaded");
+
+  await axios.post(
+    `https://mission-pawsible-backend.onrender.com/api/v1/chat`,
+    {
+      email: data[0].email,
+    }
+  );
 };

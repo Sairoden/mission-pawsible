@@ -24,6 +24,7 @@ import { useGetResources } from "./resources/useGetResources";
 import { useCreateChatConnection } from "./chats/useCreateChatConnection";
 import { useGetChatMembers } from "./chats/useGetChatMembers";
 import { useGetChatConnection } from "./chats/useGetChatConnection";
+import { useNewMessageNotification } from "./chats/useNewMessageNotification";
 
 export {
   // AUTH
@@ -52,4 +53,5 @@ export {
   useGetChatMembers,
   useCreateChatConnection,
   useGetChatConnection,
+  useNewMessageNotification,
 };
