@@ -99,16 +99,7 @@ p {
   }
 }
 
-.title {
-  margin-bottom: 2.5rem;
-  text-align: center;
-}
-
-.form-content {
-  display: flex;
-  flex-direction: column;
-}
-
+// start custom font sizes
 .label {
   margin-top: 1rem;
   font-weight: 600;
@@ -142,12 +133,27 @@ p {
     font-size: 1.2rem;
   }
 }
+// end custom font sizes
+
+// start custom container sizes
 .container {
   width: 95vw;
   margin: auto;
   @media (min-width: 1440px) {
     width: 90vw;
   }
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+// end custom container sizes
+
+// start custom spacing
+.title {
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .spacing-t {
@@ -158,11 +164,26 @@ p {
   padding-bottom: 5rem;
 }
 
-.card {
-  padding: 1rem 2rem;
-  border-radius: 1.5rem;
+.margin-t {
+  @media screen and (min-width: 425px) {
+    margin-top: 2.5rem;
+  }
+  @media screen and (min-width: 768px) {
+    margin-top: 5rem;
+  }
 }
 
+.margin-b {
+  @media screen and (min-width: 425px) {
+    margin-bottom: 2.5rem;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 5rem;
+  }
+}
+// end custom spacing
+
+// other
 .no-data {
   width: 100%;
   padding-top: 5rem;
