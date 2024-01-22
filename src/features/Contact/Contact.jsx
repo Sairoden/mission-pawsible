@@ -15,7 +15,7 @@ function Contact() {
   const { register } = useForm();
 
   return (
-    <div className="contact container spacing-t spacing-b">
+    <div className="contact container spacing-t spacing-b margin-b">
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}

@@ -62,7 +62,8 @@ function LoginForm() {
   if (isPending || isPending2) return <Spinner />;
 
   return (
-    <div className="login container spacing-t spacing-b">
+    <div className="login container spacing-t spacing-b margin-b">
+      {/* image container */}
       <div className="login-img">
         <motion.img
           src={loginBanner}
@@ -74,13 +75,15 @@ function LoginForm() {
           transition={{ duration: 3 }}
         />
       </div>
+      {/* title container */}
       <div className="title">
         <h2>Welcome back to our growing family!</h2>
       </div>
-
+      {/* body container */}
       <div className="login-body">
+        {/* form */}
         <form className="login-body-form" onSubmit={handleSubmit(handleLogin)}>
-          {/* email */}
+          {/* email input*/}
           <label htmlFor="email" className="label">
             Email <ErrorInput>{errors?.email?.message}</ErrorInput>
           </label>
@@ -93,7 +96,7 @@ function LoginForm() {
             disabled={isPending || isPending2}
           />
           <br />
-          {/* password */}
+          {/* password input*/}
           <label htmlFor="password" className="label">
             Password <ErrorInput>{errors?.password?.message}</ErrorInput>
           </label>
@@ -106,8 +109,9 @@ function LoginForm() {
             disabled={isPending || isPending2}
           />
           <br />
-          {/* forgot password */}
+          {/* forgot password container*/}
           <div className="login-body-form-forget">
+            {/* forget password button */}
             <button
               type="button"
               className="login-body-form-forget-button"
@@ -115,7 +119,7 @@ function LoginForm() {
             >
               <h6 className="label">Forget Password?</h6>
             </button>
-            {/* forgot email */}
+            {/* forgot email button*/}
             <button
               type="button"
               className="login-body-form-forget-button"
@@ -125,19 +129,23 @@ function LoginForm() {
             </button>
           </div>
           <br />
+          {/* login button container */}
           <div className="login-body-form-login">
+            {/* login via google button */}
             <button
               type="button"
-              className="login-body-form-google-button button other"
+              className="login-body-form-google-button button other button-width"
               disabled={isPending || isPending2}
               onClick={handleGoogleLogin}
             >
               Sign in with Google 
               <FcGoogle className="login-body-form-google-logo" />
             </button>
-
+            <br />
+            {/* login via user */}
             <Button
               variation="primary"
+              size="width"
               icon={true}
               type="submit"
               disabled={isPending || isPending2}
@@ -148,17 +156,16 @@ function LoginForm() {
         </form>
       </div>
       <br />
+      {/* signup link container */}
       <div className="login-body-signup">
-        
+        {/* signup text */}
           <h4 className="login-body-signup-text">
             Don't have an account?{" "}
             <Link to="/signup" onClick={() => scrollTo(0, 0)}>
             <span className="login-body-signup-text-span">Sign up</span>
             </Link>
           </h4>
-        
       </div>
-      
     </div>
   );
 }
