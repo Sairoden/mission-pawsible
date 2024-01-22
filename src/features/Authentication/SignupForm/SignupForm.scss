@@ -1,128 +1,94 @@
 @import "../../../variables";
 
-.signup-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding-bottom: 10rem;
-
-  .signup-banner {
-    width: 20%;
-    height: 20%;
-    object-fit: contain;
-  }
-
-  .signup-title {
-    color: $color-brown;
-    font-size: 4.8rem;
-    font-weight: 600;
-    word-wrap: break-word;
-    margin-top: 3rem;
-  }
-
-  .signup-form {
-    margin-top: 5rem;
-
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      align-items: center;
-      column-gap: 9rem;
-
-      .grid-item:nth-child(5) {
-        grid-column: span 2;
-      }
-    }
-
-    .signup-label {
-      color: $color-brown;
-      font-size: 1.8rem;
-      font-weight: 600;
-      word-wrap: break-word;
-      margin-top: 3rem;
-      margin-left: 1rem;
-      display: block;
-    }
-  }
-
-  .signup-buttons-container {
+.signUp {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  
+  &-img {
+    width: 100%;
+    margin: auto;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 10rem;
-    margin-top: 8rem;
-
-    .signup-google {
-      position: relative;
-      color: $color-orange;
-      font-size: 1.8rem;
-      font-weight: 600;
-      word-wrap: break-word;
-      padding: 1.6rem 3.2rem;
-      background: $color-white;
-      border-radius: 999px;
-      overflow: hidden;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      display: inline-flex;
-      cursor: pointer;
-      border: none;
-      transition: all 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-
-      &:before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 0;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.1);
-        border-radius: 999px;
-        transition: width 0.3s ease;
-        z-index: -1;
+    
+    &-content {
+      object-fit: cover;
+      width: 80%;
+      @media screen and (min-width: 425px) {
+        width: 50%;
+        min-width: 30.3rem;
       }
-
-      &-icon {
-        height: 2.8rem;
-        width: 2.8rem;
-        transition: transform 0.3s ease;
-      }
-
-      &:hover {
-        background: $color-orange;
-        color: $color-white;
-
-        &:before {
-          width: 100%;
-        }
-
-        &-icon {
-          transform: scale(1.2);
-        }
-      }
-
-      &:active {
-        transform: scale(0.95);
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+      
+      @media screen and (min-width: 768px) {
+        width: 30%;
       }
     }
   }
+  .title {
+    margin-top: 2.5rem;
+    margin-left: auto;
+    margin-right: auto;
 
-  .login-link {
-    color: $color-brown;
-    font-size: 1.8rem;
-    font-weight: 400;
-    word-wrap: break-word;
-    padding-top: 8rem;
+    @media screen and (min-width: 768px) {
+      width: 90%;
+    }
+  }
+  &-body {
 
-    &-bold {
-      color: $color-brown;
-      font-size: 1.8rem;
-      font-weight: 700;
-      word-wrap: break-word;
+    @media screen and (min-width: 768px) {
+      margin: auto;
+      width: 90%;
+    }
+    &-form {
+
+      @media screen and (min-width: 425px) {
+        &-name,
+        &-contact {
+          display: flex;
+          justify-content: space-between;
+        }
+        &-name .signUp-body-form-input,
+        &-contact .signUp-body-form-input {
+          width: 49%;
+        }
+      }
+
+      &-input {
+        display: flex;
+        flex-direction: column;
+      }
+      
+      // login button
+      &-signup {
+        margin-top: 2.5rem;
+        display: flex;
+        // justify-content: space-between;
+        flex-direction: column;
+
+        @media screen and (min-width: 425px) {
+          flex-direction: row;
+          justify-content: space-around;
+        }
+    
+      }
+      // google logo
+      &-google-logo {
+        padding-left: .3rem;
+        transform: scale(3);
+      }
+    }
+    // login
+    &-login {
+      margin-top: 2.5rem;
+      text-align: center;
+
+      &-text {
+        font-weight: 400;
+        &-span {
+          font-size: inherit;
+          font-weight: 600;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
