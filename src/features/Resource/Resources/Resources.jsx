@@ -37,11 +37,11 @@ function Resources() {
   return (
     <div className="resources spacing-t">
       <div className="container">
-      <div className="resources_header">
-        <h2 className="title">Resources</h2>
+      <div className="resources-header title">
+        <h2>Resources</h2>
       </div>
 
-      <div className="resources_body">
+      <div className="resources-body">
         {newResources.length > 0 ? (
           newResources?.map(resource => (
             <a
