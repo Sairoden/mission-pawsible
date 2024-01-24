@@ -14,7 +14,7 @@ export const useSignup = () => {
   const { mutate: signup, isPending } = useMutation({
     mutationFn: signupApi,
     onSuccess: () => {
-      toast.success("Check your email for verification");
+      toast.success("Check your email for confirmation");
       navigate("/login");
     },
     onError: err => toast.error(err.message),

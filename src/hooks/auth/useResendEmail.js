@@ -8,13 +8,13 @@ import toast from "react-hot-toast";
 import { resendEmailConfirmation } from "../../services";
 
 export const useResendEmail = () => {
-  const { mutate: resendEmail } = useMutation({
+  const { mutate: resendEmail, isPending } = useMutation({
     mutationFn: resendEmailConfirmation,
     onSuccess: () => {
-      toast.success("Check your new email confirmation.");
+      toast.success("Check your new email confirmation");
     },
     onError: err => toast.error(err.message),
   });
 
-  return { resendEmail };
+  return { resendEmail, isPending };
 };

@@ -131,6 +131,17 @@ export const resendEmailConfirmation = async email => {
   return data;
 };
 
+export const forgotPassword = async email => {
+  const { error } = await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: "https://mission-pawsible.netlify.app/account/update",
+  });
+
+  if (error) {
+    console.error(error.message);
+    throw new Error("Failed to send reset password email");
+  }
+};
+
 export const updateProfile = async ({
   firstName,
   lastName,

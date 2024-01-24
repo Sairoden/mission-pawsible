@@ -21,6 +21,7 @@ import {
   signup,
   resendEmailConfirmation,
   updateProfile,
+  forgotPassword,
 } from "./apiAuth";
 
 // RESOURCES
@@ -62,6 +63,7 @@ export {
   signup,
   resendEmailConfirmation,
   updateProfile,
+  forgotPassword,
 
   // RESOURCES
   getAllResources,

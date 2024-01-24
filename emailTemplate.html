@@ -6,9 +6,9 @@
     <title>Document</title>
   </head>
   <body>
-    <div style="text-align: center;">
+    <div style="text-align: center">
       <h2 style="color: #ff902a">Confirm your signup</h2>
-    
+
       <a href="{{ .SiteURL }}">
         <img
           src="https://i.ibb.co/3cqMjVM/logo-mission.png"
@@ -17,31 +17,45 @@
           width="155px"
         />
       </a>
-    
-      <h1 style="color: #003459"
-          >Thank you for signing up to <br />
-          &nbsp;"Mission Pawsible"</span
-        >
+
+      <h1 style="color: #003459">
+        Thank you for signing up to <br />
+        &nbsp;
+
+         <span style="font-weight: bold">"<span style="color: #ff902a">Mission</span>
+         <span style="color: #003459">Pawsible</span>"
       </h1>
+      
       <p style="font-size: 18px; color: #2f2105">
         The Lost and Found platform for pets. We're thrilled to have you on
         board! To complete your registration, please click the link below to
         confirm your email address
       </p>
-    
-      <button style="background:#ff902a; padding: 24px; border-radius: 2px;"><a style="font-size: 16px; font-weight: bold; color: white;" href="{{ .ConfirmationURL }}">Confirm your mail</a></button>
+
+      <button style="background: #ff902a; padding: 24px; border-radius: 2px">
+        <a
+          style="font-size: 16px; font-weight: bold; color: white"
+          href="{{ .ConfirmationURL }}"
+          >Confirm your mail</a
+        >
+      </button>
       <p style="font-size: 18px; color: #2f2105">
         Once confirmed, you'll gain access to our community and be able to post
         for lost or found pets in your area. We're looking forward to helping
         reunite lost pets with their families and we're glad to have you as part
         of our mission.
       </p>
-    
+
       <p style="font-size: 18px; color: #2f2105">
         Thank you, <br />
-        The "Mission Pawsible" Team
+        The 
+        <span style="font-weight: bold"
+        >"<span style="color: #ff902a">Mission</span>
+        <span style="color: #003459">Pawsible</span>"</span
+      >
+       Team
       </p>
-    
+
       <a href="https://www.facebook.com/ciitphilippines/">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Facebook_Logo_%282019%29.png/1024px-Facebook_Logo_%282019%29.png"
@@ -66,8 +80,13 @@
           width="32px"
         />
       </a>
-    
-      <h4>Need help? <a href="https://mission-pawsible.netlify.app/contact-us">Contact us here.</a></h4>
+
+      <h4>
+        Need help?
+        <a href="https://mission-pawsible.netlify.app/contact-us"
+          >Contact us here.</a
+        >
+      </h4>
     </div>
   </body>
 </html>
