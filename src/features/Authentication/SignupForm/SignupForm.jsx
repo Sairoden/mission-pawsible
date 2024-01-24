@@ -195,12 +195,12 @@ function SignupForm() {
             {/* login via google button */}
             <button
               type="button"
-              className="signUp-body-form-google-button button other button-width"
+              className="signUp-body-form-google-button button other-button button-width"
               disabled={isPending || isPending2}
               onClick={handleGoogleLogin}
             >
               Sign up with Google 
-              <FcGoogle className="signUp-body-form-google-logo" />
+              <FcGoogle className="signUp-body-form-google-logo google-icon" />
             </button>
             <br />
             {/* sign up via user */}

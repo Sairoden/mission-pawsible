@@ -134,12 +134,12 @@ function LoginForm() {
             {/* login via google button */}
             <button
               type="button"
-              className="login-body-form-google-button button other button-width"
+              className="login-body-form-google-button button other-button button-width"
               disabled={isPending || isPending2}
               onClick={handleGoogleLogin}
             >
               Sign in with Google 
-              <FcGoogle className="login-body-form-google-logo" />
+              <FcGoogle className="login-body-form-google-logo google-icon" />
             </button>
             <br />
             {/* login via user */}

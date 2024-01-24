@@ -26,20 +26,23 @@
   }
 }
 
-.other {
+.other-button {
   background: $color-white;
   color: $color-orange !important;
   font-weight: 600 !important;
 
   &:hover {
     background: darken($color-orange, 10%);
-    &:before {
-      width: 100%;
-    }
+    color: $color-white !important;
 
-    .button-icon {
-      transform: scale(1.2);
+    .google-icon {
+      transform: scale(5);
     }
+  }
+  
+  .google-icon {
+    padding-left: .4rem;
+    transform: scale(4);
   }
 }
 
