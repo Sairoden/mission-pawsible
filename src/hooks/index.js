@@ -7,6 +7,7 @@ import { useSignup } from "./auth/useSignup";
 import { useResendEmail } from "./auth/useResendEmail";
 import { useGetUserToken } from "./auth/useGetUserToken";
 import { useUpdateProfile } from "./auth/useUpdateProfile";
+import { useForgotPassword } from "./auth/useForgotPassword";
 
 // PETS
 import { useGetAllPets } from "./pets/useGetAllPets";
@@ -36,6 +37,7 @@ export {
   useResendEmail,
   useGetUserToken,
   useUpdateProfile,
+  useForgotPassword,
 
   // PETS
   useGetAllPets,
