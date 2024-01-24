@@ -4,7 +4,8 @@ import { supabase, supabaseUrl, getCoordsForAddress } from "./index";
 export const getAllPets = async () => {
   const { data, error } = await supabase
     .from("pets")
-    .select("*, users(firstName, lastName)");
+    .select("*, users(firstName, lastName)")
+    .eq("isVerified", true);
 
   if (error) {
     console.error(error.message);
@@ -18,7 +19,8 @@ export const getLostPets = async () => {
   const { data, error, count } = await supabase
     .from("pets")
     .select("*", { count: "exact" })
-    .eq("status", "Lost");
+    .eq("status", "Lost")
+    .eq("isVerified", true);
 
   if (error) {
     console.error(error.message);
@@ -32,7 +34,8 @@ export const getFoundPets = async () => {
   const { data, error, count } = await supabase
     .from("pets")
     .select("*", { count: "exact" })
-    .eq("status", "Found");
+    .eq("status", "Found")
+    .eq("isVerified", true);
 
   if (error) {
     console.error(error.message);
@@ -46,7 +49,8 @@ export const getReunitedPets = async () => {
   const { data, error, count } = await supabase
     .from("pets")
     .select("*", { count: "exact" })
-    .eq("status", "Reunited");
+    .eq("status", "Reunited")
+    .eq("isVerified", true);
 
   if (error) {
     console.error(error.message);
