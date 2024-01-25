@@ -1,3 +1,6 @@
+// REACT & LIBRARIES
+import { useState } from "react";
+
 // STYLES
 import "./PetsGallery.scss";
 
@@ -6,7 +9,6 @@ import { PetsFilter, PetsCardContainer, PetsCard, Spinner } from "../index";
 
 // UTILITIES
 import { formatDate } from "../../utils";
-import { useState } from "react";
 
 function PetsGallery({ pets = [], loading, total = 0 }) {
   const [petTypes, setPetTypes] = useState([]);
@@ -36,29 +38,29 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
   return (
     <div className="pet-gallery margin-t spacing-t">
       <div className="container">
-          <PetsFilter
-            setPetTypes={setPetTypes}
-            setGenders={setGenders}
-            setSizes={setSizes}
-            setLocations={setLocations}
-          />
-          
-          <PetsCardContainer total={total}>
-            {pets.length > 1 ? (
-              pets?.map(pet => (
-                <PetsCard
-                  key={pet.id}
-                  id={pet.id}
-                  image={pet.images[0]}
-                  title={pet.petName}
-                  gender={pet.gender}
-                  date={formatDate(pet.date)}
-                />
-              ))
-            ) : (
-              <h3 className=" no-data">No pets currently 🐕</h3>
-            )}
-          </PetsCardContainer>
+        <PetsFilter
+          setPetTypes={setPetTypes}
+          setGenders={setGenders}
+          setSizes={setSizes}
+          setLocations={setLocations}
+        />
+
+        <PetsCardContainer total={total}>
+          {pets.length > 1 ? (
+            pets?.map(pet => (
+              <PetsCard
+                key={pet.id}
+                id={pet.id}
+                image={pet.images[0]}
+                title={pet.petName}
+                gender={pet.gender}
+                date={formatDate(pet.date)}
+              />
+            ))
+          ) : (
+            <h3 className=" no-data">No pets currently 🐕</h3>
+          )}
+        </PetsCardContainer>
       </div>
     </div>
   );

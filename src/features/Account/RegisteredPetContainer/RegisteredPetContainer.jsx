@@ -20,7 +20,10 @@ function RegisteredPetContainer({ title, pets = [] }) {
           <h4>{title}</h4>
           <button
             className="register-btnAdd"
-            onClick={() => navigate("/report")}
+            onClick={() => {
+              navigate("/report");
+              scrollTo(0, 0);
+            }}
           >
             ADD <span style={{ fontSize: "2rem", fontWeight: "bold" }}>+</span>
           </button>
@@ -28,11 +31,13 @@ function RegisteredPetContainer({ title, pets = [] }) {
       </div>
 
       <div className="register-middle-content">
-        <div>
-          <h3 className="register-footer-text">No Entry</h3>
-        </div>
-
-        <RegisteredPetGallery pets={pets} />
+        {pets.length > 0 ? (
+          <RegisteredPetGallery pets={pets} />
+        ) : (
+          <div>
+            <h3 className="register-footer-text">No Entry</h3>
+          </div>
+        )}
 
         <div className="bottom-content">
           <Button variation="primary" size="small">

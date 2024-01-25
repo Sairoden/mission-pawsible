@@ -15,7 +15,7 @@ function Account() {
   const { logout, isLogoutPending } = useLogout();
   const { userPets, isUserPetsPending } = useGetUserPets();
 
-  if (isUserPetsPending || isLogoutPending || isCurrentUserPending)
+  if (isUserPetsPending || isLogoutPending || isCurrentUserPending || !userPets)
     return <Spinner />;
 
   return (
