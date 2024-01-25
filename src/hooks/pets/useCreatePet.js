@@ -16,7 +16,7 @@ export const useCreatePet = () => {
     mutationFn: createPetApi,
     onSuccess: () => {
       toast.success("New pet successfully registered");
-      queryClient.invalidateQueries({ queryKey: ["pets"] });
+      queryClient.invalidateQueries({ queryKey: ["pets", "userPets"] });
       navigate("/account");
     },
     onError: err => toast.error(err.message),

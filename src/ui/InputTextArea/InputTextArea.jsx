@@ -1,9 +1,16 @@
 // STYLES
 import "./InputTextArea.scss";
 
-function InputTextArea({ name = "", id = "", required = false, register }) {
+function InputTextArea({
+  name = "",
+  id = "",
+  required = false,
+  register,
+  defaultValue,
+}) {
   return (
     <textarea
+      defaultValue={defaultValue}
       name={name}
       id={id}
       cols={50}

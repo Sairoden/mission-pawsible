@@ -137,3 +137,70 @@ export const createPet = async newPet => {
 
   return data;
 };
+
+export const updatePet = async (newPet, petId) => {
+  // 1. Get Pet
+  let { data: pet, petError } = await supabase
+    .from("pets")
+    .select("*")
+    .eq("id", petId);
+
+  if (petError) throw new Error("Pet ID not found. Please try again");
+
+  let newImages = [];
+  if (newPet.images.length > 0) {
+    for (let image of newPet.images) {
+      let imageName = `${Math.random()}-${image.name}`.replaceAll("/", "");
+      let imagePath = `${supabaseUrl}/storage/v1/object/public/pet-images/${encodeURI(
+        imageName
+      )}`;
+
+      // 1. Upload image
+      const { error: storageError } = await supabase.storage
+        .from("pet-images")
+        .upload(imageName, image);
+
+      if (storageError)
+        throw new Error(
+          "Pet image could not be uploaded and the pet was not created"
+        );
+
+      newImages.push(imagePath);
+    }
+  }
+
+  // 2. Get latitude and longitude
+  const coordinates = await getCoordsForAddress(newPet.location);
+
+  newPet.location = coordinates.formattedAddress;
+  newImages = [...pet[0].images, ...newImages];
+
+  // 3. Update Pet
+  let query = supabase
+    .from("pets")
+    .update({
+      ...newPet,
+      images: newImages,
+      lat: coordinates.lat,
+      lng: coordinates.lng,
+    })
+    .eq("id", petId);
+
+  const { data, error } = await query.select().single();
+
+  if (error) throw new Error("Pet could not be edited");
+
+  return data;
+};
+
+export const getUserPet = async id => {
+  const { data, error } = await supabase.from("pets").select("*").eq("id", id);
+
+  if (error) throw new Error("Pet could not be loaded");
+
+  const { data: user } = await supabase.auth.getUser();
+
+  if (data[0].userId !== user.user.id) throw new Error("Pet not found");
+
+  return data[0];
+};

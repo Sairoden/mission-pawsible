@@ -30,6 +30,7 @@ export const useGetCurrentUser = () => {
       (!user && location.pathname === "/account") ||
       (!user && location.pathname === "/account/update") ||
       (!user && location.pathname === "/report") ||
+      (!user && location.pathname.startsWith("/editPet")) ||
       (!user && location.pathname === "/chat")
     ) {
       toast.error("Please create an account");
