@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 // STYLES
 import "./RegisteredPetGallery.scss";
 
@@ -11,15 +13,16 @@ function RegisteredPetGallery({ pets = [] }) {
   return (
     <div className="register-card-grid">
       {pets?.map(pet => (
-        <RegisteredPetCard
-          key={pet.id}
-          id={pet.id}
-          image={pet.images[0]}
-          title={pet.petName}
-          gender={pet.gender}
-          date={formatDate(pet.date)}
-          isVerified={pet.isVerified}
-        />
+        <Link key={pet.id} to={`/pet/${pet.id}`}>
+          <RegisteredPetCard
+            id={pet.id}
+            image={pet.images[0]}
+            title={pet.petName}
+            gender={pet.gender}
+            date={formatDate(pet.date)}
+            isVerified={pet.isVerified}
+          />
+        </Link>
       ))}
     </div>
   );

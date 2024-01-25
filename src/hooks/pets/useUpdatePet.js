@@ -16,7 +16,7 @@ export const useUpdatePet = () => {
     mutationFn: ({ newPet, petId }) => updatePetApi(newPet, petId),
     onSuccess: () => {
       toast.success("Pet successfully edited");
-      queryClient.invalidateQueries({ queryKey: ["pets"] });
+      queryClient.invalidateQueries({ queryKey: ["pets", "userPets"] });
       navigate("/pet/138");
     },
     onError: err => {
