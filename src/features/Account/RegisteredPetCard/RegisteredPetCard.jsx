@@ -7,11 +7,13 @@ import "./RegisteredPetCard.scss";
 function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
   const navigate = useNavigate();
 
+  console.log(isVerified);
+
   return (
     <div>
       <div className="register-middle-container">
         <div className="ribbon-container">
-          {isVerified && <div className="ribbon">Pending</div>}
+          {!isVerified && <div className="ribbon">Pending</div>}
         </div>
         <div className="middle-img-container">
           <img src={image} alt="shitsupic" className="register-img" />

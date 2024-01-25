@@ -18,7 +18,7 @@ function RegisteredPetGallery({ pets = [] }) {
           title={pet.petName}
           gender={pet.gender}
           date={formatDate(pet.date)}
-          status={pet.isVerified}
+          isVerified={pet.isVerified}
         />
       ))}
     </div>
