@@ -15,6 +15,45 @@
     width: auto;
   }
 
+  /* HTML: <div class="ribbon">Your text content</div> */
+  .ribbon {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+  }
+  /* HTML: <div class="ribbon">Your text content</div> */
+  .ribbon {
+    font-size: 22px;
+    font-weight: bold;
+    color: $color-white;
+  }
+  .ribbon {
+    --f: 0.5em;
+
+    position: absolute;
+    top: 50;
+    left: 50;
+    margin-bottom: 320px;
+    margin-left: 130px;
+    line-height: 1.8;
+    padding-inline: 1lh;
+    padding-bottom: var(--f);
+    border-image: conic-gradient(#0008 0 0) 51% / var(--f);
+    clip-path: polygon(
+      100% calc(100% - var(--f)),
+      100% 100%,
+      calc(100% - var(--f)) calc(100% - var(--f)),
+      var(--f) calc(100% - var(--f)),
+      0 100%,
+      0 calc(100% - var(--f)),
+      999px calc(100% - var(--f) - 999px),
+      calc(100% - 999px) calc(100% - var(--f) - 999px)
+    );
+    transform: translate(calc((1 - cos(45deg)) * 100%), -100%) rotate(45deg);
+    transform-origin: 0% 100%;
+    background-color: $color-blue;
+  }
+
   .register-h3 {
     text-align: center;
 
@@ -76,6 +115,15 @@
       font-size: 1.4rem;
       font-weight: 600;
       cursor: pointer;
+
+      @media only screen and (max-width: 1610px) {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+      @media only screen and (max-width: 1430px) {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
     }
     .listing-btn:hover {
       background: $color-blue;
@@ -96,6 +144,14 @@
       color: $color-orange;
       font-size: 1.4rem;
       cursor: pointer;
+      @media only screen and (max-width: 1610px) {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+      @media only screen and (max-width: 1430px) {
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
     }
     .update-btn:hover {
       background: $color-orange;
