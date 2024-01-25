@@ -10,7 +10,7 @@ function RegisteredPet({ userPets }) {
 
   return (
     <div>
-      <div className="register_white_container">
+      <div className="register_white_container ribbon">
         <RegisteredPetContainer title="REGISTERED LOST PET" pets={lostPets} />
         <RegisteredPetContainer title="REGISTERED FOUND PET" pets={foundPets} />
       </div>

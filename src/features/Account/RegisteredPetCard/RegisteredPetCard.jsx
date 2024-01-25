@@ -6,7 +6,9 @@ function RegisteredPetCard() {
   return (
     <div>
       <div className="register-middle-container">
-        <div className="ribbon">Pending</div>
+        <div className="ribbon-container">
+          <div className="ribbon">Pending</div>
+        </div>
         <div className="middle-img-container">
           <img src={shitsu} alt="shitsupic" className="register-img" />
         </div>
