@@ -14,44 +14,41 @@
   @media only screen and (max-width: 1075px) {
     width: auto;
   }
+  .ribbon-container {
+    display: block;
+    position: sticky;
+    height: auto;
+    width: 40px;
 
-  /* HTML: <div class="ribbon">Your text content</div> */
-  .ribbon {
-    font-size: 28px;
-    font-weight: bold;
-    color: #fff;
-  }
-  /* HTML: <div class="ribbon">Your text content</div> */
-  .ribbon {
-    font-size: 22px;
-    font-weight: bold;
-    color: $color-white;
-  }
-  .ribbon {
-    --f: 0.5em;
+    .ribbon {
+      font-size: 2.2rem;
+      font-weight: bold;
+      color: $color-white;
+      margin-top: -10px;
+      @media only screen and (max-width: 1625px) {
+        font-size: 1.9rem;
+      }
+    }
 
-    position: absolute;
-    top: 50;
-    left: 50;
-    margin-bottom: 320px;
-    margin-left: 130px;
-    line-height: 1.8;
-    padding-inline: 1lh;
-    padding-bottom: var(--f);
-    border-image: conic-gradient(#0008 0 0) 51% / var(--f);
-    clip-path: polygon(
-      100% calc(100% - var(--f)),
-      100% 100%,
-      calc(100% - var(--f)) calc(100% - var(--f)),
-      var(--f) calc(100% - var(--f)),
-      0 100%,
-      0 calc(100% - var(--f)),
-      999px calc(100% - var(--f) - 999px),
-      calc(100% - 999px) calc(100% - var(--f) - 999px)
-    );
-    transform: translate(calc((1 - cos(45deg)) * 100%), -100%) rotate(45deg);
-    transform-origin: 0% 100%;
-    background-color: $color-blue;
+    .ribbon {
+      --f: 0.5em;
+      position: absolute;
+      padding-inline: 1.2lh;
+      padding-bottom: var(--f);
+      clip-path: polygon(
+        100% calc(100% - var(--f)),
+        100% 100%,
+        calc(100% - var(--f)) calc(100% - var(--f)),
+        var(--f) calc(100% - var(--f)),
+        0 100%,
+        0 calc(100% - var(--f)),
+        999px calc(100% - var(--f) - 999px),
+        calc(100% - 999px) calc(100% - var(--f) - 999px)
+      );
+      transform: translate(calc((1 - cos(45deg)) * 100%), -100%) rotate(45deg);
+      transform-origin: 0% 100%;
+      background-color: $color-blue;
+    }
   }
 
   .register-h3 {
