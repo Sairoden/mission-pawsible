@@ -10,6 +10,12 @@
   margin: auto;
   grid-template-rows: auto;
   gap: 3rem;
+  @media only screen and (max-width: 770px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
   @media only screen and (max-width: 640px) {
     display: flex;
