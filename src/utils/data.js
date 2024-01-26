@@ -41,6 +41,7 @@ export const cats = [
   "Havana Brown",
   "Highlander",
   "Himalayan",
+  "Husky",
   "Japanese Bobtail",
   "Javanese",
   "Khao Manee",

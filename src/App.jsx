@@ -85,7 +85,7 @@ function App() {
           element: <PetDetail />,
         },
         {
-          path: "/report/:petId",
+          path: "/editPet/:petId",
           element: <UpdatePet />,
         },
         {

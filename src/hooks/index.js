@@ -17,6 +17,8 @@ import { useGetReunitedPets } from "./pets/useGetReunitedPets";
 import { useGetSinglePet } from "./pets/useGetSinglePet";
 import { useGetUserPets } from "./pets/useGetUserPets";
 import { useCreatePet } from "./pets/useCreatePet";
+import { useUpdatePet } from "./pets/useUpdatePet";
+import { useGetUserPet } from "./pets/useGetUserPet";
 
 // RESOURCES
 import { useGetResources } from "./resources/useGetResources";
@@ -47,6 +49,8 @@ export {
   useGetSinglePet,
   useGetUserPets,
   useCreatePet,
+  useUpdatePet,
+  useGetUserPet,
 
   // RESORUCES
   useGetResources,

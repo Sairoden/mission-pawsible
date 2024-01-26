@@ -34,7 +34,7 @@ function ContactUs() {
             icon={true}
             size="small"
             onClick={() => {
-              navigate("/lost-pets");
+              navigate("/contact-us");
               scrollTo(0, 0);
             }}
           >

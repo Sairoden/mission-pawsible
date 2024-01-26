@@ -10,6 +10,8 @@ import {
   getSinglePet,
   getUserPets,
   createPet,
+  updatePet,
+  getUserPet,
 } from "./apiPets";
 
 // AUTH
@@ -54,6 +56,8 @@ export {
   getSinglePet,
   getUserPets,
   createPet,
+  updatePet,
+  getUserPet,
 
   // AUTH
   loginWithGoogle,

@@ -4,9 +4,14 @@ import "./RegisteredPet.scss";
 // FEATURES COMPONENTS
 import { RegisteredPetContainer } from "../../index";
 
-function RegisteredPet({ userPets }) {
-  const lostPets = userPets?.filter((userPet) => userPet.status === "Lost");
-  const foundPets = userPets?.filter((userPet) => userPet.status === "Found");
+// UI COMPONENTS
+import { Spinner } from "../../../ui";
+
+function RegisteredPet({ userPets = [] }) {
+  if (!Array.isArray(userPets)) return <Spinner />;
+
+  const lostPets = userPets?.filter(userPet => userPet.status === "Lost");
+  const foundPets = userPets?.filter(userPet => userPet.status === "Found");
 
   return (
     <div>

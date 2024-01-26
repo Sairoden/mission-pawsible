@@ -96,6 +96,7 @@ function ReportPet() {
                   id="petName"
                   required="Please provide a pet name"
                   register={register}
+                  disabled={isPending}
                 />
               </div>
             </div>
@@ -181,12 +182,12 @@ function ReportPet() {
                 <br />
                 <Controller
                   name="status"
+                  disabled={isPending}
                   control={control}
                   rules={{ required: "Please select a pet status" }}
                   render={({ field }) => (
                     <InputSelect
                       id="status"
-                      disabled={isPending}
                       options={[
                         { value: "", label: "Select one" },
                         { value: "Lost", label: "Lost" },
@@ -224,12 +225,12 @@ function ReportPet() {
                 <br />
                 <Controller
                   name="size"
+                  disabled={isPending}
                   control={control}
                   rules={{ required: "Please select a size" }}
                   render={({ field }) => (
                     <InputSelect
                       id="size"
-                      disabled={isPending}
                       options={[
                         { value: "", label: "Select one" },
                         ...sizeOptions,
@@ -248,12 +249,12 @@ function ReportPet() {
                 <br />
                 <Controller
                   name="gender"
+                  disabled={isPending}
                   control={control}
                   rules={{ required: "Please select a gender" }}
                   render={({ field }) => (
                     <InputSelect
                       id="gender"
-                      disabled={isPending}
                       options={[
                         { value: "", label: "Select one" },
                         ...genderOptions,
@@ -277,12 +278,12 @@ function ReportPet() {
                 <br />
                 <Controller
                   name="microchipped"
+                  disabled={isPending}
                   control={control}
                   rules={{ required: "Please select a microchip" }}
                   render={({ field }) => (
                     <InputSelect
                       id="microchipped"
-                      disabled={isPending}
                       options={[
                         { value: "", label: "Select one" },
                         ...microchipOptions,
