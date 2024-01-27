@@ -54,7 +54,7 @@ function Open({ children, opens: opensWindowName }) {
   });
 }
 
-function ConfirmModal({ handleConfirm, disabled, handleCloseModal }) {
+function ConfirmModal({ disabled, handleReunite, handleRemove, isVerified }) {
   return (
     <div className="confirm-modal">
       <h3 className="confirm-modal-title">CLOSE LISTING</h3>
@@ -69,13 +69,19 @@ function ConfirmModal({ handleConfirm, disabled, handleCloseModal }) {
         <Button
           variation="secondary"
           disabled={disabled}
-          onClick={handleCloseModal}
+          onClick={handleRemove}
         >
           REMOVE
         </Button>
-        <Button variation="primary" disabled={disabled} onClick={handleConfirm}>
-          REUNITE
-        </Button>
+        {isVerified && (
+          <Button
+            variation="primary"
+            disabled={disabled}
+            onClick={handleReunite}
+          >
+            REUNITE
+          </Button>
+        )}
       </div>
     </div>
   );

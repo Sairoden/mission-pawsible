@@ -16,7 +16,5 @@ export const useGetUserPet = () => {
 
   if (!userPet) navigate("/account");
 
-  console.log(userPet);
-
   return { userPet, isPending };
 };

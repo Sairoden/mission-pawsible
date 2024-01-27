@@ -12,6 +12,8 @@ import {
   createPet,
   updatePet,
   getUserPet,
+  updatePetStatus,
+  deletePet,
 } from "./apiPets";
 
 // AUTH
@@ -58,6 +60,8 @@ export {
   createPet,
   updatePet,
   getUserPet,
+  updatePetStatus,
+  deletePet,
 
   // AUTH
   loginWithGoogle,

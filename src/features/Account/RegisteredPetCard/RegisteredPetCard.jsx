@@ -5,10 +5,18 @@ import { useNavigate, Link } from "react-router-dom";
 import "./RegisteredPetCard.scss";
 
 // UI COMPONENTS
-import { Modal } from "../../../ui";
+import { Modal, Spinner } from "../../../ui";
+
+// HOOKS
+import { useUpdatePetStatus } from "../../../hooks";
 
 function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
+  // HOOKS
+  const { updatePetStatus, isPending } = useUpdatePetStatus();
+
   const navigate = useNavigate();
+
+  if (isPending) return <Spinner />;
 
   return (
     <div>
@@ -36,19 +44,23 @@ function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
                 scrollTo(0, 0);
                 navigate(`/editPet/${id}`);
               }}
+              disabled={isPending}
             >
               UPDATE
             </button>
 
             <Modal>
               <Modal.Open opens="verify">
-                <button className="listing-btn">CLOSE LISTING</button>
+                <button disabled={isPending} className="listing-btn">
+                  CLOSE LISTING
+                </button>
               </Modal.Open>
 
               <Modal.Window name="verify">
                 <Modal.ConfirmModal
-                  // disabled={isUpdating2}
-                  handleConfirm={() => console.log("CLOSE LSITING")}
+                  disabled={isPending}
+                  handleReunite={() => updatePetStatus(id)}
+                  isVerified={isVerified}
                 />
               </Modal.Window>
             </Modal>

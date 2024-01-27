@@ -204,3 +204,22 @@ export const getUserPet = async id => {
 
   return data[0];
 };
+
+export const updatePetStatus = async id => {
+  const { data, error } = await supabase
+    .from("pets")
+    .update({ status: "Reunited" })
+    .eq("id", id)
+    .select();
+
+  if (error) throw new Error("Pet status could not be updated");
+
+  return data;
+};
+
+export const deletePet = async id => {
+  console.log(id);
+  // const { error } = await supabase.from("pets").delete().eq("id", id);
+
+  // if (error) throw new Error("Pet could not be deleted");
+};
