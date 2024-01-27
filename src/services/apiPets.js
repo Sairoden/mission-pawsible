@@ -148,7 +148,9 @@ export const updatePet = async (newPet, petId) => {
   if (petError) throw new Error("Pet ID not found. Please try again");
 
   let newImages = [];
-  if (newPet.images.length > 0) {
+
+  // Check if it is a file list
+  if (newPet.images[0]?.lastModified) {
     for (let image of newPet.images) {
       let imageName = `${Math.random()}-${image.name}`.replaceAll("/", "");
       let imagePath = `${supabaseUrl}/storage/v1/object/public/pet-images/${encodeURI(
@@ -174,10 +176,7 @@ export const updatePet = async (newPet, petId) => {
 
   newPet.location = coordinates.formattedAddress;
 
-  newImages =
-    newPet.images.length > 0 ? [...pet[0].images, ...newImages] : pet[0].images;
-
-  console.log(newImages);
+  newImages = [...pet[0].images, ...newImages];
 
   // 3. Update Pet
   let query = supabase
