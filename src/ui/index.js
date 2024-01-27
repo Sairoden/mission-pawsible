@@ -15,6 +15,7 @@ import InputFile from "./InputFile/InputFile";
 import InputSelect from "./InputSelect/InputSelect";
 import InputTextArea from "./InputTextArea/InputTextArea";
 import Map from "./Map/Map";
+import Modal from "./Modal/Modal";
 
 export {
   Navbar,
@@ -34,4 +35,5 @@ export {
   InputSelect,
   InputTextArea,
   Map,
+  Modal,
 };

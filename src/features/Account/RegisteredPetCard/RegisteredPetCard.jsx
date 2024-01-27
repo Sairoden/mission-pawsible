@@ -4,6 +4,9 @@ import { useNavigate, Link } from "react-router-dom";
 // STYLES
 import "./RegisteredPetCard.scss";
 
+// UI COMPONENTS
+import { Modal } from "../../../ui";
+
 function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
   const navigate = useNavigate();
 
@@ -36,7 +39,19 @@ function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
             >
               UPDATE
             </button>
-            <button className="listing-btn">CLOSE LISTING</button>
+
+            <Modal>
+              <Modal.Open opens="verify">
+                <button className="listing-btn">CLOSE LISTING</button>
+              </Modal.Open>
+
+              <Modal.Window name="verify">
+                <Modal.ConfirmModal
+                  // disabled={isUpdating2}
+                  handleConfirm={() => console.log("CLOSE LSITING")}
+                />
+              </Modal.Window>
+            </Modal>
           </div>
         </div>
       </div>

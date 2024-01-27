@@ -29,6 +29,9 @@ import { useGetChatMembers } from "./chats/useGetChatMembers";
 import { useGetChatConnection } from "./chats/useGetChatConnection";
 import { useNewMessageNotification } from "./chats/useNewMessageNotification";
 
+// UTILS
+import { useOutsideClick } from "./utils/useOutsideClick";
+
 export {
   // AUTH
   useLoginWithGoogle,
@@ -60,4 +63,7 @@ export {
   useCreateChatConnection,
   useGetChatConnection,
   useNewMessageNotification,
+
+  // UTILS
+  useOutsideClick,
 };
