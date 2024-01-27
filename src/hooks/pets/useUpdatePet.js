@@ -17,7 +17,7 @@ export const useUpdatePet = () => {
     onSuccess: () => {
       toast.success("Pet successfully edited");
       queryClient.invalidateQueries({ queryKey: ["pets", "userPets"] });
-      navigate("/pet/138");
+      navigate("/account");
     },
     onError: err => {
       toast.error(err.message);

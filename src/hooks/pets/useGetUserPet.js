@@ -10,11 +10,13 @@ export const useGetUserPet = () => {
   const navigate = useNavigate();
 
   const { data: userPet, isPending } = useQuery({
-    queryKey: ["userPets"],
     queryFn: () => getUserPet(petId),
+    queryKey: ["userPets"],
   });
 
   if (!userPet) navigate("/account");
+
+  console.log(userPet);
 
   return { userPet, isPending };
 };

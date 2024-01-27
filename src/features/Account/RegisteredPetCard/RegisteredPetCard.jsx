@@ -1,5 +1,5 @@
 // REACT & LIBRARIES
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 // STYLES
 import "./RegisteredPetCard.scss";
@@ -7,17 +7,17 @@ import "./RegisteredPetCard.scss";
 function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
   const navigate = useNavigate();
 
-  console.log(isVerified);
-
   return (
     <div>
       <div className="register-middle-container">
         <div className="ribbon-container">
           {!isVerified && <div className="ribbon">Pending</div>}
         </div>
-        <div className="middle-img-container">
-          <img src={image} alt="shitsupic" className="register-img" />
-        </div>
+        <Link to={`/pet/${id}`}>
+          <div className="middle-img-container">
+            <img src={image} alt="shitsupic" className="register-img" />
+          </div>
+        </Link>
         <div>
           <div className="register-h3">
             <h3 className="register-h3-text">{title}</h3>
@@ -29,7 +29,10 @@ function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
           <div className="register-button-container">
             <button
               className="update-btn"
-              onClick={() => navigate(`/editPet/${id}`)}
+              onClick={() => {
+                scrollTo(0, 0);
+                navigate(`/editPet/${id}`);
+              }}
             >
               UPDATE
             </button>

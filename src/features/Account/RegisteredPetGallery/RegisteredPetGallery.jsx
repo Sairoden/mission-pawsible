@@ -13,16 +13,15 @@ function RegisteredPetGallery({ pets = [] }) {
   return (
     <div className="register-card-grid">
       {pets?.map(pet => (
-        <Link key={pet.id} to={`/pet/${pet.id}`}>
-          <RegisteredPetCard
-            id={pet.id}
-            image={pet.images[0]}
-            title={pet.petName}
-            gender={pet.gender}
-            date={formatDate(pet.date)}
-            isVerified={pet.isVerified}
-          />
-        </Link>
+        <RegisteredPetCard
+          key={pet.id}
+          id={pet.id}
+          image={pet.images[0]}
+          title={pet.petName}
+          gender={pet.gender}
+          date={formatDate(pet.date)}
+          isVerified={pet.isVerified}
+        />
       ))}
     </div>
   );

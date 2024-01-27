@@ -7,7 +7,7 @@ import { getUserPets } from "../../services";
 export const useGetUserPets = () => {
   const { data: userPets, isPending } = useQuery({
     queryFn: getUserPets,
-    queryKey: ["userPets"],
+    queryKey: ["userPets", "pets"],
   });
 
   return { userPets, isPending };

@@ -1,4 +1,6 @@
 // REACT & LIBRARIES
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
 
 // STYLES
@@ -32,6 +34,7 @@ import { useUpdatePet, useGetUserPet } from "../../../hooks";
 function UpdatePet() {
   const { userPet, isPending } = useGetUserPet();
   const { updatePet, isPending: isPending2 } = useUpdatePet();
+  const navigate = useNavigate();
 
   // REACT-HOOK-FORM
   const {
@@ -42,8 +45,6 @@ function UpdatePet() {
     watch,
     control,
   } = useForm();
-
-  if (isPending || isPending2 || !userPet) return <Spinner />;
 
   const petTypeOptions = petTypes.map(petType => ({
     value: petType,
@@ -75,7 +76,13 @@ function UpdatePet() {
     updatePet({ newPet: { ...data }, petId: id });
   };
 
-  const handleReset = () => reset();
+  const handleReset = () => navigate(-1);
+
+  useEffect(() => {
+    if (userPet) reset(userPet);
+  }, [userPet, reset]);
+
+  if (isPending || isPending2 || !userPet) return <Spinner />;
 
   let {
     id,
