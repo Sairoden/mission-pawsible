@@ -20,6 +20,7 @@ import { useCreatePet } from "./pets/useCreatePet";
 import { useUpdatePet } from "./pets/useUpdatePet";
 import { useGetUserPet } from "./pets/useGetUserPet";
 import { useUpdatePetStatus } from "./pets/useUpdatePetStatus";
+import { useDeletePet } from "./pets/useDeletePet";
 
 // RESOURCES
 import { useGetResources } from "./resources/useGetResources";
@@ -56,6 +57,7 @@ export {
   useUpdatePet,
   useGetUserPet,
   useUpdatePetStatus,
+  useDeletePet,
 
   // RESORUCES
   useGetResources,

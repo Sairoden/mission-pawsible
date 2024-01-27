@@ -8,15 +8,16 @@ import "./RegisteredPetCard.scss";
 import { Modal, Spinner } from "../../../ui";
 
 // HOOKS
-import { useUpdatePetStatus } from "../../../hooks";
+import { useUpdatePetStatus, useDeletePet } from "../../../hooks";
 
 function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
   // HOOKS
   const { updatePetStatus, isPending } = useUpdatePetStatus();
+  const { deletePet, isPending: isPending2 } = useDeletePet();
 
   const navigate = useNavigate();
 
-  if (isPending) return <Spinner />;
+  if (isPending || isPending2) return <Spinner />;
 
   return (
     <div>
@@ -44,23 +45,27 @@ function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
                 scrollTo(0, 0);
                 navigate(`/editPet/${id}`);
               }}
-              disabled={isPending}
+              disabled={isPending || isPending2}
             >
               UPDATE
             </button>
 
             <Modal>
               <Modal.Open opens="verify">
-                <button disabled={isPending} className="listing-btn">
+                <button
+                  disabled={isPending || isPending2}
+                  className="listing-btn"
+                >
                   CLOSE LISTING
                 </button>
               </Modal.Open>
 
               <Modal.Window name="verify">
                 <Modal.ConfirmModal
-                  disabled={isPending}
+                  disabled={isPending || isPending2}
                   handleReunite={() => updatePetStatus(id)}
                   isVerified={isVerified}
+                  handleRemove={() => deletePet(id)}
                 />
               </Modal.Window>
             </Modal>

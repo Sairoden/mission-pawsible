@@ -173,7 +173,11 @@ export const updatePet = async (newPet, petId) => {
   const coordinates = await getCoordsForAddress(newPet.location);
 
   newPet.location = coordinates.formattedAddress;
-  newImages = [...pet[0].images, ...newImages];
+
+  newImages =
+    newPet.images.length > 0 ? [...pet[0].images, ...newImages] : pet[0].images;
+
+  console.log(newImages);
 
   // 3. Update Pet
   let query = supabase
@@ -218,8 +222,7 @@ export const updatePetStatus = async id => {
 };
 
 export const deletePet = async id => {
-  console.log(id);
-  // const { error } = await supabase.from("pets").delete().eq("id", id);
+  const { error } = await supabase.from("pets").delete().eq("id", id);
 
-  // if (error) throw new Error("Pet could not be deleted");
+  if (error) throw new Error("Pet could not be deleted");
 };
