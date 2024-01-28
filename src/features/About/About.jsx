@@ -53,7 +53,7 @@ function AboutUs() {
         <motion.div
           initial={{ x: 300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.5, duration: 1 }}
           className="image1"
         >
           <motion.img
@@ -72,7 +72,7 @@ function AboutUs() {
         <motion.div
           initial={{ x: 300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          transition={{ delay: 1, duration: 1 }}
           className="image2"
         >
           <motion.img
@@ -91,7 +91,7 @@ function AboutUs() {
         <motion.div
           initial={{ x: 300, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 1.5, duration: 0.5 }}
+          transition={{ delay: 1.5, duration: 1 }}
           className="image3"
         >
           <motion.img

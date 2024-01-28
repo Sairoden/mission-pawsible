@@ -1,5 +1,6 @@
 // STYLES
 import "./Michopchip.scss";
+import { motion } from "framer-motion";
 
 // UI COMPONENTS
 import { Button } from "../../../ui";
@@ -9,7 +10,17 @@ import microchips from "../../../assets/microchips.png";
 
 function Microchip() {
   return (
-    <div className="microchip-container">
+    <motion.div
+      className="microchip-container"
+      initial={{
+        opacity: 0,
+        y: 100,
+        filter: "blur(5px)",
+      }}
+      whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+    >
       <div>
         <img
           src={microchips}
@@ -52,7 +63,7 @@ function Microchip() {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

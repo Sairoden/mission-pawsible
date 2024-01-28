@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // STYLES
 import "./Stats.scss";
+import { motion } from "framer-motion";
 
 // UI COMPONENTS
 import { Button } from "../../../ui";
@@ -31,25 +32,43 @@ function Stats() {
 
         <div>
           <div className="stats-circle-card">
-            <div className="stats-circle1">
+            <motion.div
+              className="stats-circle1"
+              initial={{ y: 300, opacity: 0, filter: "blur(5px)" }}
+              whileInView={{ y: 0, opacity: 1, filter: "blur(0)" }}
+              transition={{ duration: 0.6, ease: "easeInOut" }}
+              viewport={{ once: true }}
+            >
               <h2 className="stats-circle-number"> {lostPets?.length || 0} </h2>
               <br />
               <span className="stats-circle-text"> Missing Pets </span>
-            </div>
+            </motion.div>
 
-            <div className="stats-circle2">
+            <motion.div
+              className="stats-circle2"
+              initial={{ y: 300, opacity: 0, filter: "blur(5px)" }}
+              whileInView={{ y: 0, opacity: 1, filter: "blur(0)" }}
+              transition={{ delay: 0.2, duration: 0.6, ease: "easeInOut" }}
+              viewport={{ once: true }}
+            >
               <h2 className="stats-circle-number"> {foundPets?.length || 0}</h2>{" "}
               <br />
               <span className="stats-circle-text"> Found Pets </span>
-            </div>
+            </motion.div>
 
-            <div className="stats-circle3">
+            <motion.div
+              className="stats-circle3"
+              initial={{ y: 300, opacity: 0, filter: "blur(5px)" }}
+              whileInView={{ y: 0, opacity: 1, filter: "blur(0)" }}
+              transition={{ delay: 0.4, duration: 0.6, ease: "easeInOut" }}
+              viewport={{ once: true }}
+            >
               <h2 className="stats-circle-number">
                 {reunitedPets?.length || 0}
               </h2>
               <br />
               <span className="stats-circle-text"> Reunited Pets </span>
-            </div>
+            </motion.div>
           </div>
           <hr className="stats-line" />
         </div>

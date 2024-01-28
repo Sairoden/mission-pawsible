@@ -1,10 +1,13 @@
 // STYLES
 import "./FeaturedStory.scss";
+import { motion } from "framer-motion";
 
 // ASSETS
 import featuredStoryBanner from "../../../assets/featuredStoryBanner.png";
 
 function FeaturedStory() {
+  const title = "A Bark Away: The Journey of Max's Return";
+
   return (
     <div className="featured-container">
       <div>
@@ -23,9 +26,29 @@ function FeaturedStory() {
           <div className="featured-right-details">
             <div>
               <h6 className="featured-date">December 09, 2023</h6>
-              <h2 className="featured-story-title">
-                A Bark Away: The Journey of Max&apos;s Return
-              </h2>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "3px",
+                }}
+              >
+                {title.split("").map((char, i) => (
+                  <motion.h2
+                    key={char}
+                    className="featured-story-title"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{
+                      duration: 2,
+                      delay: i / 10,
+                    }}
+                    viewport={{ once: true }}
+                  >
+                    {char}
+                  </motion.h2>
+                ))}
+              </div>
             </div>
             <div>
               <p className="featured-text">

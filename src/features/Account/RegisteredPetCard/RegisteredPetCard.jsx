@@ -56,7 +56,7 @@ function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
                   disabled={isPending || isPending2}
                   className="listing-btn"
                 >
-                  CLOSE LISTING
+                  CLOSE
                 </button>
               </Modal.Open>
 

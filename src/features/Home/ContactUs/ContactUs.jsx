@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // STYLES
 import "./ContactUs.scss";
+import { motion } from "framer-motion";
 
 // UI COMPONENTS
 import { Button } from "../../../ui";
@@ -43,10 +44,16 @@ function ContactUs() {
         </div>
       </div>
       <div>
-        <img
+        <motion.img
           src={contactUsImage}
           alt="Contact Us"
           className="contact-section-img"
+          initial={{
+            opacity: 0,
+            filter: "blur(5px)",
+          }}
+          whileInView={{ opacity: 1, filter: "blur(0)" }}
+          transition={{ duration: 2, ease: "easeInOut" }} 
         />
       </div>
     </section>

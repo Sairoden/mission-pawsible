@@ -1,5 +1,6 @@
 // STYLES
 import "./Adoption.scss";
+import { motion } from "framer-motion";
 
 // ASSETS
 import adopt1 from "../../../assets/adopt1.png";
@@ -21,7 +22,13 @@ function Adoption() {
       </div>
 
       <div className="adoption-img-container">
-        <div className="adoption-img-content">
+        <motion.div
+          initial={{ opacity: 0, x: "-100%", filter: "blur(5px)" }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0)" }}
+          viewport={{ once: true }}
+          className="adoption-img-content"
+        >
           <a href="https://www.caraphil.org/" target="_blank" rel="noreferrer">
             <img
               src={adopt1}
@@ -30,9 +37,15 @@ function Adoption() {
               className="adoption-image"
             />
           </a>
-        </div>
+        </motion.div>
 
-        <div className="adoption-img-content">
+        <motion.div
+          initial={{ opacity: 0, x: "-100%", filter: "blur(5px)" }}
+          transition={{ delay: 0.2, duration: 1, ease: "easeInOut" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0)" }}
+          viewport={{ once: true }}
+          className="adoption-img-content"
+        >
           <a
             href="http://www.philanimalrescue.org/"
             target="_blank"
@@ -45,9 +58,15 @@ function Adoption() {
               className="adoption-image"
             />
           </a>
-        </div>
+        </motion.div>
 
-        <div className="adoption-img-content">
+        <motion.div
+          initial={{ opacity: 0, x: "-100%", filter: "blur(5px)" }}
+          transition={{ delay: 0.4, duration: 1, ease: "easeInOut" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0)" }}
+          viewport={{ once: true }}
+          className="adoption-img-content"
+        >
           <a href="https://akf.org.ph/" target="_blank" rel="noreferrer">
             <img
               src={adopt3}
@@ -56,9 +75,15 @@ function Adoption() {
               className="adoption-image"
             />
           </a>
-        </div>
+        </motion.div>
 
-        <div className="adoption-img-content">
+        <motion.div
+          initial={{ opacity: 0, x: "-100%", filter: "blur(5px)" }}
+          transition={{ delay: 0.6, duration: 1, ease: "easeInOut" }}
+          whileInView={{ opacity: 1, x: 0, filter: "blur(0)" }}
+          viewport={{ once: true }}
+          className="adoption-img-content"
+        >
           <a
             href="https://pawssionproject.org.ph/"
             target="_blank"
@@ -71,7 +96,7 @@ function Adoption() {
               className="adoption-image"
             />
           </a>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

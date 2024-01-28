@@ -56,6 +56,14 @@
     .adoption-img-content {
       text-align: center;
 
+      img {
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+          scale: 1.2;
+        }
+      }
+
       .adoption-image {
         @media only screen and (max-width: 375px) {
           width: 100px;

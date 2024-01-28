@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 // STYLES
 import "./Landing.scss";
+import { motion } from "framer-motion";
 
 // UI COMPONENTS
 import { Button } from "../../../ui";
@@ -15,7 +16,13 @@ function Landing() {
 
   return (
     <section className="landing container">
-      <div className="cta">
+      <motion.div
+        className="cta"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1, duration: 2, ease: "easeInOut" }}
+      >
         <div className="header">
           <h1>
             Make a <span>Pawsitive</span> Change
@@ -53,9 +60,15 @@ function Landing() {
             Join Us
           </Button>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="img">
+      <motion.div
+        className="img"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 2, ease: "easeInOut" }}
+      >
         <div>
           <img
             src={landing}
@@ -63,7 +76,7 @@ function Landing() {
             className="landing-image-gallery"
           />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
