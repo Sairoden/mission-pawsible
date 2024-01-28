@@ -29,11 +29,16 @@
     font-weight: 600;
     font-size: 1.6rem;
     cursor: pointer;
+    transition: all ease-in-out 0.5s;
+    -webkit-transition: all ease-in-out 0.5s;
+    -moz-transition: all ease-in-out 0.5s;
+    -ms-transition: all ease-in-out 0.5s;
+    -o-transition: all ease-in-out 0.5s;
   }
   .register-btnAdd:hover {
     background: $color-orange;
     color: $color-white;
-    transition: 0.5s;
+    transition: all ease-in-out 1.5s;
     -webkit-transition: 0.5s;
     -moz-transition: 0.5s;
     -ms-transition: 0.5s;

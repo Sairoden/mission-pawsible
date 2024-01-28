@@ -12,6 +12,19 @@
   align-items: center;
   margin-top: 2rem;
 
+  &:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transition: all ease-in-out 0.5s;
+    -webkit-transition: all ease-in-out 0.5s;
+    -moz-transition: all ease-in-out 0.5s;
+    -ms-transition: all ease-in-out 0.5s;
+    -o-transition: all ease-in-out 0.5s;
+  }
+
   @media only screen and (max-width: 1075px) {
     width: auto;
   }
@@ -64,7 +77,7 @@
       }
       @media only screen and (max-width: 820px) {
         font-size: 1.8rem;
-        margin-left: -2.3rem;
+        margin-left: -2rem;
       }
       @media only screen and (max-width: 768px) {
         font-size: 2rem;
@@ -88,7 +101,7 @@
       }
       @media only screen and (max-width: 390px) {
         font-size: 2rem;
-        margin-left: 1.3rem;
+        margin-left: -2.5rem;
       }
       @media only screen and (max-width: 375px) {
         font-size: 2rem;
@@ -197,7 +210,7 @@
       font-size: 1.4rem;
       font-weight: 600;
       cursor: pointer;
-
+      transition: all ease-in-out 0.5s;
       @media only screen and (max-width: 1610px) {
         font-size: 1.2rem;
         font-weight: 600;
@@ -211,7 +224,11 @@
       background: $color-blue;
       color: $color-white;
       transform: scale(0.9);
-      transition: 0.6s;
+      transition: all ease-in-out 0.5s;
+      -webkit-transition: all ease-in-out 0.5s;
+      -moz-transition: all ease-in-out 0.5s;
+      -ms-transition: all ease-in-out 0.5s;
+      -o-transition: all ease-in-out 0.5s;
     }
     .listing-btn:active {
       transform: translateY(4px);
@@ -226,6 +243,7 @@
       color: $color-orange;
       font-size: 1.4rem;
       cursor: pointer;
+      transition: all ease-in-out 0.5s;
       @media only screen and (max-width: 1610px) {
         font-size: 1.2rem;
         font-weight: 600;
@@ -239,8 +257,7 @@
       background: $color-orange;
       color: $color-white;
       transform: scale(0.9);
-      transition: 0.6s;
-
+      transition: all ease-in-out 0.5s;
       .update-btn:active {
         transform: translateY(4px);
       }
