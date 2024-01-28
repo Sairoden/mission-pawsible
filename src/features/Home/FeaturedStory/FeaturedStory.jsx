@@ -26,16 +26,10 @@ function FeaturedStory() {
           <div className="featured-right-details">
             <div>
               <h6 className="featured-date">December 09, 2023</h6>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "3px",
-                }}
-              >
+              <div className="featured-story-title-animation">
                 {title.split("").map((char, i) => (
                   <motion.h2
-                    key={char}
+                    key={char + i}
                     className="featured-story-title"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
