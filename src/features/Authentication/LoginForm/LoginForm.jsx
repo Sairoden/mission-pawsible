@@ -99,12 +99,14 @@ function LoginForm() {
           <div className="login-body-form-forget">
             {/* forget password button */}
             <Link to="/email">
-              <h6 className="label">Forget Password?</h6>
+              <h6 className="login-body-form-forget-label">Forget Password?</h6>
             </Link>
             {/* forgot email button*/}
 
             <Link to="/email">
-              <h6 className="label">Didn't receive a confirmation email?</h6>
+              <h6 className="login-body-form-forget-label">
+                Didn't receive a confirmation email?
+              </h6>
             </Link>
           </div>
           <br />
@@ -118,7 +120,7 @@ function LoginForm() {
               disabled={isPending || isPending2}
               onClick={handleGoogleLogin}
             >
-              Sign in with Google 
+              Sign in with Google
               <FcGoogle className="login-body-form-google-logo google-icon" />
             </button>
             <br />

@@ -21,7 +21,7 @@ function Landing() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ delay: 1, duration: 2, ease: "easeInOut" }}
+        transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
       >
         <div className="header">
           <h1>
@@ -67,7 +67,7 @@ function Landing() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 2, ease: "easeInOut" }}
+        transition={{ duration: 1, ease: "easeInOut" }}
       >
         <div>
           <img

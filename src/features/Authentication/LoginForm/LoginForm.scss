@@ -3,13 +3,13 @@
 .login {
   padding-right: 1rem;
   padding-left: 1rem;
-  
+
   &-img {
     width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
-    
+
     &-content {
       object-fit: cover;
       width: 80%;
@@ -17,7 +17,7 @@
         width: 50%;
         min-width: 30.3rem;
       }
-      
+
       @media screen and (min-width: 768px) {
         width: 30%;
       }
@@ -33,7 +33,6 @@
     }
   }
   &-body {
-
     @media screen and (min-width: 768px) {
       margin: auto;
       width: 90%;
@@ -53,8 +52,28 @@
         display: flex;
         justify-content: space-between;
 
+        @media screen and (max-width: 600px) {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+        }
+
         &-button {
           all: unset;
+        }
+
+        &-label {
+          font-size: 1.2rem;
+          font-weight: 500;
+
+          @media screen and (min-width: 767px) {
+            font-size: 1.4rem;
+          }
+
+          @media screen and (min-width: 1440px) {
+            font-size: 1.8rem;
+          }
         }
       }
       // login button
@@ -68,12 +87,16 @@
           flex-direction: row;
           justify-content: space-around;
         }
-    
       }
       // google logo
       &-google-logo {
-        padding-left: .3rem;
+        padding-left: 0.3rem;
         transform: scale(3);
+        transition: all 0.5s ease-in-out;
+
+        @media only screen and (min-width: 1440px) {
+          margin-left: 1rem;
+        }
       }
     }
     // signup
