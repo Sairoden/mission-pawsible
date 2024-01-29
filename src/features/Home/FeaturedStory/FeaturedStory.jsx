@@ -45,42 +45,40 @@ function FeaturedStory() {
               </div>
             </div>
             <div>
+              <p className="featured-text">Hey everyone,</p>
               <p className="featured-text">
-                Once upon a time in Manila, Justin and his joyful Golden
-                Retriever, Max, shared a happy life together. But one day,
-                during a bustling city festival, Max got lost in the crowd,
-                leaving Justin feeling lost without his furry companion.
+                I'm Max, and I wanna share a story that still gives me
+                goosebumps every time I think about it. It's about my son, me,
+                and our furry family member Justin, a golden retriever who means
+                the world to us.
               </p>
               <p className="featured-text">
-                Determined to find Max, Justin turned to Mission Pawsible, where
-                he shared Max's details. The response was heartwarming as kind
-                hearted people rallied together to share Max's story far and
-                wide. Each day, the search grew, fueled by the compassion of the
-                online community.
+                It was a bright sunny day when my son came running to me with
+                tears in his eyes. He told me that our beloved golden retriever,
+                Justin, was missing. I could see the devastation in his eyes,
+                and it broke my heart to see him so upset. We searched
+                everywhere, put up posters, and asked around, but there was no
+                sign of Justin.
               </p>
               <p className="featured-text">
-                After weeks of anxious waiting, a ray of hope came from Charice,
-                a fellow user on the website. She spotted Max in Quiapo,
-                recognized him from the shared photos, and swiftly contacted
-                Justin through the platform.
+                I decided to post on Mission Pawsible, hoping that someone might
+                have seen Justin. That's when Sophia saw my post and reached out
+                to me through chat. She had found Justin and wanted to reunite
+                us. I couldn't believe it! I was overwhelmed with gratitude for
+                her kindness.
               </p>
               <p className="featured-text">
-                With a pounding heart, Justin drove through Manila, and the
-                moment he saw Max wagging his tail, tears filled his eyes.
-                Overwhelmed with gratitude, he realized the power of community.
-                What seemed impossible alone became effortless when people stood
-                together.
+                Sophia brought Justin back to us, and the moment my son saw him,
+                his face lit up with joy. It was a heartwarming reunion, and I
+                couldn't thank Sophia enough for bringing Justin back to us. I
+                shared our story to let everyone know that miracles do happen
+                and to never lose hope.
               </p>
               <p className="featured-text">
-                Max's return not only brought immense joy to Justin but also
-                inspired him to share their story. Today, he happily spreads the
-                tale of hope, proving that miracles can happen through the
-                combined efforts of a caring community on Mission Pawsible.
-              </p>
-              <p className="featured-text">
-                This heartwarming story stands as a testament to the platform's
-                ability to create miracles and reunite lost pets with their
-                owners, thanks to a robust and compassionate community.
+                Justin is back where he belongs and our family is complete
+                again. I will forever be grateful to Sophia for her kindness and
+                the combined efforts of a caring community on Mission Pawsible.
+                They brought Justin back home to us.
               </p>
             </div>
           </div>

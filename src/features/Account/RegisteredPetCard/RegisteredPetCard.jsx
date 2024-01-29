@@ -25,7 +25,7 @@ function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
         <div className="ribbon-container">
           {!isVerified && <div className="ribbon">Pending</div>}
         </div>
-        <Link to={`/pet/${id}`}>
+        <Link to={`/pet/${id}`} onClick={() => scrollTo(0, 0)}>
           <div className="middle-img-container">
             <img src={image} alt="shitsupic" className="register-img" />
           </div>
