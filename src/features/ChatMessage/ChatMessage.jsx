@@ -44,20 +44,25 @@ function ChatMessage() {
 
         let user = {};
         const channelId = `${chatConnection?.id}-${chatConnection?.pet?.id}`;
-        let channelName = `${chatConnection?.pet?.name} - ${chatConnection?.messenger?.name}`;
         let channelImage = chatConnection?.pet?.image;
+        let channelName = `${chatConnection?.pet?.name}-${chatConnection?.id}`;
 
-        if (
-          chatConnection?.messenger?.id === chatConnection?.messengerId ||
-          chatConnection?.messenger?.id !== chatConnection?.ownerId
-        ) {
+        if (chatConnection?.messenger?.id !== chatConnection?.ownerId) {
           user = chatConnection.messenger;
         } else {
           user = chatConnection.owner;
         }
 
+        console.log(user);
+
+        console.log(channelName);
+
         const res = await axios(
           `https://mission-pawsible-backend.onrender.com/api/v1/getToken/${user?.id}`
+        );
+
+        await axios(
+          `https://mission-pawsible-backend.onrender.com/api/v1/getToken/${chatConnection?.ownerId}`
         );
 
         await chatClient.connectUser(user, res.data.token);
@@ -67,15 +72,12 @@ function ChatMessage() {
           image: channelImage,
         });
 
-        await channel.create();
-
         if (chatConnection?.messenger?.id !== chatConnection?.ownerId) {
+          await channel.create();
           await channel.addMembers([
             chatConnection?.owner.id,
             chatConnection?.messenger.id,
           ]);
-        } else {
-          await channel.addMembers([chatConnection?.owner.id]);
         }
 
         setChannel(channel);
@@ -94,7 +96,7 @@ function ChatMessage() {
       } catch (err) {
         if (err) {
           console.log(err);
-          toast.error("Something went wrong.");
+          toast.error("Refresh the page and try again");
           navigate(-1);
         }
       }
