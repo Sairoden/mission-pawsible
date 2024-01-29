@@ -43,6 +43,7 @@ function PetDetails() {
     images,
     lat,
     lng,
+    status,
   } = pet;
 
   const handleChat = () => {
@@ -90,11 +91,12 @@ function PetDetails() {
           <h2 className="petdetail-right-header-title">
             {petName} ⭐ {breed}
           </h2>
-
-          <button className="petdetail-chat-btn" onClick={handleChat}>
-            <IoChatboxEllipsesOutline className="chat-icon" />
-            Chat with the person
-          </button>
+          {status !== "Reunited" && (
+            <button className="petdetail-chat-btn" onClick={handleChat}>
+              <IoChatboxEllipsesOutline className="chat-icon" />
+              Chat with the person
+            </button>
+          )}
         </div>
 
         <div className="petdetail-right-details">
