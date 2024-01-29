@@ -53,10 +53,6 @@ function ChatMessage() {
           user = chatConnection.owner;
         }
 
-        console.log(user);
-
-        console.log(channelName);
-
         const res = await axios(
           `https://mission-pawsible-backend.onrender.com/api/v1/getToken/${user?.id}`
         );
