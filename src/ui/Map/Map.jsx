@@ -1,12 +1,21 @@
 // REACT & LIBRARIES
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { useState, useEffect } from "react";
+import {
+  MapContainer,
+  TileLayer,
+  Marker,
+  Popup,
+  useMap,
+  useMapEvents,
+} from "react-leaflet";
+import { useNavigate } from "react-router-dom";
 import { FullscreenControl } from "react-leaflet-fullscreen";
 
 // STYLES
 import "./Map.scss";
 import "react-leaflet-fullscreen/styles.css";
 
-function Map({ center, location, zoom }) {
+function Map({ center, location, zoom, petForm = false }) {
   return (
     <div className="mapContainer">
       <MapContainer center={center} zoom={zoom} className="map">
@@ -21,9 +30,31 @@ function Map({ center, location, zoom }) {
         </Marker>
 
         <FullscreenControl forceSeparateButton={true} position="topright" />
+
+        {petForm && (
+          <>
+            <ChangeCenter position={center} />
+            <DetectClick />
+          </>
+        )}
       </MapContainer>
     </div>
   );
+}
+
+function ChangeCenter({ position }) {
+  const map = useMap();
+  map.setView(position);
+
+  return null;
+}
+
+function DetectClick() {
+  const navigate = useNavigate();
+
+  useMapEvents({
+    click: e => navigate(`/report?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+  });
 }
 
 export default Map;

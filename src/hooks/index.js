@@ -33,6 +33,7 @@ import { useNewMessageNotification } from "./chats/useNewMessageNotification";
 
 // UTILS
 import { useOutsideClick } from "./utils/useOutsideClick";
+import { useUrlPosition } from "./utils/useUrlPosition";
 
 export {
   // AUTH
@@ -70,4 +71,5 @@ export {
 
   // UTILS
   useOutsideClick,
+  useUrlPosition,
 };

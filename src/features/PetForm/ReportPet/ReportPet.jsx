@@ -1,8 +1,11 @@
 // REACT & LIBRARIES
+import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
+import axios from "axios";
 
 // STYLES
 import "./ReportPet.scss";
+import toast from "react-hot-toast";
 
 // UI COMPONENTS
 import {
@@ -13,6 +16,7 @@ import {
   Button,
   ErrorInput,
   Spinner,
+  Map,
 } from "../../../ui";
 
 // UTILITIES
@@ -27,7 +31,7 @@ import {
 } from "../../../utils";
 
 // HOOKS
-import { useCreatePet } from "../../../hooks";
+import { useCreatePet, useUrlPosition } from "../../../hooks";
 
 function ReportPet() {
   const { createPet, isPending } = useCreatePet();
@@ -40,8 +44,17 @@ function ReportPet() {
     reset,
     watch,
     control,
+    setValue,
+    getValues,
   } = useForm();
 
+  // MAPS
+  const [lat, lng] = useUrlPosition();
+  const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
+  const [location, setLocation] = useState("");
+  const BASE_URL = "https://maps.googleapis.com/maps/api/geocode/json";
+
+  // OPTIONS
   const petTypeOptions = petTypes.map(petType => ({
     value: petType,
     label: petType,
@@ -73,6 +86,35 @@ function ReportPet() {
   };
 
   const handleReset = () => reset();
+
+  useEffect(() => {
+    if (!lat && !lng) return;
+
+    const fetchLocation = async () => {
+      try {
+        setIsLoadingGeocoding(true);
+
+        const { data } = await axios(
+          `${BASE_URL}?latlng=${lat},${lng}&key=${
+            import.meta.env.VITE_GOOGLE_KEY
+          }`
+        );
+
+        setLocation(data.results[0].formatted_address);
+      } catch (err) {
+        toast.error("Failed to fetch location");
+      } finally {
+        setIsLoadingGeocoding(false);
+      }
+    };
+
+    fetchLocation();
+  }, [lat, lng]);
+
+  const handleLocationChange = e => {
+    console.log(e.target.value);
+    // setLocation(e.target.value);
+  };
 
   if (isPending) return <Spinner />;
 
@@ -324,8 +366,19 @@ function ReportPet() {
                   register={register}
                   id="location"
                   required="This field is required"
+                  location={location}
+                  setValue={setValue}
+                  placeholder={location}
+                  getValues={getValues}
                 />
               </div>
+
+              <Map
+                center={[lat, lng]}
+                location={location}
+                zoom={16}
+                petForm={true}
+              />
             </div>
 
             {/* description */}

@@ -26,3 +26,5 @@ export const getCoordsForAddress = async address => {
 
   return location;
 };
+
+// https://maps.googleapis.com/maps/api/geocode/json?latlng=14.602943,121.0187439&key=AIzaSyD4dHRnyY_cdZGX0wSnPIrDQo6jTdBYpdg

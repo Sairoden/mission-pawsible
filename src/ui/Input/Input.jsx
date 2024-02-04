@@ -19,6 +19,9 @@ function Input({
   defaultValue,
   size,
   max,
+  location,
+  setValue,
+  getValues,
 }) {
   const [showPassword, setShowPassword] = useState(false);
   const inputType = showPassword ? "text" : type;
@@ -47,8 +50,6 @@ function Input({
     message: "Should start with 09",
   };
 
-  const sizes = {};
-
   return (
     <div className="input-container">
       <input
@@ -70,6 +71,22 @@ function Input({
           pattern: validEmail || validContactNumber,
           minLength: validPassword,
           validate: validConfirmPassword,
+          onChange: e => {
+            if (id === "location") {
+              if (location) {
+                setValue("location", location);
+                location = "";
+              }
+
+              const myLocation = getValues("location");
+
+              if (myLocation && location) {
+                let address = myLocation + e.target.value;
+                setValue("location", address);
+                address = "";
+              }
+            }
+          },
         })}
       />
       {type === "password" && (
