@@ -48,6 +48,11 @@
         display: flex;
         justify-content: space-evenly;
       }
+
+      .input-textarea {
+        height: 10rem !important;
+        resize: none;
+      }
     }
 
     &-right {
@@ -70,6 +75,7 @@
     }
   }
   .btns {
+    margin-top: 3rem;
     flex-direction: column-reverse !important;
 
     @media screen and (min-width: 425px) {

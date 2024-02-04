@@ -1,5 +1,4 @@
 // REACT & LIBRARIES
-import { useState, useEffect } from "react";
 import {
   MapContainer,
   TileLayer,

@@ -50,7 +50,6 @@ function ReportPet() {
 
   // MAPS
   const [lat, lng] = useUrlPosition();
-  const [isLoadingGeocoding, setIsLoadingGeocoding] = useState(false);
   const [location, setLocation] = useState("");
   const BASE_URL = "https://maps.googleapis.com/maps/api/geocode/json";
 
@@ -92,8 +91,6 @@ function ReportPet() {
 
     const fetchLocation = async () => {
       try {
-        setIsLoadingGeocoding(true);
-
         const { data } = await axios(
           `${BASE_URL}?latlng=${lat},${lng}&key=${
             import.meta.env.VITE_GOOGLE_KEY
@@ -103,18 +100,11 @@ function ReportPet() {
         setLocation(data.results[0].formatted_address);
       } catch (err) {
         toast.error("Failed to fetch location");
-      } finally {
-        setIsLoadingGeocoding(false);
       }
     };
 
     fetchLocation();
   }, [lat, lng]);
-
-  const handleLocationChange = e => {
-    console.log(e.target.value);
-    // setLocation(e.target.value);
-  };
 
   if (isPending) return <Spinner />;
 
@@ -307,6 +297,41 @@ function ReportPet() {
                 />
               </div>
             </div>
+
+            {/* description */}
+            <div className="reportPet-body-left-desc">
+              <div className="reportPet-body-input">
+                <label htmlFor="description" className="label">
+                  Description
+                  <ErrorInput>{errors?.description?.message}</ErrorInput>
+                </label>
+                <br />
+                <InputTextArea
+                  disabled={isPending}
+                  name="description"
+                  id="description"
+                  required="This field is required"
+                  register={register}
+                />
+              </div>
+            </div>
+
+            {/* message */}
+            <div className="reportPet-body-left-msg">
+              <div className="reportPet-body-input">
+                <label htmlFor="message" className="label">
+                  Message <ErrorInput>{errors?.message?.message}</ErrorInput>
+                </label>
+                <br />
+                <InputTextArea
+                  disabled={isPending}
+                  name="message"
+                  id="message"
+                  required="This field is required"
+                  register={register}
+                />
+              </div>
+            </div>
           </div>
 
           <div className="reportPet-body-right">
@@ -338,7 +363,7 @@ function ReportPet() {
 
               <div className="reportPet-body-input">
                 <label htmlFor="date" className="label">
-                  Date last seen
+                  Date Last Seen
                   <ErrorInput>{errors?.date?.message}</ErrorInput>
                 </label>
                 <br />
@@ -357,7 +382,7 @@ function ReportPet() {
             <div className="reportPet-body-right-location">
               <div className="reportPet-body-input">
                 <label htmlFor="location" className="label">
-                  Location Last Seen (Please provide a detailed address)
+                  Location Last Seen
                   <ErrorInput>{errors?.location?.message}</ErrorInput>
                 </label>
                 <br />
@@ -373,47 +398,15 @@ function ReportPet() {
                 />
               </div>
 
+              <br />
+              <br />
+
               <Map
                 center={[lat, lng]}
                 location={location}
                 zoom={16}
                 petForm={true}
               />
-            </div>
-
-            {/* description */}
-            <div className="reportPet-body-right-desc">
-              <div className="reportPet-body-input">
-                <label htmlFor="description" className="label">
-                  Description
-                  <ErrorInput>{errors?.description?.message}</ErrorInput>
-                </label>
-                <br />
-                <InputTextArea
-                  disabled={isPending}
-                  name="description"
-                  id="description"
-                  required="This field is required"
-                  register={register}
-                />
-              </div>
-            </div>
-
-            {/* message */}
-            <div className="reportPet-body-right-msg">
-              <div className="reportPet-body-input">
-                <label htmlFor="message" className="label">
-                  Message <ErrorInput>{errors?.message?.message}</ErrorInput>
-                </label>
-                <br />
-                <InputTextArea
-                  disabled={isPending}
-                  name="message"
-                  id="message"
-                  required="This field is required"
-                  register={register}
-                />
-              </div>
             </div>
           </div>
 
