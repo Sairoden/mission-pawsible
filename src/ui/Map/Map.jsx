@@ -1,8 +1,10 @@
 // REACT & LIBRARIES
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { FullscreenControl } from "react-leaflet-fullscreen";
 
 // STYLES
 import "./Map.scss";
+import "react-leaflet-fullscreen/styles.css";
 
 function Map({ center, location, zoom }) {
   return (
@@ -17,6 +19,8 @@ function Map({ center, location, zoom }) {
         <Marker position={center}>
           <Popup>{location}</Popup>
         </Marker>
+
+        <FullscreenControl forceSeparateButton={true} position="topright" />
       </MapContainer>
     </div>
   );
