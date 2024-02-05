@@ -1,4 +1,5 @@
 // REACT & LIBRARIES
+import { useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useParams, useNavigate } from "react-router-dom";
 
@@ -14,7 +15,9 @@ export const useGetUserPet = () => {
     queryKey: ["userPets"],
   });
 
-  if (!userPet) navigate("/account");
+  useEffect(() => {
+    if (!userPet) navigate("/account");
+  }, [navigate, userPet]);
 
   return { userPet, isPending };
 };

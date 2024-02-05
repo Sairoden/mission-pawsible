@@ -184,7 +184,7 @@ function PetDetails() {
       </div>
 
       <div className="petdetail-footer-middle">
-        <Map center={[lat, lng]} location={location} zoom={15} />
+        <Map center={[lat, lng]} location={location} zoom={19} />
       </div>
     </div>
   );

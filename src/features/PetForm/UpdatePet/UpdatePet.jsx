@@ -39,8 +39,8 @@ function UpdatePet() {
   const { updatePet, isPending: isPending2 } = useUpdatePet();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
-  const [lat, setLat] = useState(14.651482);
-  const [lng, setLng] = useState(121.04932);
+  const [lat, setLat] = useState(14.62959426666337);
+  const [lng, setLng] = useState(121.04191562631124);
 
   // REACT-HOOK-FORM
   const {
@@ -452,7 +452,7 @@ function UpdatePet() {
               <Map
                 center={[lat, lng]}
                 location={location}
-                zoom={16}
+                zoom={19}
                 petForm={true}
                 changeMap="updatePet"
                 petId={id}
