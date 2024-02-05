@@ -5,7 +5,7 @@
   height: calc(100vh - 80vh);
   transition: all ease-in-out 0.5s;
 
-  @media only screen and (max-width: 950px) {
+  @media only screen and (max-width: 1000px) {
     height: fit-content;
     position: fixed;
     top: 0;
@@ -31,10 +31,18 @@
       justify-content: space-around;
       align-items: center;
       transition: all ease-in-out 0.5s;
-      @media only screen and (max-width: 950px) {
-        height: 100vh;
+
+      @media only screen and (max-width: 1600px) {
+        font-size: 1.6rem;
+      }
+      @media only screen and (max-width: 1300px) {
+        font-size: 1.6rem;
       }
       @media only screen and (max-width: 1250px) {
+        font-size: 1.4rem;
+      }
+      @media only screen and (max-width: 1000px) {
+        height: 100vh;
         font-size: 1.6rem;
       }
     }
@@ -46,7 +54,7 @@
   .active {
     color: $color-orange;
 
-    @media only screen and (max-width: 950px) {
+    @media only screen and (max-width: 1000px) {
       color: $color-white;
     }
   }
@@ -143,7 +151,7 @@
   }
 }
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1000px) {
   .navbar-container {
     .menu {
       display: none;
