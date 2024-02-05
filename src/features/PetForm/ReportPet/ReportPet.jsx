@@ -406,6 +406,7 @@ function ReportPet() {
                 location={location}
                 zoom={16}
                 petForm={true}
+                changeMap="reportPet"
               />
             </div>
           </div>

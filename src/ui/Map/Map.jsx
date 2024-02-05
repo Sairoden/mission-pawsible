@@ -14,13 +14,23 @@ import { FullscreenControl } from "react-leaflet-fullscreen";
 import "./Map.scss";
 import "react-leaflet-fullscreen/styles.css";
 
-function Map({ center, location, zoom, petForm = false }) {
+function Map({
+  center,
+  location,
+  zoom,
+  petForm = false,
+  changeMap = "",
+  petId,
+}) {
   return (
     <div className="mapContainer">
       <MapContainer center={center} zoom={zoom} className="map">
         <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
-          url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+          // attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+          // url="https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png"
+
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           maxZoom={20}
         />
 
@@ -30,12 +40,14 @@ function Map({ center, location, zoom, petForm = false }) {
 
         <FullscreenControl forceSeparateButton={true} position="topright" />
 
-        {petForm && (
+        {/* {petForm && (
           <>
             <ChangeCenter position={center} />
-            <DetectClick />
+            <DetectClick changeMap={changeMap} petId={petId} />
           </>
-        )}
+        )} */}
+        <ChangeCenter position={center} />
+        <DetectClick changeMap={changeMap} petId={petId} />
       </MapContainer>
     </div>
   );
@@ -48,11 +60,17 @@ function ChangeCenter({ position }) {
   return null;
 }
 
-function DetectClick() {
+function DetectClick({ changeMap, petId }) {
   const navigate = useNavigate();
 
   useMapEvents({
-    click: e => navigate(`/report?lat=${e.latlng.lat}&lng=${e.latlng.lng}`),
+    click: e => {
+      if (changeMap === "reportPet")
+        navigate(`/report?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
+
+      if (changeMap === "updatePet")
+        navigate(`/editPet/${petId}?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
+    },
   });
 }
 

@@ -1,10 +1,12 @@
 // REACT & LIBRARIES
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { useForm, Controller } from "react-hook-form";
+import axios from "axios";
 
 // STYLES
 import "./UpdatePet.scss";
+import toast from "react-hot-toast";
 
 // UI COMPONENTS
 import {
@@ -15,6 +17,7 @@ import {
   Button,
   ErrorInput,
   Spinner,
+  Map,
 } from "../../../ui";
 
 // UTILITIES
@@ -35,6 +38,9 @@ function UpdatePet() {
   const { userPet, isPending } = useGetUserPet();
   const { updatePet, isPending: isPending2 } = useUpdatePet();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const [lat, setLat] = useState(14.651482);
+  const [lng, setLng] = useState(121.04932);
 
   // REACT-HOOK-FORM
   const {
@@ -44,8 +50,11 @@ function UpdatePet() {
     reset,
     watch,
     control,
+    setValue,
+    getValues,
   } = useForm();
 
+  // OPTIONS
   const petTypeOptions = petTypes.map(petType => ({
     value: petType,
     label: petType,
@@ -82,6 +91,42 @@ function UpdatePet() {
     if (userPet) reset(userPet);
   }, [userPet, reset]);
 
+  // MAPS
+  const [location, setLocation] = useState("");
+  const BASE_URL = "https://maps.googleapis.com/maps/api/geocode/json";
+
+  useEffect(() => {
+    let myLat = searchParams.get("lat");
+    let myLng = searchParams.get("lng");
+
+    if (!lat && !lng && !userPet && isPending) return;
+
+    if (!myLat || !myLng) {
+      setLat(userPet?.lat);
+      setLng(userPet?.lng);
+    } else {
+      setLat(myLat);
+      setLng(myLng);
+    }
+
+    // address
+    const fetchLocation = async () => {
+      try {
+        const { data } = await axios(
+          `${BASE_URL}?latlng=${lat},${lng}&key=${
+            import.meta.env.VITE_GOOGLE_KEY
+          }`
+        );
+
+        setLocation(data.results[0].formatted_address);
+      } catch (err) {
+        toast.error("Failed to fetch location");
+      }
+    };
+
+    fetchLocation();
+  }, [isPending, lat, lng, searchParams, userPet]);
+
   if (isPending || isPending2 || !userPet) return <Spinner />;
 
   let {
@@ -92,7 +137,7 @@ function UpdatePet() {
     color,
     size,
     gender,
-    location,
+    location: address,
     microchipped,
     date,
     message,
@@ -295,6 +340,43 @@ function UpdatePet() {
                 />
               </div>
             </div>
+
+            {/* description */}
+            <div className="reportPet-body-left-desc">
+              <div className="updatePet-body-input">
+                <label htmlFor="description" className="label">
+                  Description
+                  <ErrorInput>{errors?.description?.message}</ErrorInput>
+                </label>
+                <br />
+                <InputTextArea
+                  defaultValue={description}
+                  disabled={isPending || isPending2}
+                  name="description"
+                  id="description"
+                  required="This field is required"
+                  register={register}
+                />
+              </div>
+            </div>
+
+            {/* message */}
+            <div className="reportPet-body-left-msg">
+              <div className="updatePet-body-input">
+                <label htmlFor="message" className="label">
+                  Message <ErrorInput>{errors?.message?.message}</ErrorInput>
+                </label>
+                <br />
+                <InputTextArea
+                  defaultValue={message}
+                  disabled={isPending || isPending2}
+                  name="message"
+                  id="message"
+                  required="This field is required"
+                  register={register}
+                />
+              </div>
+            </div>
           </div>
 
           <div className="updatePet-body-right">
@@ -352,50 +434,29 @@ function UpdatePet() {
                 </label>
                 <br />
                 <Input
-                  defaultValue={location}
+                  defaultValue={address}
                   disabled={isPending || isPending2}
                   register={register}
                   id="location"
                   required="This field is required"
+                  location={location}
+                  setValue={setValue}
+                  placeholder={location}
+                  getValues={getValues}
                 />
               </div>
-            </div>
 
-            {/* description */}
-            <div className="updatePet-body-right-desc">
-              <div className="updatePet-body-input">
-                <label htmlFor="description" className="label">
-                  Description
-                  <ErrorInput>{errors?.description?.message}</ErrorInput>
-                </label>
-                <br />
-                <InputTextArea
-                  defaultValue={description}
-                  disabled={isPending || isPending2}
-                  name="description"
-                  id="description"
-                  required="This field is required"
-                  register={register}
-                />
-              </div>
-            </div>
+              <br />
+              <br />
 
-            {/* message */}
-            <div className="updatePet-body-right-msg">
-              <div className="updatePet-body-input">
-                <label htmlFor="message" className="label">
-                  Message <ErrorInput>{errors?.message?.message}</ErrorInput>
-                </label>
-                <br />
-                <InputTextArea
-                  defaultValue={message}
-                  disabled={isPending || isPending2}
-                  name="message"
-                  id="message"
-                  required="This field is required"
-                  register={register}
-                />
-              </div>
+              <Map
+                center={[lat, lng]}
+                location={location}
+                zoom={16}
+                petForm={true}
+                changeMap="updatePet"
+                petId={id}
+              />
             </div>
           </div>
 
