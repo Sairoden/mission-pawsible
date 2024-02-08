@@ -68,6 +68,15 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
+    &:hover {
+      color: $color-orange;
+
+      @media only screen and (max-width: 1000px) {
+        color: inherit;
+      }
+    }
+
     .navbar-icon {
       height: 2.4rem;
       width: 2.4rem;
