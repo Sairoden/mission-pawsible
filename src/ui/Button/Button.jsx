@@ -10,13 +10,14 @@ const Button = ({
   type = "button",
   disabled = false,
   size,
+  className,
 }) => {
   return (
     <button
       onClick={onClick}
       style={styles}
       type={type}
-      className={`button ${variation} ${
+      className={`button ${variation} ${className} ${
         disabled && "button-disabled"
       } button-${size}`}
       disabled={disabled}

@@ -48,11 +48,7 @@ const Navbar = () => {
             />
           </NavLink>
 
-          <NavLink
-            to="/"
-            className={`nav-link ${isActive ? "active" : ""}`}
-            onClick={handleNavItemClick}
-          >
+          <NavLink to="/" className="nav-link" onClick={handleNavItemClick}>
             <HiOutlineHomeModern className="navbar-icon" />
             HOME
           </NavLink>
@@ -113,13 +109,21 @@ const Navbar = () => {
 
           {!user ? (
             <NavLink to="/login" onClick={handleNavItemClick}>
-              <Button variation="primary" size="small">
+              <Button
+                variation="primary"
+                size="small"
+                className="navbar-button"
+              >
                 LOG IN
               </Button>
             </NavLink>
           ) : (
             <NavLink to="/account" onClick={handleNavItemClick}>
-              <Button variation="primary" size="small">
+              <Button
+                variation="primary"
+                size="small"
+                className="navbar-button"
+              >
                 ACCOUNT
               </Button>
             </NavLink>
