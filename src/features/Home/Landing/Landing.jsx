@@ -11,8 +11,12 @@ import { Button } from "../../../ui";
 // ASSETS
 import landing from "../../../assets/landing.png";
 
+// HOOKS
+import { useGetCurrentUser } from "../../../hooks";
+
 function Landing() {
   const navigate = useNavigate();
+  const { user } = useGetCurrentUser();
 
   return (
     <section className="landing container">
@@ -53,11 +57,11 @@ function Landing() {
             variation="secondary"
             size="medium"
             onClick={() => {
-              navigate("/signup");
+              navigate(`${!user ? "/signup" : "/resources"}`);
               scrollTo(0, 0);
             }}
           >
-            Join Us
+            {!user ? " Join Us  " : "Resources"}
           </Button>
         </div>
       </motion.div>

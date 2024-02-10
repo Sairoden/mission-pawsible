@@ -13,9 +13,12 @@ import {
   useGetLostPets,
   useGetFoundPets,
   useGetReunitedPets,
+  useGetCurrentUser,
 } from "../../../hooks";
 
 function Stats() {
+  const { user } = useGetCurrentUser();
+
   const { lostPets } = useGetLostPets();
   const { foundPets } = useGetFoundPets();
   const { reunitedPets } = useGetReunitedPets();
@@ -75,8 +78,9 @@ function Stats() {
 
         <div className="stats-footer">
           <span className="stats-footer-text">
-            Join the community of pet owners to reunite missing pets with their
-            families
+            {!user
+              ? "Join the community to reunite missing pets with their families"
+              : "Explore our mission and join us in bringing pets and families together"}
           </span>
 
           <Button
@@ -87,7 +91,7 @@ function Stats() {
               scrollTo(0, 0);
             }}
           >
-            Sign up now!
+            {!user ? "Sign up now!" : "Learn About Us!"}
           </Button>
         </div>
       </div>
