@@ -87,7 +87,7 @@ function Stats() {
             variation="primary"
             size="small"
             onClick={() => {
-              navigate("/signup");
+              navigate(`${!user ? "/signup" : "/about-us"}`);
               scrollTo(0, 0);
             }}
           >
