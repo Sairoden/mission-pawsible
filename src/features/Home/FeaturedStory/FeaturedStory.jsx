@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import featuredStoryBanner from "../../../assets/featuredStoryBanner.png";
 
 function FeaturedStory() {
-  const title = "A Bark Away: The Journey of Max's Return";
+  const title = "A Bark Away: The Journey of Justin's Homecoming";
 
   return (
     <div className="featured-container">
