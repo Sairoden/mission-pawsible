@@ -69,6 +69,9 @@
 
         @media only screen and (max-width: 500px) {
           gap: 1px;
+        }
+
+        @media only screen and (max-width: 800px) {
           justify-content: center;
         }
       }
@@ -84,11 +87,14 @@
         @media only screen and (max-width: 720px) {
           font-size: 2.2rem;
         }
-        @media only screen and (max-width: 590px) {
+        @media only screen and (max-width: 840px) {
           font-size: 1.6rem;
         }
-        @media only screen and (max-width: 378px) {
+        @media only screen and (max-width: 550px) {
           font-size: 1.4rem;
+        }
+        @media only screen and (max-width: 400px) {
+          font-size: 1.2rem;
         }
       }
 
@@ -104,7 +110,7 @@
           font-size: 1.6rem;
         }
 
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 840px) {
           text-align: center;
         }
       }
@@ -123,8 +129,14 @@
           font-size: 1.6rem;
         }
 
-        @media only screen and (max-width: 500px) {
-          padding: 0 2rem;
+        @media only screen and (max-width: 840px) {
+          margin-left: 2rem;
+          margin-right: 2rem;
+        }
+
+        @media only screen and (max-width: 400px) {
+          margin-left: 3rem;
+          margin-right: 3rem;
         }
       }
     }
