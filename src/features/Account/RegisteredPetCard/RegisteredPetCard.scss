@@ -228,16 +228,11 @@
     .listing-btn:hover {
       background: $color-blue;
       color: $color-white;
-      font-weight: 600;
-      transform: scale(0.9);
       transition: all ease-in-out 0.5s;
       -webkit-transition: all ease-in-out 0.5s;
       -moz-transition: all ease-in-out 0.5s;
       -ms-transition: all ease-in-out 0.5s;
       -o-transition: all ease-in-out 0.5s;
-    }
-    .listing-btn:active {
-      transform: translateY(4px);
     }
 
     .update-btn {
@@ -262,12 +257,7 @@
     .update-btn:hover {
       background: $color-orange;
       color: $color-white;
-      transform: scale(0.9);
       transition: all ease-in-out 0.5s;
-      font-weight: 600;
-      .update-btn:active {
-        transform: translateY(4px);
-      }
     }
   }
 }
