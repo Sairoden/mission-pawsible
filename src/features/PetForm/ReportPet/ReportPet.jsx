@@ -418,7 +418,7 @@ function ReportPet() {
               size="width"
               onClick={handleReset}
             >
-              CANCEL
+              RESET
             </Button>
             <br />
             <Button
