@@ -15,8 +15,8 @@ export const useUpdatePet = () => {
   const { mutate: updatePet, isPending } = useMutation({
     mutationFn: ({ newPet, petId }) => updatePetApi(newPet, petId),
     onSuccess: () => {
-      toast.success("Pet successfully edited");
       queryClient.invalidateQueries({ queryKey: ["pets", "userPets"] });
+      toast.success("Pet successfully edited");
       navigate("/account");
     },
     onError: err => {

@@ -10,7 +10,7 @@ export const useGetSinglePet = () => {
   const navigate = useNavigate();
 
   const { data: pet, isPending } = useQuery({
-    queryKey: ["pets, userPets"],
+    queryKey: ["pets", "userPets"],
     queryFn: () => getSinglePet(petId),
   });
 

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 // STYLES
 import "./ReportPet.scss";
@@ -49,8 +50,10 @@ function ReportPet() {
   } = useForm();
 
   // MAPS
+  const navigate = useNavigate();
   const [lat, lng] = useUrlPosition();
   const [location, setLocation] = useState("");
+  const [blurLocation, setBlurLocation] = useState("");
   const BASE_URL = "https://maps.googleapis.com/maps/api/geocode/json";
 
   // OPTIONS
@@ -98,13 +101,37 @@ function ReportPet() {
         );
 
         setLocation(data.results[0].formatted_address);
+        setBlurLocation("");
+        return;
       } catch (err) {
         toast.error("Failed to fetch location");
       }
     };
 
-    fetchLocation();
-  }, [lat, lng]);
+    const fetchBlurLocation = async () => {
+      try {
+        const { data } = await axios(
+          `https://maps.googleapis.com/maps/api/geocode/json?address=${blurLocation}&key=${
+            import.meta.env.VITE_GOOGLE_KEY
+          }`
+        );
+
+        setLocation(data.results[0].formatted_address);
+        const myLat = data.results[0].geometry.location.lat;
+        const myLng = data.results[0].geometry.location.lng;
+        navigate(`/report?lat=${myLat}&lng=${myLng}`);
+        setBlurLocation("");
+        return;
+      } catch (err) {
+        toast.error("Failed to fetch location");
+      }
+    };
+
+    if (blurLocation) fetchBlurLocation();
+    else fetchLocation();
+  }, [blurLocation, lat, lng, location, navigate]);
+
+  // const handleBlurLocation = myLocation => setBlurLocation(myLocation);
 
   if (isPending) return <Spinner />;
 
@@ -395,6 +422,9 @@ function ReportPet() {
                   setValue={setValue}
                   placeholder={location}
                   getValues={getValues}
+                  setBlurLocation={setBlurLocation}
+                  blurLocation={blurLocation}
+                  setLocation={setLocation}
                 />
               </div>
 

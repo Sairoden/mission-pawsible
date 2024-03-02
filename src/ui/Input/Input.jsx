@@ -1,5 +1,5 @@
 // REACT & LIBRARIES
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // STYLES
 import "./Input.scss";
@@ -22,6 +22,8 @@ function Input({
   location,
   setValue,
   getValues,
+  setBlurLocation,
+  setLocation,
 }) {
   const [showPassword, setShowPassword] = useState(false);
   const inputType = showPassword ? "text" : type;
@@ -50,6 +52,12 @@ function Input({
     message: "Should start with 09",
   };
 
+  useEffect(() => {
+    if (location) {
+      setValue("location", location);
+    }
+  }, [location, setValue]);
+
   return (
     <div className="input-container">
       <input
@@ -63,27 +71,20 @@ function Input({
         disabled={disabled}
         className={`input-textbox input-${size}`}
         value={value || undefined}
-        placeholder={placeholder || undefined}
         onChange={onChange}
+        placeholder={placeholder || undefined}
         autoComplete={autocompleteValue}
         {...register(id, {
           required,
           pattern: validEmail || validContactNumber,
           minLength: validPassword,
           validate: validConfirmPassword,
-          onChange: e => {
+          onBlur: e => {
             if (id === "location") {
-              if (location) {
-                setValue("location", location);
-                location = "";
-              }
-
-              const myLocation = getValues("location");
-
-              if (myLocation && location) {
-                let address = myLocation + e.target.value;
-                setValue("location", address);
-                address = "";
+              const myLocation = e.target.value;
+              if (myLocation) {
+                setBlurLocation(myLocation);
+                setLocation("");
               }
             }
           },

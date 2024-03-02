@@ -41,6 +41,7 @@ function UpdatePet() {
   const [searchParams] = useSearchParams();
   const [lat, setLat] = useState(14.62959426666337);
   const [lng, setLng] = useState(121.04191562631124);
+  const [blurLocation, setBlurLocation] = useState("");
 
   // REACT-HOOK-FORM
   const {
@@ -124,8 +125,28 @@ function UpdatePet() {
       }
     };
 
-    fetchLocation();
-  }, [isPending, lat, lng, searchParams, userPet]);
+    const fetchBlurLocation = async () => {
+      try {
+        const { data } = await axios(
+          `https://maps.googleapis.com/maps/api/geocode/json?address=${blurLocation}&key=${
+            import.meta.env.VITE_GOOGLE_KEY
+          }`
+        );
+
+        setLocation(data.results[0].formatted_address);
+        const myLat = data.results[0].geometry.location.lat;
+        const myLng = data.results[0].geometry.location.lng;
+        navigate(`/editPet/${userPet?.id}?lat=${myLat}&lng=${myLng}`);
+        setBlurLocation("");
+        return;
+      } catch (err) {
+        toast.error("Failed to fetch location");
+      }
+    };
+
+    if (blurLocation) fetchBlurLocation();
+    else fetchLocation();
+  }, [blurLocation, isPending, lat, lng, navigate, searchParams, userPet]);
 
   if (isPending || isPending2 || !userPet) return <Spinner />;
 
@@ -443,6 +464,9 @@ function UpdatePet() {
                   setValue={setValue}
                   placeholder={location}
                   getValues={getValues}
+                  setBlurLocation={setBlurLocation}
+                  blurLocation={blurLocation}
+                  setLocation={setLocation}
                 />
               </div>
 
@@ -467,7 +491,7 @@ function UpdatePet() {
               size="width"
               onClick={handleReset}
             >
-              CANCEL
+              RESET
             </Button>
             <br />
             <Button
