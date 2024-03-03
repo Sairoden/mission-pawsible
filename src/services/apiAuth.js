@@ -8,6 +8,8 @@ export const getCurrentUser = async () => {
 
   const { data, error } = await supabase.auth.getUser();
 
+  console.log("FROM GET CURRENT USER", data);
+
   if (error) {
     console.error(error.message);
     throw new Error("Unable to retrieve user information. Please try again.");
@@ -40,7 +42,7 @@ export const loginWithGoogle = async () => {
   });
 
   const { data, error } = await supabase.auth.getUser();
-  console.log(data);
+  console.log("FROM LOGIN", data);
 };
 
 export const login = async ({ email, password }) => {
