@@ -63,10 +63,10 @@ function ChatMessage() {
 
           if (channels.length === 0) {
             navigate("/account");
+            window.location.reload();
             setTimeout(function () {
-              window.location.reload();
-            }, 1000);
-            toast.error("You have no messages at the moment");
+              toast.error("You have no messages at the moment");
+            }, 100);
             return;
           }
 
