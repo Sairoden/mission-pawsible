@@ -29,22 +29,12 @@ function UpdateProfile() {
   if (isPending || isPending2) return <Spinner />;
 
   const handleUpdateProfile = data => {
-    console.log(data);
-    if (
-      !data.firstName ||
-      !data.lastName ||
-      !data.email ||
-      !data.contactNumber ||
-      !data.address
-    )
-      return;
+    if (!data.firstName || !data.lastName || !data.email) return;
 
     if (data.email !== email)
       toast.error("Email Change Confirmation Required", { duration: 10000 });
 
-    console.log("NOT DONE");
     updateProfile(data);
-    console.log("DONE");
   };
 
   return (
