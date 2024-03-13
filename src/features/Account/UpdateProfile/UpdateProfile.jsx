@@ -46,6 +46,8 @@ function UpdateProfile() {
     updateProfile(data);
   };
 
+  console.log(user);
+
   return (
     <div className="updateProfile spacing-t spacing-b">
       <div className="container">
