@@ -1,5 +1,5 @@
 // REACT & LIBRARIES
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // STYLES
 import "./Profile.scss";
@@ -7,10 +7,15 @@ import "./Profile.scss";
 // UI COMPONENTS
 import { Button } from "../../../ui";
 
+// CONTEXTS
+import { useChatContext } from "../../../contexts";
+
 function Profile({ user, logout }) {
   const { email } = user;
   const { address, avatar, contactNumber, firstName, lastName } =
     user.user_metadata || {};
+  const { setConnected } = useChatContext();
+  const navigate = useNavigate();
 
   return (
     <div className="profile-main-container">
@@ -23,6 +28,16 @@ function Profile({ user, logout }) {
           <h4 className="account-text">
             {firstName} {lastName}
           </h4>
+
+          <button
+            className="button-chat"
+            onClick={() => {
+              setConnected(true);
+              navigate("/chat");
+            }}
+          >
+            View Chat
+          </button>
         </div>
       </div>
 
@@ -60,11 +75,14 @@ function Profile({ user, logout }) {
         </div>
 
         <div className="footer-content">
-          <NavLink to="/account/update">
-            <Button variation="primary" size="medium">
-              Update
-            </Button>
-          </NavLink>
+          <Button
+            variation="primary"
+            size="medium"
+            onClick={() => navigate("/account/update")}
+          >
+            Update
+          </Button>
+
           <Button variation="secondary" onClick={logout} size="medium">
             Logout
           </Button>

@@ -26,21 +26,46 @@ import { Spinner } from "../../ui";
 import { useChatContext } from "../../contexts";
 
 // HOOKS
-import { useNewMessageNotification } from "../../hooks";
+import { useNewMessageNotification, useGetCurrentUser } from "../../hooks";
 
 const apiKey = import.meta.env.VITE_STREAM_KEY;
 
 function ChatMessage() {
   const [client, setClient] = useState(null);
   const [channel, setChannel] = useState(null);
-  const { chatConnection, setConnected } = useChatContext();
+  const { chatConnection, setConnected, connected } = useChatContext();
   const { newMessageNotification } = useNewMessageNotification();
   const navigate = useNavigate();
+  const { user: currentUser } = useGetCurrentUser();
 
   useEffect(() => {
     async function init() {
       try {
         const chatClient = StreamChat.getInstance(apiKey);
+
+        if (!chatConnection) {
+          let user = {
+            id: currentUser?.id,
+            name: `${currentUser?.user_metadata?.firstName} ${currentUser?.user_metadata?.lastName}`,
+            image: currentUser?.user_metadata?.avatar,
+            role: "user",
+          };
+
+          const res = await axios(
+            `https://mission-pawsible-backend.onrender.com/api/v1/getToken/${user?.id}`
+          );
+
+          await chatClient.connectUser(user, res.data.token);
+
+          const filter = { type: "messaging", members: { $in: [user?.id] } };
+
+          const channels = await chatClient.queryChannels(filter);
+
+          setChannel(channels);
+          setClient(chatClient);
+          setConnected(true);
+          return;
+        }
 
         let user = {};
         const channelId = `${chatConnection?.id}-${chatConnection?.pet?.id}`;
@@ -98,14 +123,14 @@ function ChatMessage() {
       }
     }
 
-    if (chatConnection) init();
+    if (connected) init();
 
     if (client)
       return () => {
         setConnected(false);
         return client.disconnectUser();
       };
-  }, [chatConnection, client, navigate, setConnected]);
+  }, [connected]);
 
   if (!client || !channel) return <Spinner />;
 
@@ -115,7 +140,7 @@ function ChatMessage() {
         <ChannelList
           filters={{
             members: {
-              $in: [chatConnection?.messenger?.id],
+              $in: [currentUser?.id],
             },
           }}
         />

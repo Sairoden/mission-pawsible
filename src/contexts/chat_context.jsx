@@ -10,7 +10,7 @@ export const ChatProvider = ({ children }) => {
 
   const handleChatConnection = userData => {
     setChatConnection(userData);
-    connected(true);
+    setConnected(true);
   };
 
   const value = {
