@@ -165,11 +165,11 @@ export const updateProfile = async ({
   avatar,
   password,
 }) => {
+  console.log("CLICKING UPDATE");
+
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  console.log(user);
 
   const { error } = await supabase
     .from("users")

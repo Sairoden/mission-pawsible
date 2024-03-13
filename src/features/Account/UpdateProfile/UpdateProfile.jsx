@@ -29,6 +29,7 @@ function UpdateProfile() {
   if (isPending || isPending2) return <Spinner />;
 
   const handleUpdateProfile = data => {
+    console.log(data);
     if (
       !data.firstName ||
       !data.lastName ||
@@ -41,12 +42,10 @@ function UpdateProfile() {
     if (data.email !== email)
       toast.error("Email Change Confirmation Required", { duration: 10000 });
 
-    console.log(data);
-
+    console.log("NOT DONE");
     updateProfile(data);
+    console.log("DONE");
   };
-
-  console.log(user);
 
   return (
     <div className="updateProfile spacing-t spacing-b">
