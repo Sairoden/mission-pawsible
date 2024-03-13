@@ -8,20 +8,6 @@ export const getCurrentUser = async () => {
 
   const { data, error } = await supabase.auth.getUser();
 
-  if (data.user.app_metadata.provider === "google") {
-    const { avatar_url, full_name } = data.user.identities[0].identity_data;
-
-    const firstName = full_name.split(" ")[0];
-    const lastName = full_name.split(" ")[1];
-    const avatar = avatar_url;
-
-    await supabase
-      .from("users")
-      .update([{ firstName, lastName, avatar }])
-      .eq("email", data.user.email)
-      .select();
-  }
-
   if (error) {
     console.error(error.message);
     throw new Error("Unable to retrieve user information. Please try again.");
@@ -52,6 +38,22 @@ export const loginWithGoogle = async () => {
   supabase.auth.signInWithOAuth({
     provider: "google",
   });
+
+  const { data } = await supabase.auth.getUser();
+
+  if (data.user.app_metadata.provider === "google") {
+    const { avatar_url, full_name } = data.user.identities[0].identity_data;
+
+    const firstName = full_name.split(" ")[0];
+    const lastName = full_name.split(" ")[1];
+    const avatar = avatar_url;
+
+    await supabase
+      .from("users")
+      .update([{ firstName, lastName, avatar }])
+      .eq("email", data.user.email)
+      .select();
+  }
 };
 
 export const login = async ({ email, password }) => {

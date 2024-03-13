@@ -65,7 +65,7 @@ function ChatMessage() {
             navigate("/account");
             setTimeout(function () {
               window.location.reload();
-            }, 100);
+            }, 1000);
             toast.error("You have no messages at the moment");
             return;
           }
