@@ -169,6 +169,8 @@ export const updateProfile = async ({
     data: { user },
   } = await supabase.auth.getUser();
 
+  console.log(user);
+
   const { error } = await supabase
     .from("users")
     .update({
@@ -184,10 +186,8 @@ export const updateProfile = async ({
     throw new Error("Update user went wrong");
   }
 
-  console.log(password);
-
   if (password) {
-    const { data: passwordUser, error } = await supabase.auth.updateUser({
+    const { error } = await supabase.auth.updateUser({
       password,
       data: {
         address,
@@ -197,9 +197,6 @@ export const updateProfile = async ({
         lastName,
       },
     });
-
-    console.log(error);
-    console.log(passwordUser);
 
     if (error) console.error(error?.message);
   }
