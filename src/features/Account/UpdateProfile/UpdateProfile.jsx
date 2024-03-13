@@ -41,6 +41,8 @@ function UpdateProfile() {
     if (data.email !== email)
       toast.error("Email Change Confirmation Required", { duration: 10000 });
 
+    console.log(data);
+
     updateProfile(data);
   };
 
