@@ -61,11 +61,10 @@ function ChatMessage() {
 
           const channels = await chatClient.queryChannels(filter);
 
-          console.log(channels);
-
-          if (!channels) {
+          if (channels.length === 0) {
             navigate(-1);
             toast.error("You have no messages at the moment");
+            return;
           }
 
           setChannel(channels);
