@@ -1,6 +1,6 @@
 // STYLES
 import "./PetsFilter.scss";
-  
+
 function PetsFilter({ setPetTypes, setGenders, setSizes, setLocations }) {
   const handleFilter = e => {
     const { name, value, checked } = e.target;
@@ -51,7 +51,7 @@ function PetsFilter({ setPetTypes, setGenders, setSizes, setLocations }) {
   return (
     <div className="pet-filter">
       <form className="filter-form">
-        <input type="checkbox" className="toggler"/>
+        <input type="checkbox" className="toggler" />
         <div className="header">
           <h2 className="click">FILTER</h2>
         </div>

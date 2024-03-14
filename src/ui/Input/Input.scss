@@ -4,7 +4,6 @@
   position: relative;
 
   .input-textbox {
-  
     width: 100%;
     margin-bottom: 0.5rem;
     padding: 1rem 2rem;
@@ -23,38 +22,17 @@
     &:focus {
       outline: none;
     }
-
-    // &-extra-small {
-    //   width: 18vw;
-    // }
-
-    // &-small {
-    //   width: 22vw;
-    // }
-
-    // &-medium {
-    //   width: 45vw;
-    // }
-
-    // &-large {
-    //   width: 49vw;
-    // }
-
-    // &-extra-large {
-    // }
   }
 
   .password-icon {
-    // display: none;
     height: 2.4rem;
     width: 2.4rem;
     position: absolute;
-    top: -.5rem;
+    top: -0.5rem;
     bottom: 0;
     right: 1rem;
     margin: auto 0;
     cursor: pointer;
     color: #8d8a86;
   }
-
 }

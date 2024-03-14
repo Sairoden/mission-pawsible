@@ -24,7 +24,9 @@ function LostPets() {
   const indexOfLastPet = currentPage * PETS_PAGE_SIZE;
   const indexOfFirstPet = indexOfLastPet - PETS_PAGE_SIZE;
 
-  const newLostPets = lostPets?.slice(indexOfFirstPet, indexOfLastPet);
+  const newLostPets = lostPets
+    ?.sort((a, b) => b.id - a.id)
+    .slice(indexOfFirstPet, indexOfLastPet);
 
   if (isPending) return <Spinner />;
 

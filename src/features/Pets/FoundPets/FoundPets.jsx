@@ -24,7 +24,9 @@ function FoundPets() {
   const indexOfLastPet = currentPage * PETS_PAGE_SIZE;
   const indexOfFirstPet = indexOfLastPet - PETS_PAGE_SIZE;
 
-  const newFoundPets = foundPets?.slice(indexOfFirstPet, indexOfLastPet);
+  const newFoundPets = foundPets
+    ?.sort((a, b) => b.id - a.id)
+    ?.slice(indexOfFirstPet, indexOfLastPet);
 
   if (isPending) return <Spinner />;
 

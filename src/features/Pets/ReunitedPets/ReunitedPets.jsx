@@ -24,7 +24,9 @@ function ReunitedPets() {
   const indexOfLastPet = currentPage * PETS_PAGE_SIZE;
   const indexOfFirstPet = indexOfLastPet - PETS_PAGE_SIZE;
 
-  const newReunitedPets = reunitedPets?.slice(indexOfFirstPet, indexOfLastPet);
+  const newReunitedPets = reunitedPets
+    ?.sort((a, b) => b.id - a.id)
+    ?.slice(indexOfFirstPet, indexOfLastPet);
 
   if (isPending) return <Spinner />;
 
