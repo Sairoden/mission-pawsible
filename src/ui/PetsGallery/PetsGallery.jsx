@@ -15,15 +15,6 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
   const [genders, setGenders] = useState([]);
   const [sizes, setSizes] = useState([]);
   const [locations, setLocations] = useState([]);
-  const [searchPetName, setSearchPetName] = useState("");
-
-  if (searchPetName) {
-    pets = pets.filter(pet =>
-      pet.petName.toLowerCase().includes(searchPetName)
-    );
-
-    console.log(pets);
-  }
 
   if (petTypes.length > 0)
     pets = pets.filter(pet => petTypes.includes(pet.petType));
@@ -54,7 +45,7 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
           setLocations={setLocations}
         />
 
-        <PetsCardContainer total={total} setSearchPetName={setSearchPetName}>
+        <PetsCardContainer total={total}>
           {pets.length > 0 ? (
             pets?.map(pet => (
               <PetsCard

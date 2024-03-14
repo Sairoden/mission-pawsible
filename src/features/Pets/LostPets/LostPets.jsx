@@ -21,10 +21,15 @@ function LostPets() {
     ? 1
     : Number(searchParams.get("page"));
 
+  const searchPetName = !searchParams.get("search")
+    ? ""
+    : searchParams.get("search");
+
   const indexOfLastPet = currentPage * PETS_PAGE_SIZE;
   const indexOfFirstPet = indexOfLastPet - PETS_PAGE_SIZE;
 
   const newLostPets = lostPets
+    ?.filter(pet => pet.petName.toLowerCase().includes(searchPetName))
     ?.sort((a, b) => b.id - a.id)
     .slice(indexOfFirstPet, indexOfLastPet);
 

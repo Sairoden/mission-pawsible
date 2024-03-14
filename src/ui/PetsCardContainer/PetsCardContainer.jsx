@@ -1,8 +1,13 @@
+// REACT & LIBRARIES
+import { useSearchParams } from "react-router-dom";
+
 // STYLES
 import "./PetsCardContainer.scss";
 import "../Input/Input.scss";
 
-function PetsCardContainer({ total, children, setSearchPetName }) {
+function PetsCardContainer({ total, children }) {
+  const [searchParams, setSearchParams] = useSearchParams();
+
   const delaySubmission = e => {
     let timeout;
 
@@ -11,7 +16,8 @@ function PetsCardContainer({ total, children, setSearchPetName }) {
     clearTimeout(timeout);
 
     timeout = setTimeout(() => {
-      setSearchPetName(value.toLowerCase());
+      searchParams.set("search", value.toLowerCase());
+      setSearchParams(searchParams);
     }, 0);
   };
 
