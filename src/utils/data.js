@@ -227,6 +227,7 @@ export const dogs = [
   "Clumber Spaniel",
   "Combai",
   "Cordoba Fighting Dog",
+  "Corgi",
   "Coton de Tulear",
   "Cretan Hound",
   "Croatian Sheepdog",
