@@ -491,7 +491,7 @@ function UpdatePet() {
               size="width"
               onClick={handleReset}
             >
-              RESET
+              CANCEL
             </Button>
             <br />
             <Button

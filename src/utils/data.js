@@ -154,6 +154,7 @@ export const dogs = [
   "Berger Picard",
   "Berner Laufhund",
   "Bernese Mountain Dog",
+  "Biewer Terrier",
   "Billy",
   "Black and Tan Coonhound",
   "Black and Tan Virginia Foxhound",

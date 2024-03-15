@@ -24,14 +24,25 @@ function PetsGallery({ pets = [], loading, total = 0 }) {
 
   if (sizes.length > 0) pets = pets.filter(pet => sizes.includes(pet.size));
 
-  if (locations.length > 0)
+  if (locations.length > 0) {
+    // Check if both "Manila" and "Quezon" are in the locations array
+    const includeBoth =
+      locations.includes("Manila") && locations.includes("Quezon");
+
     pets = pets.filter(pet => {
-      for (let location of locations) {
-        if (location === "Manila") return pet.location.includes("Manila");
-        else if (location === "Quezon") return pet.location.includes("Quezon");
-        else return;
+      if (includeBoth) {
+        return pet;
+      } else {
+        for (let location of locations) {
+          if (location === "Manila" && !pet.location.includes("Quezon")) {
+            return pet.location.includes("Manila");
+          } else if (location === "Quezon") {
+            return pet.location.includes("Quezon");
+          }
+        }
       }
     });
+  }
 
   if (loading) return <Spinner />;
 
