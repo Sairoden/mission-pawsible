@@ -88,20 +88,6 @@ function PetsFilter({ setPetTypes, setGenders, setSizes, setLocations }) {
                 Dog
               </label>
             </div>
-
-            <div className="choices">
-              <input
-                type="checkbox"
-                id="other"
-                className="checkbox"
-                value="Other"
-                name="petType"
-                onChange={handleFilter}
-              />
-              <label htmlFor="other" className="label">
-                Other
-              </label>
-            </div>
           </div>
 
           {/* GENDER */}
