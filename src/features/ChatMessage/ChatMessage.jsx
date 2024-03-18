@@ -43,6 +43,8 @@ function ChatMessage() {
       try {
         const chatClient = StreamChat.getInstance(apiKey);
 
+        console.log(chatClient);
+
         if (!chatConnection) {
           let user = {
             id: currentUser?.id,
