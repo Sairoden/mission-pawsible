@@ -41,9 +41,6 @@ export const loginWithGoogle = async () => {
 
   const { data } = await supabase.auth.getUser();
 
-  console.log(data);
-  console.log("WORKED");
-
   if (data.user.app_metadata.provider === "google") {
     const { avatar_url, full_name } = data.user.identities[0].identity_data;
 
