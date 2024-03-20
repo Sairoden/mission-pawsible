@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import {
   HiOutlineSignal,
@@ -17,6 +17,22 @@ import "./Navbar.scss";
 const Navbar = () => {
   const { user } = useGetCurrentUser();
   const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const navbar = document.querySelector(".navbar-container");
+      if (navbar) {
+        if (window.scrollY > 0) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleNavItemClick = () => {
     setIsActive(false); // Close the navigation menu when a navigation item is clicked
