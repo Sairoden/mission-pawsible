@@ -13,18 +13,18 @@ function Pagination({ total, pageSize }) {
   const handleChange = current => {
     searchParams.set("page", current);
     setSearchParams(searchParams);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   return (
     <div className="pagination container spacing-t spacing-b margin-b">
       <RCPagination
-      total={total}
-      pageSize={pageSize}
-      prevIcon={<HiOutlineArrowLeft />}
-      nextIcon={<HiOutlineArrowRight />}
-      onChange={handleChange}
-    />
+        total={total}
+        pageSize={pageSize}
+        prevIcon={<HiOutlineArrowLeft />}
+        nextIcon={<HiOutlineArrowRight />}
+        onChange={handleChange}
+      />
     </div>
   );
 }

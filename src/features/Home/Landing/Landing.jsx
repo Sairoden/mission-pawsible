@@ -47,7 +47,7 @@ function Landing() {
             size="small"
             onClick={() => {
               navigate("/lost-pets");
-              scrollTo(0, 0);
+              window.scrollTo({ top: 0, behavior: "instant" });
             }}
           >
             Find Pets
@@ -58,7 +58,7 @@ function Landing() {
             size="medium"
             onClick={() => {
               navigate(`${!user ? "/signup" : "/resources"}`);
-              scrollTo(0, 0);
+              window.scrollTo({ top: 0, behavior: "instant" });
             }}
           >
             {!user ? " Join Us  " : "Resources"}

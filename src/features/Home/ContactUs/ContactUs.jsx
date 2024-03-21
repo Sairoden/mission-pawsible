@@ -36,7 +36,7 @@ function ContactUs() {
             size="small"
             onClick={() => {
               navigate("/contact-us");
-              scrollTo(0, 0);
+              window.scrollTo({ top: 0, behavior: "instant" });
             }}
           >
             Contact Us
@@ -53,7 +53,7 @@ function ContactUs() {
             filter: "blur(5px)",
           }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
-          transition={{ duration: 2, ease: "easeInOut" }} 
+          transition={{ duration: 2, ease: "easeInOut" }}
         />
       </div>
     </section>

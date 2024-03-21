@@ -8,7 +8,8 @@
   &.sticky {
     transition: all ease-in-out 0.5s;
     position: fixed;
-    background-color: $color-coffee;
+    background-color: #f8f2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     top: 0;
     width: 100%;
     height: auto;

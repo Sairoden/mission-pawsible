@@ -11,7 +11,7 @@ function PetsCard({ id, image, title, gender, date }) {
   const handleInfo = () => {
     navigate(`/pet/${id}`);
 
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "instant" });
   };
 
   return (

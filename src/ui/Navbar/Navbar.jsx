@@ -1,5 +1,9 @@
-import React, { useState, useEffect } from "react";
+// REACT & LIBRARIES
+import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
+
+// STYLES
+import "./Navbar.scss";
 import {
   HiOutlineSignal,
   HiOutlineTag,
@@ -9,10 +13,13 @@ import {
   HiOutlineLightBulb,
   HiOutlineSquare3Stack3D,
 } from "react-icons/hi2";
-import { Button } from "../index";
-import { useGetCurrentUser } from "../../hooks";
 import logo from "../../assets/logo-mission.png";
-import "./Navbar.scss";
+
+// UI COMPONENTS
+import { Button } from "../index";
+
+// HOOKS
+import { useGetCurrentUser } from "../../hooks";
 
 const Navbar = () => {
   const { user } = useGetCurrentUser();
@@ -35,10 +42,14 @@ const Navbar = () => {
   }, []);
 
   const handleNavItemClick = () => {
-    setIsActive(false); // Close the navigation menu when a navigation item is clicked
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+    setIsActive(false);
   };
 
   const handleToggleClick = () => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+
     setIsActive(!isActive);
   };
 

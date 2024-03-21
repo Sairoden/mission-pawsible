@@ -71,8 +71,10 @@ function SignupForm() {
       {/* body contaienr */}
       <div className="signUp-body">
         {/* form */}
-        <form className="signUp-body-form" onSubmit={handleSubmit(handleSignup)}>
-          
+        <form
+          className="signUp-body-form"
+          onSubmit={handleSubmit(handleSignup)}
+        >
           {/* name container */}
           <div className="signUp-body-form-name">
             {/* last name */}
@@ -151,7 +153,7 @@ function SignupForm() {
                 disabled={isPending || isPending2}
               />
               <br />
-            </div>    
+            </div>
           </div>
 
           {/* password container */}
@@ -199,7 +201,7 @@ function SignupForm() {
               disabled={isPending || isPending2}
               onClick={handleGoogleLogin}
             >
-              Sign up with Google 
+              Sign up with Google
               <FcGoogle className="signUp-body-form-google-logo google-icon" />
             </button>
             <br />
@@ -222,7 +224,10 @@ function SignupForm() {
         {/* signup text */}
         <h4 className="signUp-body-login-text">
           Already have an account?{" "}
-          <Link to="/login" onClick={() => scrollTo(0, 0)}>
+          <Link
+            to="/login"
+            onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+          >
             <span className="signUp-body-login-text-span">Log in</span>
           </Link>
         </h4>

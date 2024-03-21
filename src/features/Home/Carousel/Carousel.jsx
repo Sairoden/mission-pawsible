@@ -49,7 +49,7 @@ function Carousel() {
             size="small"
             onClick={() => {
               navigate("/lost-pets");
-              scrollTo(0, 0);
+              window.scrollTo({ top: 0, behavior: "instant" });
             }}
           >
             Check Out

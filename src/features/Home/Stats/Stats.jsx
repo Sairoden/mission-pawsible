@@ -88,7 +88,7 @@ function Stats() {
             size="small"
             onClick={() => {
               navigate(`${!user ? "/signup" : "/about-us"}`);
-              scrollTo(0, 0);
+              window.scrollTo({ top: 0, behavior: "instant" });
             }}
           >
             {!user ? "Sign up now!" : "Learn About Us!"}

@@ -25,7 +25,10 @@ function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
         <div className="ribbon-container">
           {!isVerified && <div className="ribbon">Pending</div>}
         </div>
-        <Link to={`/pet/${id}`} onClick={() => scrollTo(0, 0)}>
+        <Link
+          to={`/pet/${id}`}
+          onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+        >
           <div className="middle-img-container">
             <img src={image} alt="shitsupic" className="register-img" />
           </div>
@@ -42,7 +45,7 @@ function RegisteredPetCard({ id, title, gender, date, image, isVerified }) {
             <button
               className="update-btn"
               onClick={() => {
-                scrollTo(0, 0);
+                window.scrollTo({ top: 0, behavior: "instant" });
                 navigate(`/editPet/${id}`);
               }}
               disabled={isPending || isPending2}

@@ -145,7 +145,10 @@ function LoginForm() {
         {/* signup text */}
         <h4 className="login-body-signup-text">
           Don't have an account?{" "}
-          <Link to="/signup" onClick={() => scrollTo(0, 0)}>
+          <Link
+            to="/signup"
+            onClick={() => window.scrollTo({ top: 0, behavior: "instant" })}
+          >
             <span className="login-body-signup-text-span">Sign up</span>
           </Link>
         </h4>
