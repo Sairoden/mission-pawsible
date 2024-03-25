@@ -19,7 +19,7 @@ function Account() {
     return <Spinner />;
 
   return (
-    <div className="profile-container">
+    <div className="profile-container spacing-t">
       <Profile logout={logout} user={user} />
       <RegisteredPet userPets={userPets} />
     </div>
